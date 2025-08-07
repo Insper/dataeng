@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Mono&display=swap');
+
+:root {
+  /* Default color shades */
+  --md-default-fg-color: hsla(0, 0%, 0%, 0.87);
+  --md-default-fg-color--light: hsla(0, 0%, 0%, 0.54);
+  --md-default-fg-color--lighter: hsla(0, 0%, 0%, 0.32);
+  --md-default-fg-color--lightest: hsla(0, 0%, 0%, 0.12);
+  --md-default-bg-color: hsla(0, 0%, 100%, 1);
+  --md-default-bg-color--light: hsla(0, 0%, 100%, 0.7);
+  --md-default-bg-color--lighter: hsla(0, 0%, 100%, 0.3);
+  --md-default-bg-color--lightest: hsla(0, 0%, 100%, 0.1);
+
+  /* Primary color shades (default: indigo) */
+  --md-primary-fg-color: #3f51b5;
+  --md-primary-fg-color--light: #7986cb;
+  --md-primary-fg-color--dark: #303f9f;
+  --md-primary-bg-color: #3f51b5;
+  --md-primary-bg-color--light: #c5cae9;
+
+  /* Accent color shades (default: indigo) */
+  --md-accent-fg-color: #3f51b5;
+  --md-accent-fg-color--transparent: hsla(231, 48%, 48%, 0.1);
+  --md-accent-bg-color: #3f51b5;
+  --md-accent-bg-color--light: #c5cae9;
+
+  /* Font families */
+  --md-text-font: "Roboto", sans-serif;
+  --md-code-font: "Roboto Mono", monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Default color shades (dark mode) */
+    --md-default-fg-color: hsla(0, 0%, 100%, 0.87);
+    --md-default-fg-color--light: hsla(0, 0%, 100%, 0.54);
+    --md-default-fg-color--lighter: hsla(0, 0%, 100%, 0.32);
+    --md-default-fg-color--lightest: hsla(0, 0%, 100%, 0.12);
+    --md-default-bg-color: hsla(220, 16%, 15%, 1);
+    --md-default-bg-color--light: hsla(220, 16%, 15%, 0.7);
+    --md-default-bg-color--lighter: hsla(220, 16%, 15%, 0.3);
+    --md-default-bg-color--lightest: hsla(220, 16%, 15%, 0.1);
+
+    /* Primary color shades (dark mode default: indigo) */
+    --md-primary-fg-color: #7986cb;
+    --md-primary-fg-color--light: #aab6fe;
+    --md-primary-fg-color--dark: #49599a;
+    --md-primary-bg-color: #303f9f;
+    --md-primary-bg-color--light: #424242;
+
+    /* Accent color shades (dark mode default: indigo) */
+    --md-accent-fg-color: #7986cb;
+    --md-accent-fg-color--transparent: hsla(231, 48%, 48%, 0.1);
+    --md-accent-bg-color: #303f9f;
+    --md-accent-bg-color--light: #424242;
+  }
+}
+
+/* Basic font settings */
+body {
+  font-family: var(--md-text-font);
+}
+
+code, pre {
+  font-family: var(--md-code-font);
+}
+
+/* Fixed Navigation Menu (adjusting for MkDocs Material structure) */
+.md-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 4; /* MkDocs Material header z-index */
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.05);
+}
+
+.md-container {
+  padding-top: 3.6rem; /* Adjust based on default header height */
+}
+
+.md-sidebar--primary {
+  position: fixed;
+  top: 3.6rem; /* Adjust based on default header height */
+  height: calc(100% - 3.6rem);
+  overflow-y: auto;
+}
+
+.md-sidebar--secondary {
+  position: fixed;
+  top: 3.6rem; /* Adjust based on default header height */
+  height: calc(100% - 3.6rem);
+  overflow-y: auto;
+}

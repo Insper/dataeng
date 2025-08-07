@@ -1,0 +1,5 @@
+mkdocs-roamlinks-plugin==0.3.2
+mkdocs
+pymdown-extensions
+mkdocs-material
+git+https://github.com/macielcalebe/mkdocs-quiz.git
