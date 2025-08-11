@@ -13,8 +13,11 @@ function setupTermynal() {
 
     function createTermynals() {
         document
-            .querySelectorAll(`.${termynalActivateClass} .highlight`)
+            .querySelectorAll(`.${termynalActivateClass} .highlight:not(.termynal-processed)`)
             .forEach(node => {
+                // Marca como processado para evitar dupla inicialização
+                node.classList.add('termynal-processed');
+                
                 const text = node.textContent;
                 const lines = text.split("\n");
                 const useLines = [];
@@ -110,4 +113,42 @@ async function main() {
     setupTermynal()
 }
 
-main()
+// Para compatibilidade com navigation.instant do MkDocs Material
+function initializeTermynal() {
+    setupTermynal();
+}
+
+// Múltiplas estratégias para garantir que o termynal seja inicializado
+if (typeof document$ !== 'undefined') {
+    // MkDocs Material com navigation.instant
+    document$.subscribe(function() {
+        setTimeout(initializeTermynal, 100); // Pequeno delay para garantir que o DOM esteja pronto
+    });
+} else if (document.readyState === 'loading') {
+    // DOM ainda carregando
+    document.addEventListener('DOMContentLoaded', initializeTermynal);
+} else {
+    // DOM já carregado
+    initializeTermynal();
+}
+
+// Backup: observer para mudanças no DOM (caso algo não funcione)
+if (typeof MutationObserver !== 'undefined') {
+    const observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+            if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
+                // Verifica se há elementos .termy que não foram processados
+                const termyBlocks = document.querySelectorAll('.termy .highlight');
+                const processedBlocks = document.querySelectorAll('[data-termynal]');
+                if (termyBlocks.length > processedBlocks.length) {
+                    setTimeout(initializeTermynal, 200);
+                }
+            }
+        });
+    });
+    
+    observer.observe(document.body, {
+        childList: true,
+        subtree: true
+    });
+}
