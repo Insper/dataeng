@@ -20,6 +20,30 @@ Seja bem-vindo ao material do curso de **Engenharia de Dados** (2025/2). Aqui vo
 
 Nossos encontros serão **presenciais**. A primeira aula será dia **11/08** e a última aula será dia **10/11**, mas poderão haver entregas após esta data.
 
+## Requirements.txt!
+
+Para que você aproveite ao máximo as atividades do curso, é obrigatório ter conhecimento em:
+
+- Bancos de dados relacionais e não relacionais
+- Programação avançada
+- Computação em nuvem
+- Git
+- Ferramentas de linha de comando
+
+As aulas exigem bastante autonomia. É **recomendável** já ter cursado as disciplinas do Insper de:
+- Megadados
+- Computação em nuvem (se ENGCOMP)
+- Sprint sessions (se BCC)
+
+## Dinâmica das aulas
+
+No inicio de cada aula, poderá ocorrer uma seção expositiva, para introduzir os conceitos que serão trabalhados. Em seguida, seguiremos de forma predominantemente ativa, com a utilização de *active handouts*. É esperado que você interaja com o material para consolidar o aprendizado:
+
+- Ler e explorar o material;
+- Executar atividades;
+- Testar e validar respostas (escritas e de código);
+- Refletir e anotar.
+
 ## Entregas
 
 Os alunos precisarão entregar algumas atividades:
@@ -32,27 +56,12 @@ Os alunos precisarão entregar algumas atividades:
 
 As atividades de entrevista (`INT`) são como provas. Fora isto, não teremos provas, nem aulas durante as semanas de avaliação intermediária e final do calendário do Insper.
 
-## Requirements.txt!
-
-Para que você aproveite ao máximo as atividades do curso, é obrigatório ter conhecimento em:
-
-- Bancos de dados relacionais e não relacionais
-- Programação avançada
-- Computação em nuvem
-- Git
-- Ferramentas de linha de comando
-
-As aulas exigem bastante autonomia. É recomendável já ter cursado as disciplinas do Insper de:
-- Megadados
-- Computação em nuvem (se ENGCOMP)
-- Sprint sessions (se BCC)
-
 ## Nota final
 
 A nota final é calculada com a seguinte fórmula
 
 ```
-NF = 0.40*APS + 0.20*INT + 0.40*PRO
+NF = 0.35*APS + 0.25*INT + 0.40*PRO
 ```
 
 Algumas condições são necessárias para aprovação:

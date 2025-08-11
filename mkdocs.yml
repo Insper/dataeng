@@ -9,12 +9,16 @@ copyright: © 2025 | @macielcalebe
 
 nav:
   - Início: index.md
-  - Regras: about.md
   - Aulas:
-    - 01-Introdução: classes/01-intro/intro.md
+    - 01-Introdução:
+      - classes/01-intro/intro.md
+      - classes/01-intro/profissionais.md
+      - classes/01-intro/warmup.md
+      - classes/01-intro/processar.md
+  - Regras: about.md
   - Deadlines: deadlines.md
   - Contribuições: contributions.md
-  - Projeto: project/project.md
+  # - Projeto: project/project.md
 
 
 extra:
@@ -54,9 +58,9 @@ extra_javascript:
   - js/tabs.js
   - js/termynal.js
   - js/custom.js
-  - ttps://polyfill.io/v3/polyfill.min.js?features=es6
+  # - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-
+  - https://unpkg.com/mermaid/dist/mermaid.min.js
 extra_css:
     - css/termynal.css
 
@@ -97,19 +101,16 @@ theme:
 markdown_extensions:
   - admonition
   - pymdownx.details
-  - pymdownx.superfences
   - footnotes
   - markdown.extensions.admonition
   - pymdownx.tasklist:
       custom_checkbox: true
-  - pymdownx.details
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.highlight:
       anchor_linenums: true
       pygments_lang_class: true
   - pymdownx.inlinehilite
-  - pymdownx.superfences
   - pymdownx.magiclink
   - pymdownx.critic:
       mode: view
@@ -120,12 +121,19 @@ markdown_extensions:
   - pymdownx.tilde
   - pymdownx.smartsymbols
   - pymdownx.emoji:
-      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - attr_list
   - pymdownx.tilde
   - pymdownx.snippets:
       base_path: content
       check_paths: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - abbr
 
 plugins:
   - search
