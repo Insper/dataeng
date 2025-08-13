@@ -15,6 +15,13 @@ nav:
       - classes/01-intro/profissionais.md
       - classes/01-intro/warmup.md
       - classes/01-intro/processar.md
+    - 02-Filas e Containers:
+      - classes/02-docker-filas/relembrar-ciclo.md
+      - classes/02-docker-filas/filas.md
+      - classes/02-docker-filas/docker.md
+      - classes/02-docker-filas/rabbitmq.md
+      - classes/02-docker-filas/programar-sensores.md
+      - classes/02-docker-filas/programar-pipeline.md
   - Regras: about.md
   - Deadlines: deadlines.md
   - Contribuições: contributions.md

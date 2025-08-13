@@ -1,6 +1,6 @@
 # Explorar Alternativas
 
-Agora que você já consegue pelo menos observar quais arquivos estão disponíveis, iremos avançar até qe os dados disponíveis no **S3** possam ser analisados pela empresa.
+Agora que você já consegue pelo menos observar quais arquivos estão disponíveis, iremos avançar até que os dados disponíveis no **S3** possam ser analisados pela empresa.
 
 !!! info
     Já sabemos que eles contém informações sobre [estações de bicicleta em São Francisco](https://www.kaggle.com/datasets/benhamner/sf-bay-area-bike-share/data).

@@ -7,43 +7,44 @@ O **ciclo de vida da engenharia de dados** representa um processo contínuo e in
 ```mermaid
 flowchart LR
 
-  %% Plataforma principal
-  subgraph PD[Plataforma de Dados]
-    direction LR
+    %% Plataforma principal
+    subgraph PD[Plataforma de Dados]
+        direction LR
 
-    G[Geração]
+        G[Geração]
 
-    %% Linha horizontal de entrada + pipeline
-    subgraph LINE[Armazenamento]
-      direction LR
-      I[Ingestão]
-      T[Transformação]
-      S[Disponibilização]
-      I --> T --> S
+        %% Linha horizontal de entrada + pipeline
+        subgraph LINE[Armazenamento]
+        direction LR
+        I[Ingestão]
+        T[Transformação]
+        S[Disponibilização]
+        I --> T --> S
+        end
+
+        %% Saídas diretas (à direita)
+        ML[Aprendizado de Máquina]
+        AN[Análises]
+        REP[Dashboards]
+
+        G --> I
+        S --> ML
+        S --> AN
+        S --> REP
     end
 
-    %% Saídas diretas (à direita)
-    ML[Aprendizado de Máquina]
-    AN[Análises]
-    REP[Dashboards]
+    %% Estilos adaptados para light e dark mode
+    classDef gen fill:#64748b,stroke:#475569,color:#ffffff,stroke-width:2px;
+    classDef stage fill:#0891b2,stroke:#0e7490,color:#ffffff,stroke-width:2px;
+    classDef trans fill:#8b5cf6,stroke:#7c3aed,color:#ffffff,stroke-width:2px;
+    classDef serve fill:#10b981,stroke:#059669,color:#ffffff,stroke-width:2px;
+    classDef out fill:#f59e0b,stroke:#d97706,color:#ffffff,stroke-width:2px;
 
-    G --> I
-    S --> ML
-    S --> AN
-    S --> REP
-  end
-
-  %% Estilos
-  classDef gen fill:#f8bfbf,stroke:#c23b22,color:#111;
-  classDef stage fill:#b2dfdb,stroke:#00695c,color:#102a43;
-  classDef trans fill:#d1c4e9,stroke:#5e35b1,color:#1a1a1a;
-  classDef serve fill:#c5e1a5,stroke:#33691e,color:#10331e;
-  classDef out fill:#ffe082,stroke:#ff8f00,color:#3d2800;
-
-  class G gen;
-  class I stage;
-  class T trans;
-  class S serve;
+    class G gen;
+    class I stage;
+    class T trans;
+    class S serve;
+    class ML,AN,REP out;
 ```
 
 Este fluxo inicia com a **geração** de dados em diversas fontes (sistemas transacionais, sensores, APIs, *logs*) e passa por três etapas fundamentais dentro da plataforma de dados:
@@ -75,12 +76,12 @@ Considere a **hierarquia de necessidades da ciência de dados** (adaptado de FDE
   }
 }}%%
 flowchart TB
-  classDef top fill:#ffffff,stroke:#000,color:#000,font-size:11px;
-  classDef l2  fill:#f4f4f4,stroke:#000,color:#000,font-size:11px;
-  classDef l3  fill:#e6e6e6,stroke:#000,color:#000,font-size:11px;
-  classDef l4  fill:#d9ead3,stroke:#000,color:#000,font-size:11px;
-  classDef l5  fill:#b6d7a8,stroke:#000,color:#000,font-size:11px;
-  classDef l6  fill:#93c47d,stroke:#000,color:#000,font-size:11px;
+  classDef top fill:#6366f1,stroke:#4f46e5,color:#ffffff,font-size:11px,stroke-width:2px;
+  classDef l2  fill:#8b5cf6,stroke:#7c3aed,color:#ffffff,font-size:11px,stroke-width:2px;
+  classDef l3  fill:#a855f7,stroke:#9333ea,color:#ffffff,font-size:11px,stroke-width:2px;
+  classDef l4  fill:#0891b2,stroke:#0e7490,color:#ffffff,font-size:11px,stroke-width:2px;
+  classDef l5  fill:#10b981,stroke:#059669,color:#ffffff,font-size:11px,stroke-width:2px;
+  classDef l6  fill:#22c55e,stroke:#16a34a,color:#ffffff,font-size:11px,stroke-width:2px;
 
   A["IA, Aprendizado Profundo"]:::top
   B["Testes A/B, Experimentação, Algoritmos de ML Simples"]:::l2
@@ -103,9 +104,9 @@ Assim, podemos considerar que engenharia de dados está localizada nas etapas pr
 
 ```mermaid
 flowchart LR
-    style Fontes fill:#ccffcc,stroke:#000,color:#000,rx:5,ry:5
-    style Engenharia fill:#e0ccff,stroke:#000,color:#000,rx:5,ry:5
-    style Ciencia fill:#ffddcc,stroke:#000,color:#000,rx:5,ry:5
+    style Fontes fill:#10b981,stroke:#059669,color:#ffffff,rx:5,ry:5,stroke-width:2px
+    style Engenharia fill:#8b5cf6,stroke:#7c3aed,color:#ffffff,rx:5,ry:5,stroke-width:2px
+    style Ciencia fill:#f59e0b,stroke:#d97706,color:#ffffff,rx:5,ry:5,stroke-width:2px
 
     Fontes[Dados de<br>várias fontes] --> Engenharia[Engenharia de dados] --> Ciencia[Ciência de dados<br>e análise]
 ```

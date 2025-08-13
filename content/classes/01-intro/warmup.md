@@ -8,46 +8,48 @@ O trabalho do engenheiro de dados envolve atuar em áreas fundamentais como **se
 
 Relembrando o ciclo de vida:
 
+
 ```mermaid
 flowchart LR
 
-  %% Plataforma principal
-  subgraph PD[Plataforma de Dados]
-    direction LR
+    %% Plataforma principal
+    subgraph PD[Plataforma de Dados]
+        direction LR
 
-    G[Geração]
+        G[Geração]
 
-    %% Linha horizontal de entrada + pipeline
-    subgraph LINE[Armazenamento]
-      direction LR
-      I[Ingestão]
-      T[Transformação]
-      S[Disponibilização]
-      I --> T --> S
+        %% Linha horizontal de entrada + pipeline
+        subgraph LINE[Armazenamento]
+        direction LR
+        I[Ingestão]
+        T[Transformação]
+        S[Disponibilização]
+        I --> T --> S
+        end
+
+        %% Saídas diretas (à direita)
+        ML[Aprendizado de Máquina]
+        AN[Análises]
+        REP[Dashboards]
+
+        G --> I
+        S --> ML
+        S --> AN
+        S --> REP
     end
 
-    %% Saídas diretas (à direita)
-    ML[Aprendizado de Máquina]
-    AN[Análises]
-    REP[Dashboards]
+    %% Estilos adaptados para light e dark mode
+    classDef gen fill:#64748b,stroke:#475569,color:#ffffff,stroke-width:2px;
+    classDef stage fill:#0891b2,stroke:#0e7490,color:#ffffff,stroke-width:2px;
+    classDef trans fill:#8b5cf6,stroke:#7c3aed,color:#ffffff,stroke-width:2px;
+    classDef serve fill:#10b981,stroke:#059669,color:#ffffff,stroke-width:2px;
+    classDef out fill:#f59e0b,stroke:#d97706,color:#ffffff,stroke-width:2px;
 
-    G --> I
-    S --> ML
-    S --> AN
-    S --> REP
-  end
-
-  %% Estilos
-  classDef gen fill:#f8bfbf,stroke:#c23b22,color:#111;
-  classDef stage fill:#b2dfdb,stroke:#00695c,color:#102a43;
-  classDef trans fill:#d1c4e9,stroke:#5e35b1,color:#1a1a1a;
-  classDef serve fill:#c5e1a5,stroke:#33691e,color:#10331e;
-  classDef out fill:#ffe082,stroke:#ff8f00,color:#3d2800;
-
-  class G gen;
-  class I stage;
-  class T trans;
-  class S serve;
+    class G gen;
+    class I stage;
+    class T trans;
+    class S serve;
+    class ML,AN,REP out;
 ```
 
 Além disso, o engenheiro de dados precisa equilibrar constantemente fatores como **custo**, **agilidade**, **escalabilidade**, **simplicidade**, **reutilização** e **interoperabilidade**, escolhendo as soluções mais adequadas para cada contexto.
@@ -62,12 +64,12 @@ Embora precise ter noções de análise, *machine learning* e criação de relat
 
 ```mermaid
 flowchart LR
-    style Custo fill:#cce5ff,stroke:#000,color:#000,rx:5,ry:5
-    style Agilidade fill:#cce5ff,stroke:#000,color:#000,rx:5,ry:5
-    style Escalabilidade fill:#cce5ff,stroke:#000,color:#000,rx:5,ry:5
-    style Simplicidade fill:#cce5ff,stroke:#000,color:#000,rx:5,ry:5
-    style Reuso fill:#cce5ff,stroke:#000,color:#000,rx:5,ry:5
-    style Interoperabilidade fill:#cce5ff,stroke:#000,color:#000,rx:5,ry:5
+    style Custo fill:#0891b2,stroke:#0e7490,color:#ffffff,rx:5,ry:5,stroke-width:2px
+    style Agilidade fill:#0891b2,stroke:#0e7490,color:#ffffff,rx:5,ry:5,stroke-width:2px
+    style Escalabilidade fill:#0891b2,stroke:#0e7490,color:#ffffff,rx:5,ry:5,stroke-width:2px
+    style Simplicidade fill:#0891b2,stroke:#0e7490,color:#ffffff,rx:5,ry:5,stroke-width:2px
+    style Reuso fill:#0891b2,stroke:#0e7490,color:#ffffff,rx:5,ry:5,stroke-width:2px
+    style Interoperabilidade fill:#0891b2,stroke:#0e7490,color:#ffffff,rx:5,ry:5,stroke-width:2px
 
     Custo[Custo] --- Agilidade[Agilidade] --- Escalabilidade[Escalabilidade] --- Simplicidade[Simplicidade] --- Reuso[Reuso] --- Interoperabilidade[Interoperabilidade]
 ```
