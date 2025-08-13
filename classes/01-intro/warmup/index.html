@@ -421,6 +421,8 @@
       
         
       
+        
+      
     
     
     
@@ -746,6 +748,207 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    02-Filas e Containers
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            02-Filas e Containers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-docker-filas/relembrar-ciclo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Relembrar
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-docker-filas/filas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Exemplo: Sensores
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-docker-filas/docker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Docker
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-docker-filas/rabbitmq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RabbitMQ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-docker-filas/programar-sensores/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Programar Sensores
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-docker-filas/programar-pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Programar Pipeline
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -964,55 +1167,56 @@
 <p>Relembrando o ciclo de vida:</p>
 <pre class="mermaid"><code>flowchart LR
 
-  %% Plataforma principal
-  subgraph PD[Plataforma de Dados]
-    direction LR
+    %% Plataforma principal
+    subgraph PD[Plataforma de Dados]
+        direction LR
 
-    G[Geração]
+        G[Geração]
 
-    %% Linha horizontal de entrada + pipeline
-    subgraph LINE[Armazenamento]
-      direction LR
-      I[Ingestão]
-      T[Transformação]
-      S[Disponibilização]
-      I --&gt; T --&gt; S
+        %% Linha horizontal de entrada + pipeline
+        subgraph LINE[Armazenamento]
+        direction LR
+        I[Ingestão]
+        T[Transformação]
+        S[Disponibilização]
+        I --&gt; T --&gt; S
+        end
+
+        %% Saídas diretas (à direita)
+        ML[Aprendizado de Máquina]
+        AN[Análises]
+        REP[Dashboards]
+
+        G --&gt; I
+        S --&gt; ML
+        S --&gt; AN
+        S --&gt; REP
     end
 
-    %% Saídas diretas (à direita)
-    ML[Aprendizado de Máquina]
-    AN[Análises]
-    REP[Dashboards]
+    %% Estilos adaptados para light e dark mode
+    classDef gen fill:#64748b,stroke:#475569,color:#ffffff,stroke-width:2px;
+    classDef stage fill:#0891b2,stroke:#0e7490,color:#ffffff,stroke-width:2px;
+    classDef trans fill:#8b5cf6,stroke:#7c3aed,color:#ffffff,stroke-width:2px;
+    classDef serve fill:#10b981,stroke:#059669,color:#ffffff,stroke-width:2px;
+    classDef out fill:#f59e0b,stroke:#d97706,color:#ffffff,stroke-width:2px;
 
-    G --&gt; I
-    S --&gt; ML
-    S --&gt; AN
-    S --&gt; REP
-  end
-
-  %% Estilos
-  classDef gen fill:#f8bfbf,stroke:#c23b22,color:#111;
-  classDef stage fill:#b2dfdb,stroke:#00695c,color:#102a43;
-  classDef trans fill:#d1c4e9,stroke:#5e35b1,color:#1a1a1a;
-  classDef serve fill:#c5e1a5,stroke:#33691e,color:#10331e;
-  classDef out fill:#ffe082,stroke:#ff8f00,color:#3d2800;
-
-  class G gen;
-  class I stage;
-  class T trans;
-  class S serve;</code></pre>
+    class G gen;
+    class I stage;
+    class T trans;
+    class S serve;
+    class ML,AN,REP out;</code></pre>
 <p>Além disso, o engenheiro de dados precisa equilibrar constantemente fatores como <strong>custo</strong>, <strong>agilidade</strong>, <strong>escalabilidade</strong>, <strong>simplicidade</strong>, <strong>reutilização</strong> e <strong>interoperabilidade</strong>, escolhendo as soluções mais adequadas para cada contexto.</p>
 <p>Até pouco tempo atrás, o trabalho do engenheiro de dados envolvia o domínio de um conjunto limitado, porém robusto, de tecnologias como Hadoop e Spark.</p>
 <p>Essas ferramentas exigiam habilidades avançadas (engenharia de software, redes, computação distribuída, armazenamento) e grande parte das atividades era voltada à gestão e manutenção de <em>clusters</em>, ao controle de recursos e à implementação de <em>pipelines</em> e rotinas de transformação de dados.</p>
 <p>Atualmente, as ferramentas modernas tornaram o cenário menos complexo e mais ágil, permitindo arquiteturas de dados que evoluem conforme novas tendências surgem.</p>
 <p>Embora precise ter noções de análise, <em>machine learning</em> e criação de relatórios, o engenheiro de dados não é o responsável direto por essas tarefas.</p>
 <pre class="mermaid"><code>flowchart LR
-    style Custo fill:#cce5ff,stroke:#000,color:#000,rx:5,ry:5
-    style Agilidade fill:#cce5ff,stroke:#000,color:#000,rx:5,ry:5
-    style Escalabilidade fill:#cce5ff,stroke:#000,color:#000,rx:5,ry:5
-    style Simplicidade fill:#cce5ff,stroke:#000,color:#000,rx:5,ry:5
-    style Reuso fill:#cce5ff,stroke:#000,color:#000,rx:5,ry:5
-    style Interoperabilidade fill:#cce5ff,stroke:#000,color:#000,rx:5,ry:5
+    style Custo fill:#0891b2,stroke:#0e7490,color:#ffffff,rx:5,ry:5,stroke-width:2px
+    style Agilidade fill:#0891b2,stroke:#0e7490,color:#ffffff,rx:5,ry:5,stroke-width:2px
+    style Escalabilidade fill:#0891b2,stroke:#0e7490,color:#ffffff,rx:5,ry:5,stroke-width:2px
+    style Simplicidade fill:#0891b2,stroke:#0e7490,color:#ffffff,rx:5,ry:5,stroke-width:2px
+    style Reuso fill:#0891b2,stroke:#0e7490,color:#ffffff,rx:5,ry:5,stroke-width:2px
+    style Interoperabilidade fill:#0891b2,stroke:#0e7490,color:#ffffff,rx:5,ry:5,stroke-width:2px
 
     Custo[Custo] --- Agilidade[Agilidade] --- Escalabilidade[Escalabilidade] --- Simplicidade[Simplicidade] --- Reuso[Reuso] --- Interoperabilidade[Interoperabilidade]</code></pre>
 <h2 id="warm-up_1">Warm Up</h2>
