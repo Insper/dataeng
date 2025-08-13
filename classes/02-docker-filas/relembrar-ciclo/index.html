@@ -725,18 +725,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#ingestao-pull-based" class="md-nav__link">
+  <a href="#ingestao-push-based" class="md-nav__link">
     <span class="md-ellipsis">
-      Ingestão Pull-based
+      Ingestão Push-based
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ingestao-push-based" class="md-nav__link">
+  <a href="#ingestao-pull-based" class="md-nav__link">
     <span class="md-ellipsis">
-      Ingestão Push-based
+      Ingestão Pull-based
     </span>
   </a>
   
@@ -974,18 +974,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#ingestao-pull-based" class="md-nav__link">
+  <a href="#ingestao-push-based" class="md-nav__link">
     <span class="md-ellipsis">
-      Ingestão Pull-based
+      Ingestão Push-based
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ingestao-push-based" class="md-nav__link">
+  <a href="#ingestao-pull-based" class="md-nav__link">
     <span class="md-ellipsis">
-      Ingestão Push-based
+      Ingestão Pull-based
     </span>
   </a>
   
@@ -1559,7 +1559,7 @@ class ML,AN,REP out;</code></pre>
 <li><strong>Pull</strong> (a ingestão chama a fonte): ocorre a <strong>busca</strong> de dados na fonte.</li>
 <li><strong>Híbrido</strong>: mistura os dois.</li>
 </ul>
-<h2 id="ingestao-pull-based">Ingestão <strong>Pull-based</strong></h2>
+<h2 id="ingestao-push-based">Ingestão <strong>Push-based</strong></h2>
 <p>Neste formato de ingestão, a fonte <strong>empurra</strong> eventos/dados para um <em>endpoint</em> seu. Este modelo é particularmente bom para cenários de <strong>tempo real</strong>.</p>
 <p><strong>Analogia</strong>: notificações no celular (você <strong>não pede</strong>, elas chegam).</p>
 <div class="admonition example">
@@ -1567,7 +1567,7 @@ class ML,AN,REP out;</code></pre>
 <p>Lembra do <strong>Webhook</strong> configurado para as correções das atividades de <em>SisHard</em>?</p>
 <p>As criações de <em>tag</em> batem no endpoint do servidor de correção como um <em>JSON</em>.</p>
 </div>
-<h2 id="ingestao-push-based">Ingestão <strong>Push-based</strong></h2>
+<h2 id="ingestao-pull-based">Ingestão <strong>Pull-based</strong></h2>
 <p>Segundo este formato, o pipeline ou script <strong>consulta</strong>/<strong>baixa</strong> dados periodicamente. Este é um formato adequado para processamento em lotes (iremos abordar isso mais adiante) e integrações com sistemas legados.</p>
 <p><strong>Analogia</strong>: checar e-mail manualmente, uma vez que você <strong>vai lá e busca</strong>.</p>
 <div class="admonition example">
