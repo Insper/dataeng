@@ -209,8 +209,8 @@ services:
     container_name: rabbitmq-sensores
     restart: always
     ports:
-      - 5675:5672
-      - 15675:15672
+      - 5672:5672
+      - 15672:15672
     volumes:
       - ./rabbitmq:/var/lib/rabbitmq
     environment:

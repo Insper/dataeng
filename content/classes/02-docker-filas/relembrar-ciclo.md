@@ -99,7 +99,7 @@ Em **engenharia de dados**, a ingestão pode funcionar seguindo um padrão:
 - **Pull** (a ingestão chama a fonte): ocorre a **busca** de dados na fonte.
 - **Híbrido**: mistura os dois.
 
-## Ingestão **Pull-based**
+## Ingestão **Push-based**
 
 Neste formato de ingestão, a fonte **empurra** eventos/dados para um *endpoint* seu. Este modelo é particularmente bom para cenários de **tempo real**.
 
@@ -110,7 +110,7 @@ Neste formato de ingestão, a fonte **empurra** eventos/dados para um *endpoint*
     
     As criações de *tag* batem no endpoint do servidor de correção como um *JSON*.
 
-## Ingestão **Push-based**
+## Ingestão **Pull-based**
 
 Segundo este formato, o pipeline ou script **consulta**/**baixa** dados periodicamente. Este é um formato adequado para processamento em lotes (iremos abordar isso mais adiante) e integrações com sistemas legados.
 
