@@ -10,23 +10,27 @@ copyright: © 2025 | @macielcalebe
 nav:
   - Início: index.md
   - Aulas:
-    - 01-Introdução:
-      - classes/01-intro/intro.md
-      - classes/01-intro/profissionais.md
-      - classes/01-intro/warmup.md
-      - classes/01-intro/processar.md
-    - 02-Filas e Containers:
-      - classes/02-docker-filas/relembrar-ciclo.md
-      - classes/02-docker-filas/filas.md
-      - classes/02-docker-filas/docker.md
-      - classes/02-docker-filas/rabbitmq.md
-      - classes/02-docker-filas/programar-sensores.md
-      - classes/02-docker-filas/programar-pipeline.md
+      - 01 - Introdução:
+          - classes/01-intro/intro.md
+          - classes/01-intro/profissionais.md
+          - classes/01-intro/warmup.md
+          - classes/01-intro/processar.md
+      - 02 - Filas e Containers:
+          - classes/02-docker-filas/relembrar-ciclo.md
+          - classes/02-docker-filas/filas.md
+          - classes/02-docker-filas/docker.md
+          - classes/02-docker-filas/rabbitmq.md
+          - classes/02-docker-filas/programar-sensores.md
+          - classes/02-docker-filas/programar-pipeline.md
+      - 03 - Data Warehousing:
+          - classes/03-data-warehouse/intro.md
+          - classes/03-data-warehouse/linha-tempo.md
+          - classes/03-data-warehouse/data-warehousing.md
+          - classes/03-data-warehouse/pratica.md
   - Regras: about.md
   - Deadlines: deadlines.md
   - Contribuições: contributions.md
   # - Projeto: project/project.md
-
 
 extra:
   home_cover_image: attachments/home-image.png
@@ -38,16 +42,16 @@ extra:
 
   home_button1_name: Aulas
   home_button1_url: classes/01-intro/intro/
-  home_button1_theme: md-button  md-button--primary 
+  home_button1_theme: md-button  md-button--primary
   home_button1_icon: book
   home_button1_blurb: |
     Material das aulas, que serão apresentadas no formato de handout.
 
-  home_button2_name: Regras                         # Comment this parameter out to remove the button.
-  home_button2_url: about                           # This path starts at your root mkdocs directory.
+  home_button2_name: Regras # Comment this parameter out to remove the button.
+  home_button2_url: about # This path starts at your root mkdocs directory.
   home_button2_theme: md-button # Options: "md-button", "md-button md-button--primary"
-  home_button2_icon: rule                           # Options: "people", "gear", "image", "calendar", "rule","book"
-  home_button2_blurb: |                             # Short description of this button / section.
+  home_button2_icon: rule # Options: "people", "gear", "image", "calendar", "rule","book"
+  home_button2_blurb: | # Short description of this button / section.
     Conheça detalhes sobre o curso, como as atividades, as regras e o que é esperado de você.
 
   home_button3_name: Deadlines
@@ -56,7 +60,7 @@ extra:
   home_button3_icon: calendar
   home_button3_blurb: |
     Confira os deadlines do curso, com as datas de entrega das atividades.
-  
+
 # # Homepage Code Execution
 # home_execute_js: | # Javascript to execute when accessing the homepage
 #   console.log("This is an example!");
@@ -69,23 +73,23 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
   - https://unpkg.com/mermaid/dist/mermaid.min.js
 extra_css:
-    - css/termynal.css
+  - css/termynal.css
 
 theme:
   name: material
   custom_dir: assets
-  
+
   features:
-    - navigation.indexes          # Implied section 'index.md' files
-    - navigation.tabs             # Static upper section tabs (exist)
-    - navigation.tabs.sticky      # Static upper section tabs (stay)
-    - navigation.footer           # Add 'previous' and 'next' buttons in the footer
-    - navigation.instant          # Keep navigation from reloading
+    - navigation.indexes # Implied section 'index.md' files
+    - navigation.tabs # Static upper section tabs (exist)
+    - navigation.tabs.sticky # Static upper section tabs (stay)
+    - navigation.footer # Add 'previous' and 'next' buttons in the footer
+    - navigation.instant # Keep navigation from reloading
     - navigation.instant.progress # Display page loading progress-bar ( > 400ms)
-    - search.highlight            # Highlight all occurrences of queried string
-    - search.share                # Search Query can be copied to Clipboard
-    - search.suggest              # Display likeliest completion for the last queried word
-    
+    - search.highlight # Highlight all occurrences of queried string
+    - search.share # Search Query can be copied to Clipboard
+    - search.suggest # Display likeliest completion for the last queried word
+
   palette:
     # Light Mode
     - media: "(prefers-color-scheme: light)"
@@ -146,4 +150,3 @@ plugins:
   - search
   - roamlinks # Obsidian Style Image Support ![[<attachment_name>]]
   - mkdocs_quiz
-

@@ -314,15 +314,10 @@ services:
     Altere o código do pipeline para que ele armazene as informações dos sensores em um banco de dados relacional.
 
     Você pode utilizar coisas como:
+
     - SQLite ou PostgreSQL (atualize `docker-compose.yml` para incluir o serviço de banco de dados)
     - ORM para facilitar a interação com o banco de dados, como o SQLAlchemy.
 
-!!! exercise
-    Altere o código do pipeline para que ele armazene as informações dos sensores em um banco de dados relacional.
-
-    Você pode utilizar coisas como:
-    - SQLite ou PostgreSQL (atualize `docker-compose.yml` para incluir o serviço de banco de dados)
-    - ORM para facilitar a interação com o banco de dados, como o SQLAlchemy.
 
 !!! exercise
     Crie uma `view` que exiba as medidas resumo da última hora e dados dos sensores.

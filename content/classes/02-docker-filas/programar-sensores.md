@@ -414,7 +414,7 @@ Também será necessário atualizar o `docker-compose.yml`:
             restart: always
             ports:
             - 5672:5672
-            - 15672:15672
+            - 15675:15672
             volumes:
             - ./rabbitmq:/var/lib/rabbitmq
             environment:
