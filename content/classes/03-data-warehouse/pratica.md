@@ -298,3 +298,26 @@ Um dashboard é uma ferramenta de visualização de dados que permite acompanhar
         O **ETL** deve ser projetado para lidar com atualizações, entretanto, nosso **ETL** atual não considera essas mudanças e supõe que os dados são sempre novos (incrementais).
 
         Para lidar com isso, precisaríamos implementar uma lógica de atualização que identificasse registros existentes no Data Warehouse e os atualizasse conforme necessário.
+
+## Limpeza
+
+!!! exercise
+    Para parar e remover os *containers* e volumes:
+
+    !!! warning
+        O `-v` no comando abaixo irá garantir que os volumes criados sejam apagados.
+
+        Utilize isto quando quiser apagar dados persistidos em volumes do docker.
+
+        Nesta aula, os volumes mapeiam para pastas do próprio sistema (*bind mounts*), mas fica o aprendizado para as próximas aulas.
+
+    !!! danger "Limpeza!"
+        Lembre-se que você criou/alterou dois conjuntos de serviços nesta aula!
+
+    <div class="termy">
+
+    ```bash
+    $ docker compose down -v
+    ```
+
+    </div>

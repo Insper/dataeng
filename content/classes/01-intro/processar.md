@@ -85,7 +85,7 @@ AWS_REGION=us-east-1
     !!! answer "Resposta"
         Pergunte ao professor caso não saiba onde encontrar esta informação!
 
-Uma outra boa prática é criar um ambiente virtual para aula. Você pode fazer isso utilizando o `venv`, `conda` ou outra ferramenta de sua preferência.
+Uma outra boa prática é criar um ambiente virtual para aula. Você pode fazer isso utilizando o `venv`, `conda`, `uv` ou outra ferramenta de sua preferência.
 
 !!! exercise
     Crie ou ative seu ambiente virtual
