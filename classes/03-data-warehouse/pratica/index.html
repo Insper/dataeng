@@ -16,7 +16,7 @@
         <link rel="prev" href="../data-warehousing/">
       
       
-        <link rel="next" href="../../../about/">
+        <link rel="next" href="../olap/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -829,10 +829,6 @@
       
         
       
-        
-      
-        
-      
     
     
     
@@ -864,6 +860,59 @@
           <label class="md-nav__title" for="__nav_2_3">
             <span class="md-nav__icon md-icon"></span>
             03 - Data Warehousing
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_1" id="__nav_2_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Parte I
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Parte I
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1046,9 +1095,202 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#limpeza" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limpeza
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_2" id="__nav_2_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Parte II
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Parte II
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../olap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sistemas OLAP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../uv/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Conhecendo o uv
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../duckdb/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DuckDB
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../clickhouse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ClickHouse
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../links/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Links interessantes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -1211,6 +1453,15 @@
   <a href="#para-finalizar" class="md-nav__link">
     <span class="md-ellipsis">
       Para finalizar
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limpeza" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limpeza
     </span>
   </a>
   
@@ -2117,6 +2368,30 @@ Você pode utilizar bibliotecas como <code>pandas</code> para facilitar a manipu
 <p>Para lidar com isso, precisaríamos implementar uma lógica de atualização que identificasse registros existentes no Data Warehouse e os atualizasse conforme necessário.</p>
 </div>
 </div>
+<h2 id="limpeza">Limpeza</h2>
+<div class="admonition exercise exercise-self-progress" id="exercise_16">
+<p class="admonition-title">Exercise</p>
+<form class="quiz-form"><p>Para parar e remover os <em>containers</em> e volumes:</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>O <code>-v</code> no comando abaixo irá garantir que os volumes criados sejam apagados.</p>
+<p>Utilize isto quando quiser apagar dados persistidos em volumes do docker.</p>
+<p>Nesta aula, os volumes mapeiam para pastas do próprio sistema (<em>bind mounts</em>), mas fica o aprendizado para as próximas aulas.</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Limpeza!</p>
+<p>Lembre-se que você criou/alterou dois conjuntos de serviços nesta aula!</p>
+</div>
+<div class="termy">
+<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>$<span class="w"> </span>docker<span class="w"> </span>compose<span class="w"> </span>down<span class="w"> </span>-v
+</code></pre></div>
+</div>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
+</div></form></div>
 <script type="text/javascript">
 // Sistema de processamento de exercícios de múltipla escolha
 function processChoiceExercises() {
@@ -3225,13 +3500,13 @@ document.addEventListener('click', function(e) {
         
         
           
-          <a href="../../../about/" class="md-footer__link md-footer__link--next" aria-label="Next: Regras">
+          <a href="../olap/" class="md-footer__link md-footer__link--next" aria-label="Next: Sistemas OLAP">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Regras
+                Sistemas OLAP
               </div>
             </div>
             <div class="md-footer__button md-icon">

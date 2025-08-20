@@ -13,10 +13,10 @@
       
       
       
-        <link rel="prev" href="../../02-docker-filas/programar-pipeline/">
+        <link rel="prev" href="../pratica/">
       
       
-        <link rel="next" href="../linha-tempo/">
+        <link rel="next" href="../uv/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Introdução - Engenharia de Dados</title>
+        <title>Sistemas OLAP - Engenharia de Dados</title>
       
     
     
@@ -81,7 +81,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introducao" class="md-skip">
+        <a href="#sistemas-olap" class="md-skip">
           Skip to content
         </a>
       
@@ -117,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Introdução
+              Sistemas OLAP
             
           </span>
         </div>
@@ -867,10 +867,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -889,11 +887,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_1" >
         
           
           <label class="md-nav__link" for="__nav_2_3_1" id="__nav_2_3_1_label" tabindex="0">
@@ -909,7 +907,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_3_1">
             <span class="md-nav__icon md-icon"></span>
             Parte I
@@ -920,32 +918,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Introdução
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../intro/" class="md-nav__link">
         
   
   
@@ -956,149 +932,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#o-problema" class="md-nav__link">
-    <span class="md-ellipsis">
-      O problema
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#oltp" class="md-nav__link">
-    <span class="md-ellipsis">
-      OLTP
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="OLTP">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#caracteristicas-principais-do-oltp" class="md-nav__link">
-    <span class="md-ellipsis">
-      Características principais do OLTP:
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#olap" class="md-nav__link">
-    <span class="md-ellipsis">
-      OLAP
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="OLAP">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#caracteristicas-principais-do-olap" class="md-nav__link">
-    <span class="md-ellipsis">
-      Características principais do OLAP:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#oltp-vs-olap-padroes-de-uso" class="md-nav__link">
-    <span class="md-ellipsis">
-      OLTP vs OLAP: Padrões de Uso
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ambientes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ambientes
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Ambientes">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#tipos-de-ambientes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tipos de Ambientes
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Tipos de Ambientes">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#desenvolvimento-dev" class="md-nav__link">
-    <span class="md-ellipsis">
-      Desenvolvimento (DEV)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#homologacaostaging-stg" class="md-nav__link">
-    <span class="md-ellipsis">
-      Homologação/Staging (STG)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#producao-prod" class="md-nav__link">
-    <span class="md-ellipsis">
-      Produção (PROD)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1185,8 +1018,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -1207,11 +1042,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2_3_2" id="__nav_2_3_2_label" tabindex="0">
@@ -1227,7 +1062,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_3_2">
             <span class="md-nav__icon md-icon"></span>
             Parte II
@@ -1238,10 +1073,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../olap/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Sistemas OLAP
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1252,6 +1109,35 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#fluxo-dw" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxo DW
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1465,125 +1351,11 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#o-problema" class="md-nav__link">
+  <a href="#fluxo-dw" class="md-nav__link">
     <span class="md-ellipsis">
-      O problema
+      Fluxo DW
     </span>
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#oltp" class="md-nav__link">
-    <span class="md-ellipsis">
-      OLTP
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="OLTP">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#caracteristicas-principais-do-oltp" class="md-nav__link">
-    <span class="md-ellipsis">
-      Características principais do OLTP:
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#olap" class="md-nav__link">
-    <span class="md-ellipsis">
-      OLAP
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="OLAP">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#caracteristicas-principais-do-olap" class="md-nav__link">
-    <span class="md-ellipsis">
-      Características principais do OLAP:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#oltp-vs-olap-padroes-de-uso" class="md-nav__link">
-    <span class="md-ellipsis">
-      OLTP vs OLAP: Padrões de Uso
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ambientes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ambientes
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Ambientes">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#tipos-de-ambientes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tipos de Ambientes
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Tipos de Ambientes">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#desenvolvimento-dev" class="md-nav__link">
-    <span class="md-ellipsis">
-      Desenvolvimento (DEV)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#homologacaostaging-stg" class="md-nav__link">
-    <span class="md-ellipsis">
-      Homologação/Staging (STG)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#producao-prod" class="md-nav__link">
-    <span class="md-ellipsis">
-      Produção (PROD)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2020,45 +1792,12 @@ body {
   }
 }
 </style>
-<h1 id="introducao">Introdução</h1>
-<p>Nas aulas anteriores, exploramos o ciclo de vida de engenharia de dados (<strong>ingestão</strong>, <strong>transformação</strong> e <strong>disponibilização</strong>) e a criação de <em>softwares</em> desacoplados que interagem entre si. Na aula de hoje, vamos explorar:</p>
-<ul>
-<li>Data warehouse</li>
-<li>Contexto histórico de criação das solução.</li>
-</ul>
-<h2 id="o-problema">O problema</h2>
-<p>Como engenheiro de dados, você terá que trabalhar lado a lado, interagir e levantar requisitos de profissionais como <a href="../../01-intro/profissionais/">cientistas de dados e analistas de dados</a>.</p>
-<p>Suponha que você foi designado para um projeto que envolve a criação de um <em>Dashboard</em> para analisar os dados de vendas.</p>
-<p>Para levantar os requisitos, você marca uma reunião com os <em>stakeholders</em> do projeto. Ao ser perguntado sobre os objetivos do projeto, o analista de dados menciona:</p>
-<div class="admonition quote">
-<p class="admonition-title">Quote</p>
-<p>A diretoria do departamento de vendas, que atua como cliente neste projeto, reclamou da falta de informações consolidadas sobre as vendas.</p>
-<p>Os gestores desejam ter uma visão clara e integrada das vendas, permitindo identificar tendências, oportunidades e áreas que precisam de atenção.</p>
-</div>
-<p>O time de engenharia logo comenta:</p>
-<div class="admonition quote">
-<p class="admonition-title">Quote</p>
-<p>Já levantamos que os dados de vendas estão armazenados em um <strong>RDBMS</strong> (ou <strong>SGBD-R</strong>, <em>Sistema de Gerenciamento de Banco de Dados Relacional</em>) <a href="https://www.postgresql.org/"><strong>PostgreSQL</strong></a>, que pode atuar como fonte dos dados.</p>
-</div>
-<p>O analista de dados, por sua vez, complementa:</p>
-<div class="admonition quote">
-<p class="admonition-title">Quote</p>
-<p>Nossa conversa inicial indicou que a principal necessidade, neste momento, seria uma visão integrada e histórica da evolução das vendas.</p>
-<p>Como os gestores desejam visualizar as vendas agregadas por <strong>UF</strong> e realizar filtros por <em>período</em>, a proposta se encaminha para a criação de um <strong>Dashboard</strong>.</p>
-</div>
-<p>Sabendo que os dados estão disponíveis no <strong>PostgreSQL</strong>, um analista de dados comenta.</p>
-<div class="admonition quote">
-<p class="admonition-title">Quote</p>
-<p>Nossa solução de <em>Dashboard</em> integra com o <strong>PostgreSQL</strong>.</p>
-<p>Posso criar uma <em>query</em> <strong>SQL</strong> e consumir direto deste banco de dados.</p>
-</div>
+<h1 id="sistemas-olap">Sistemas OLAP</h1>
+<p>Na <a href="../intro/">aula passada</a>, aprendemos sobre por que separar os ambientes de produção e <em>analytics</em>.</p>
+<p>Isto nos levou a pensar em duas categorias de sistemas: <strong>OLTP</strong> (<em>Online Transaction Processing</em>) e <strong>OLAP</strong> (<em>Online Analytical Processing</em>)</p>
 <div class="admonition exercise text long exercise-long" id="exercise_1">
 <p class="admonition-title">Exercise</p>
-<form class="quiz-form"><p>O que você acha da proposta do analista?</p>
-<details>
-<summary>Caso não tenha entendido muito a pergunta...</summary>
-<p>O que você acha da proposta do analista de dados de criar um <em>Dashboard</em> que se conecta e consome os dados diretamente do <strong>PostgreSQL</strong>?</p>
-</details>
+<form class="quiz-form"><p>Qual a principal aplicação de sistemas <strong>OLTP</strong>?</p>
 <div class="form-elements">
 <div class="quiz-text-container">
 
@@ -2069,177 +1808,12 @@ body {
 <button class="quiz-submit-button" type="submit">Submit</button>
 </div></form><div class="admonition answer quiz-answer no-indent">
 <p class="admonition-title">Answer</p>
-<p>A proposta do analista de dados de criar um <em>Dashboard</em> que se conecta e consome os dados diretamente do <strong>PostgreSQL</strong> é geralmente problemática.</p>
-<p>Apesar de ser uma abordagem utilizada especialmente por empresas menores, ela pode levar a desafios significativos em termos de escalabilidade, manutenção e governança dos dados.</p>
-<p>Possíveis problemas:</p>
-<ul>
-<li>O que vai acontecer quando um <strong>processamento pesado</strong> for realizado diretamente no <strong>PostgreSQL</strong>?<ul>
-<li>As vendas vão parar para que o <strong>Dashboard</strong> possa ser atualizado?</li>
-</ul>
-</li>
-<li>O que vai acontecer quanto à <strong>segurança</strong> e <strong>governança dos dados</strong>?<ul>
-<li>Quem terá acesso a esses dados?</li>
-<li>Como garantir que os dados sensíveis estejam protegidos?</li>
-</ul>
-</li>
-<li>O que vai acontecer quanto à <strong>evolução</strong> do <strong>software</strong> <em>versus</em> a evolução do <strong>Dashboard</strong>?<ul>
-<li>Como garantir que as mudanças no sistema gerencial (<strong>novas features</strong>) não quebrem o <strong>Dashboard</strong>?</li>
-<li>Como garantir que o analista não realize modificações que quebrem o sistema gerencial?</li>
-</ul>
-</li>
-</ul>
+<p>A principal aplicação de sistemas <strong>OLTP</strong> é em cenários onde as prioridades são o processamento de transações e a manutenção da integridade dos dados (propriedades <em>ACID</em>), como em sistemas de vendas, reservas e gerenciamento de estoque.</p>
 </div>
-</div>
-<p>Podemos perceber que o servidor utilizado pelo sistema de vendas da empresa possui um propósito específico, que é o processamento das vendas, garantindo que os dados estejam íntegros ao longo de todo o ciclo de vida das transações. Não é objetivo deste servidor propiciar análises complexas ou relatórios detalhados (<em>data analytics</em>).</p>
-<p>Com isto, vemos que precisamos entender melhor os diferentes tipos de sistemas de banco de dados e suas finalidades específicas.</p>
-<h2 id="oltp">OLTP</h2>
-<p>O <strong>OLTP</strong> (<em>Online Transaction Processing</em>) evoluiu dos primeiros sistemas de processamento de dados comerciais, onde cada escrita no banco correspondia a uma transação comercial real: efetuar uma venda, fazer um pedido, pagar um salário. Hoje, o termo "transação" se expandiu para qualquer grupo de leituras e escritas que formam uma unidade lógica.</p>
-<p>Sistemas <strong>OLTP</strong> são projetados para permitir leituras e escritas de <strong>baixa latência</strong> por milhares de usuários simultâneos, contrastando com processamento em lote que roda periodicamente.</p>
-<h3 id="caracteristicas-principais-do-oltp">Características principais do OLTP:</h3>
-<ul>
-<li><strong>Padrão de acesso interativo</strong>: A aplicação busca poucos registros por chave usando índices</li>
-<li><strong>Baixa latência e alta concorrência</strong>: Seleção ou atualização de registros em menos de um milissegundo</li>
-<li><strong>Transações ACID</strong>: Garantem <em>Atomicity</em>, <em>Consistency</em>, <em>Isolation</em> e <em>Durability</em></li>
-<li><strong>Dados normalizados</strong>: Estrutura otimizada para minimizar redundância e garantir integridade</li>
-<li><strong>Operações pontuais</strong>: Inserções e atualizações baseadas em input do usuário</li>
-</ul>
-<div class="admonition info">
-<p class="admonition-title">OLTP e ACID</p>
-<p>Nem todo sistema OLTP precisa ter propriedades ACID completas.</p>
-<p>Alguns sistemas relaxam essas restrições para melhor performance e escala, usando modelos como <strong>eventual consistency</strong>.</p>
-</div>
-<div class="admonition example">
-<p class="admonition-title">Exemplos de sistemas OLTP</p>
-<ul>
-<li><strong>Sistema bancário</strong>: Transferências entre contas (transação atômica)</li>
-<li><strong>E-commerce</strong>: Processamento de pedidos e atualizações de estoque</li>
-<li><strong>Reserva de voos</strong>: Milhares de usuários consultando e reservando assentos simultaneamente</li>
-</ul>
-</div>
-<div class="admonition exercise choice exercise-choice" data-answer-idx="2" id="exercise_1">
-<p class="admonition-title">Características do OLTP</p>
-<form class="quiz-form"><p>Qual das seguintes características <strong>NÃO</strong> é típica de um sistema OLTP?</p>
-<div class="form-elements">
-<div class="quiz-alternative-set">
-  
-<label class="quiz-alternative" data-alt-index="0">
-  <div class="content">
-    <input type="hidden" name="data" value="">
-    <span class="choice-text">Processamento rápido de transações pequenas</span>
-  </div>
-</label>
-
-<label class="quiz-alternative" data-alt-index="1">
-  <div class="content">
-    <input type="hidden" name="data" value="">
-    <span class="choice-text">Garantia de consistência ACID</span>
-  </div>
-</label>
-
-<label class="quiz-alternative" data-alt-index="2">
-  <div class="content">
-    <input type="hidden" name="data" value="">
-    <span class="choice-text">Otimização para consultas analíticas complexas</span>
-  </div>
-</label>
-
-<label class="quiz-alternative" data-alt-index="3">
-  <div class="content">
-    <input type="hidden" name="data" value="">
-    <span class="choice-text">Suporte a múltiplos usuários concorrentes</span>
-  </div>
-</label>
-
-</div>
-<button class="quiz-submit-button" type="submit">Submit</button>
-</div></form><div class="admonition answer quiz-answer no-indent">
-<p class="admonition-title">Answer</p>
-<p>Sistemas <strong>OLTP</strong> são otimizados para transações rápidas e operações <em>CRUD</em>, não para <strong>consultas analíticas complexas</strong>.</p>
-<p>Consultas analíticas são características de sistemas <strong>OLAP</strong> (Online Analytical Processing).</p>
-</div>
-</div>
-<div class="admonition example">
-<p class="admonition-title">Exemplos de soluções OLTP</p>
-<ul>
-<li>MySQL</li>
-<li>PostgreSQL</li>
-<li>Oracle Database</li>
-</ul>
-</div>
-<h2 id="olap">OLAP</h2>
-<p>O <strong>OLAP</strong> (<em>Online Analytical Processing</em>) surgiu quando bancos de dados começaram a ser usados para <strong>análise de dados</strong> (<em>data analytics</em>), com padrões de acesso muito diferentes do processamento transacional.</p>
-<p>Enquanto <strong>OLTP</strong> busca poucos registros, uma consulta analítica típica precisa <strong>escanear milhares ou milhões de registros</strong>, lendo apenas <strong>algumas colunas</strong> e calculando estatísticas agregadas (<em>count</em>, <em>sum</em>, <em>average</em>) ao invés de retornar dados brutos.</p>
-<h3 id="caracteristicas-principais-do-olap">Características principais do OLAP:</h3>
-<ul>
-<li><strong>Consultas analíticas de grande escala</strong>: Escaneiam grandes volumes, frequentemente 100MB+ por consulta</li>
-<li><strong>Foco em agregações</strong>: Cálculos como totais, médias, contagens ao invés de registros individuais</li>
-<li><strong>Otimizado para <em>scan</em></strong>: Bancos <strong>colunares</strong> reduzem a dependência de índices para melhor performance de varredura</li>
-<li><strong>Processamento em lote</strong>: Atualizações periódicas, não em tempo real</li>
-<li><strong>Ineficiente para <em>lookups</em></strong>: Não adequado para busca de registros individuais</li>
-</ul>
-<div class="admonition example">
-<p class="admonition-title">Exemplos típicos de consultas OLAP</p>
-<ul>
-<li><em>"Qual foi a receita total de cada loja em janeiro?"</em></li>
-<li><em>"Quantos produtos a mais vendemos durante a promoção?"</em></li>
-<li><em>"Qual marca é mais comprada junto com fraldas da marca X?"</em></li>
-</ul>
-</div>
-<h3 id="oltp-vs-olap-padroes-de-uso">OLTP vs OLAP: Padrões de Uso</h3>
-<p>Vamos resumir, de forma geral, os <strong>padrões de uso</strong> de <strong>OLTP</strong> e <strong>OLAP</strong>:</p>
-<table>
-<thead>
-<tr>
-<th>Aspecto</th>
-<th>OLTP</th>
-<th>OLAP</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Padrão de consulta</strong></td>
-<td>Poucos registros por chave</td>
-<td>Scan de milhões de registros</td>
-</tr>
-<tr>
-<td><strong>Latência</strong></td>
-<td>Milissegundos</td>
-<td>Segundos a minutos</td>
-</tr>
-<tr>
-<td><strong>Volume por operação</strong></td>
-<td>Registros individuais</td>
-<td>Grandes agregações</td>
-</tr>
-<tr>
-<td><strong>Usuários típicos</strong></td>
-<td>Aplicações e usuários finais</td>
-<td>Analistas de negócio</td>
-</tr>
-<tr>
-<td><strong>Finalidade</strong></td>
-<td>Estado da aplicação</td>
-<td>Business Intelligence</td>
-</tr>
-<tr>
-<td><strong>Exemplo</strong></td>
-<td>Consultar saldo da conta</td>
-<td>Receita total por região/mês</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition warning">
-<p class="admonition-title">OLTP para Analytics: Problema Comum</p>
-<p>Empresas pequenas frequentemente rodam analytics diretamente no OLTP. Isso funciona no curto prazo, mas não é escalável devido a:</p>
-<ul>
-<li><strong>Limitações estruturais</strong> do OLTP para consultas analíticas</li>
-<li><strong>Contenção de recursos</strong> entre cargas transacionais e analíticas</li>
-</ul>
-<p>Engenheiros devem configurar integrações adequadas sem degradar a performance dos sistemas produtivos.</p>
 </div>
 <div class="admonition exercise text long exercise-long" id="exercise_2">
 <p class="admonition-title">Exercise</p>
-<form class="quiz-form"><p>Considerando o cenário apresentado no início da aula, explique por que conectar o <strong>Dashboard</strong> diretamente ao <strong>PostgreSQL</strong> (sistema OLTP) pode causar problemas de performance.</p>
+<form class="quiz-form"><p>Qual a principal aplicação de sistemas <strong>OLAP</strong>?</p>
 <div class="form-elements">
 <div class="quiz-text-container">
 
@@ -2250,104 +1824,86 @@ body {
 <button class="quiz-submit-button" type="submit">Submit</button>
 </div></form><div class="admonition answer quiz-answer no-indent">
 <p class="admonition-title">Answer</p>
-<p>Conectar o Dashboard diretamente ao PostgreSQL (OLTP) pode causar sérios problemas de performance porque:</p>
-<ol>
-<li>
-<p><strong>Consultas analíticas pesadas</strong>: O Dashboard precisará executar queries com agregações complexas (vendas por mês, por UF) que são computacionalmente caras</p>
-</li>
-<li>
-<p><strong>Bloqueio de operações</strong>: Enquanto o PostgreSQL processa essas consultas pesadas, as operações de venda podem ficar lentas ou bloqueadas</p>
-</li>
-<li>
-<p><strong>Estrutura não otimizada</strong>: Bancos OLTP são normalizados para eficiência transacional, não para consultas analíticas</p>
-</li>
-<li>
-<p><strong>Concorrência</strong>: O sistema precisa atender tanto às vendas em tempo real quanto às consultas do Dashboard, competindo pelos mesmos recursos</p>
-</li>
-</ol>
-<p>Por isso, a solução adequada seria extrair os dados do OLTP, transformá-los e carregá-los em um sistema OLAP otimizado para análises.</p>
+<p>A principal aplicação de sistemas <strong>OLAP</strong> ocorre quando a prioridade é a análise de grandes volumes de dados, como em sistemas de suporte à decisão, <em>data warehouses</em> e análise de tendências.</p>
 </div>
 </div>
-<p>Agora que você entendeu a importância de <strong>separar as cargas de trabalho</strong> transacionais e analíticas, vamos explorar os diferentes <strong>ambientes</strong> utilizados por empresas. Não é algo que iremos aprofundar muito, mas é importante ter uma visão geral.</p>
-<h2 id="ambientes">Ambientes</h2>
-<p>No desenvolvimento de soluções, é fundamental trabalhar com diferentes ambientes para garantir a qualidade, segurança e confiabilidade dos sistemas. Cada ambiente serve a um propósito específico no ciclo de desenvolvimento e operação.</p>
-<h3 id="tipos-de-ambientes">Tipos de Ambientes</h3>
-<h4 id="desenvolvimento-dev">Desenvolvimento (DEV)</h4>
-<p>Ambiente onde os engenheiros desenvolvem e testam inicialmente suas soluções.</p>
-<ul>
-<li><strong>Propósito</strong>: Desenvolvimento e testes iniciais</li>
-<li><strong>Dados</strong>: Dados sintéticos ou subconjuntos pequenos dos dados reais</li>
-<li><strong>Acesso</strong>: Restrito à equipe de desenvolvimento</li>
-<li><strong>Estabilidade</strong>: Esperada instabilidade durante desenvolvimento</li>
-</ul>
-<h4 id="homologacaostaging-stg">Homologação/Staging (STG)</h4>
-<p>Ambiente que replica o ambiente de produção para testes finais.</p>
-<ul>
-<li><strong>Propósito</strong>: Testes de integração, validação de performance e homologação</li>
-<li><strong>Dados</strong>: Dados similares aos de produção, mas mascarados ou anonimizados</li>
-<li><strong>Acesso</strong>: Equipe de desenvolvimento, QA e stakeholders para homologação</li>
-<li><strong>Estabilidade</strong>: Deve ser estável para testes confiáveis</li>
-</ul>
-<h4 id="producao-prod">Produção (PROD)</h4>
-<p>Ambiente onde o sistema opera para usuários finais.</p>
-<ul>
-<li><strong>Propósito</strong>: Operação real do sistema</li>
-<li><strong>Dados</strong>: Dados reais da empresa</li>
-<li><strong>Acesso</strong>: Restrito e auditado</li>
-<li><strong>Estabilidade</strong>: Máxima estabilidade e disponibilidade</li>
-</ul>
-<div class="admonition warning">
-<p class="admonition-title">Segurança nos Ambientes</p>
-<p>É fundamental que os dados sensíveis de produção <strong>nunca</strong> sejam copiados diretamente para ambientes de desenvolvimento. Utilize técnicas de:</p>
-<ul>
-<li><strong>Mascaramento de dados</strong>: Substituição de dados sensíveis por valores falsos</li>
-<li><strong>Anonimização</strong>: Remoção de identificadores pessoais</li>
-<li><strong>Dados sintéticos</strong>: Geração de dados artificiais que mantêm as características estatísticas</li>
-</ul>
-</div>
-<div class="admonition exercise choice exercise-choice" data-answer-idx="0" id="exercise_2">
-<p class="admonition-title">Ambientes de Desenvolvimento</p>
-<form class="quiz-form"><p>Um engenheiro de dados precisa testar um novo pipeline ETL que processará dados de clientes contendo CPF, nomes e informações financeiras. Em qual ambiente ele deve realizar os primeiros testes?</p>
-<div class="form-elements">
-<div class="quiz-alternative-set">
-  
-<label class="quiz-alternative" data-alt-index="0">
-  <div class="content">
-    <input type="hidden" name="data" value="">
-    <span class="choice-text">Desenvolvimento (DEV) com dados mascarados</span>
-  </div>
-</label>
+<h2 id="fluxo-dw">Fluxo DW</h2>
+<p>Para ilustrar melhor o fluxo de dados entre sistemas <strong>OLTP</strong> e <strong>OLAP</strong>, considere o diagrama abaixo.</p>
+<pre class="mermaid"><code>graph TD
+    subgraph Usuários
+        Cliente(Cliente)
+        AtendenteSuporte(Atendente de suporte)
+        ContadorFinanceiro(Contador)
+    end
 
-<label class="quiz-alternative" data-alt-index="1">
-  <div class="content">
-    <input type="hidden" name="data" value="">
-    <span class="choice-text">Produção (PROD) com dados reais</span>
-  </div>
-</label>
+    subgraph "Sistemas OLTP"
+        SiteEcommerce(Site de e-commerce)
+        SistemaCRM(Sistema de CRM)
+        SistemaContabil(Sistema contábil)
 
-<label class="quiz-alternative" data-alt-index="2">
-  <div class="content">
-    <input type="hidden" name="data" value="">
-    <span class="choice-text">Diretamente em Homologação (STG)</span>
-  </div>
-</label>
+        BDVendas[(BD de vendas)]
+        BDAtendimento[(BD de atendimento)]
+        BDFinanceiro[(BD financeiro)]
 
-<label class="quiz-alternative" data-alt-index="3">
-  <div class="content">
-    <input type="hidden" name="data" value="">
-    <span class="choice-text">Produção (PROD) em horário de baixo uso</span>
-  </div>
-</label>
+        SiteEcommerce --&gt; BDVendas
+        SistemaCRM --&gt; BDAtendimento
+        SistemaContabil --&gt; BDFinanceiro
+    end
 
+    subgraph "Sistemas OLAP"
+        ExtracaoVendas[Extração]
+        ExtracaoAtendimento[Extração]
+        ExtracaoFinanceiro[Extração]
+
+        TransformacaoVendas[Transformação]
+        TransformacaoAtendimento[Transformação]
+        TransformacaoFinanceiro[Transformação]
+
+        CargaVendas[Carga]
+        CargaAtendimento[Carga]
+        CargaFinanceiro[Carga]
+
+        ArmazemDados[(Armazém de dados - Data Warehouse)]
+
+        BDVendas --&gt; ExtracaoVendas
+        BDAtendimento --&gt; ExtracaoAtendimento
+        BDFinanceiro --&gt; ExtracaoFinanceiro
+
+        ExtracaoVendas --&gt; TransformacaoVendas
+        ExtracaoAtendimento --&gt; TransformacaoAtendimento
+        ExtracaoFinanceiro --&gt; TransformacaoFinanceiro
+
+        TransformacaoVendas --&gt; CargaVendas
+        TransformacaoAtendimento --&gt; CargaAtendimento
+        TransformacaoFinanceiro --&gt; CargaFinanceiro
+
+        CargaVendas --&gt; ArmazemDados
+        CargaAtendimento --&gt; ArmazemDados
+        CargaFinanceiro --&gt; ArmazemDados
+    end
+
+    Cliente --&gt; SiteEcommerce
+    AtendenteSuporte --&gt; SistemaCRM
+    ContadorFinanceiro --&gt; SistemaContabil</code></pre>
+<p>Uma empresa pode conter diversos sistemas <strong>OLTP</strong>. Eles suportam o dia a dia da operação do negócio (sistema de vendas, CRM, gestão de contas, etc.), sendo esperado deles resposta com baixa latência e foco na integridade dos dados.</p>
+<p>Para que os dados desses sistemas possam ser analisados de forma eficiente, processos de <strong>ELT</strong> ou <strong>ETL</strong> (<strong>Extract-Transform-Load</strong>) extraem dados de diversos sistemas transacionais, transformam para um formato adequado à análise e os carregam em um <strong>Data Warehouse (DW)</strong>.</p>
+<p>Quando os analistas de negócio ou cientistas de dados necessitarem de informações para análise, eles consultarão o <strong>Data Warehouse (DW)</strong>.</p>
+<pre class="mermaid"><code>graph LR
+    subgraph Analistas
+        AnalistaNegocios(Analista de negócios)
+        Consulta[Query de consulta]
+        AnalistaNegocios --&gt; Consulta
+    end
+
+    ArmazemDados[(Armazém de dados - Data Warehouse)]
+
+    Consulta --&gt; ArmazemDados</code></pre>
+<div class="admonition info">
+<p class="admonition-title">Info!</p>
+<p>O <strong>DW</strong> é otimizado para consultas complexas e análises de grandes volumes de dados.</p>
 </div>
-<button class="quiz-submit-button" type="submit">Submit</button>
-</div></form><div class="admonition answer quiz-answer no-indent">
-<p class="admonition-title">Answer</p>
-<p>O engenheiro deve usar o ambiente de Desenvolvimento (DEV) com dados mascarados. Nunca se deve testar diretamente em produção, e os primeiros testes devem ocorrer em DEV antes de ir para homologação.</p>
-<p>Ainda, é adequado que dados sensíveis sejam mascarados em ambientes não-produtivos.</p>
-</div>
-</div>
-<p>Sabendo que necessitaremos de um serviço separado para <em>analytics</em>, é importante considerar a arquitetura do sistema e como os dados serão processados e armazenados. Na sequência, exploraremos as soluções de arquitetura propostas para atender a essas necessidades, de um ponto de vista histórico.</p>
+<p>Nesta aula, vamos explorar algumas soluções <strong>OLAP</strong> (<em>Online Analytical Processing</em>) e como eles se diferenciam de soluções focadas em <strong>OLTP</strong>.</p>
+<!-- Os dados no DW são organizados de forma a facilitar a análise, geralmente utilizando modelos de dados como **star schema** ou **snowflake schema**. -->
 <script type="text/javascript">
 // Sistema de processamento de exercícios de múltipla escolha
 function processChoiceExercises() {
@@ -3439,7 +2995,7 @@ document.addEventListener('click', function(e) {
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../02-docker-filas/programar-pipeline/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Programar Pipeline">
+          <a href="../pratica/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Praticando">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -3449,20 +3005,20 @@ document.addEventListener('click', function(e) {
                 Previous
               </span>
               <div class="md-ellipsis">
-                Programar Pipeline
+                Praticando
               </div>
             </div>
           </a>
         
         
           
-          <a href="../linha-tempo/" class="md-footer__link md-footer__link--next" aria-label="Next: Linha do Tempo">
+          <a href="../uv/" class="md-footer__link md-footer__link--next" aria-label="Next: Conhecendo o uv">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Linha do Tempo
+                Conhecendo o uv
               </div>
             </div>
             <div class="md-footer__button md-icon">

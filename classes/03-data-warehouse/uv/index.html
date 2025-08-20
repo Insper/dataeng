@@ -13,10 +13,10 @@
       
       
       
-        <link rel="prev" href="../relembrar-ciclo/">
+        <link rel="prev" href="../olap/">
       
       
-        <link rel="next" href="../docker/">
+        <link rel="next" href="../duckdb/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Exemplo: Sensores - Engenharia de Dados</title>
+        <title>Conhecendo o uv - Engenharia de Dados</title>
       
     
     
@@ -81,7 +81,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#exemplo-sensores" class="md-skip">
+        <a href="#conhecendo-o-uv" class="md-skip">
           Skip to content
         </a>
       
@@ -117,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Exemplo: Sensores
+              Conhecendo o uv
             
           </span>
         </div>
@@ -617,10 +617,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -643,11 +641,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
         
           
           <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
@@ -663,7 +661,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
             02 - Filas e Containers
@@ -677,7 +675,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../relembrar-ciclo/" class="md-nav__link">
+      <a href="../../02-docker-filas/relembrar-ciclo/" class="md-nav__link">
         
   
   
@@ -697,32 +695,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Exemplo: Sensores
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../02-docker-filas/filas/" class="md-nav__link">
         
   
   
@@ -733,44 +709,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#questao-importante" class="md-nav__link">
-    <span class="md-ellipsis">
-      Questão importante
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#filas" class="md-nav__link">
-    <span class="md-ellipsis">
-      Filas
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -783,7 +721,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker/" class="md-nav__link">
+      <a href="../../02-docker-filas/docker/" class="md-nav__link">
         
   
   
@@ -806,7 +744,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../rabbitmq/" class="md-nav__link">
+      <a href="../../02-docker-filas/rabbitmq/" class="md-nav__link">
         
   
   
@@ -829,7 +767,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../programar-sensores/" class="md-nav__link">
+      <a href="../../02-docker-filas/programar-sensores/" class="md-nav__link">
         
   
   
@@ -852,7 +790,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../programar-pipeline/" class="md-nav__link">
+      <a href="../../02-docker-filas/programar-pipeline/" class="md-nav__link">
         
   
   
@@ -880,8 +818,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -896,11 +836,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
         
           
           <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
@@ -916,7 +856,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_3">
             <span class="md-nav__icon md-icon"></span>
             03 - Data Warehousing
@@ -981,7 +921,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03-data-warehouse/intro/" class="md-nav__link">
+      <a href="../intro/" class="md-nav__link">
         
   
   
@@ -1004,7 +944,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03-data-warehouse/linha-tempo/" class="md-nav__link">
+      <a href="../linha-tempo/" class="md-nav__link">
         
   
   
@@ -1027,7 +967,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03-data-warehouse/data-warehousing/" class="md-nav__link">
+      <a href="../data-warehousing/" class="md-nav__link">
         
   
   
@@ -1050,7 +990,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03-data-warehouse/pratica/" class="md-nav__link">
+      <a href="../pratica/" class="md-nav__link">
         
   
   
@@ -1078,8 +1018,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -1100,11 +1042,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2_3_2" id="__nav_2_3_2_label" tabindex="0">
@@ -1120,7 +1062,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_3_2">
             <span class="md-nav__icon md-icon"></span>
             Parte II
@@ -1134,7 +1076,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03-data-warehouse/olap/" class="md-nav__link">
+      <a href="../olap/" class="md-nav__link">
         
   
   
@@ -1154,10 +1096,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../03-data-warehouse/uv/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Conhecendo o uv
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1168,6 +1132,44 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#instalacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instalação
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#criar-ambiente-virtual" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criar ambiente virtual
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1180,7 +1182,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03-data-warehouse/duckdb/" class="md-nav__link">
+      <a href="../duckdb/" class="md-nav__link">
         
   
   
@@ -1203,7 +1205,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03-data-warehouse/clickhouse/" class="md-nav__link">
+      <a href="../clickhouse/" class="md-nav__link">
         
   
   
@@ -1226,7 +1228,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03-data-warehouse/links/" class="md-nav__link">
+      <a href="../links/" class="md-nav__link">
         
   
   
@@ -1358,18 +1360,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#questao-importante" class="md-nav__link">
+  <a href="#instalacao" class="md-nav__link">
     <span class="md-ellipsis">
-      Questão importante
+      Instalação
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#filas" class="md-nav__link">
+  <a href="#criar-ambiente-virtual" class="md-nav__link">
     <span class="md-ellipsis">
-      Filas
+      Criar ambiente virtual
     </span>
   </a>
   
@@ -1394,136 +1396,86 @@
   
 
 
-<h1 id="exemplo-sensores">Exemplo: Sensores</h1>
-<p>Suponha um cenário onde sensores de temperatura são utilizados em uma fábrica. Esses sensores enviam dados de temperatura em tempo real para um sistema central.</p>
-<pre class="mermaid"><code>graph TD
-    %% Nó central
-    C([Endpoint de Ingestão])
-
-    %% Sensores distribuídos
-    S1(((Sensor A)))
-    S2(((Sensor B)))
-    S3(((Sensor C)))
-    S4(((Sensor D)))
-    S5(((Sensor E)))
-    S6(((Sensor F)))
-    S7(((Sensor G)))
-    S8(((Sensor H)))
-
-    %% Ligações
-    S1 --&gt; C
-    S2 --&gt; C
-    S3 --&gt; C
-    S4 --&gt; C
-    S5 --&gt; C
-    S6 --&gt; C
-    S7 --&gt; C
-    S8 --&gt; C</code></pre>
-<p>O <em>endpoint</em> de ingestão é responsável por receber os dados dos sensores e encaminhá-los para tratamento adequado (transformação e disponibilização).</p>
-<div class="admonition example">
-<p class="admonition-title">Exemplo de Mensagem</p>
-<p>Exemplo de mensagem enviada por um sensor:</p>
-<div class="language-json highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nt">&quot;sensor_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;S1&quot;</span><span class="p">,</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">&quot;timestamp&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023-10-01T12:00:00Z&quot;</span><span class="p">,</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nt">&quot;temperature&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">22.5</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">}</span>
+<h1 id="conhecendo-o-uv">Conhecendo o <code>uv</code></h1>
+<p>o <strong>uv</strong> é um gerenciador de pacotes, ambientes e projetos para Python. Ele foi escrito em <em>Rust</em> e serve como uma alternativa a como utilizamos <code>conda</code> e <code>venv</code> nos cursos do Insper.</p>
+<p>Para esta aula e as demais, indicamos utilizar o <strong>uv</strong> para gerenciar ambientes virtuais.</p>
+<div class="admonition attention">
+<p class="admonition-title">Atenção!</p>
+<p>Utilizar o <strong>uv</strong> é opcional.</p>
+<p>Caso prefira, pode ignorar os passos de instalação e seguir com seu gerenciador de pacotes preferido!</p>
+</div>
+<h2 id="instalacao">Instalação</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Linux e MacOS</label><label for="__tabbed_1_2">Windows</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><div class="termy">
+    <div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>$<span class="w"> </span>curl<span class="w"> </span>-LsSf<span class="w"> </span>https://astral.sh/uv/install.sh<span class="w"> </span><span class="p">|</span><span class="w"> </span>sh
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>$<span class="w"> </span>uv<span class="w"> </span>--version
 </code></pre></div>
+</div></p>
 </div>
-<p>Neste cenário, o modelo de ingestão é <em>push-based</em>. Como vantagens para este modelo, podemos considerar:</p>
-<ol>
-<li>
-<p><strong>Dados em tempo real</strong>:</p>
-<ul>
-<li>Sensores podem enviar leituras assim que elas são coletadas, garantindo <strong>baixa latência</strong>.</li>
-<li>Em casos como detecção de superaquecimento, tempo de resposta rápido é essencial.</li>
-</ul>
-</li>
-<li>
-<p><strong>Eficiência energética e de rede</strong>:</p>
-<ul>
-<li>O sensor só transmite quando tem dados, economizando energia (importante para IoT).</li>
-<li>Evita tráfego desnecessário de <em>polling</em> contínuo.</li>
-</ul>
-</li>
-<li>
-<p><strong>Simplicidade de implementação</strong>:</p>
-<ul>
-<li>Sensores não precisam implementar lógica complexa para gerenciar conexões ou estados.</li>
-<li>O envio de dados é feito de forma simples e direta.</li>
-</ul>
-</li>
-<li>
-<p><strong>Armazenamento nos sensores</strong>:</p>
-<ul>
-<li>Os sensores não precisam implementar lógica de armazenamento, pois os dados são enviados em tempo real para o <em>endpoint</em> de ingestão.</li>
-</ul>
-</li>
-</ol>
-<div class="admonition warning">
-<p class="admonition-title">Requisitos!</p>
-<p>Em um cenário real, a escolha pelo modelo de ingestão deve considerar o cenário atual da empresa e os requisitos de projeto.</p>
+<div class="tabbed-block">
+<p>No <strong>Powershell</strong>, faça:</p>
+<p><div class="termy">
+    <div class="language-powershell highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">$</span> <span class="n">powershell</span> <span class="n">-ExecutionPolicy</span> <span class="n">ByPass</span> <span class="n">-c</span> <span class="s2">&quot;irm https://astral.sh/uv/install.ps1 | iex&quot;</span>
+</code></pre></div>
+</div></p>
 </div>
-<h2 id="questao-importante">Questão importante</h2>
-<p>Assim, o <em>endpoint</em> de ingestão precisa ser algum serviço que consiga receber as mensagens e lidar com a taxa de transmissão dos sensores.</p>
-<p>Como cada sensor irá realizar uma conexão para envio das mensagens, precisamos garantir que o sistema seja escalável e capaz de lidar com picos de tráfego.</p>
-<div class="admonition danger">
-<p class="admonition-title">Perigo!</p>
-<p>Caso o <em>endpoint</em> de ingestão não consiga lidar com a taxa de transmissão dos sensores, podemos enfrentar problemas como:</p>
-<ul>
-<li><strong>Perda de dados</strong>: Mensagens podem ser descartadas se o sistema estiver sobrecarregado. O sensor pode não esperar o <em>endpoint</em> processar a mensagem (<em>timeout</em>).</li>
-<li><strong>Atrasos</strong>: O processamento de dados pode ser retardado, afetando a análise em tempo real.</li>
-<li><strong>Lock dos sensores</strong>: Sensores podem ficar bloqueados, impedindo o envio de novas mensagens (espera até que ocorra garantia de entrega da mensagem).</li>
-</ul>
 </div>
-<h2 id="filas">Filas</h2>
-<p>As filas são uma solução eficaz para lidar com a ingestão de dados em cenários de alta taxa de transmissão, como o dos sensores de temperatura.</p>
-<p>Elas irão atuar como intermediárias entre os <strong>produtores de dados</strong> (sensores) e os <strong>consumidores</strong> (serviços de processamento).</p>
-<p>Ao invés do endpoint de ingestão receber as mensagens diretamente dos sensores, os sensores irão publicar suas mensagens em uma fila. Os serviços de processamento, <strong>quando tiverem disponibilidade</strong>, irão consumir as mensagens dessa fila.</p>
-<p>Este é o modelo proposto:</p>
-<pre class="mermaid"><code>flowchart LR
-    S1[Sensor Temp 1] --&gt;|Publish| B[Broker/Fila]
-    S2[Sensor Temp 2] --&gt;|Publish| B
-    S3[Sensor Temp N] --&gt;|Publish| B
-    B --&gt;|Consume| P[Pipeline de Processamento]
-    %% Data Lake/Warehouse
-    P --&gt; D[Serviço de Armazenamento - Disponibilização]</code></pre>
-<div class="admonition info">
-<p class="admonition-title">Benefícios</p>
-<p>Com o uso de filas, ganharemos em:</p>
-<ol>
-<li>
-<p><strong>Escalabilidade</strong>:</p>
-<ul>
-<li>Adicionar mais sensores não sobrecarrega um job central de coleta; cada sensor publica no seu ritmo.</li>
-<li>A fila fará o gerenciamento da entrega para o <em>pipeline de processamento</em>.</li>
-</ul>
-</li>
-<li>
-<p><strong>Desacoplamento</strong>:</p>
-<ul>
-<li>Se o processador (<em>pipeline de processamento</em>) estiver indisponível por alguns segundos, as mensagens podem ficar na fila e serem processadas depois.</li>
-</ul>
-</li>
-</ol>
+</div>
+<p>Caso tenha problemas, veja mais informações <a href="https://docs.astral.sh/uv/getting-started/installation">no site oficial do UV</a>.</p>
+<h2 id="criar-ambiente-virtual">Criar ambiente virtual</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">uv</label><label for="__tabbed_2_2">venv</label><label for="__tabbed_2_3">conda</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Linux e MacOS</label><label for="__tabbed_3_2">Windows</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><div class="termy">
+    <div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>$<span class="w"> </span>uv<span class="w"> </span>venv<span class="w"> </span>--python<span class="w"> </span><span class="m">3</span>.12<span class="w"> </span>.olap-env
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>$<span class="w"> </span><span class="nb">source</span><span class="w"> </span>.olap-env/bin/activate
+</code></pre></div>
+</div></p>
+</div>
+<div class="tabbed-block">
+<p><div class="termy">
+    <div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>$<span class="w"> </span>uv<span class="w"> </span>venv<span class="w"> </span>--python<span class="w"> </span><span class="m">3</span>.12<span class="w"> </span>.olap-env
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>$<span class="w"> </span>.olap-env<span class="se">\S</span>cripts<span class="se">\A</span>ctivate.ps1
+</code></pre></div>
+</div></p>
+</div>
+</div>
 </div>
 <div class="admonition tip">
-<p class="admonition-title">Dica!</p>
-<p>Desacoplamento é o princípio de projetar sistemas de forma que seus componentes funcionem de maneira independente, <strong>reduzindo dependências</strong> diretas entre eles.</p>
-<p>Isso permite que partes do pipeline (como ingestão, processamento e armazenamento) possam evoluir, ser escaladas ou substituídas sem afetar drasticamente as demais.</p>
-<p>Técnicas como uso de filas, APIs e contratos bem definidos entre serviços ajudam a alcançar esse isolamento, trazendo mais resiliência, flexibilidade e facilidade de manutenção às arquiteturas de dados.</p>
+<p class="admonition-title">Tip</p>
+<p>Caso precise, você pode baixar a versão específica de python com:</p>
+<p><div class="termy">
+    <div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>$<span class="w"> </span>uv<span class="w"> </span>python<span class="w"> </span>install<span class="w"> </span><span class="m">3</span>.12
+</code></pre></div>
+</div></p>
+<p>Para ver as versões do Python disponíveis e instaladas, utilize:</p>
+<p><div class="termy">
+    <div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>$<span class="w"> </span>uv<span class="w"> </span>python<span class="w"> </span>list
+</code></pre></div>
+</div></p>
 </div>
-<p>Mas toda tecnologia tem suas complexidades e <em>trade-offs</em>! O uso de filas, por exemplo, pode introduzir latências adicionais e requer um gerenciamento cuidadoso para evitar problemas como o acúmulo de mensagens não processadas.</p>
-<p>Considere se o uso de filas não irá trazer mais complexidade do que benefício ao fluxo de dados. Isso acontece, por exemplo, em <em>pipelines</em> simples e diretos, onde um componente chama outro imediatamente e não há necessidade de desacoplamento ou de lidar com variações de carga.</p>
-<div class="admonition danger">
-<p class="admonition-title">Evite uso de filas se:</p>
-<ul>
-<li>Não há variações de carga / pico de tráfego</li>
-<li>Volume de dados pequeno e previsível</li>
-<li>Não há múltiplos produtores ou consumidores</li>
-<li>A resposta precisa ser imediata e não há tolerância para processamento assíncrono.</li>
-</ul>
-<p>Nestes casos, a sobrecarga operacional de gerenciar e monitorar uma fila pode ser desnecessária!</p>
+</div>
+<div class="tabbed-block">
+<p>No <strong>Powershell</strong>, faça:</p>
+<p><div class="termy">
+    <div class="language-powershell highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="p">$</span> <span class="n">python</span> <span class="n">-m</span> <span class="n">venv</span> <span class="p">.</span><span class="n">olap-env</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="p">$</span> <span class="p">.</span><span class="n">olap-env</span><span class="p">\</span><span class="n">Scripts</span><span class="p">\</span><span class="n">activate</span>
+</code></pre></div>
+</div></p>
+</div>
+<div class="tabbed-block">
+<p><div class="termy">
+    <div class="language-powershell highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="p">$</span> <span class="n">conda</span> <span class="n">create</span> <span class="p">-</span><span class="n">-name</span> <span class="n">olap-env</span> <span class="n">python</span><span class="p">=</span><span class="n">3</span><span class="p">.</span><span class="n">12</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="p">$</span> <span class="n">conda</span> <span class="n">activate</span> <span class="n">olap-env</span>
+</code></pre></div>
+</div></p>
+</div>
+</div>
 </div>
 
 
@@ -1554,7 +1506,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../relembrar-ciclo/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Relembrar">
+          <a href="../olap/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Sistemas OLAP">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1564,20 +1516,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Relembrar
+                Sistemas OLAP
               </div>
             </div>
           </a>
         
         
           
-          <a href="../docker/" class="md-footer__link md-footer__link--next" aria-label="Next: Docker">
+          <a href="../duckdb/" class="md-footer__link md-footer__link--next" aria-label="Next: DuckDB">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Docker
+                DuckDB
               </div>
             </div>
             <div class="md-footer__button md-icon">
