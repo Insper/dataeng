@@ -137,7 +137,7 @@ Vamos utilizar os dados do **S3** da aula de [*warm up*](../01-intro/warmup.md) 
 
     ```bash
     $ mkdir dados
-    $ aws s3 cp s3://dataeng-warmup/data_raw/ dados/ --recursive --exclude="status.csv"
+    $ aws s3 cp s3://dataeng-warmup/data_raw/ dados/ --recursive --exclude="status.csv" --profile dataeng-warmup
     ```
 
     </div>
@@ -149,7 +149,7 @@ Vamos utilizar os dados do **S3** da aula de [*warm up*](../01-intro/warmup.md) 
 
         ```bash
         $ mkdir dados
-        $ aws s3 cp s3://dataeng-warmup/data_raw/ dados/ --recursive
+        $ aws s3 cp s3://dataeng-warmup/data_raw/ dados/ --recursive --profile dataeng-warmup
         ```
 
         </div>

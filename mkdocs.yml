@@ -34,6 +34,10 @@ nav:
               - classes/03-data-warehouse/duckdb.md
               - classes/03-data-warehouse/clickhouse.md
               - classes/03-data-warehouse/links.md
+      - 04 - Computação em Nuvem:
+          - classes/04-cloud/intro.md
+          - classes/04-cloud/config.md
+          - classes/04-cloud/pratica.md
   - Regras: about.md
   - Deadlines: deadlines.md
   - Contribuições: contributions.md

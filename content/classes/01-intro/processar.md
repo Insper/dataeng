@@ -11,7 +11,7 @@ Agora que você já consegue pelo menos observar quais arquivos estão disponív
     <div class="termy">
 
     ```console
-    $ aws s3 ls s3://dataeng-warmup --recursive
+    $ aws s3 ls s3://dataeng-warmup --recursive --profile dataeng-warmup
     ```
 
     </div>
@@ -95,7 +95,7 @@ Uma outra boa prática é criar um ambiente virtual para aula. Você pode fazer 
 !!! exercise
     Crie o arquivo `requirements.txt` na raiz do seu projeto e adicione as seguintes bibliotecas nele:
 
-    ```
+    ```bash  { .copy }
     pandas==2.3.1
     polars==1.32.2
     python-dotenv==1.1.1
@@ -122,7 +122,7 @@ Utilize os seguintes códigos base para realizar a leitura dos arquivos CSV:
     Analise os códigos da sequência e garanta que entendeu o que está acontecendo.
 
 === "Pandas"
-    ```python
+    ```python  { .copy }
     import os
     import s3fs
     import pandas as pd
@@ -149,7 +149,7 @@ Utilize os seguintes códigos base para realizar a leitura dos arquivos CSV:
     ```
 
 === "Polars"
-    ```python
+    ```python  { .copy }
     import os
     import s3fs
     import polars as pl
@@ -212,7 +212,7 @@ Utilize os seguintes códigos base para realizar a leitura dos arquivos CSV:
 
         Defina seu `insper_username` e o `parquet_path` corretamente. 
 
-    ```python
+    ```python  { .copy }
     import os
     import s3fs
     import polars as pl
@@ -244,7 +244,7 @@ Utilize os seguintes códigos base para realizar a leitura dos arquivos CSV:
 
     Utilize este código como base:
 
-    ```python
+    ```python  { .copy }
     import os
     import s3fs
     import polars as pl
@@ -279,7 +279,7 @@ Utilize os seguintes códigos base para realizar a leitura dos arquivos CSV:
     <div class="termy">
 
     ```console
-    $ aws s3 ls s3://dataeng-warmup --recursive
+    $ aws s3 ls s3://dataeng-warmup --recursive --profile dataeng-warmup
     ```
 
     </div>

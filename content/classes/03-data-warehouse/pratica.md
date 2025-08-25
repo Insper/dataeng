@@ -119,6 +119,14 @@ Para termos um ambiente de testes, iremos criar um simulador de vendas que irá 
             2. Inicializa o banco (`python src/init_database.py`).
             3. Inicia o simulador de vendas (`python src/sales_simulator.py`).
 
+!!! exercise text long
+    Ainda no arquivo `docker-compose.yml`, o que quer dizer o trecho `${POSTGRES_PORT_APP:-5432}:5432`?
+    
+    !!! answer "Resposta"
+        O trecho permite que, ao definir a variável de ambiente `POSTGRES_PORT_APP`, você escolha dinamicamente em qual porta o Postgres vai aparecer no host, mapeando ela para a porta `5432` no container.
+
+        Se nada for configurado (a variável `POSTGRES_PORT_APP` não está definida), ele abre `5432:5432`.
+
 !!! exercise
     Crie um arquivo `.env` a partir do `.env.example` e ajuste as variáveis de ambiente conforme necessário.
 
@@ -142,24 +150,24 @@ Para termos um ambiente de testes, iremos criar um simulador de vendas que irá 
 
 ## DBeaver
 
-Vamos instalar um cliente de banco de dados chamado DBeaver, que é uma ferramenta gráfica para gerenciar bancos de dados.
+Vamos instalar um cliente de banco de dados chamado **DBeaver**, que é uma ferramenta gráfica para gerenciar bancos de dados.
 
 ![](dbeaver.png)
 
 !!! info
-    Caso você já tenha instalado um cliente que suporte **PostgreSQL**, você pode utilizá-lo para se conectar ao banco de dados da aplicação de vendas e ignorar a instalação do DBeaver.
+    Caso você já tenha instalado um cliente que suporte **PostgreSQL**, você pode utilizá-lo para se conectar ao banco de dados da aplicação de vendas e ignorar a instalação do **DBeaver**.
 
-Para instalar o DBeaver, siga as instruções para o seu sistema operacional:
+Para instalar o **DBeaver**, siga as instruções para o seu sistema operacional:
 
 === "Windows"
 
-    1. Baixe o instalador do DBeaver [aqui](https://dbeaver.io/download/).
+    1. Baixe o instalador do **DBeaver** [aqui](https://dbeaver.io/download/).
     2. Execute o instalador e siga as instruções na tela.
 
 === "macOS"
 
-    1. Baixe o arquivo DMG do DBeaver [aqui](https://dbeaver.io/download/).
-    2. Abra o arquivo DMG e arraste o DBeaver para a pasta Aplicativos.
+    1. Baixe o arquivo DMG do **DBeaver** [aqui](https://dbeaver.io/download/).
+    2. Abra o arquivo DMG e arraste o **DBeaver** para a pasta Aplicativos.
 
 === "Linux"
 
@@ -181,7 +189,30 @@ Para instalar o DBeaver, siga as instruções para o seu sistema operacional:
 
 Para mais detalhes, consulte a [página oficial](https://dbeaver.io/download/).
 
-Após a instalação, abra o DBeaver e crie uma nova conexão com o banco de dados PostgreSQL da aplicação de vendas utilizando as informações configuradas no `.env`.
+Após a instalação, abra o **DBeaver** e crie uma nova conexão com o banco de dados PostgreSQL da aplicação de vendas utilizando as informações configuradas no `.env`.
+
+!!! warning "Atenção"
+    Perceba que, no **DBeaver**, a conexão será pela porta exposta pelo `docker-compose.yml` (`5435`).
+
+    Já o *container* do simulador de vendas enxergará o **PostgreSQL** na porta `5432`.
+
+    Para entender melhor, veja `.env.example` e como no serviço `python-app` do `docker-compose.yml` as variáveis `POSTGRES_HOST_APP` e `POSTGRES_PORT_APP` são redefinidas na seção `environment`:
+
+    ```yaml
+        # RECORTE DE PARTE DO docker-compose.yml
+        postgres-app:
+            environment: # Redefine ou define variáveis de ambiente
+            - POSTGRES_DB=${POSTGRES_DB_APP}
+            - POSTGRES_USER=${POSTGRES_USER_APP}
+            - POSTGRES_PASSWORD=${POSTGRES_PASSWORD_APP}
+            ports: # A porta exposta no host será `POSTGRES_PORT_APP` (5435)
+            - "${POSTGRES_PORT_APP:-5432}:5432"
+
+        python-app:
+            environment: # Redefine ou define variáveis de ambiente
+            - POSTGRES_HOST_APP=postgres-app # Container name do DB PostgreSQL
+            - POSTGRES_PORT_APP=5432 # O python-app acessa o DB pela porta interna do container
+    ```
 
 !!! exercise
     Garanta que você consegue observar, no DBeaver, as tabelas e os dados inseridos pelo simulador de vendas.
@@ -208,18 +239,23 @@ Agora que a aplicação de vendas está em funcionamento e os dados estão sendo
     Execute os próximos exercícios a partir da pasta `02-etl` do repositório base.
 
 !!! exercise
-    No `02-etl/docker-compose.yml`, inicialize um serviço **PostgreSQL** que servirá como **Data Warehouse**.
+    No `02-etl/docker-compose.yml`, defina um serviço **PostgreSQL** que servirá como **Data Warehouse**.
 
     !!! danger "Atenção"
         Garanta que está trabalhando na pasta `02-etl` do repositório base.
 
+        Leia o `.env.example` para entender as variáveis de ambiente que você pode usar.
+
 !!! exercise
-    Utilizando o arquivo "01-vendas/sql/0001-ddl.sql", crie uma versão de **DDL** no arquivo `02-etl/sql/0001-ddl-warehouse.sql` para definir o *schema* do **Data Warehouse**.
+    Descubra o **IPv4** local da sua máquina e atualize o arquivo `02-etl/.env` com o valor encontrado.
+
+!!! exercise
+    Utilizando o arquivo `01-vendas/sql/0001-ddl.sql` como referência, crie uma versão de **DDL** no arquivo `02-etl/sql/0001-ddl-warehouse.sql` para definir o *schema* inicial do **Data Warehouse**.
 
     Será apenas uma cópia do arquivo?
 
     !!! answer "Resposta"
-        Não. O *schema* do Data Warehouse deve ser otimizado para análises, então você pode querer ajustar os tipos de dados, remover *constraints* de chave estrangeira, obrigatoriedade de preenchimento das colunas, remover colunas desnecessárias, remover **triggers** de atualização automática ou criar índices para melhorar a performance das consultas.
+        Não. O *schema* do Data Warehouse deve ser otimizado para análises, então você pode querer ajustar os tipos de dados, remover *constraints* de chave estrangeira, obrigatoriedade de preenchimento das colunas, remover colunas desnecessárias, remover **triggers** de atualização automática, retirar auto-incremento, ou criar índices para melhorar a performance das consultas.
 
 !!! exercise
     Crie um arquivo python `02-etl/src/init_database.py` que leia o arquivo `02-etl/sql/0001-ddl-warehouse.sql` e execute o comando para criar o banco de dados.
@@ -231,7 +267,6 @@ Agora que a aplicação de vendas está em funcionamento e os dados estão sendo
 
 
 !!! exercise
-
     Utilizando o **DBeaver**, crie uma nova aba de query (*new SQL script*) para trabalhar em modo explorador!
 
     Agora, crie uma query que retorne **todos os dados criados nos últimos dois minutos**.
@@ -264,6 +299,17 @@ Agora que a aplicação de vendas está em funcionamento e os dados estão sendo
 
     !!! tip "Dica"
         Por enquanto, basta executar um loop infinito com espera ao seu final. Melhoraremos nas próximas aulas!
+
+    !!! warning "Atenção"
+        Não se esqueça de atualizar, na seção `environment` do serviço de **ETL**, as variáveis de ambiente para conectar ao banco de dados do **Data Warehouse**:
+
+        ```yaml
+        # RECORTE DE PARTE DO ARQUIVO docker-compose.yml DO ETL
+        python-etl:
+            environment: # Supondo que o serviço DW se chama postgres-warehouse
+            - POSTGRES_HOST_WAREHOUSE=postgres-warehouse
+            - POSTGRES_PORT_WAREHOUSE=5432
+        ```
 
 !!! exercise
     Garanta que o serviço de **ETL** está funcionando corretamente.

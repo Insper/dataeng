@@ -108,7 +108,7 @@ Configure a região e as credenciais fornecidas pelo professor.
 <div class="termy">
 
     ```console
-    $ aws configure --profile dataeng
+    $ aws configure --profile dataeng-warmup
     AWS Access Key ID [None]: ????????????
     AWS Secret Access Key [None]: ????????????????????????????????
     Default region name [None]: us-east-1
@@ -122,12 +122,17 @@ Configure a região e as credenciais fornecidas pelo professor.
 
 Para definir um perfil padrão, use:
 
+!!! warning "Atenção"
+    Tudo bem caso não consiga definir um perfil padrão.
+
+    Nos comandos de CLI, sempre utilize o parâmetro `--profile` para especificar o perfil a ser utilizado.
+
 === "Linux"
 
     <div class="termy">
 
     ```console
-    $ export AWS_PROFILE=dataeng
+    $ export AWS_PROFILE=dataeng-warmup
     ```
 
     </div>
@@ -138,7 +143,7 @@ Para definir um perfil padrão, use:
     <div class="termy">
 
     ```console
-    $ set AWS_PROFILE=dataeng
+    $ set AWS_PROFILE=dataeng-warmup
     ```
 
     </div>
@@ -149,7 +154,7 @@ Para definir um perfil padrão, use:
     <div class="termy">
 
     ```console
-    $ env:AWS_PROFILE="dataeng"
+    $ env:AWS_PROFILE="dataeng-warmup"
     ```
 
     </div>
@@ -162,7 +167,7 @@ Agora você pode usar o AWS CLI para criar, listar ou remover recursos. Por exem
 <div class="termy">
 
     ```console
-    $ aws s3 ls s3://dataeng-warmup --recursive
+    $ aws s3 ls s3://dataeng-warmup --recursive --profile dataeng-warmup
     ```
 
 </div>
