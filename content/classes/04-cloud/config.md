@@ -23,6 +23,12 @@ Para seguir com os exemplos práticos desta aula, você precisará configurar se
         Siga as instruções na tela para concluir o processo de autenticação.
 
         Caso solicitado, escolha a conta da disciplina!
+    
+    !!! warning "Configurações"
+        - `SSO session name (Recommended):` pode utilizar `dataeng`
+        - `SSO start URL:` utilize a URL de login que está no e-mail de convite
+        - `SSO region [None]`: utilize `us-east-1`
+        - `SSO registration scopes [sso:account:access]:` apenas aperte ENTER
 
     <div class="termy">
 
