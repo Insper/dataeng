@@ -425,6 +425,8 @@
       
         
       
+        
+      
     
     
     
@@ -1333,6 +1335,132 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    04 - Computação em Nuvem
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            04 - Computação em Nuvem
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-cloud/intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introdução
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-cloud/config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configuração AWS CLI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-cloud/pratica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Prática
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1623,7 +1751,7 @@
 <p>Configure a região e as credenciais fornecidas pelo professor.</p>
 <div class="termy">
 
-    <div class="language-console highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gp">$ </span>aws<span class="w"> </span>configure<span class="w"> </span>--profile<span class="w"> </span>dataeng
+    <div class="language-console highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gp">$ </span>aws<span class="w"> </span>configure<span class="w"> </span>--profile<span class="w"> </span>dataeng-warmup
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="go">AWS Access Key ID [None]: ????????????</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="go">AWS Secret Access Key [None]: ????????????????????????????????</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="go">Default region name [None]: us-east-1</span>
@@ -1634,25 +1762,30 @@
 <p><br></p>
 <h3 id="definir-perfil">Definir perfil</h3>
 <p>Para definir um perfil padrão, use:</p>
+<div class="admonition warning">
+<p class="admonition-title">Atenção</p>
+<p>Tudo bem caso não consiga definir um perfil padrão.</p>
+<p>Nos comandos de CLI, sempre utilize o parâmetro <code>--profile</code> para especificar o perfil a ser utilizado.</p>
+</div>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Linux</label><label for="__tabbed_1_2">Windows CMD (Prompt de Comando)</label><label for="__tabbed_1_3">Windows PowerShell</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="termy">
-<div class="language-console highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="gp">$ </span><span class="nb">export</span><span class="w"> </span><span class="nv">AWS_PROFILE</span><span class="o">=</span>dataeng
+<div class="language-console highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="gp">$ </span><span class="nb">export</span><span class="w"> </span><span class="nv">AWS_PROFILE</span><span class="o">=</span>dataeng-warmup
 </code></pre></div>
 <p></div>
 <br></p>
 </div>
 <div class="tabbed-block">
 <div class="termy">
-<div class="language-console highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="gp">$ </span><span class="nb">set</span><span class="w"> </span><span class="nv">AWS_PROFILE</span><span class="o">=</span>dataeng
+<div class="language-console highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="gp">$ </span><span class="nb">set</span><span class="w"> </span><span class="nv">AWS_PROFILE</span><span class="o">=</span>dataeng-warmup
 </code></pre></div>
 <p></div>
 <br></p>
 </div>
 <div class="tabbed-block">
 <div class="termy">
-<div class="language-console highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="gp">$ </span>env:AWS_PROFILE<span class="o">=</span><span class="s2">&quot;dataeng&quot;</span>
+<div class="language-console highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="gp">$ </span>env:AWS_PROFILE<span class="o">=</span><span class="s2">&quot;dataeng-warmup&quot;</span>
 </code></pre></div>
 <p></div>
 <br></p>
@@ -1663,7 +1796,7 @@
 <p>Agora você pode usar o AWS CLI para criar, listar ou remover recursos. Por exemplo, para listar os objetos no bucket S3 que utilizaremos na aula:</p>
 <div class="termy">
 
-    <div class="language-console highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="gp">$ </span>aws<span class="w"> </span>s3<span class="w"> </span>ls<span class="w"> </span>s3://dataeng-warmup<span class="w"> </span>--recursive
+    <div class="language-console highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="gp">$ </span>aws<span class="w"> </span>s3<span class="w"> </span>ls<span class="w"> </span>s3://dataeng-warmup<span class="w"> </span>--recursive<span class="w"> </span>--profile<span class="w"> </span>dataeng-warmup
 </code></pre></div>
 
 </div>

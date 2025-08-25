@@ -425,6 +425,8 @@
       
         
       
+        
+      
     
     
     
@@ -1467,6 +1469,132 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    04 - Computação em Nuvem
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            04 - Computação em Nuvem
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-cloud/intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introdução
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-cloud/config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configuração AWS CLI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-cloud/pratica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Prática
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2361,7 +2489,7 @@ body {
 </div>
 <div class="termy">
 <div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>$<span class="w"> </span>mkdir<span class="w"> </span>dados
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>$<span class="w"> </span>aws<span class="w"> </span>s3<span class="w"> </span>cp<span class="w"> </span>s3://dataeng-warmup/data_raw/<span class="w"> </span>dados/<span class="w"> </span>--recursive<span class="w"> </span>--exclude<span class="o">=</span><span class="s2">&quot;status.csv&quot;</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>$<span class="w"> </span>aws<span class="w"> </span>s3<span class="w"> </span>cp<span class="w"> </span>s3://dataeng-warmup/data_raw/<span class="w"> </span>dados/<span class="w"> </span>--recursive<span class="w"> </span>--exclude<span class="o">=</span><span class="s2">&quot;status.csv&quot;</span><span class="w"> </span>--profile<span class="w"> </span>dataeng-warmup
 </code></pre></div>
 </div>
 <div class="admonition tip">
@@ -2369,7 +2497,7 @@ body {
 <p>Caso também queira baixar o arquivo <code>status.csv</code>, você pode remover a opção <code>--exclude</code>:</p>
 <div class="termy">
 <div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>$<span class="w"> </span>mkdir<span class="w"> </span>dados
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>$<span class="w"> </span>aws<span class="w"> </span>s3<span class="w"> </span>cp<span class="w"> </span>s3://dataeng-warmup/data_raw/<span class="w"> </span>dados/<span class="w"> </span>--recursive
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>$<span class="w"> </span>aws<span class="w"> </span>s3<span class="w"> </span>cp<span class="w"> </span>s3://dataeng-warmup/data_raw/<span class="w"> </span>dados/<span class="w"> </span>--recursive<span class="w"> </span>--profile<span class="w"> </span>dataeng-warmup
 </code></pre></div>
 </div>
 </div>
