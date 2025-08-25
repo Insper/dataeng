@@ -1532,6 +1532,15 @@ Vamos centralizar recursos em uma região! Assim mantemos uma melhor organizaç�
 <p>Siga as instruções na tela para concluir o processo de autenticação.</p>
 <p>Caso solicitado, escolha a conta da disciplina!</p>
 </div>
+<div class="admonition warning">
+<p class="admonition-title">Configurações</p>
+<ul>
+<li><code>SSO session name (Recommended):</code> pode utilizar <code>dataeng</code></li>
+<li><code>SSO start URL:</code> utilize a URL de login que está no e-mail de convite</li>
+<li><code>SSO region [None]</code>: utilize <code>us-east-1</code></li>
+<li><code>SSO registration scopes [sso:account:access]:</code> apenas aperte ENTER</li>
+</ul>
+</div>
 <div class="termy">
 <div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>$<span class="w"> </span>aws<span class="w"> </span>configure<span class="w"> </span>sso<span class="w"> </span>--profile<span class="w"> </span>dataeng
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>$<span class="w"> </span>aws<span class="w"> </span>sts<span class="w"> </span>get-caller-identity<span class="w"> </span>--profile<span class="w"> </span>dataeng
