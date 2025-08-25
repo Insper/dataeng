@@ -154,7 +154,7 @@ Para definir um perfil padrão, use:
     <div class="termy">
 
     ```console
-    $ env:AWS_PROFILE="dataeng-warmup"
+    $ $env:AWS_PROFILE="dataeng-warmup"
     ```
 
     </div>

@@ -89,7 +89,7 @@ Vamos utilizar os dados do **S3** da aula de [*warm up*](../01-intro/warmup.md) 
     <div class="termy">
 
     ```bash
-    $ aws configure --profile dataeng
+    $ aws configure --profile dataeng-warmup
     ```
 
     </div>
@@ -102,7 +102,7 @@ Vamos utilizar os dados do **S3** da aula de [*warm up*](../01-intro/warmup.md) 
         <div class="termy">
 
         ```bash
-        $ export AWS_PROFILE=dataeng
+        $ export AWS_PROFILE=dataeng-warmup
         ```
 
         </div>
@@ -112,7 +112,7 @@ Vamos utilizar os dados do **S3** da aula de [*warm up*](../01-intro/warmup.md) 
         <div class="termy">
 
         ```bash
-        $ set AWS_PROFILE=dataeng
+        $ set AWS_PROFILE=dataeng-warmup
         ```
 
         </div>
@@ -122,7 +122,7 @@ Vamos utilizar os dados do **S3** da aula de [*warm up*](../01-intro/warmup.md) 
         <div class="termy">
 
         ```bash
-        $ $env:AWS_PROFILE="dataeng"
+        $ $env:AWS_PROFILE="dataeng-warmup"
         ```
 
         </div>
