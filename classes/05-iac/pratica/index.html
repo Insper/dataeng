@@ -1,0 +1,4345 @@
+<!-- Elements added to "main.html" will be displayed on all pages -->
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Maciel Vidal">
+      
+      
+      
+        <link rel="prev" href="../intro/">
+      
+      
+        <link rel="next" href="../../../about/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
+    
+    
+      
+        <title>Prática IaC - Engenharia de Dados</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../css/termynal.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+    <!-- main.html | Added "navigation.instant" support -->
+    <link rel="canonical" href=".">
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#pratica-iac" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Engenharia de Dados" class="md-header__button md-logo" aria-label="Engenharia de Dados" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Engenharia de Dados
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Prática IaC
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="indigo"  aria-label="Switch to Dark Mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to Dark Mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="dark-blue-grey" data-md-color-accent="indigo"  aria-label="Switch to Light Mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to Light Mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/insper/dataeng" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    insper/dataeng
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Início
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../01-intro/intro/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Aulas
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../about/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Regras
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../deadlines/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Deadlines
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../contributions/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Contribuições
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Engenharia de Dados" class="md-nav__button md-logo" aria-label="Engenharia de Dados" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Engenharia de Dados
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/insper/dataeng" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    insper/dataeng
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Início
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Aulas
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Aulas
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    01 - Introdução
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            01 - Introdução
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-intro/intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introdução
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-intro/profissionais/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ciclo de vida e Profissionais
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-intro/warmup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Warm Up
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-intro/processar/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Explorar Alternativas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    02 - Filas e Containers
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            02 - Filas e Containers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-docker-filas/relembrar-ciclo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Relembrar
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-docker-filas/filas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Exemplo: Sensores
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-docker-filas/docker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Docker
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-docker-filas/rabbitmq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RabbitMQ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-docker-filas/programar-sensores/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Programar Sensores
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-docker-filas/programar-pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Programar Pipeline
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    03 - Data Warehousing
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            03 - Data Warehousing
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_1" id="__nav_2_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Parte I
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Parte I
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-data-warehouse/intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introdução
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-data-warehouse/linha-tempo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Linha do Tempo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-data-warehouse/data-warehousing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Data Warehousing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-data-warehouse/pratica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Praticando
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_2" id="__nav_2_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Parte II
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Parte II
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-data-warehouse/olap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sistemas OLAP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-data-warehouse/uv/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Conhecendo o uv
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-data-warehouse/duckdb/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DuckDB
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-data-warehouse/clickhouse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ClickHouse
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-data-warehouse/links/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Links interessantes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    04 - Computação em Nuvem
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            04 - Computação em Nuvem
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-cloud/intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introdução
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-cloud/config-aws-cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configuração AWS CLI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-cloud/pratica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Prática
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    05 - Infrastructure as Code
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            05 - Infrastructure as Code
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introdução
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Prática IaC
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Prática IaC
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pratica-infrastructure-as-code-com-terraform" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prática: Infrastructure as Code com Terraform
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fixar-conceito" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fixar conceito
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#terraform" class="md-nav__link">
+    <span class="md-ellipsis">
+      Terraform
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instalacao-do-terraform" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instalação do Terraform
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extensao-vscode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extensão VSCode
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estrutura-do-projeto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estrutura do projeto
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Estrutura do projeto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inicializando-o-terraform" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inicializando o Terraform
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#criando-a-instancia-ec2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criando a instância EC2
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Criando a instância EC2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#planejamento-e-aplicacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Planejamento e aplicação
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#automatizando-a-configuracao-da-aplicacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Automatizando a configuração da aplicação
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testando-a-infraestrutura-completa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testando a infraestrutura completa
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#organizando-o-codigo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Organizando o código
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limpeza-dos-recursos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limpeza dos recursos
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Regras
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../deadlines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Deadlines
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../contributions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Contribuições
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pratica-infrastructure-as-code-com-terraform" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prática: Infrastructure as Code com Terraform
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fixar-conceito" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fixar conceito
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#terraform" class="md-nav__link">
+    <span class="md-ellipsis">
+      Terraform
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instalacao-do-terraform" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instalação do Terraform
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extensao-vscode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extensão VSCode
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estrutura-do-projeto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estrutura do projeto
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Estrutura do projeto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inicializando-o-terraform" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inicializando o Terraform
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#criando-a-instancia-ec2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criando a instância EC2
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Criando a instância EC2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#planejamento-e-aplicacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Planejamento e aplicação
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#automatizando-a-configuracao-da-aplicacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Automatizando a configuração da aplicação
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testando-a-infraestrutura-completa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testando a infraestrutura completa
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#organizando-o-codigo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Organizando o código
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limpeza-dos-recursos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limpeza dos recursos
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<style type="text/css">
+/* Quiz Styles - Versão Melhorada com Compatibilidade entre Navegadores */
+
+.quiz-alternative {
+  display: block;
+  margin: 0.5em 0;
+  padding: 0.75em 1em;
+  background-color: var(--md-default-bg-color--light);
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  user-select: none; /* Evita seleção de texto acidental */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}
+
+.quiz-alternative:hover {
+  background-color: var(--md-default-bg-color--lighter);
+  border-color: var(--md-default-fg-color--light);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Disabled state for alternatives */
+.quiz-alternative.disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.quiz-alternative.disabled:hover {
+  background-color: var(--md-default-bg-color--light);
+  border-color: var(--md-default-fg-color--lightest);
+  transform: none;
+  box-shadow: none;
+}
+
+.quiz-alternative input[type="radio"] {
+  display: none; /* Hide radio buttons completely */
+}
+
+/* Selected state for alternatives */
+.quiz-alternative.selected {
+  background-color: #e3f2fd; /* Light blue background */
+  border-color: #1976d2; /* Blue border */
+  color: #0d47a1; /* Dark blue text */
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.2);
+}
+
+.quiz-alternative .content {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5em;
+}
+
+.quiz-alternative.correct {
+  background-color: #d4edda; /* Light green */
+  border-color: #28a745; /* Green */
+  color: #155724;
+}
+
+.quiz-alternative.correct::after {
+  content: "✓";
+  position: absolute;
+  right: 1em;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #28a745;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.quiz-alternative.incorrect {
+  background-color: #f8d7da; /* Light red */
+  border-color: #dc3545; /* Red */
+  color: #721c24;
+}
+
+.quiz-alternative.incorrect::after {
+  content: "✗";
+  position: absolute;
+  right: 1em;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #dc3545;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+/* Alternative set container */
+.quiz-alternative-set {
+  margin: 1em 0;
+}
+
+/* Submit button styles */
+.quiz-submit-button {
+  margin-top: 1em;
+  padding: 0.8em 1.5em;
+  background-color: var(--md-primary-fg-color);
+  color: var(--md-default-bg-color);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.95em;
+  transition: all 0.3s ease;
+  min-width: 120px;
+  position: relative;
+  overflow: hidden;
+}
+
+.quiz-submit-button:hover:not(:disabled) {
+  background-color: var(--md-primary-fg-color--dark);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.quiz-submit-button:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.quiz-submit-button:disabled {
+  background-color: var(--md-default-fg-color--lightest);
+  cursor: not-allowed;
+  opacity: 0.7;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Answer block styles */
+.quiz-answer {
+  margin-top: 1.5em;
+  padding: 1.2em;
+  background-color: var(--md-default-bg-color--light);
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-left: 5px solid var(--md-accent-fg-color);
+  border-radius: 4px;
+  display: none; /* Hidden by default - shown only after submission */
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease-in-out;
+}
+
+.quiz-answer.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+  animation: fadeInSlideDown 0.4s ease-out;
+}
+
+@keyframes fadeInSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Ensure answer is hidden until submission */
+.admonition.exercise .quiz-answer:not(.show) {
+  display: none !important;
+  visibility: hidden;
+}
+
+/* Text input styles */
+.quiz-text-input {
+  width: 100%;
+  padding: 0.75em;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: 0.95em;
+  line-height: 1.4;
+  transition: all 0.3s ease;
+  resize: vertical; /* Allow vertical resizing for textareas */
+  min-height: 3em; /* Minimum height for textareas */
+}
+
+.quiz-text-input:focus {
+  outline: none;
+  border-color: var(--md-primary-fg-color);
+  box-shadow: 0 0 0 2px rgba(var(--md-primary-fg-color-rgb), 0.2);
+}
+
+.quiz-text-input:disabled {
+  background-color: var(--md-default-bg-color--lighter);
+  color: var(--md-default-fg-color--light);
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* Textarea specific styles */
+textarea.quiz-text-input {
+  min-height: 6em;
+  max-height: 20em;
+}
+
+/* Edit button styles */
+.quiz-edit-button {
+  float: right;
+  background: none;
+  border: none;
+  font-size: 1.2em;
+  cursor: pointer;
+  color: var(--md-default-fg-color--light);
+  padding: 0.25em 0.5em;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+  margin-left: 0.5em;
+}
+
+.quiz-edit-button:hover {
+  color: var(--md-default-fg-color);
+  background-color: var(--md-default-bg-color--lighter);
+  transform: scale(1.1);
+}
+
+.quiz-edit-button:active {
+  transform: scale(0.95);
+}
+
+/* Form container */
+.quiz-form {
+  margin-top: 1em;
+}
+
+/* Form elements container */
+.form-elements {
+  margin: 1em 0;
+}
+
+/* Exercise container improvements */
+.admonition.exercise {
+  position: relative;
+  margin: 1.5em 0;
+  counter-increment: exercise-counter;
+}
+
+.admonition.exercise .admonition-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Exercise numbering - Base rule */
+.admonition.exercise .admonition-title::before {
+  content: "Exercise " counter(exercise-counter);
+  font-weight: bold;
+  margin-right: 0.25em;
+  color: var(--md-primary-fg-color);
+  display: inline;
+}
+
+/* Different numbering styles for different exercise types - More specific rules */
+.admonition.exercise.exercise-choice .admonition-title::before,
+.admonition.exercise.exercise-text .admonition-title::before,
+.admonition.exercise.exercise-short .admonition-title::before,
+.admonition.exercise.exercise-long .admonition-title::before {
+  content: "Question " counter(exercise-counter);
+  font-weight: bold;
+  margin-right: 0.25em;
+  color: var(--md-primary-fg-color);
+  display: inline;
+}
+
+/* Reset counter at the beginning of each page */
+body {
+  counter-reset: exercise-counter;
+}
+
+/* Status indicators */
+.quiz-status {
+  font-size: 0.8em;
+  padding: 0.2em 0.5em;
+  border-radius: 3px;
+  margin-left: auto;
+  margin-right: 0.5em;
+}
+
+.quiz-status.completed {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.quiz-status.in-progress {
+  background-color: #fff3e0;
+  color: #ef6c00;
+}
+
+/* Loading states */
+.quiz-loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.quiz-loading::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border: 2px solid var(--md-primary-fg-color);
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+  .quiz-alternative {
+    padding: 0.6em 0.8em;
+    margin: 0.4em 0;
+  }
+  
+  .quiz-submit-button {
+    width: 100%;
+    padding: 1em;
+    font-size: 1em;
+  }
+  
+  .quiz-text-input {
+    font-size: 1em;
+  }
+  
+  .quiz-edit-button {
+    font-size: 1.4em;
+    padding: 0.3em;
+  }
+}
+
+/* Dark theme support */
+@media (prefers-color-scheme: dark) {
+  .quiz-alternative.correct {
+    background-color: #1e3a28;
+    border-color: #28a745;
+    color: #a3d9a5;
+  }
+  
+  .quiz-alternative.incorrect {
+    background-color: #3a1e1e;
+    border-color: #dc3545;
+    color: #f5a6a6;
+  }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  .quiz-alternative,
+  .quiz-submit-button,
+  .quiz-text-input,
+  .quiz-edit-button {
+    transition: none;
+  }
+  
+  .quiz-alternative:hover,
+  .quiz-submit-button:hover:not(:disabled),
+  .quiz-edit-button:hover {
+    transform: none;
+  }
+  
+  .quiz-answer {
+    animation: none;
+  }
+}
+
+/* Focus visible for better keyboard navigation */
+.quiz-alternative:focus-visible,
+.quiz-submit-button:focus-visible,
+.quiz-edit-button:focus-visible {
+  outline: 2px solid var(--md-primary-fg-color);
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .quiz-alternative {
+    border-width: 2px;
+  }
+  
+  .quiz-alternative.correct {
+    border-color: #000;
+    background-color: #90EE90;
+    color: #000;
+  }
+  
+  .quiz-alternative.incorrect {
+    border-color: #000;
+    background-color: #FFB6C1;
+    color: #000;
+  }
+  
+  .quiz-alternative.selected {
+    border-color: #000;
+    background-color: #ADD8E6;
+    color: #000;
+  }
+}
+</style>
+<h1 id="pratica-iac">Prática IaC</h1>
+<h2 id="pratica-infrastructure-as-code-com-terraform">Prática: Infrastructure as Code com Terraform</h2>
+<h2 id="fixar-conceito">Fixar conceito</h2>
+<p><strong>Infrastructure as Code</strong> (Infraestrutura como Código) é uma abordagem que permite <strong>gerenciar e provisionar</strong> recursos de infraestrutura usando <strong>código</strong> e arquivos de configuração, ao invés de processos manuais.</p>
+<p>Com <strong>IaC</strong>, você define sua infraestrutura em arquivos de texto que podem ser versionados, revisados e reutilizados. Isso traz benefícios como:</p>
+<ul>
+<li><strong>Consistência</strong>: A mesma configuração pode ser aplicada múltiplas vezes</li>
+<li><strong>Versionamento</strong>: Mudanças podem ser rastreadas usando Git</li>
+<li><strong>Reutilização</strong>: Configurações podem ser compartilhadas entre projetos</li>
+<li><strong>Automação</strong>: Reduz erros humanos e acelera deployments</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Comparação com a aula anterior</p>
+<p>Na aula anterior, criamos uma <strong>VM</strong> manualmente pelo console da AWS e depois fizemos configurações via <strong>SSH</strong>.</p>
+<p>Com <strong>Terraform</strong>, faremos tudo isso através de código!</p>
+</div>
+<h2 id="terraform">Terraform</h2>
+<p>O <strong>Terraform</strong> é uma das ferramentas mais populares para <strong>IaC</strong>.</p>
+<p>Desenvolvido pela <strong>HashiCorp</strong> (<a href="https://en.wikipedia.org/wiki/Terraform_(software)">2014</a>), ele permite definir infraestrutura usando a linguagem <strong>HCL</strong> (<em>HashiCorp Configuration Language</em>).</p>
+<p>O <strong>Terraform</strong> suporta múltiplos provedores de nuvem (AWS, Azure, Google Cloud) e serviços diversos, permitindo criar desde uma simples VM até arquiteturas complexas.</p>
+<div class="admonition danger">
+<p class="admonition-title">Perigo!</p>
+<p>Se fizer esta aula pela metade, não deixe <strong>VMs</strong> em execução.</p>
+<p>Confira, ao final do tutorial, o comando para <strong>destruir</strong> os recursos criados.</p>
+<p>Você também pode utilizar o <strong>console</strong> para conferir se sobrou algo (para destruir, prefira o terraform, não é boa prática utilizar o console uma vez que introduzimos IaC).</p>
+<p>Qualquer dúvida, entre em contato com o professor.</p>
+</div>
+<details class="info">
+<summary>OpenTofu: Curiosidade!</summary>
+<p>Há alguns anos, a HashiCorp decidiu mudar a licença do Terraform para um modelo mais restritivo, o que gerou preocupação sobre a liberdade e sustentabilidade do projeto.</p>
+<p>Como resposta, a comunidade criou um <em>fork</em> aberto para manter a colaboração e garantir transparência no desenvolvimento.</p>
+<p>Inicialmente chamado de OpenTF e depois renomeado para <a href="https://opentofu.org/"><strong>OpenTofu</strong></a>, o projeto passou a ser mantido pela <em>Linux Foundation</em>, assegurando governança aberta e compatibilidade com o Terraform.</p>
+<p>Assim, tornou-se uma alternativa livre e confiável para usuários e empresas que dependem de <strong>IaC</strong>.</p>
+</details>
+<h2 id="instalacao-do-terraform">Instalação do Terraform</h2>
+<div class="admonition exercise exercise-self-progress" id="exercise_1">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Instale a versão mais recente do Terraform seguindo as instruções para seu sistema operacional:</p>
+<div class="admonition note">
+<p class="admonition-title">Extra</p>
+<p>Caso necessário, acesse mais informações diretamente no site do <a href="https://developer.hashicorp.com/terraform/install">Terraform</a>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Linux (Ubuntu/Debian)</label><label for="__tabbed_1_2">macOS</label><label for="__tabbed_1_3">Windows</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="termy">
+<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>$<span class="w"> </span>wget<span class="w"> </span>-O<span class="w"> </span>-<span class="w"> </span>https://apt.releases.hashicorp.com/gpg<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>gpg<span class="w"> </span>--dearmor<span class="w"> </span>-o<span class="w"> </span>/usr/share/keyrings/hashicorp-archive-keyring.gpg
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;deb [arch=</span><span class="k">$(</span>dpkg<span class="w"> </span>--print-architecture<span class="k">)</span><span class="s2"> signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com </span><span class="k">$(</span>grep<span class="w"> </span>-oP<span class="w"> </span><span class="s1">&#39;(?&lt;=UBUNTU_CODENAME=).*&#39;</span><span class="w"> </span>/etc/os-release<span class="w"> </span><span class="o">||</span><span class="w"> </span>lsb_release<span class="w"> </span>-cs<span class="k">)</span><span class="s2"> main&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>/etc/apt/sources.list.d/hashicorp.list
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>$<span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>terraform
+</code></pre></div>
+</div>
+</div>
+<div class="tabbed-block">
+<div class="termy">
+<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>$<span class="w"> </span>brew<span class="w"> </span>tap<span class="w"> </span>hashicorp/tap
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>$<span class="w"> </span>brew<span class="w"> </span>install<span class="w"> </span>hashicorp/tap/terraform
+</code></pre></div>
+</div>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>Baixe o binário do Terraform em <a href="https://developer.hashicorp.com/terraform/install">https://developer.hashicorp.com/terraform/install</a></li>
+<li>Extraia o arquivo ZIP em um diretório (ex: <code>C:\terraform</code>)</li>
+<li>Adicione o diretório ao PATH do sistema <a href="https://www.wikihow.com/Change-the-PATH-Environment-Variable-on-Windows">Tutorial 1</a> <a href="https://www.eukhost.com/kb/how-to-add-to-the-path-on-windows-10-and-windows-11/">Tutorial 2</a></li>
+</ol>
+</div>
+</div>
+</div>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
+</div></form></div>
+<div class="admonition exercise exercise-self-progress" id="exercise_2">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Verifique se a instalação foi bem-sucedida:</p>
+<div class="termy">
+<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>$<span class="w"> </span>terraform<span class="w"> </span>version
+</code></pre></div>
+</div>
+<p>Você deve ver a versão do Terraform instalada.</p>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
+</div></form></div>
+<h2 id="extensao-vscode">Extensão VSCode</h2>
+<p>Instale a extensão <a href="https://marketplace.visualstudio.com/items?itemName=HashiCorp.terraform">Hashicorp Terraform</a> no VS Code.</p>
+<h2 id="estrutura-do-projeto">Estrutura do projeto</h2>
+<p>Vamos criar um projeto Terraform que reproduzirá o deploy da API de filmes que fizemos manualmente na aula anterior.</p>
+<div class="admonition exercise exercise-self-progress" id="exercise_3">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Crie um diretório para o projeto e entre nele:</p>
+<div class="termy">
+<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>$<span class="w"> </span>mkdir<span class="w"> </span>movies-api-terraform
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>movies-api-terraform
+</code></pre></div>
+</div>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
+</div></form></div>
+<div class="admonition exercise exercise-self-progress" id="exercise_4">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Crie um arquivo <code>main.tf</code> com a configuração inicial do provedor AWS:</p>
+<div class="language-hcl copy highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">terraform</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="na">required_version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;&gt;= 1.0&quot;</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span><span class="nb">required_providers</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="nb">aws</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">      </span><span class="na">source</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;hashicorp/aws&quot;</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">      </span><span class="na">version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;~&gt; 5.0&quot;</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="p">}</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="kr">provider</span><span class="w"> </span><span class="nv">&quot;aws&quot;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">  </span><span class="na">region</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;us-east-1&quot;</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">  </span><span class="na">profile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;dataeng&quot;</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="p">}</span>
+</code></pre></div>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
+</div></form></div>
+<h3 id="inicializando-o-terraform">Inicializando o Terraform</h3>
+<div class="admonition exercise exercise-self-progress" id="exercise_5">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Garanta que você está com o perfil <code>dataeng</code> configurado e logado no <strong>AWS CLI</strong>.</p>
+<p>Para mais detalhes, acesse <a href="../../04-cloud/config-aws-cli/">a aula passada</a></p>
+<p>Caso tenha o perfil configurado, faça login com:</p>
+<div class="termy">
+<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>$<span class="w"> </span>aws<span class="w"> </span>sso<span class="w"> </span>login<span class="w"> </span>--profile<span class="w"> </span>dataeng
+</code></pre></div>
+</div>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
+</div></form></div>
+<div class="admonition exercise exercise-self-progress" id="exercise_6">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Inicialize o diretório do Terraform:</p>
+<div class="termy">
+<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>$<span class="w"> </span>terraform<span class="w"> </span>init
+</code></pre></div>
+</div>
+<p>Esse comando baixa os plugins necessários para o provedor AWS.</p>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
+</div></form></div>
+<div class="admonition exercise text short exercise-short" id="exercise_1">
+<p class="admonition-title">Exercise</p>
+<form class="quiz-form"><p>O que aconteceu após executar <code>terraform init</code>?</p>
+<div class="form-elements">
+<div class="quiz-text-container">
+
+<input type="text" value="" name="data" class="quiz-text-input" 
+       placeholder="Enter your answer..." autocomplete="off"/>
+
+</div>
+<button class="quiz-submit-button" type="submit">Submit</button>
+</div></form><div class="admonition answer quiz-answer no-indent">
+<p class="admonition-title">Answer</p>
+<p>O Terraform criou um diretório <code>.terraform/</code> e baixou o plugin do provedor AWS. Também criou um arquivo <code>.terraform.lock.hcl</code> para fixar as versões dos provedores.</p>
+</div>
+</div>
+<h2 id="criando-a-instancia-ec2">Criando a instância EC2</h2>
+<p>Vamos começar criando apenas a instância EC2 com Terraform, equivalente ao que fizemos manualmente na aula anterior.</p>
+<div class="admonition warning">
+<p class="admonition-title">Chave SSH</p>
+<p>O código abaixo assume que você tem uma chave SSH em <code>~/.ssh/id_ed25519.pub</code>. Se não tiver, crie uma com:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Linux / Mac / Windows (Git Bash)</label><label for="__tabbed_2_2">Windows (Power Shell)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="termy">
+<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>$<span class="w"> </span>ssh-keygen<span class="w"> </span>-t<span class="w"> </span>ed25519<span class="w"> </span>-f<span class="w"> </span>~/.ssh/id_ed25519
+</code></pre></div>
+</div>
+</div>
+<div class="tabbed-block">
+<div class="termy">
+<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>$<span class="w"> </span>ssh-keygen<span class="w"> </span>-t<span class="w"> </span>ed25519<span class="w"> </span>-f<span class="w"> </span><span class="nv">$env</span>:USERPROFILE<span class="se">\.</span>ssh<span class="se">\i</span>d_ed25519
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition exercise exercise-self-progress" id="exercise_7">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Adicione ao final do arquivo <code>main.tf</code> a configuração da instância EC2:</p>
+<div class="language-hcl copy highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1"># Dados da AMI mais recente do Ubuntu</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="kr">data</span><span class="w"> </span><span class="nc">&quot;aws_ami&quot;</span><span class="w"> </span><span class="nv">&quot;ubuntu&quot;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">  </span><span class="na">most_recent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">true</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">  </span><span class="na">owners</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;099720109477&quot;</span><span class="p">]</span><span class="c1"> # Canonical (Ubuntu)</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">  </span><span class="nb">filter</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="w">    </span><span class="na">name</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;name&quot;</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="w">    </span><span class="na">values</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;ubuntu/images/hvm-ssd-gp3/ubuntu-noble-24.04-amd64-server-*&quot;</span><span class="p">]</span><span class="c1"> # A mesma que utilizamos na aula passada!</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="w">  </span><span class="nb">filter</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="w">    </span><span class="na">name</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;virtualization-type&quot;</span>
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="w">    </span><span class="na">values</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;hvm&quot;</span><span class="p">]</span>
+<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a><span class="p">}</span>
+<a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a>
+<a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a><span class="c1"># Key Pair para acesso SSH</span>
+<a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a><span class="kr">resource</span><span class="w"> </span><span class="nc">&quot;aws_key_pair&quot;</span><span class="w"> </span><span class="nv">&quot;movies_api_key&quot;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a><span class="w">  </span><span class="na">key_name</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;movies-api-key&quot;</span>
+<a id="__codelineno-9-20" name="__codelineno-9-20" href="#__codelineno-9-20"></a><span class="w">  </span><span class="na">public_key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">file</span><span class="p">(</span><span class="s2">&quot;~/.ssh/id_ed25519.pub&quot;</span><span class="p">)</span><span class="c1"> # Ajuste o caminho conforme necessário</span>
+<a id="__codelineno-9-21" name="__codelineno-9-21" href="#__codelineno-9-21"></a><span class="p">}</span>
+<a id="__codelineno-9-22" name="__codelineno-9-22" href="#__codelineno-9-22"></a>
+<a id="__codelineno-9-23" name="__codelineno-9-23" href="#__codelineno-9-23"></a><span class="c1"># Instância EC2</span>
+<a id="__codelineno-9-24" name="__codelineno-9-24" href="#__codelineno-9-24"></a><span class="kr">resource</span><span class="w"> </span><span class="nc">&quot;aws_instance&quot;</span><span class="w"> </span><span class="nv">&quot;movies_api&quot;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-25" name="__codelineno-9-25" href="#__codelineno-9-25"></a><span class="w">  </span><span class="na">ami</span><span class="w">             </span><span class="o">=</span><span class="w"> </span><span class="nv">data.aws_ami.ubuntu.id</span>
+<a id="__codelineno-9-26" name="__codelineno-9-26" href="#__codelineno-9-26"></a><span class="w">  </span><span class="na">instance_type</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;t3a.micro&quot;</span>
+<a id="__codelineno-9-27" name="__codelineno-9-27" href="#__codelineno-9-27"></a><span class="w">  </span><span class="na">key_name</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="nv">aws_key_pair.movies_api_key.key_name</span>
+<a id="__codelineno-9-28" name="__codelineno-9-28" href="#__codelineno-9-28"></a><span class="w">  </span><span class="na">security_groups</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="nv">aws_security_group.movies_api_sg.name</span><span class="p">]</span>
+<a id="__codelineno-9-29" name="__codelineno-9-29" href="#__codelineno-9-29"></a>
+<a id="__codelineno-9-30" name="__codelineno-9-30" href="#__codelineno-9-30"></a><span class="w">  </span><span class="nb">tags</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-31" name="__codelineno-9-31" href="#__codelineno-9-31"></a><span class="w">    </span><span class="na">Name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;movies-api-server&quot;</span>
+<a id="__codelineno-9-32" name="__codelineno-9-32" href="#__codelineno-9-32"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-9-33" name="__codelineno-9-33" href="#__codelineno-9-33"></a><span class="p">}</span>
+</code></pre></div>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
+</div></form></div>
+<div class="admonition exercise text short exercise-short" id="exercise_2">
+<p class="admonition-title">Exercise</p>
+<form class="quiz-form"><p>Qual sistema operacional e versão estão sendo utilizados na instância EC2?</p>
+<div class="form-elements">
+<div class="quiz-text-container">
+
+<input type="text" value="" name="data" class="quiz-text-input" 
+       placeholder="Enter your answer..." autocomplete="off"/>
+
+</div>
+<button class="quiz-submit-button" type="submit">Submit</button>
+</div></form><div class="admonition answer quiz-answer no-indent">
+<p class="admonition-title">Answer</p>
+<p>Ubuntu 22.04 LTS</p>
+</div>
+</div>
+<div class="admonition exercise text short exercise-short" id="exercise_3">
+<p class="admonition-title">Exercise</p>
+<form class="quiz-form"><p>Qual será a configuração (RAM e vCPU) da instância EC2?</p>
+<div class="form-elements">
+<div class="quiz-text-container">
+
+<input type="text" value="" name="data" class="quiz-text-input" 
+       placeholder="Enter your answer..." autocomplete="off"/>
+
+</div>
+<button class="quiz-submit-button" type="submit">Submit</button>
+</div></form><div class="admonition answer quiz-answer no-indent">
+<p class="admonition-title">Answer</p>
+<p><code>t3a.micro</code> (2 vCPU, 1 GB RAM).</p>
+<p>Veja mais em <a href="https://aws.amazon.com/ec2/instance-types/">AWS EC2 Instance Types</a>.</p>
+</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Dica!</p>
+<p>Você pode conferir as imagens disponíveis da canonical com:</p>
+<div class="admonition info">
+<p class="admonition-title">Info!</p>
+<p><code>099720109477</code> é o ID do dono oficial das imagens Ubuntu na AWS (canonical).</p>
+</div>
+<div class="termy">
+<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>$<span class="w"> </span>aws<span class="w"> </span>ec2<span class="w"> </span>describe-images<span class="w"> </span>--owners<span class="w"> </span><span class="m">099720109477</span><span class="w"> </span>--query<span class="w"> </span><span class="s1">&#39;Images[*].[ImageId,Name,CreationDate]&#39;</span><span class="w"> </span>--output<span class="w"> </span>table<span class="w"> </span>--profile<span class="w"> </span>dataeng
+</code></pre></div>
+</div>
+</div>
+<div class="admonition exercise exercise-self-progress" id="exercise_8">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Adicione também a configuração do Security Group:</p>
+<div class="language-hcl copy highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="c1"># Security Group</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="kr">resource</span><span class="w"> </span><span class="nc">&quot;aws_security_group&quot;</span><span class="w"> </span><span class="nv">&quot;movies_api_sg&quot;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">  </span><span class="na">name_prefix</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;movies-api-sg&quot;</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="c1">  # SSH</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="w">  </span><span class="nb">ingress</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="w">    </span><span class="na">from_port</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="m">22</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="w">    </span><span class="na">to_port</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="m">22</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="w">    </span><span class="na">protocol</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;tcp&quot;</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="w">    </span><span class="na">cidr_blocks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;0.0.0.0/0&quot;</span><span class="p">]</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>
+<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a><span class="c1">  # HTTP para a API (porta 8000)</span>
+<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a><span class="w">  </span><span class="nb">ingress</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a><span class="w">    </span><span class="na">from_port</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="m">8000</span>
+<a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a><span class="w">    </span><span class="na">to_port</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="m">8000</span>
+<a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a><span class="w">    </span><span class="na">protocol</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;tcp&quot;</span>
+<a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a><span class="w">    </span><span class="na">cidr_blocks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;0.0.0.0/0&quot;</span><span class="p">]</span>
+<a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a>
+<a id="__codelineno-11-21" name="__codelineno-11-21" href="#__codelineno-11-21"></a><span class="c1">  # Saída para internet</span>
+<a id="__codelineno-11-22" name="__codelineno-11-22" href="#__codelineno-11-22"></a><span class="w">  </span><span class="nb">egress</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-23" name="__codelineno-11-23" href="#__codelineno-11-23"></a><span class="w">    </span><span class="na">from_port</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="m">0</span>
+<a id="__codelineno-11-24" name="__codelineno-11-24" href="#__codelineno-11-24"></a><span class="w">    </span><span class="na">to_port</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="m">0</span>
+<a id="__codelineno-11-25" name="__codelineno-11-25" href="#__codelineno-11-25"></a><span class="w">    </span><span class="na">protocol</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;-1&quot;</span>
+<a id="__codelineno-11-26" name="__codelineno-11-26" href="#__codelineno-11-26"></a><span class="w">    </span><span class="na">cidr_blocks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;0.0.0.0/0&quot;</span><span class="p">]</span>
+<a id="__codelineno-11-27" name="__codelineno-11-27" href="#__codelineno-11-27"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-11-28" name="__codelineno-11-28" href="#__codelineno-11-28"></a>
+<a id="__codelineno-11-29" name="__codelineno-11-29" href="#__codelineno-11-29"></a><span class="w">  </span><span class="nb">tags</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-30" name="__codelineno-11-30" href="#__codelineno-11-30"></a><span class="w">    </span><span class="na">Name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;movies-api-security-group&quot;</span>
+<a id="__codelineno-11-31" name="__codelineno-11-31" href="#__codelineno-11-31"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-11-32" name="__codelineno-11-32" href="#__codelineno-11-32"></a><span class="p">}</span>
+</code></pre></div>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
+</div></form></div>
+<div class="admonition exercise exercise-self-progress" id="exercise_9">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Adicione <em>outputs</em> para exibir informações importantes:</p>
+<div class="language-hcl copy highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c1"># Outputs</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="kr">output</span><span class="w"> </span><span class="nv">&quot;instance_id&quot;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">  </span><span class="na">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;ID da instância EC2&quot;</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">  </span><span class="na">value</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="nv">aws_instance.movies_api.id</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="p">}</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="kr">output</span><span class="w"> </span><span class="nv">&quot;instance_public_ip&quot;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="w">  </span><span class="na">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;IP público da instância&quot;</span>
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="w">  </span><span class="na">value</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="nv">aws_instance.movies_api.public_ip</span>
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="p">}</span>
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>
+<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="kr">output</span><span class="w"> </span><span class="nv">&quot;instance_public_dns&quot;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a><span class="w">  </span><span class="na">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;DNS público da instância&quot;</span>
+<a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a><span class="w">  </span><span class="na">value</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="nv">aws_instance.movies_api.public_dns</span>
+<a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a><span class="p">}</span>
+<a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a>
+<a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a><span class="kr">output</span><span class="w"> </span><span class="nv">&quot;ssh_connection&quot;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a><span class="w">  </span><span class="na">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Comando para conectar via SSH&quot;</span>
+<a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a><span class="w">  </span><span class="na">value</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;ssh ubuntu@${aws_instance.movies_api.public_ip} -i ~/.ssh/id_ed25519&quot;</span>
+<a id="__codelineno-12-20" name="__codelineno-12-20" href="#__codelineno-12-20"></a><span class="p">}</span>
+</code></pre></div>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
+</div></form></div>
+<div class="admonition warning">
+<p class="admonition-title">Acesso SSH</p>
+<p>Perceba que, na aula passada, utilizamos um arquivo <code>.pem</code> para obter acesso à VM.</p>
+<p>Nesta aula, a chave da sua máquina é um arquivo <code>id_ed25519</code> e estará autorizada a acessar a instância.</p>
+</div>
+<h3 id="planejamento-e-aplicacao">Planejamento e aplicação</h3>
+<p>O comando  <code>terraform plan</code> é usado no Terraform para gerar e exibir um plano de execução, mostrando quais mudanças serão feitas na infraestrutura antes de aplicá-las.</p>
+<p>Ele compara o estado atual dos recursos (registrado no <em>state file</em> e no provedor) com a configuração descrita nos arquivos <code>.tf</code> e indica o que será <strong>criado</strong>, <strong>alterado</strong> ou <strong>destruído</strong>.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>O <code>terraform plan</code> serve como uma <strong>prévia segura</strong> para validar se as alterações desejadas estão corretas, permitindo <strong>revisar</strong> e <strong>evitar modificações indesejadas</strong> na infraestrutura antes de executar o <code>terraform apply</code>.</p>
+</div>
+<div class="admonition exercise text short exercise-short" id="exercise_4">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Execute o planejamento para ver o que será criado:</p>
+<div class="termy">
+<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>$<span class="w"> </span>terraform<span class="w"> </span>plan
+</code></pre></div>
+</div>
+<p>Analise a saída. O que o Terraform pretende criar?</p>
+<div class="form-elements">
+<div class="quiz-text-container">
+
+<input type="text" value="" name="data" class="quiz-text-input" 
+       placeholder="Enter your answer..." autocomplete="off"/>
+
+</div>
+<button class="quiz-submit-button" type="submit">Submit</button>
+</div></form><div class="admonition answer quiz-answer no-indent">
+<p class="admonition-title">Answer</p>
+<p>Deve retornar algo contendo, dentre outras informações:</p>
+<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="c1"># aws_instance.movies_api will be created</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>...
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="c1"># aws_key_pair.movies_api_key will be created</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>...
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="c1"># aws_security_group.movies_api_sg will be created</span>
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>...
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>Plan:<span class="w"> </span><span class="m">3</span><span class="w"> </span>to<span class="w"> </span>add,<span class="w"> </span><span class="m">0</span><span class="w"> </span>to<span class="w"> </span>change,<span class="w"> </span><span class="m">0</span><span class="w"> </span>to<span class="w"> </span>destroy.
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>...
+</code></pre></div>
+</div>
+</div>
+<div class="admonition exercise exercise-self-progress" id="exercise_10">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Aplique a configuração para criar os recursos:</p>
+<div class="termy">
+<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>$<span class="w"> </span>terraform<span class="w"> </span>apply
+</code></pre></div>
+</div>
+<p>Digite <code>yes</code> quando solicitado.</p>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
+</div></form></div>
+<div class="admonition exercise text short exercise-short" id="exercise_5">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Abra o <strong>console</strong> da <strong>AWS</strong> e verifique, no painel da <strong>EC2</strong>, se a instância foi criada.</p>
+<p>Quantas instâncias você vê?</p>
+<div class="form-elements">
+<div class="quiz-text-container">
+
+<input type="text" value="" name="data" class="quiz-text-input" 
+       placeholder="Enter your answer..." autocomplete="off"/>
+
+</div>
+<button class="quiz-submit-button" type="submit">Submit</button>
+</div></form><div class="admonition answer quiz-answer no-indent">
+<p class="admonition-title">Answer</p>
+<p>Duas!</p>
+<ul>
+<li>Uma da aula passada (desligada)</li>
+<li>Uma que acabou de ser criada (ligada)</li>
+</ul>
+</div>
+</div>
+<div class="admonition exercise exercise-self-progress" id="exercise_11">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Teste o acesso SSH à instância criada:</p>
+<div class="admonition warning">
+<p class="admonition-title">Atenção!</p>
+<p>Substitua <code>IP_PUBLICO</code> pelo <strong>IP público</strong> mostrado no output do Terraform.</p>
+</div>
+<div class="termy">
+<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>$<span class="w"> </span>ssh<span class="w"> </span>ubuntu@IP_PUBLICO<span class="w"> </span>-i<span class="w"> </span>~/.ssh/id_ed25519
+</code></pre></div>
+</div>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
+</div></form></div>
+<div class="admonition exercise exercise-self-progress" id="exercise_12">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Na <strong>VM</strong>, rode o comando:</p>
+<div class="termy">
+<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>$<span class="w"> </span>cat<span class="w"> </span>~/.ssh/authorized_keys
+</code></pre></div>
+<p></div>
+<br></p>
+<div class="admonition info">
+<p class="admonition-title">Informação</p>
+<p>O conteúdo do arquivo <code>~/.ssh/authorized_keys</code> deve incluir a chave pública correspondente ao arquivo <code>id_ed25519</code> da sua máquina!</p>
+<p>Ou seja, esta linha que permite você realize <strong>SSH</strong> no servidor!</p>
+<p>Cada computador autorizado a realizar <strong>SSH</strong> no servidor terá uma chave pública listada nesse arquivo (uma por linha).</p>
+</div>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
+</div></form></div>
+<div class="admonition exercise text long exercise-long" id="exercise_6">
+<p class="admonition-title">Exercise</p>
+<form class="quiz-form"><p>Compare o processo de criação da VM com Terraform versus a criação manual da aula anterior. Quais são as principais diferenças?</p>
+<div class="form-elements">
+<div class="quiz-text-container">
+
+<textarea name="data" class="quiz-text-input" 
+          placeholder="Enter your detailed answer..." rows="4"></textarea>
+
+</div>
+<button class="quiz-submit-button" type="submit">Submit</button>
+</div></form><div class="admonition answer quiz-answer no-indent">
+<p class="admonition-title">Answer</p>
+<ul>
+<li><strong>Velocidade</strong>: Terraform cria todos os recursos de uma vez</li>
+<li><strong>Reprodutibilidade</strong>: O mesmo código pode ser executado várias vezes</li>
+<li><strong>Documentação</strong>: A infraestrutura fica documentada no código</li>
+<li><strong>Versionamento</strong>: Mudanças podem ser rastreadas no Git</li>
+<li><strong>Consistência</strong>: Reduz erros de configuração manual</li>
+</ul>
+</div>
+</div>
+<h2 id="automatizando-a-configuracao-da-aplicacao">Automatizando a configuração da aplicação</h2>
+<p>Agora vamos estender nosso Terraform para instalar e configurar a aplicação automaticamente, eliminando as etapas manuais via SSH.</p>
+<div class="admonition exercise exercise-self-progress" id="exercise_13">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Crie um arquivo <code>user_data.sh</code> com o script de inicialização:</p>
+<div class="admonition info">
+<p class="admonition-title">info</p>
+<p>Este será o script de inicialização a ser executado quando a VM for criada.</p>
+</div>
+<div class="language-bash copy highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="ch">#!/bin/bash</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="nb">set</span><span class="w"> </span>-euxo<span class="w"> </span>pipefail
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="c1"># Atualizar sistema</span>
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>apt-get<span class="w"> </span>update
+<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>apt-get<span class="w"> </span>upgrade<span class="w"> </span>-y
+<a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>git<span class="w"> </span>curl<span class="w"> </span>build-essential<span class="w"> </span>python3-pip
+<a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a>
+<a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a><span class="c1"># Criar usuário</span>
+<a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a>sudo<span class="w"> </span>useradd<span class="w"> </span>--system<span class="w"> </span>--create-home<span class="w"> </span>--home-dir<span class="w"> </span>/srv/movies-api<span class="w"> </span>--shell<span class="w"> </span>/usr/sbin/nologin<span class="w"> </span>uapi
+<a id="__codelineno-18-11" name="__codelineno-18-11" href="#__codelineno-18-11"></a>sudo<span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>/srv/movies-api/app
+<a id="__codelineno-18-12" name="__codelineno-18-12" href="#__codelineno-18-12"></a>sudo<span class="w"> </span>chown<span class="w"> </span>-R<span class="w"> </span>uapi:uapi<span class="w"> </span>/srv/movies-api/app
+<a id="__codelineno-18-13" name="__codelineno-18-13" href="#__codelineno-18-13"></a>
+<a id="__codelineno-18-14" name="__codelineno-18-14" href="#__codelineno-18-14"></a><span class="c1"># Clonar Repositorio API</span>
+<a id="__codelineno-18-15" name="__codelineno-18-15" href="#__codelineno-18-15"></a>sudo<span class="w"> </span>-u<span class="w"> </span>uapi<span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/macielcalebe/movies-api-example-01.git<span class="w"> </span>/srv/movies-api/app
+<a id="__codelineno-18-16" name="__codelineno-18-16" href="#__codelineno-18-16"></a>
+<a id="__codelineno-18-17" name="__codelineno-18-17" href="#__codelineno-18-17"></a><span class="c1"># Instalar uv system-wide</span>
+<a id="__codelineno-18-18" name="__codelineno-18-18" href="#__codelineno-18-18"></a>curl<span class="w"> </span>-LsSf<span class="w"> </span>https://astral.sh/uv/install.sh<span class="w"> </span><span class="p">|</span><span class="w"> </span>env<span class="w"> </span><span class="nv">UV_INSTALL_DIR</span><span class="o">=</span>/usr/local/bin<span class="w"> </span>sh
+<a id="__codelineno-18-19" name="__codelineno-18-19" href="#__codelineno-18-19"></a>/usr/local/bin/uv<span class="w"> </span>--version
+<a id="__codelineno-18-20" name="__codelineno-18-20" href="#__codelineno-18-20"></a>
+<a id="__codelineno-18-21" name="__codelineno-18-21" href="#__codelineno-18-21"></a><span class="c1"># Criar ambiente virtual Python 3.12 com uv</span>
+<a id="__codelineno-18-22" name="__codelineno-18-22" href="#__codelineno-18-22"></a>sudo<span class="w"> </span>-u<span class="w"> </span>uapi<span class="w"> </span>/usr/local/bin/uv<span class="w"> </span>venv<span class="w"> </span>--python<span class="w"> </span><span class="m">3</span>.12<span class="w"> </span>/srv/movies-api/app/.venv
+<a id="__codelineno-18-23" name="__codelineno-18-23" href="#__codelineno-18-23"></a>
+<a id="__codelineno-18-24" name="__codelineno-18-24" href="#__codelineno-18-24"></a><span class="c1"># Instalar dependências</span>
+<a id="__codelineno-18-25" name="__codelineno-18-25" href="#__codelineno-18-25"></a><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-f<span class="w"> </span>/srv/movies-api/app/requirements.txt<span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<a id="__codelineno-18-26" name="__codelineno-18-26" href="#__codelineno-18-26"></a><span class="w">    </span>sudo<span class="w"> </span>-u<span class="w"> </span>uapi<span class="w"> </span>/usr/local/bin/uv<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>/srv/movies-api/app/requirements.txt<span class="w"> </span>--python<span class="w"> </span>/srv/movies-api/app/.venv/bin/python
+<a id="__codelineno-18-27" name="__codelineno-18-27" href="#__codelineno-18-27"></a><span class="k">fi</span>
+<a id="__codelineno-18-28" name="__codelineno-18-28" href="#__codelineno-18-28"></a>
+<a id="__codelineno-18-29" name="__codelineno-18-29" href="#__codelineno-18-29"></a><span class="c1"># Criar arquivo de serviço systemd</span>
+<a id="__codelineno-18-30" name="__codelineno-18-30" href="#__codelineno-18-30"></a>cat<span class="w"> </span>&gt;<span class="w"> </span>/etc/systemd/system/movies-api.service<span class="w"> </span><span class="s">&lt;&lt; &#39;EOF&#39;</span>
+<a id="__codelineno-18-31" name="__codelineno-18-31" href="#__codelineno-18-31"></a><span class="s">[Unit]</span>
+<a id="__codelineno-18-32" name="__codelineno-18-32" href="#__codelineno-18-32"></a><span class="s">Description=Movies API</span>
+<a id="__codelineno-18-33" name="__codelineno-18-33" href="#__codelineno-18-33"></a><span class="s">After=network.target</span>
+<a id="__codelineno-18-34" name="__codelineno-18-34" href="#__codelineno-18-34"></a>
+<a id="__codelineno-18-35" name="__codelineno-18-35" href="#__codelineno-18-35"></a><span class="s">[Service]</span>
+<a id="__codelineno-18-36" name="__codelineno-18-36" href="#__codelineno-18-36"></a><span class="s">Type=simple</span>
+<a id="__codelineno-18-37" name="__codelineno-18-37" href="#__codelineno-18-37"></a><span class="s">User=uapi</span>
+<a id="__codelineno-18-38" name="__codelineno-18-38" href="#__codelineno-18-38"></a><span class="s">WorkingDirectory=/srv/movies-api/app</span>
+<a id="__codelineno-18-39" name="__codelineno-18-39" href="#__codelineno-18-39"></a><span class="s">Environment=PATH=/srv/movies-api/app/.venv/bin</span>
+<a id="__codelineno-18-40" name="__codelineno-18-40" href="#__codelineno-18-40"></a><span class="s">ExecStart=/srv/movies-api/app/.venv/bin/fastapi run src/main.py --host 0.0.0.0 --port 8000</span>
+<a id="__codelineno-18-41" name="__codelineno-18-41" href="#__codelineno-18-41"></a><span class="s">Restart=always</span>
+<a id="__codelineno-18-42" name="__codelineno-18-42" href="#__codelineno-18-42"></a>
+<a id="__codelineno-18-43" name="__codelineno-18-43" href="#__codelineno-18-43"></a><span class="s">[Install]</span>
+<a id="__codelineno-18-44" name="__codelineno-18-44" href="#__codelineno-18-44"></a><span class="s">WantedBy=multi-user.target</span>
+<a id="__codelineno-18-45" name="__codelineno-18-45" href="#__codelineno-18-45"></a><span class="s">EOF</span>
+<a id="__codelineno-18-46" name="__codelineno-18-46" href="#__codelineno-18-46"></a>
+<a id="__codelineno-18-47" name="__codelineno-18-47" href="#__codelineno-18-47"></a><span class="c1"># Iniciar o serviço</span>
+<a id="__codelineno-18-48" name="__codelineno-18-48" href="#__codelineno-18-48"></a>systemctl<span class="w"> </span>daemon-reload
+<a id="__codelineno-18-49" name="__codelineno-18-49" href="#__codelineno-18-49"></a>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>movies-api
+<a id="__codelineno-18-50" name="__codelineno-18-50" href="#__codelineno-18-50"></a>systemctl<span class="w"> </span>start<span class="w"> </span>movies-api
+</code></pre></div>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
+</div></form></div>
+<div class="admonition exercise text short exercise-short" id="exercise_7">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>O que é <code>set -euxo pipefail</code>? Pesquise sobre!</p>
+<div class="form-elements">
+<div class="quiz-text-container">
+
+<input type="text" value="" name="data" class="quiz-text-input" 
+       placeholder="Enter your answer..." autocomplete="off"/>
+
+</div>
+<button class="quiz-submit-button" type="submit">Submit</button>
+</div></form></div>
+<div class="admonition exercise exercise-self-progress" id="exercise_14">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Modifique o recurso <code>aws_instance</code> no arquivo <code>main.tf</code> para incluir o <strong>script</strong> user data:</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>A única alteração será a adição da linha:
+<div class="language-bash copy highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="nv">user_data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>file<span class="o">(</span><span class="s2">&quot;user_data.sh&quot;</span><span class="o">)</span>
+</code></pre></div></p>
+</div>
+<p>Deverá ficar assim:</p>
+<div class="language-hcl copy highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="kr">resource</span><span class="w"> </span><span class="nc">&quot;aws_instance&quot;</span><span class="w"> </span><span class="nv">&quot;movies_api&quot;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="w">  </span><span class="na">ami</span><span class="w">             </span><span class="o">=</span><span class="w"> </span><span class="nv">data.aws_ami.ubuntu.id</span>
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="w">  </span><span class="na">instance_type</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;t3a.micro&quot;</span>
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="w">  </span><span class="na">key_name</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="nv">aws_key_pair.movies_api_key.key_name</span>
+<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="w">  </span><span class="na">security_groups</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="nv">aws_security_group.movies_api_sg.name</span><span class="p">]</span>
+<a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a>
+<a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a><span class="c1">  # Script de inicialização</span>
+<a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a><span class="w">  </span><span class="na">user_data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">file</span><span class="p">(</span><span class="s2">&quot;user_data.sh&quot;</span><span class="p">)</span>
+<a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a>
+<a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a><span class="w">  </span><span class="nb">tags</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-20-11" name="__codelineno-20-11" href="#__codelineno-20-11"></a><span class="w">    </span><span class="na">Name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;movies-api-server&quot;</span>
+<a id="__codelineno-20-12" name="__codelineno-20-12" href="#__codelineno-20-12"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-20-13" name="__codelineno-20-13" href="#__codelineno-20-13"></a><span class="p">}</span>
+</code></pre></div>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
+</div></form></div>
+<div class="admonition exercise exercise-self-progress" id="exercise_15">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Ao final do arquivo, adicione um output para a <strong>URL</strong> da <strong>API</strong>:</p>
+<div class="language-hcl copy highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="kr">output</span><span class="w"> </span><span class="nv">&quot;api_url&quot;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="w">  </span><span class="na">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;URL da API de filmes&quot;</span>
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="w">  </span><span class="na">value</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;http://${aws_instance.movies_api.public_ip}:8000&quot;</span>
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="p">}</span>
+<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>
+<a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a><span class="kr">output</span><span class="w"> </span><span class="nv">&quot;api_docs_url&quot;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a><span class="w">  </span><span class="na">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;URL da documentação da API&quot;</span>
+<a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a><span class="w">  </span><span class="na">value</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;http://${aws_instance.movies_api.public_ip}:8000/docs&quot;</span>
+<a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a><span class="p">}</span>
+</code></pre></div>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
+</div></form></div>
+<h2 id="testando-a-infraestrutura-completa">Testando a infraestrutura completa</h2>
+<div class="admonition exercise exercise-self-progress" id="exercise_16">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Como fizemos mudanças na configuração, vamos recriar a instância:</p>
+<div class="admonition info">
+<p class="admonition-title">Responda <code>yes</code></p>
+<p>Responda 'yes` para confirmar a destruição da instância e para sua recriação!</p>
+</div>
+<div class="termy">
+<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>$<span class="w"> </span>terraform<span class="w"> </span>destroy
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>$<span class="w"> </span>terraform<span class="w"> </span>apply
+</code></pre></div>
+</div>
+<p>Digite <code>yes</code> quando solicitado para ambos comandos.</p>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
+</div></form></div>
+<div class="admonition tip">
+<p class="admonition-title">Dica!</p>
+<p>Você pode conferir o <em>log</em> de execução do <em>script</em> <code>user_data.sh</code> em <code>/var/log/cloud-init-output.log</code>.</p>
+<p>Faça <strong>SSH</strong> na <strong>VM</strong> e rode:</p>
+<div class="termy">
+<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>$<span class="w"> </span>cat<span class="w"> </span>/var/log/cloud-init-output.log
+</code></pre></div>
+</div>
+</div>
+<div class="admonition exercise exercise-self-progress" id="exercise_17">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Aguarde alguns minutos (3-5 minutos) para que o script de inicialização seja executado completamente.</p>
+<p>Teste a API nos endpoints:
+- <code>http://&lt;IP_PUBLICO&gt;:8000</code>
+- <code>http://&lt;IP_PUBLICO&gt;:8000/docs</code>
+- <code>http://&lt;IP_PUBLICO&gt;:8000/filmes/avatar</code></p>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
+</div></form></div>
+<div class="admonition exercise exercise-self-progress" id="exercise_18">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Verifique se o serviço está rodando corretamente conectando via SSH:</p>
+<div class="termy">
+<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>$<span class="w"> </span>ssh<span class="w"> </span>ubuntu@&lt;IP_PUBLICO&gt;<span class="w"> </span>-i<span class="w"> </span>~/.ssh/id_ed25519
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>$<span class="w"> </span>sudo<span class="w"> </span>systemctl<span class="w"> </span>status<span class="w"> </span>movies-api
+<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>$<span class="w"> </span>sudo<span class="w"> </span>journalctl<span class="w"> </span>-u<span class="w"> </span>movies-api<span class="w"> </span>-f
+</code></pre></div>
+</div>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
+</div></form></div>
+<div class="admonition exercise text short exercise-short" id="exercise_8">
+<p class="admonition-title">Exercise</p>
+<form class="quiz-form"><p>Quais são as vantagens de usar user data versus configurar tudo manualmente via SSH?</p>
+<div class="form-elements">
+<div class="quiz-text-container">
+
+<input type="text" value="" name="data" class="quiz-text-input" 
+       placeholder="Enter your answer..." autocomplete="off"/>
+
+</div>
+<button class="quiz-submit-button" type="submit">Submit</button>
+</div></form><div class="admonition answer quiz-answer no-indent">
+<p class="admonition-title">Answer</p>
+<ul>
+<li><strong>Automação completa</strong>: A instância fica pronta sem intervenção manual</li>
+<li><strong>Reprodutibilidade</strong>: Sempre teremos a mesma configuração</li>
+<li><strong>Escalabilidade</strong>: Facilita a criação de múltiplas instâncias</li>
+<li><strong>Documentação</strong>: Todo processo fica documentado no código</li>
+<li><strong>Redução de erros</strong>: Elimina passos manuais propensos a erro</li>
+</ul>
+</div>
+</div>
+<h2 id="organizando-o-codigo">Organizando o código</h2>
+<p>Para projetos maiores, é uma boa prática organizar o código Terraform em múltiplos arquivos.</p>
+<div class="admonition exercise exercise-self-progress" id="exercise_19">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Vamos conferir o <em>status</em> atual!</p>
+<p>Execute:</p>
+<div class="termy">
+<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>$<span class="w"> </span>terraform<span class="w"> </span>plan
+</code></pre></div>
+</div>
+<p>Como não realizamos nenhuma modificação nos arquivos de configuração, o esperado é que obtenhamos:</p>
+<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>No<span class="w"> </span>changes.<span class="w"> </span>Your<span class="w"> </span>infrastructure<span class="w"> </span>matches<span class="w"> </span>the<span class="w"> </span>configuration.
+</code></pre></div>
+<p>Isto indica que não existem mudanças a serem aplicadas.</p>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
+</div></form></div>
+<p>Assim, prosseguimos para a reorganização do código!</p>
+<div class="admonition exercise exercise-self-progress" id="exercise_20">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Reorganize o código criando os arquivos:</p>
+<p><strong><code>variables.tf</code></strong>:
+<div class="language-hcl copy highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="kr">variable</span><span class="w"> </span><span class="nv">&quot;region&quot;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="w">  </span><span class="na">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Região AWS&quot;</span>
+<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="w">  </span><span class="na">type</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="kt">string</span>
+<a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a><span class="w">  </span><span class="na">default</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;us-east-1&quot;</span>
+<a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a><span class="p">}</span>
+<a id="__codelineno-27-6" name="__codelineno-27-6" href="#__codelineno-27-6"></a>
+<a id="__codelineno-27-7" name="__codelineno-27-7" href="#__codelineno-27-7"></a><span class="kr">variable</span><span class="w"> </span><span class="nv">&quot;instance_type&quot;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-27-8" name="__codelineno-27-8" href="#__codelineno-27-8"></a><span class="w">  </span><span class="na">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Tipo da instância EC2&quot;</span>
+<a id="__codelineno-27-9" name="__codelineno-27-9" href="#__codelineno-27-9"></a><span class="w">  </span><span class="na">type</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="kt">string</span>
+<a id="__codelineno-27-10" name="__codelineno-27-10" href="#__codelineno-27-10"></a><span class="w">  </span><span class="na">default</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;t3a.micro&quot;</span>
+<a id="__codelineno-27-11" name="__codelineno-27-11" href="#__codelineno-27-11"></a><span class="p">}</span>
+<a id="__codelineno-27-12" name="__codelineno-27-12" href="#__codelineno-27-12"></a>
+<a id="__codelineno-27-13" name="__codelineno-27-13" href="#__codelineno-27-13"></a><span class="kr">variable</span><span class="w"> </span><span class="nv">&quot;key_name&quot;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-27-14" name="__codelineno-27-14" href="#__codelineno-27-14"></a><span class="w">  </span><span class="na">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Nome da chave SSH&quot;</span>
+<a id="__codelineno-27-15" name="__codelineno-27-15" href="#__codelineno-27-15"></a><span class="w">  </span><span class="na">type</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="kt">string</span>
+<a id="__codelineno-27-16" name="__codelineno-27-16" href="#__codelineno-27-16"></a><span class="w">  </span><span class="na">default</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;movies-api-key&quot;</span>
+<a id="__codelineno-27-17" name="__codelineno-27-17" href="#__codelineno-27-17"></a><span class="p">}</span>
+<a id="__codelineno-27-18" name="__codelineno-27-18" href="#__codelineno-27-18"></a>
+<a id="__codelineno-27-19" name="__codelineno-27-19" href="#__codelineno-27-19"></a><span class="kr">variable</span><span class="w"> </span><span class="nv">&quot;ssh_public_key_path&quot;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-27-20" name="__codelineno-27-20" href="#__codelineno-27-20"></a><span class="w">  </span><span class="na">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Caminho para a chave pública SSH&quot;</span>
+<a id="__codelineno-27-21" name="__codelineno-27-21" href="#__codelineno-27-21"></a><span class="w">  </span><span class="na">type</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="kt">string</span>
+<a id="__codelineno-27-22" name="__codelineno-27-22" href="#__codelineno-27-22"></a><span class="w">  </span><span class="na">default</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;~/.ssh/id_ed25519.pub&quot;</span>
+<a id="__codelineno-27-23" name="__codelineno-27-23" href="#__codelineno-27-23"></a><span class="p">}</span>
+</code></pre></div></p>
+<p><strong><code>outputs.tf</code></strong>:
+<div class="language-hcl copy highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="kr">output</span><span class="w"> </span><span class="nv">&quot;instance_id&quot;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a><span class="w">  </span><span class="na">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;ID da instância EC2&quot;</span>
+<a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a><span class="w">  </span><span class="na">value</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="nv">aws_instance.movies_api.id</span>
+<a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a><span class="p">}</span>
+<a id="__codelineno-28-5" name="__codelineno-28-5" href="#__codelineno-28-5"></a>
+<a id="__codelineno-28-6" name="__codelineno-28-6" href="#__codelineno-28-6"></a><span class="kr">output</span><span class="w"> </span><span class="nv">&quot;instance_public_ip&quot;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-28-7" name="__codelineno-28-7" href="#__codelineno-28-7"></a><span class="w">  </span><span class="na">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;IP público da instância&quot;</span>
+<a id="__codelineno-28-8" name="__codelineno-28-8" href="#__codelineno-28-8"></a><span class="w">  </span><span class="na">value</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="nv">aws_instance.movies_api.public_ip</span>
+<a id="__codelineno-28-9" name="__codelineno-28-9" href="#__codelineno-28-9"></a><span class="p">}</span>
+<a id="__codelineno-28-10" name="__codelineno-28-10" href="#__codelineno-28-10"></a>
+<a id="__codelineno-28-11" name="__codelineno-28-11" href="#__codelineno-28-11"></a><span class="kr">output</span><span class="w"> </span><span class="nv">&quot;api_url&quot;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-28-12" name="__codelineno-28-12" href="#__codelineno-28-12"></a><span class="w">  </span><span class="na">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;URL da API de filmes&quot;</span>
+<a id="__codelineno-28-13" name="__codelineno-28-13" href="#__codelineno-28-13"></a><span class="w">  </span><span class="na">value</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;http://${aws_instance.movies_api.public_ip}:8000&quot;</span>
+<a id="__codelineno-28-14" name="__codelineno-28-14" href="#__codelineno-28-14"></a><span class="p">}</span>
+<a id="__codelineno-28-15" name="__codelineno-28-15" href="#__codelineno-28-15"></a>
+<a id="__codelineno-28-16" name="__codelineno-28-16" href="#__codelineno-28-16"></a><span class="kr">output</span><span class="w"> </span><span class="nv">&quot;ssh_connection&quot;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-28-17" name="__codelineno-28-17" href="#__codelineno-28-17"></a><span class="w">  </span><span class="na">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Comando para conectar via SSH&quot;</span>
+<a id="__codelineno-28-18" name="__codelineno-28-18" href="#__codelineno-28-18"></a><span class="w">  </span><span class="na">value</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;ssh ubuntu@${aws_instance.movies_api.public_ip} -i ~/.ssh/id_ed25519&quot;</span>
+<a id="__codelineno-28-19" name="__codelineno-28-19" href="#__codelineno-28-19"></a><span class="p">}</span>
+</code></pre></div></p>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
+</div></form></div>
+<div class="admonition exercise exercise-self-progress" id="exercise_21">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Atualize o <code>main.tf</code> para usar as variáveis:</p>
+<div class="language-hcl copy highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="nb">terraform</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="w">  </span><span class="na">required_version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;&gt;= 1.0&quot;</span>
+<a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a><span class="w">  </span><span class="nb">required_providers</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a><span class="w">    </span><span class="nb">aws</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-29-5" name="__codelineno-29-5" href="#__codelineno-29-5"></a><span class="w">      </span><span class="na">source</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;hashicorp/aws&quot;</span>
+<a id="__codelineno-29-6" name="__codelineno-29-6" href="#__codelineno-29-6"></a><span class="w">      </span><span class="na">version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;~&gt; 5.0&quot;</span>
+<a id="__codelineno-29-7" name="__codelineno-29-7" href="#__codelineno-29-7"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-29-8" name="__codelineno-29-8" href="#__codelineno-29-8"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-29-9" name="__codelineno-29-9" href="#__codelineno-29-9"></a><span class="p">}</span>
+<a id="__codelineno-29-10" name="__codelineno-29-10" href="#__codelineno-29-10"></a>
+<a id="__codelineno-29-11" name="__codelineno-29-11" href="#__codelineno-29-11"></a><span class="kr">provider</span><span class="w"> </span><span class="nv">&quot;aws&quot;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-29-12" name="__codelineno-29-12" href="#__codelineno-29-12"></a><span class="w">  </span><span class="na">region</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="nv">var.region</span>
+<a id="__codelineno-29-13" name="__codelineno-29-13" href="#__codelineno-29-13"></a><span class="w">  </span><span class="na">profile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;dataeng&quot;</span>
+<a id="__codelineno-29-14" name="__codelineno-29-14" href="#__codelineno-29-14"></a><span class="p">}</span>
+<a id="__codelineno-29-15" name="__codelineno-29-15" href="#__codelineno-29-15"></a>
+<a id="__codelineno-29-16" name="__codelineno-29-16" href="#__codelineno-29-16"></a><span class="kr">data</span><span class="w"> </span><span class="nc">&quot;aws_ami&quot;</span><span class="w"> </span><span class="nv">&quot;ubuntu&quot;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-29-17" name="__codelineno-29-17" href="#__codelineno-29-17"></a><span class="w">  </span><span class="na">most_recent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">true</span>
+<a id="__codelineno-29-18" name="__codelineno-29-18" href="#__codelineno-29-18"></a><span class="w">  </span><span class="na">owners</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;099720109477&quot;</span><span class="p">]</span>
+<a id="__codelineno-29-19" name="__codelineno-29-19" href="#__codelineno-29-19"></a>
+<a id="__codelineno-29-20" name="__codelineno-29-20" href="#__codelineno-29-20"></a><span class="w">  </span><span class="nb">filter</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-29-21" name="__codelineno-29-21" href="#__codelineno-29-21"></a><span class="w">    </span><span class="na">name</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;name&quot;</span>
+<a id="__codelineno-29-22" name="__codelineno-29-22" href="#__codelineno-29-22"></a><span class="w">    </span><span class="na">values</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-amd64-server-*&quot;</span><span class="p">]</span>
+<a id="__codelineno-29-23" name="__codelineno-29-23" href="#__codelineno-29-23"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-29-24" name="__codelineno-29-24" href="#__codelineno-29-24"></a>
+<a id="__codelineno-29-25" name="__codelineno-29-25" href="#__codelineno-29-25"></a><span class="w">  </span><span class="nb">filter</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-29-26" name="__codelineno-29-26" href="#__codelineno-29-26"></a><span class="w">    </span><span class="na">name</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;virtualization-type&quot;</span>
+<a id="__codelineno-29-27" name="__codelineno-29-27" href="#__codelineno-29-27"></a><span class="w">    </span><span class="na">values</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;hvm&quot;</span><span class="p">]</span>
+<a id="__codelineno-29-28" name="__codelineno-29-28" href="#__codelineno-29-28"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-29-29" name="__codelineno-29-29" href="#__codelineno-29-29"></a><span class="p">}</span>
+<a id="__codelineno-29-30" name="__codelineno-29-30" href="#__codelineno-29-30"></a>
+<a id="__codelineno-29-31" name="__codelineno-29-31" href="#__codelineno-29-31"></a><span class="kr">resource</span><span class="w"> </span><span class="nc">&quot;aws_key_pair&quot;</span><span class="w"> </span><span class="nv">&quot;movies_api_key&quot;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-29-32" name="__codelineno-29-32" href="#__codelineno-29-32"></a><span class="w">  </span><span class="na">key_name</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="nv">var.key_name</span>
+<a id="__codelineno-29-33" name="__codelineno-29-33" href="#__codelineno-29-33"></a><span class="w">  </span><span class="na">public_key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">file</span><span class="p">(</span><span class="nv">var.ssh_public_key_path</span><span class="p">)</span>
+<a id="__codelineno-29-34" name="__codelineno-29-34" href="#__codelineno-29-34"></a><span class="p">}</span>
+<a id="__codelineno-29-35" name="__codelineno-29-35" href="#__codelineno-29-35"></a>
+<a id="__codelineno-29-36" name="__codelineno-29-36" href="#__codelineno-29-36"></a><span class="kr">resource</span><span class="w"> </span><span class="nc">&quot;aws_security_group&quot;</span><span class="w"> </span><span class="nv">&quot;movies_api_sg&quot;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-29-37" name="__codelineno-29-37" href="#__codelineno-29-37"></a><span class="w">  </span><span class="na">name_prefix</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;movies-api-sg&quot;</span>
+<a id="__codelineno-29-38" name="__codelineno-29-38" href="#__codelineno-29-38"></a>
+<a id="__codelineno-29-39" name="__codelineno-29-39" href="#__codelineno-29-39"></a><span class="w">  </span><span class="nb">ingress</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-29-40" name="__codelineno-29-40" href="#__codelineno-29-40"></a><span class="w">    </span><span class="na">from_port</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="m">22</span>
+<a id="__codelineno-29-41" name="__codelineno-29-41" href="#__codelineno-29-41"></a><span class="w">    </span><span class="na">to_port</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="m">22</span>
+<a id="__codelineno-29-42" name="__codelineno-29-42" href="#__codelineno-29-42"></a><span class="w">    </span><span class="na">protocol</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;tcp&quot;</span>
+<a id="__codelineno-29-43" name="__codelineno-29-43" href="#__codelineno-29-43"></a><span class="w">    </span><span class="na">cidr_blocks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;0.0.0.0/0&quot;</span><span class="p">]</span>
+<a id="__codelineno-29-44" name="__codelineno-29-44" href="#__codelineno-29-44"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-29-45" name="__codelineno-29-45" href="#__codelineno-29-45"></a>
+<a id="__codelineno-29-46" name="__codelineno-29-46" href="#__codelineno-29-46"></a><span class="w">  </span><span class="nb">ingress</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-29-47" name="__codelineno-29-47" href="#__codelineno-29-47"></a><span class="w">    </span><span class="na">from_port</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="m">8000</span>
+<a id="__codelineno-29-48" name="__codelineno-29-48" href="#__codelineno-29-48"></a><span class="w">    </span><span class="na">to_port</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="m">8000</span>
+<a id="__codelineno-29-49" name="__codelineno-29-49" href="#__codelineno-29-49"></a><span class="w">    </span><span class="na">protocol</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;tcp&quot;</span>
+<a id="__codelineno-29-50" name="__codelineno-29-50" href="#__codelineno-29-50"></a><span class="w">    </span><span class="na">cidr_blocks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;0.0.0.0/0&quot;</span><span class="p">]</span>
+<a id="__codelineno-29-51" name="__codelineno-29-51" href="#__codelineno-29-51"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-29-52" name="__codelineno-29-52" href="#__codelineno-29-52"></a>
+<a id="__codelineno-29-53" name="__codelineno-29-53" href="#__codelineno-29-53"></a><span class="w">  </span><span class="nb">egress</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-29-54" name="__codelineno-29-54" href="#__codelineno-29-54"></a><span class="w">    </span><span class="na">from_port</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="m">0</span>
+<a id="__codelineno-29-55" name="__codelineno-29-55" href="#__codelineno-29-55"></a><span class="w">    </span><span class="na">to_port</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="m">0</span>
+<a id="__codelineno-29-56" name="__codelineno-29-56" href="#__codelineno-29-56"></a><span class="w">    </span><span class="na">protocol</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;-1&quot;</span>
+<a id="__codelineno-29-57" name="__codelineno-29-57" href="#__codelineno-29-57"></a><span class="w">    </span><span class="na">cidr_blocks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;0.0.0.0/0&quot;</span><span class="p">]</span>
+<a id="__codelineno-29-58" name="__codelineno-29-58" href="#__codelineno-29-58"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-29-59" name="__codelineno-29-59" href="#__codelineno-29-59"></a>
+<a id="__codelineno-29-60" name="__codelineno-29-60" href="#__codelineno-29-60"></a><span class="w">  </span><span class="nb">tags</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-29-61" name="__codelineno-29-61" href="#__codelineno-29-61"></a><span class="w">    </span><span class="na">Name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;movies-api-security-group&quot;</span>
+<a id="__codelineno-29-62" name="__codelineno-29-62" href="#__codelineno-29-62"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-29-63" name="__codelineno-29-63" href="#__codelineno-29-63"></a><span class="p">}</span>
+<a id="__codelineno-29-64" name="__codelineno-29-64" href="#__codelineno-29-64"></a>
+<a id="__codelineno-29-65" name="__codelineno-29-65" href="#__codelineno-29-65"></a><span class="kr">resource</span><span class="w"> </span><span class="nc">&quot;aws_instance&quot;</span><span class="w"> </span><span class="nv">&quot;movies_api&quot;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-29-66" name="__codelineno-29-66" href="#__codelineno-29-66"></a><span class="w">  </span><span class="na">ami</span><span class="w">             </span><span class="o">=</span><span class="w"> </span><span class="nv">data.aws_ami.ubuntu.id</span>
+<a id="__codelineno-29-67" name="__codelineno-29-67" href="#__codelineno-29-67"></a><span class="w">  </span><span class="na">instance_type</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="nv">var.instance_type</span>
+<a id="__codelineno-29-68" name="__codelineno-29-68" href="#__codelineno-29-68"></a><span class="w">  </span><span class="na">key_name</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="nv">aws_key_pair.movies_api_key.key_name</span>
+<a id="__codelineno-29-69" name="__codelineno-29-69" href="#__codelineno-29-69"></a><span class="w">  </span><span class="na">security_groups</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="nv">aws_security_group.movies_api_sg.name</span><span class="p">]</span>
+<a id="__codelineno-29-70" name="__codelineno-29-70" href="#__codelineno-29-70"></a><span class="w">  </span><span class="na">user_data</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="nf">file</span><span class="p">(</span><span class="s2">&quot;user_data.sh&quot;</span><span class="p">)</span>
+<a id="__codelineno-29-71" name="__codelineno-29-71" href="#__codelineno-29-71"></a>
+<a id="__codelineno-29-72" name="__codelineno-29-72" href="#__codelineno-29-72"></a><span class="w">  </span><span class="nb">tags</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-29-73" name="__codelineno-29-73" href="#__codelineno-29-73"></a><span class="w">    </span><span class="na">Name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;movies-api-server&quot;</span>
+<a id="__codelineno-29-74" name="__codelineno-29-74" href="#__codelineno-29-74"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-29-75" name="__codelineno-29-75" href="#__codelineno-29-75"></a><span class="p">}</span>
+</code></pre></div>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
+</div></form></div>
+<div class="admonition exercise exercise-self-progress" id="exercise_22">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Teste a reorganização:</p>
+<div class="termy">
+<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>$<span class="w"> </span>terraform<span class="w"> </span>plan
+</code></pre></div>
+</div>
+<p>Se não houver mudanças planejadas na infra (apenas nos <em>outputs</em>), a reorganização foi bem-sucedida!</p>
+<p>Pode aplicar!</p>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
+</div></form></div>
+<h2 id="limpeza-dos-recursos">Limpeza dos recursos</h2>
+<div class="admonition danger">
+<p class="admonition-title">Importante!</p>
+<p>Sempre remova recursos que não estão em uso para evitar custos desnecessários.</p>
+</div>
+<div class="admonition exercise exercise-self-progress" id="exercise_23">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Destrua todos os recursos criados:</p>
+<div class="termy">
+<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>$<span class="w"> </span>terraform<span class="w"> </span>destroy
+</code></pre></div>
+</div>
+<p>Digite <code>yes</code> quando solicitado.</p>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
+</div></form></div>
+<div class="admonition exercise exercise-self-progress" id="exercise_24">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Confirme que todos os recursos foram removidos:</p>
+<div class="termy">
+<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>$<span class="w"> </span>aws<span class="w"> </span>ec2<span class="w"> </span>describe-instances<span class="w"> </span>--query<span class="w"> </span><span class="s1">&#39;Reservations[*].Instances[*].{ID:InstanceId,State:State.Name}&#39;</span><span class="w"> </span>--output<span class="w"> </span>table<span class="w"> </span>--profile<span class="w"> </span>dataeng
+</code></pre></div>
+</div>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
+</div></form></div>
+<script type="text/javascript">
+// Sistema de processamento de exercícios de múltipla escolha
+function processChoiceExercises() {
+  document.querySelectorAll('.admonition.exercise.choice').forEach(function(exerciseContainer, index) {
+    // Skip if already processed
+    if (exerciseContainer.hasAttribute('data-choice-processed')) {
+      console.log(`Choice exercise ${exerciseContainer.id || index + 1} already processed, skipping`);
+      return;
+    }
+    
+    // Mark as processed
+    exerciseContainer.setAttribute('data-choice-processed', 'true');
+    
+    // Always process choice exercises with JavaScript to ensure functionality
+    const exerciseId = `exercise_choice_${index + 1}`;
+    exerciseContainer.id = exerciseId;
+    
+    const ul = exerciseContainer.querySelector('ul');
+    if (!ul) return;
+    
+    // Check if already processed by Python plugin
+    const existingForm = exerciseContainer.querySelector('.quiz-form');
+    if (existingForm) {
+      console.log(`Choice exercise ${exerciseId} already has form from Python plugin`);
+      
+      // Ensure proper event handlers are attached
+      attachChoiceEventHandlers(exerciseContainer, existingForm);
+      return;
+    }
+    
+    console.log(`Creating JavaScript form for choice exercise ${exerciseId}`);
+    
+    // Process list items
+    const listItems = ul.querySelectorAll('li');
+    const alternatives = [];
+    let correctAnswerIndex = -1;
+    
+    listItems.forEach(function(li, i) {
+      const text = li.textContent.trim();
+      let isCorrect = false;
+      let choiceText = text;
+      
+      // Check if it's a checkbox format
+      if (text.startsWith('[ ]')) {
+        choiceText = text.substring(3).trim();
+        isCorrect = false;
+      } else if (text.startsWith('[X]') || text.startsWith('[x]')) {
+        choiceText = text.substring(3).trim();
+        isCorrect = true;
+        correctAnswerIndex = i;
+      }
+      
+      alternatives.push({
+        text: choiceText,
+        isCorrect: isCorrect
+      });
+    });
+    
+    // Create the quiz form
+    const form = document.createElement('form');
+    form.className = 'quiz-form';
+    
+    const alternativeSet = document.createElement('div');
+    alternativeSet.className = 'quiz-alternative-set';
+    
+    alternatives.forEach(function(alt, i) {
+      const label = document.createElement('label');
+      label.className = 'quiz-alternative';
+      label.setAttribute('data-value', i); // Store value in data attribute instead of radio
+      
+      const content = document.createElement('div');
+      content.className = 'content';
+      
+      // Create hidden input to store the value
+      const hiddenInput = document.createElement('input');
+      hiddenInput.type = 'hidden';
+      hiddenInput.name = 'data';
+      hiddenInput.value = '';
+      
+      const span = document.createElement('span');
+      span.className = 'choice-text';
+      span.textContent = alt.text;
+      
+      content.appendChild(span);
+      label.appendChild(content);
+      label.appendChild(hiddenInput);
+      alternativeSet.appendChild(label);
+    });
+    
+    const submitButton = document.createElement('button');
+    submitButton.className = 'quiz-submit-button';
+    submitButton.type = 'submit';
+    submitButton.textContent = 'Submit';
+    
+    form.appendChild(alternativeSet);
+    form.appendChild(submitButton);
+    
+    // Store correct answer
+    exerciseContainer.dataset.answerIdx = correctAnswerIndex;
+    
+    // Replace the original ul with the form
+    ul.parentNode.replaceChild(form, ul);
+    
+    console.log(`Processed choice exercise ${exerciseId} with ${alternatives.length} alternatives, correct: ${correctAnswerIndex}`);
+    
+    // Attach event handlers
+    attachChoiceEventHandlers(exerciseContainer, form);
+  });
+}
+
+// Function to attach event handlers to choice exercises
+function attachChoiceEventHandlers(exerciseContainer, form) {
+  const alternatives = form.querySelectorAll('.quiz-alternative');
+  const submitButton = form.querySelector('.quiz-submit-button');
+  
+  // Check if handlers are already attached to prevent duplicates
+  if (form.hasAttribute('data-handlers-attached')) {
+    console.log('Choice handlers already attached, skipping duplicate attachment');
+    return;
+  }
+  
+  // Add click handlers to alternatives
+  alternatives.forEach(function(alternative) {
+    alternative.addEventListener('click', function() {
+      // Check if the alternative is disabled or if the form is disabled
+      if (this.classList.contains("disabled") || (submitButton && submitButton.disabled)) {
+        console.log("Alternative click ignored - form is disabled");
+        return;
+      }
+      
+      // Remove selected class from all alternatives and clear their hidden inputs
+      alternatives.forEach(alt => {
+        alt.classList.remove('selected');
+        const hiddenInput = alt.querySelector('input[type="hidden"], input[name="data"]');
+        if (hiddenInput) {
+          hiddenInput.value = '';
+        }
+      });
+      
+      // Add selected class to clicked alternative
+      alternative.classList.add('selected');
+      
+      // Set the hidden input value
+      const hiddenInput = alternative.querySelector('input[type="hidden"], input[name="data"]');
+      const value = alternative.getAttribute('data-value') || 
+                   alternative.getAttribute('data-alt-index') ||
+                   Array.from(alternative.parentElement.children).indexOf(alternative);
+      if (hiddenInput && value !== null) {
+        hiddenInput.value = value.toString();
+      }
+    });
+  });
+  
+  // Mark that handlers have been attached
+  form.setAttribute('data-handlers-attached', 'true');
+  console.log('Attached choice handlers via attachChoiceEventHandlers');
+}
+
+// Sistema de processamento de exercícios de texto
+function processTextExercises() {
+  // Process text short exercises
+  document.querySelectorAll('.admonition.exercise.text.short').forEach(function(exerciseContainer, index) {
+    // Skip if already processed
+    if (exerciseContainer.hasAttribute('data-text-processed')) {
+      console.log(`Text short exercise ${exerciseContainer.id || index + 1} already processed, skipping`);
+      return;
+    }
+    
+    // Mark as processed
+    exerciseContainer.setAttribute('data-text-processed', 'true');
+    
+    // Check if form already exists (created by Python plugin)
+    if (exerciseContainer.querySelector('.quiz-form')) {
+      console.log(`Text short exercise ${index + 1} already has a form, skipping JavaScript creation`);
+      return;
+    }
+    
+    const exerciseId = `exercise_text_short_${index + 1}`;
+    exerciseContainer.id = exerciseId;
+    exerciseContainer.classList.add('exercise-short');
+    
+    const form = document.createElement('form');
+    form.className = 'quiz-form';
+    
+    const textContainer = document.createElement('div');
+    textContainer.className = 'quiz-text-container';
+    
+    const input = document.createElement('input');
+    input.type = 'text';
+    input.name = 'data';
+    input.className = 'quiz-text-input';
+    input.placeholder = 'Enter your answer...';
+    input.autocomplete = 'off';
+    
+    const submitButton = document.createElement('button');
+    submitButton.className = 'quiz-submit-button';
+    submitButton.type = 'submit';
+    submitButton.textContent = 'Submit';
+    
+    textContainer.appendChild(input);
+    form.appendChild(textContainer);
+    form.appendChild(submitButton);
+    
+    // Append form to the exercise container
+    exerciseContainer.appendChild(form);
+    
+    console.log(`Processed text short exercise ${exerciseId}`);
+  });
+  
+  // Process text long exercises
+  document.querySelectorAll('.admonition.exercise.text.long').forEach(function(exerciseContainer, index) {
+    // Skip if already processed
+    if (exerciseContainer.hasAttribute('data-text-processed')) {
+      console.log(`Text long exercise ${exerciseContainer.id || index + 1} already processed, skipping`);
+      return;
+    }
+    
+    // Mark as processed
+    exerciseContainer.setAttribute('data-text-processed', 'true');
+    
+    // Check if form already exists (created by Python plugin)
+    if (exerciseContainer.querySelector('.quiz-form')) {
+      console.log(`Text long exercise ${index + 1} already has a form, skipping JavaScript creation`);
+      return;
+    }
+    
+    const exerciseId = `exercise_text_long_${index + 1}`;
+    exerciseContainer.id = exerciseId;
+    exerciseContainer.classList.add('exercise-long');
+    
+    const form = document.createElement('form');
+    form.className = 'quiz-form';
+    
+    const textContainer = document.createElement('div');
+    textContainer.className = 'quiz-text-container';
+    
+    const textarea = document.createElement('textarea');
+    textarea.name = 'data';
+    textarea.className = 'quiz-text-input';
+    textarea.placeholder = 'Enter your detailed answer...';
+    textarea.rows = 4;
+    
+    const submitButton = document.createElement('button');
+    submitButton.className = 'quiz-submit-button';
+    submitButton.type = 'submit';
+    submitButton.textContent = 'Submit';
+    
+    textContainer.appendChild(textarea);
+    form.appendChild(textContainer);
+    form.appendChild(submitButton);
+    
+    // Append form to the exercise container
+    exerciseContainer.appendChild(form);
+    
+    console.log(`Processed text long exercise ${exerciseId}`);
+  });
+}
+
+// Sistema de armazenamento adaptativo com fallback
+const quizStorage = {
+  data: {},
+  available: false,
+  
+  init: function() {
+    try {
+      const test = 'test_' + Date.now();
+      localStorage.setItem(test, test);
+      localStorage.removeItem(test);
+      this.available = true;
+      console.log('localStorage is available');
+      return true;
+    } catch(e) {
+      console.warn('localStorage not available, using memory storage:', e.message);
+      this.available = false;
+      return false;
+    }
+  },
+  
+  setItem: function(key, value) {
+    try {
+      if (this.available) {
+        localStorage.setItem(key, value);
+        return true;
+      }
+    } catch(e) {
+      console.warn('localStorage.setItem failed, using memory storage:', e.message);
+      this.available = false;
+    }
+    
+    // Fallback para armazenamento em memória
+    this.data[key] = value;
+    return false;
+  },
+  
+  getItem: function(key) {
+    try {
+      if (this.available) {
+        const value = localStorage.getItem(key);
+        if (value !== null) {
+          return value;
+        }
+      }
+    } catch(e) {
+      console.warn('localStorage.getItem failed, using memory storage:', e.message);
+      this.available = false;
+    }
+    
+    // Fallback para armazenamento em memória
+    return this.data[key] || null;
+  },
+  
+  removeItem: function(key) {
+    try {
+      if (this.available) {
+        localStorage.removeItem(key);
+      }
+    } catch(e) {
+      console.warn('localStorage.removeItem failed:', e.message);
+    }
+    
+    // Sempre limpa do armazenamento em memória também
+    delete this.data[key];
+  }
+};
+
+// Função de debug para informações do navegador
+function debugBrowserInfo() {
+  console.log('=== DEBUG INFO ===');
+  console.log('User Agent:', navigator.userAgent);
+  console.log('Browser supports Storage:', typeof(Storage) !== "undefined");
+  console.log('Current origin:', window.location.origin);
+  console.log('Current protocol:', window.location.protocol);
+  console.log('localStorage available:', quizStorage.available);
+  console.log('==================');
+}
+
+// Function to add exercise numbering (JavaScript fallback)
+function addExerciseNumbering() {
+  const exercises = document.querySelectorAll('.admonition.exercise');
+  let exerciseCounter = 0;
+  
+  exercises.forEach(function(exercise) {
+    // Skip if already numbered
+    if (exercise.hasAttribute('data-numbered')) {
+      return;
+    }
+    
+    exerciseCounter++;
+    exercise.setAttribute('data-numbered', 'true');
+    const titleElement = exercise.querySelector('.admonition-title');
+    
+    if (titleElement) {
+      let newTitle = '';
+      
+      // Determine the type and create simple numbering
+      if (exercise.classList.contains('exercise-choice') || 
+          exercise.classList.contains('exercise-long') || 
+          exercise.classList.contains('exercise-short') || 
+          exercise.classList.contains('exercise-text')) {
+        newTitle = `Question ${exerciseCounter}`;
+      } else {
+        newTitle = `Exercise ${exerciseCounter}`;
+      }
+      
+      titleElement.textContent = newTitle;
+      console.log(`Updated exercise ${exerciseCounter}: ${newTitle}`);
+    }
+  });
+  
+  console.log(`Processed ${exerciseCounter} exercises for numbering`);
+}
+
+// Function to clean up invalid stored states
+function cleanupInvalidStates() {
+  if (!quizStorage.available) return;
+  
+  console.log('CLEANUP FUNCTION DISABLED - Text exercise persistence debugging in progress');
+  // Completely disable cleanup until we fix the logic that incorrectly removes valid text exercise states
+  // When re-enabled, it should handle page-specific keys (format: "path::exercise_id")
+  return;
+  
+  console.log('Cleaning up invalid stored states...');
+  const keysToRemove = [];
+  
+  // Check localStorage for quiz-related keys
+  for (let i = 0; i < localStorage.length; i++) {
+    const key = localStorage.key(i);
+    if (key && key.startsWith('exercise_')) {
+      try {
+        const value = localStorage.getItem(key);
+        const state = JSON.parse(value);
+        
+        // Only remove states that are truly invalid:
+        // 1. States with invalid structure
+        // 2. States that are supposedly submitted but have no answer data at all
+        if (typeof state !== 'object' || state === null) {
+          console.log(`Found invalid state structure for ${key}:`, state);
+          keysToRemove.push(key);
+        } else if (state.submitted && 
+                   state.selectedAnswer === null && 
+                   (!state.answerText || state.answerText.trim() === '')) {
+          // Only remove if it's supposedly submitted but has no answer data at all
+          // This means BOTH selectedAnswer is null AND answerText is empty/null
+          console.log(`Found incomplete submitted state for ${key}:`);
+          console.log(`  - submitted: ${state.submitted}`);
+          console.log(`  - selectedAnswer: ${state.selectedAnswer}`);
+          console.log(`  - answerText: "${state.answerText}"`);
+          console.log(`  - answerText.trim(): "${state.answerText?.trim()}"`);
+          console.log(`  - answerText is falsy: ${!state.answerText}`);
+          console.log(`  - answerText.trim() is empty: ${state.answerText?.trim() === ''}`);
+          keysToRemove.push(key);
+        } else {
+          // This is a valid state, don't remove it
+          console.log(`Valid state preserved for ${key}:`, state);
+        }
+        // Note: Text exercises can have selectedAnswer: null but valid answerText
+        // Choice exercises should have valid selectedAnswer
+      } catch (e) {
+        // Invalid JSON, mark for removal
+        console.log(`Found corrupted state for ${key}, marking for removal`);
+        keysToRemove.push(key);
+      }
+    }
+  }
+  
+  // Remove invalid states
+  keysToRemove.forEach(key => {
+    localStorage.removeItem(key);
+    console.log(`Removed invalid state: ${key}`);
+  });
+  
+  if (keysToRemove.length > 0) {
+    console.log(`Cleaned up ${keysToRemove.length} invalid states`);
+  }
+}
+
+// Main initialization function that can be called multiple times
+function initializeQuizzes() {
+  console.log('Initializing quizzes...');
+  
+  // Process exercises first
+  processChoiceExercises();
+  processTextExercises();
+  
+  // Add exercise numbering (JavaScript fallback for CSS counters)
+  addExerciseNumbering();
+  
+  // Only initialize storage once
+  if (!quizStorage.hasOwnProperty('initialized')) {
+    quizStorage.init();
+    debugBrowserInfo();
+    cleanupInvalidStates();
+    quizStorage.initialized = true;
+  }
+  
+  document.querySelectorAll("form.quiz-form").forEach(function (form) {
+    const exerciseContainer = form.closest(".admonition.exercise");
+    if (!exerciseContainer) return;
+    
+    // Check if this form is already being processed to prevent duplicate processing
+    if (form.hasAttribute('data-quiz-processed')) {
+      console.log(`Form already processed, skipping: ${exerciseContainer.id}`);
+      return;
+    }
+    
+    // Mark as being processed
+    form.setAttribute('data-quiz-processed', 'true');
+    
+    const answerBlock = exerciseContainer.querySelector(".quiz-answer, .admonition.answer");
+    const submitButton = form.querySelector(".quiz-submit-button");
+    let exerciseId = exerciseContainer.id;
+    const titleElement = exerciseContainer.querySelector(".admonition-title");
+    
+    // Ensure exercise has a unique ID
+    if (!exerciseId) {
+      // Generate a unique ID based on exercise position and detected type
+      const allExercises = Array.from(document.querySelectorAll('.admonition.exercise'));
+      const exerciseIndex = allExercises.indexOf(exerciseContainer) + 1;
+      
+      // Detect exercise type by form content to generate appropriate ID
+      const form = exerciseContainer.querySelector('.quiz-form');
+      if (form) {
+        const textInputs = form.querySelectorAll('input[name="data"]:not([type="hidden"])');
+        const textareaInputs = form.querySelectorAll('textarea[name="data"]');
+        const hiddenInputs = form.querySelectorAll('input[type="hidden"][name="data"]');
+        const alternatives = form.querySelectorAll('.quiz-alternative');
+        
+        // Determine type by form content
+        if (alternatives.length > 0 || (textInputs.length > 1 && hiddenInputs.length === 0)) {
+          // Choice exercise
+          const choiceIndex = Array.from(document.querySelectorAll('.admonition.exercise')).filter(ex => {
+            const exForm = ex.querySelector('.quiz-form');
+            return exForm && (exForm.querySelectorAll('.quiz-alternative').length > 0 || 
+                             exForm.querySelectorAll('input[name="data"]:not([type="hidden"])').length > 1);
+          }).indexOf(exerciseContainer) + 1;
+          exerciseId = `exercise_choice_${choiceIndex}`;
+        } else if (textareaInputs.length > 0 || (textInputs.length === 1 && hiddenInputs.length === 0)) {
+          // Text exercise
+          const textIndex = Array.from(document.querySelectorAll('.admonition.exercise')).filter(ex => {
+            const exForm = ex.querySelector('.quiz-form');
+            if (!exForm) return false;
+            const exTextInputs = exForm.querySelectorAll('input[name="data"]:not([type="hidden"])');
+            const exTextareaInputs = exForm.querySelectorAll('textarea[name="data"]');
+            const exHiddenInputs = exForm.querySelectorAll('input[type="hidden"][name="data"]');
+            return exTextareaInputs.length > 0 || (exTextInputs.length === 1 && exHiddenInputs.length === 0);
+          }).indexOf(exerciseContainer) + 1;
+          exerciseId = `exercise_text_${textIndex}`;
+        } else if (hiddenInputs.length > 0) {
+          // Self-progress exercise
+          const selfIndex = Array.from(document.querySelectorAll('.admonition.exercise')).filter(ex => {
+            const exForm = ex.querySelector('.quiz-form');
+            return exForm && exForm.querySelectorAll('input[type="hidden"][name="data"]').length > 0;
+          }).indexOf(exerciseContainer) + 1;
+          exerciseId = `exercise_self_${selfIndex}`;
+        } else {
+          // Fallback
+          exerciseId = `exercise_unknown_${exerciseIndex}`;
+        }
+      } else {
+        // No form found, use fallback
+        exerciseId = `exercise_noform_${exerciseIndex}`;
+      }
+      
+      exerciseContainer.id = exerciseId;
+      console.log(`Generated unique ID for exercise: ${exerciseId}`);
+    } else {
+      // Check for duplicate IDs and make them unique if needed
+      const existingElements = document.querySelectorAll(`[id="${exerciseId}"]`);
+      if (existingElements.length > 1) {
+        // There are duplicates, make this one unique
+        const allExercises = Array.from(document.querySelectorAll('.admonition.exercise'));
+        const exerciseIndex = allExercises.indexOf(exerciseContainer) + 1;
+        const originalId = exerciseId;
+        exerciseId = `${originalId}_duplicate_${exerciseIndex}`;
+        
+        console.log(`Duplicate ID detected: ${originalId}, changed to: ${exerciseId}`);
+        exerciseContainer.id = exerciseId;
+      }
+    }
+    
+    console.log(`Processing exercise: ${exerciseId}`);
+    console.log("Exercise Container:", exerciseContainer);
+    console.log("Title Element:", titleElement);
+    
+    // Create and append the edit button
+    const editButton = document.createElement("button");
+    editButton.classList.add("quiz-edit-button");
+    editButton.innerHTML = "&#x270E;"; // Pencil icon
+    editButton.type = "button"; // Evita submit do form
+    editButton.title = "Edit answer"; // Tooltip
+    
+    if (titleElement) {
+      titleElement.appendChild(editButton);
+      console.log("Edit button appended to title element.");
+    } else {
+      // Fallback if titleElement is not found, append to exerciseContainer
+      exerciseContainer.appendChild(editButton);
+      console.log("Edit button appended to exercise container (fallback).");
+    }
+    
+    console.log("Edit Button:", editButton);
+    
+    // Function to disable form elements
+    function disableForm() {
+      form.querySelectorAll("input, button, textarea").forEach(element => {
+        if (!element.classList.contains("quiz-edit-button")) {
+          element.disabled = true;
+          console.log(`Disabled element: ${element.tagName} with name ${element.name || element.className}`);
+        }
+      });
+      
+      // Also disable choice alternatives by adding a disabled class
+      form.querySelectorAll(".quiz-alternative").forEach(alternative => {
+        alternative.classList.add("disabled");
+        alternative.style.pointerEvents = "none";
+        alternative.style.opacity = "0.6";
+      });
+      console.log(`Disabled ${form.querySelectorAll(".quiz-alternative").length} alternatives`);
+    }
+    
+    // Function to enable form elements
+    function enableForm() {
+      form.querySelectorAll("input, button, textarea").forEach(element => {
+        element.disabled = false;
+        console.log(`Enabled element: ${element.tagName} with name ${element.name || element.className}`);
+      });
+      
+      // Also enable choice alternatives by removing the disabled class
+      form.querySelectorAll(".quiz-alternative").forEach(alternative => {
+        alternative.classList.remove("disabled");
+        alternative.style.pointerEvents = "";
+        alternative.style.opacity = "";
+      });
+      console.log(`Enabled ${form.querySelectorAll(".quiz-alternative").length} alternatives`);
+    }
+    
+    // Initially disable form elements
+    disableForm();
+    console.log("Initial disableForm() called.");
+    
+    // Make exercise ID page-specific to avoid conflicts between pages
+    const pageKey = window.location.pathname || window.location.href;
+    const pageSpecificExerciseId = `${pageKey}::${exerciseId}`;
+    
+    // Load saved state from storage
+    let savedState = null;
+    const savedStateRaw = quizStorage.getItem(pageSpecificExerciseId);
+    
+    console.log(`Checking saved state for ${pageSpecificExerciseId}: ${savedStateRaw}`);
+    
+    if (savedStateRaw) {
+      try {
+        savedState = JSON.parse(savedStateRaw);
+        console.log(`Loaded state for ${pageSpecificExerciseId}:`, savedState);
+        console.log(`answerText in loaded state: ${savedState.answerText}`);
+      } catch(e) {
+        console.error(`Error parsing saved state for ${pageSpecificExerciseId}:`, e);
+        // Remove estado corrompido
+        quizStorage.removeItem(pageSpecificExerciseId);
+      }
+      } else {
+        console.log(`No saved state found for ${pageSpecificExerciseId}`);
+      }    if (savedState) {
+      if (savedState.submitted) {
+        // Restore submitted state
+        disableForm();
+        console.log("Restoring submitted state: disableForm() called.");
+        
+        // Only show answer block for submitted exercises
+        if (answerBlock) {
+          answerBlock.classList.add("show");
+        }
+        
+        if (exerciseContainer.classList.contains("exercise") && exerciseContainer.classList.contains("choice")) {
+          const alternatives = form.querySelectorAll(".quiz-alternative");
+          const correctAnswerIndex = parseInt(exerciseContainer.dataset.answerIdx);
+          const selectedAnswerIndex = savedState.selectedAnswer;
+          
+          console.log(`Restoring choice exercise ${exerciseId}:`);
+          console.log(`- alternatives found: ${alternatives.length}`);
+          console.log(`- correctAnswerIndex: ${correctAnswerIndex}`);
+          console.log(`- selectedAnswerIndex: ${selectedAnswerIndex}`);
+          
+          // Only process if we have a valid selected answer index
+          if (selectedAnswerIndex !== null && selectedAnswerIndex !== undefined && 
+              selectedAnswerIndex >= 0 && selectedAnswerIndex < alternatives.length) {
+            
+            if (selectedAnswerIndex === correctAnswerIndex) {
+              alternatives[selectedAnswerIndex].classList.add("correct");
+            } else {
+              alternatives[selectedAnswerIndex].classList.add("incorrect");
+              if (correctAnswerIndex >= 0 && correctAnswerIndex < alternatives.length) {
+                alternatives[correctAnswerIndex].classList.add("correct");
+              }
+            }
+            
+            // Set the hidden input and add selected class
+            const hiddenInput = alternatives[selectedAnswerIndex].querySelector('input[name="data"], input[type="hidden"]');
+            if (hiddenInput) {
+              hiddenInput.value = selectedAnswerIndex.toString();
+              alternatives[selectedAnswerIndex].classList.add("selected");
+              console.log(`Restored selection for alternative ${selectedAnswerIndex}`);
+            } else {
+              console.log(`No hidden input found for alternative ${selectedAnswerIndex}`);
+            }
+          } else {
+            console.log(`Invalid selectedAnswerIndex for ${pageSpecificExerciseId}: ${selectedAnswerIndex} (alternatives: ${alternatives.length})`);
+            // Clear invalid state
+            console.log(`Clearing invalid state for ${pageSpecificExerciseId}`);
+            quizStorage.removeItem(pageSpecificExerciseId);
+            // Re-enable the form since the saved state was invalid
+            enableForm();
+            if (answerBlock) {
+              answerBlock.classList.remove("show");
+            }
+          }
+          
+        } else {
+          // Check for text exercises by form content, not CSS classes
+          const textInputs = form.querySelectorAll('input[name="data"]:not([type="hidden"])');
+          const textareaInputs = form.querySelectorAll('textarea[name="data"]');
+          const hiddenInputs = form.querySelectorAll('input[type="hidden"][name="data"]');
+          
+          // Text exercises have textarea or single text input (not hidden)
+          const isTextExercise = textareaInputs.length > 0 || (textInputs.length === 1 && hiddenInputs.length === 0);
+          
+          if (isTextExercise) {
+            const inputField = textareaInputs[0] || textInputs[0];
+            console.log(`Detected text exercise ${exerciseId} by form content - textarea: ${textareaInputs.length}, textInputs: ${textInputs.length}, hidden: ${hiddenInputs.length}`);
+            
+            if (inputField && savedState.answerText !== undefined) {
+              inputField.value = savedState.answerText;
+              console.log(`Restored text input for ${exerciseId}: ${inputField.value}`);
+            } else {
+              console.log(`Input field not found or no answerText for ${exerciseId} during restore.`);
+            }
+          } else {
+            console.log(`Not a recognized exercise type for ${exerciseId} - inputs: ${textInputs.length}, textarea: ${textareaInputs.length}, hidden: ${hiddenInputs.length}`);
+          }
+        }
+      } else {
+        // If not submitted, restore partial state but DON'T show answer
+        // Check for text exercises by form content, not CSS classes
+        const textInputs = form.querySelectorAll('input[name="data"]:not([type="hidden"])');
+        const textareaInputs = form.querySelectorAll('textarea[name="data"]');
+        const hiddenInputs = form.querySelectorAll('input[type="hidden"][name="data"]');
+        
+        // Text exercises have textarea or single text input (not hidden)
+        const isTextExercise = textareaInputs.length > 0 || (textInputs.length === 1 && hiddenInputs.length === 0);
+        
+        if (isTextExercise) {
+          const inputField = textareaInputs[0] || textInputs[0];
+          if (inputField && savedState.answerText !== undefined) {
+            inputField.value = savedState.answerText;
+            console.log(`Restored unsaved text input for ${exerciseId}: ${inputField.value}`);
+          } else {
+            console.log(`Input field not found or no answerText for ${exerciseId} during unsaved restore.`);
+          }
+        }
+        // Keep answer block hidden for non-submitted exercises
+        if (answerBlock) {
+          answerBlock.classList.remove("show");
+        }
+        enableForm(); // Enable if not submitted
+        console.log("State exists but not submitted: enableForm() called.");
+      }
+    } else {
+      // No saved state - enable form and keep answer hidden
+      enableForm(); 
+      if (answerBlock) {
+        answerBlock.classList.remove("show");
+      }
+      console.log("No saved state: enableForm() called.");
+    }
+    
+    // Handle choice alternative clicks - only attach if not already attached
+    if (exerciseContainer.classList.contains("exercise") && exerciseContainer.classList.contains("choice")) {
+      const alternatives = form.querySelectorAll(".quiz-alternative");
+      
+      // Check if event handlers are already attached by looking for a data attribute
+      if (!form.hasAttribute('data-handlers-attached')) {
+        alternatives.forEach(alternative => {
+          alternative.addEventListener("click", function() {
+            // Check if the alternative is disabled or if the form is disabled
+            if (this.classList.contains("disabled") || submitButton.disabled) {
+              console.log("Alternative click ignored - form is disabled");
+              return;
+            }
+            
+            // Remove selected class from all alternatives and clear their hidden inputs
+            alternatives.forEach(alt => {
+              alt.classList.remove("selected");
+              // Clear the hidden input value
+              const hiddenInput = alt.querySelector('input[name="data"], input[type="hidden"]');
+              if (hiddenInput) {
+                hiddenInput.value = "";
+              }
+            });
+            
+            // Add selected class to clicked alternative
+            this.classList.add("selected");
+            
+            // Set the hidden input with the selected alternative index
+            const hiddenInput = this.querySelector('input[name="data"], input[type="hidden"]');
+            if (hiddenInput) {
+              // Try different data attribute names (JS uses data-value, Python might use data-alt-index)
+              const altIndex = this.dataset.altIndex || this.getAttribute('data-value') || 
+                              Array.from(this.parentElement.children).indexOf(this);
+              hiddenInput.value = altIndex.toString();
+            }
+          });
+        });
+        
+        // Mark that handlers have been attached
+        form.setAttribute('data-handlers-attached', 'true');
+        console.log(`Attached choice handlers for ${exerciseId}`);
+      } else {
+        console.log(`Choice handlers already attached for ${exerciseId}`);
+      }
+    }
+    
+    // Auto-save text input (with debounce) - only for text exercises
+    // Detect text exercises by form content, not CSS classes
+    const textInputs = form.querySelectorAll('input[name="data"]:not([type="hidden"])');
+    const textareaInputs = form.querySelectorAll('textarea[name="data"]');
+    const hiddenInputs = form.querySelectorAll('input[type="hidden"][name="data"]');
+    
+    // Text exercises have textarea or single text input (not hidden)
+    const isTextExercise = textareaInputs.length > 0 || (textInputs.length === 1 && hiddenInputs.length === 0);
+    
+    if (isTextExercise) {
+      const inputField = textareaInputs[0] || textInputs[0];
+      if (inputField) {
+        let saveTimeout;
+        console.log(`Auto-save enabled for text exercise ${exerciseId}`);
+        
+        inputField.addEventListener("input", function() {
+          // Clear previous timeout
+          clearTimeout(saveTimeout);
+          
+          // Set new timeout for auto-save
+          saveTimeout = setTimeout(() => {
+            const currentState = quizStorage.getItem(pageSpecificExerciseId);
+            let state = currentState ? JSON.parse(currentState) : {};
+            
+            state.answerText = inputField.value;
+            // Don't mark as submitted for auto-save
+            
+            const success = quizStorage.setItem(pageSpecificExerciseId, JSON.stringify(state));
+            console.log(`Auto-saved text input for ${pageSpecificExerciseId}: ${inputField.value} (success: ${success})`);
+          }, 500); // Save after 500ms of no typing
+        });
+      }
+    }
+    
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      console.log("Form submitted. Preventing default behavior.");
+      console.log(`Exercise type for submission: ${exerciseContainer.classList}`);
+      
+      let selectedAnswer = null;
+      let answerText = null;
+      
+      if (exerciseContainer.classList.contains("exercise") && exerciseContainer.classList.contains("choice")) {
+        console.log("Processing choice exercise submission.");
+        
+        // Find the selected alternative by looking for the one with a non-empty hidden input value
+        const hiddenInputs = form.querySelectorAll('input[name="data"]');
+        let selectedAlternative = null;
+        selectedAnswer = -1; // Use the already declared variable
+        
+        for (let input of hiddenInputs) {
+          if (input.value !== "") {
+            selectedAlternative = input.closest(".quiz-alternative");
+            selectedAnswer = parseInt(input.value);
+            break;
+          }
+        }
+        
+        if (!selectedAlternative || selectedAnswer === -1) {
+          alert("Please select an option.");
+          return;
+        }
+        
+        const alternatives = form.querySelectorAll(".quiz-alternative");
+        
+        // Remove previous classes
+        alternatives.forEach(alt => {
+          alt.classList.remove("correct", "incorrect", "selected");
+        });
+        
+        const correctAnswerIndex = parseInt(exerciseContainer.dataset.answerIdx);
+        
+        if (selectedAnswer === correctAnswerIndex) {
+          selectedAlternative.classList.add("correct");
+        } else {
+          selectedAlternative.classList.add("incorrect");
+          // Highlight the correct answer
+          alternatives[correctAnswerIndex].classList.add("correct");
+        }
+        
+      } else {
+        // Check for text exercises by form content, not CSS classes
+        const textInputs = form.querySelectorAll('input[name="data"]:not([type="hidden"])');
+        const textareaInputs = form.querySelectorAll('textarea[name="data"]');
+        const hiddenInputs = form.querySelectorAll('input[type="hidden"][name="data"]');
+        
+        // Text exercises have textarea or single text input (not hidden)
+        const isTextExercise = textareaInputs.length > 0 || (textInputs.length === 1 && hiddenInputs.length === 0);
+        
+        if (isTextExercise) {
+          console.log("Processing text exercise submission (detected by form content).");
+          const inputField = textareaInputs[0] || textInputs[0];
+          if (inputField) {
+            console.log("Input field found:", inputField);
+            console.log("Input field value before saving:", inputField.value);
+            answerText = inputField.value.trim();
+            console.log(`Saving text input for ${exerciseId}: ${answerText}`);
+          } else {
+            console.log(`Input field not found for ${exerciseId} during save.`);
+          }
+        } else if (hiddenInputs.length > 0) {
+          console.log("Processing self-progress exercise submission (detected by form content).");
+          // For self-progress exercises, just mark as submitted
+        } else {
+          console.log(`Unknown exercise type for ${exerciseId} - inputs: ${textInputs.length}, textarea: ${textareaInputs.length}, hidden: ${hiddenInputs.length}`);
+        }
+      }
+      
+      // Show answer block only after submission
+      if (answerBlock) {
+        answerBlock.classList.add("show");
+        console.log("Answer block shown after submission.");
+      }
+      
+      // Disable form after submission
+      disableForm();
+      console.log("After submission: disableForm() called.");
+      
+      // Save state to storage
+      const stateData = {
+        submitted: true,
+        selectedAnswer: selectedAnswer,
+        answerText: answerText,
+        timestamp: Date.now()
+      };
+      
+      const success = quizStorage.setItem(pageSpecificExerciseId, JSON.stringify(stateData));
+      console.log(`State saved to storage (success: ${success}):`, stateData);
+    });
+    
+    // Handle edit button click
+    editButton.addEventListener("click", function(event) {
+      event.preventDefault();
+      event.stopPropagation();
+      console.log("Edit button clicked.");
+      
+      // Get current saved state to restore the last submitted answer
+      const currentSavedState = quizStorage.getItem(pageSpecificExerciseId);
+      let lastSubmittedState = null;
+      
+      if (currentSavedState) {
+        try {
+          lastSubmittedState = JSON.parse(currentSavedState);
+        } catch (e) {
+          console.warn("Failed to parse saved state:", e);
+        }
+      }
+      
+      // Enable form elements
+      enableForm();
+      console.log("Form enabled after edit button click");
+      
+      // Remove feedback classes but preserve the submitted answer
+      form.querySelectorAll(".quiz-alternative").forEach(alt => {
+        alt.classList.remove("correct", "incorrect");
+        // Don't remove "selected" class here, we'll restore it below
+        
+        // Clear hidden input values for choice exercises (will be restored below)
+        const hiddenInput = alt.querySelector('input[name="data"], input[type="hidden"]');
+        if (hiddenInput) {
+          hiddenInput.value = "";
+        }
+      });
+      
+      // Restore the last submitted answer for text exercises
+      const textInput = form.querySelector(".quiz-text-input");
+      if (textInput && lastSubmittedState && lastSubmittedState.answerText !== undefined) {
+        textInput.value = lastSubmittedState.answerText;
+        console.log("Restored last submitted text answer:", lastSubmittedState.answerText);
+      } else if (textInput) {
+        textInput.value = ""; // Only clear if no saved answer
+      }
+      
+      // Restore the last submitted answer for choice exercises
+      if (lastSubmittedState && lastSubmittedState.selectedAnswer !== undefined) {
+        const selectedIndex = lastSubmittedState.selectedAnswer;
+        const alternatives = form.querySelectorAll(".quiz-alternative");
+        
+        // First remove all selected states
+        alternatives.forEach(alt => alt.classList.remove("selected"));
+        
+        // Then restore the last selected option
+        if (selectedIndex >= 0 && selectedIndex < alternatives.length) {
+          const selectedAlt = alternatives[selectedIndex];
+          selectedAlt.classList.add("selected");
+          
+          const hiddenInput = selectedAlt.querySelector('input[name="data"], input[type="hidden"]');
+          if (hiddenInput) {
+            hiddenInput.value = selectedIndex.toString();
+          }
+          console.log("Restored last submitted choice answer:", selectedIndex);
+        }
+      }
+      
+      // Hide answer block when editing
+      if (answerBlock) {
+        answerBlock.classList.remove("show");
+        console.log("Answer block hidden for editing.");
+      }
+      
+      // Update the saved state to mark as editing (but keep the answer data)
+      if (lastSubmittedState) {
+        lastSubmittedState.submitted = false; // Mark as not submitted anymore
+        const success = quizStorage.setItem(pageSpecificExerciseId, JSON.stringify(lastSubmittedState));
+        console.log("Updated state to editing mode, preserved answer data");
+      }
+    });
+  });
+  
+  // Log final storage state for debugging
+  setTimeout(() => {
+    console.log('Final storage state:', {
+      available: quizStorage.available,
+      memoryData: quizStorage.data
+    });
+  }, 1000);
+}
+
+// Event listeners for both regular page loads and AJAX navigation
+document.addEventListener("DOMContentLoaded", function () {
+  console.log('DOMContentLoaded event fired');
+  initializeQuizzes();
+});
+
+// Simple and robust approach: Check for content changes every 500ms
+let lastPageUrl = window.location.href;
+let lastExerciseCount = 0;
+
+setInterval(function() {
+  const currentUrl = window.location.href;
+  const currentExercises = document.querySelectorAll('.admonition.exercise');
+  const currentCount = currentExercises.length;
+  
+  // Check if URL changed (AJAX navigation) or exercise count changed
+  if (currentUrl !== lastPageUrl || currentCount !== lastExerciseCount) {
+    console.log(`Page change detected: URL changed from ${lastPageUrl} to ${currentUrl}`);
+    console.log(`Exercise count changed from ${lastExerciseCount} to ${currentCount}`);
+    
+    lastPageUrl = currentUrl;
+    lastExerciseCount = currentCount;
+    
+    if (currentCount > 0) {
+      console.log('Exercises found after navigation, triggering initialization');
+      initializeQuizzes();
+    }
+  }
+}, 500); // Check every 500ms
+
+// Backup: Also try the standard MkDocs events
+const mkdocsEvents = [
+  'DOMContentSwapped',
+  'instant:render', 
+  'instant:loaded',
+  'page:load'
+];
+
+mkdocsEvents.forEach(eventName => {
+  document.addEventListener(eventName, function () {
+    console.log(`${eventName} event fired (AJAX navigation)`);
+    setTimeout(initializeQuizzes, 100);
+  });
+});
+
+// Also try intercepting link clicks directly
+document.addEventListener('click', function(e) {
+  if (e.target.tagName === 'A' || e.target.closest('a')) {
+    const link = e.target.tagName === 'A' ? e.target : e.target.closest('a');
+    console.log('Link clicked:', link.href);
+    
+    // Check for content after a delay
+    setTimeout(() => {
+      const exercises = document.querySelectorAll('.admonition.exercise');
+      console.log(`Found ${exercises.length} exercises after link click`);
+      if (exercises.length > 0) {
+        console.log('Exercises found after link click, triggering initialization');
+        initializeQuizzes();
+      }
+    }, 300);
+  }
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../intro/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Introdução">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Introdução
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../../about/" class="md-footer__link md-footer__link--next" aria-label="Next: Regras">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Regras
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2025 | @macielcalebe
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.indexes", "navigation.tabs", "navigation.tabs.sticky", "navigation.footer", "navigation.instant", "navigation.instant.progress", "search.highlight", "search.share", "search.suggest"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.50899def.min.js"></script>
+      
+        <script src="../../../js/tabs.js"></script>
+      
+        <script src="../../../js/termynal.js"></script>
+      
+        <script src="../../../js/custom.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>
