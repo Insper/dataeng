@@ -36,8 +36,11 @@ nav:
               - classes/03-data-warehouse/links.md
       - 04 - Computação em Nuvem:
           - classes/04-cloud/intro.md
-          - classes/04-cloud/config.md
+          - classes/04-cloud/config-aws-cli.md
           - classes/04-cloud/pratica.md
+      - 05 - Infrastructure as Code:
+          - classes/05-iac/intro.md
+          - classes/05-iac/pratica.md
   - Regras: about.md
   - Deadlines: deadlines.md
   - Contribuições: contributions.md

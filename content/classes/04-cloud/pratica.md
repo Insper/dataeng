@@ -368,7 +368,7 @@ Para criar um serviço Linux, precisamos criar um arquivo de configuração na p
 
     Cole o seguinte conteúdo:
 
-    ```bash  { .copy }
+    ```bash { .copy }
     [Unit]
     Description=Movies API service
     After=network.target
