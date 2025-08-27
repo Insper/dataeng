@@ -158,9 +158,9 @@ Gerenciar essa infraestrutura manualmente seria não apenas trabalhoso, mas tamb
 
 Diferentemente de aplicações web tradicionais, pipelines de dados frequentemente precisam de ambientes com características específicas:
 
-**Desenvolvimento**: Processamento de volumes pequenos com dados sintéticos ou mascarados
-**Teste**: Validação com volumes médios e dados representativos
-**Produção**: Processamento de volumes completos com alta disponibilidade
+- **Desenvolvimento**: Processamento de volumes pequenos com dados sintéticos ou mascarados
+- **Teste**: Validação com volumes médios e dados representativos
+- **Produção**: Processamento de volumes completos com alta disponibilidade
 
 Cada ambiente pode ter configurações diferentes de recursos (CPU, memória, armazenamento), mas a estrutura básica deve ser consistente.
 

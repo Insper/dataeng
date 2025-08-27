@@ -509,6 +509,11 @@ Agora vamos estender nosso Terraform para instalar e configurar a aplicação au
 
     Deverá ficar assim:
 
+    !!! warning "Atenção!"
+        Perceba que liberamos o acesso à porta `22` (**SSH**) de qualquer **IP**.
+
+        Por segurança, não é uma boa prática fazer isto em ambientes de produção.
+
     ```hcl { .copy }
     resource "aws_instance" "movies_api" {
       ami             = data.aws_ami.ubuntu.id
@@ -586,7 +591,7 @@ Agora vamos estender nosso Terraform para instalar e configurar a aplicação au
     <div class="termy">
 
     ```bash
-    $ ssh ubuntu@<IP_PUBLICO> -i ~/.ssh/id_ed25519
+    $ ssh ubuntu@IP_PUBLICO -i ~/.ssh/id_ed25519
     $ sudo systemctl status movies-api
     $ sudo journalctl -u movies-api -f
     ```
