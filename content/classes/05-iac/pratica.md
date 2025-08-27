@@ -235,7 +235,7 @@ Vamos começar criando apenas a instância EC2 com Terraform, equivalente ao que
     Qual sistema operacional e versão estão sendo utilizados na instância EC2?
 
     !!! answer "Resposta"
-        Ubuntu 22.04 LTS
+        Ubuntu 24.04 LTS
 
 !!! exercise text short
     Qual será a configuração (RAM e vCPU) da instância EC2?
@@ -713,7 +713,7 @@ Assim, prosseguimos para a reorganização do código!
 
       filter {
         name   = "name"
-        values = ["ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-amd64-server-*"]
+        values = ["ubuntu/images/hvm-ssd-gp3/ubuntu-noble-24.04-amd64-server-*"] # A mesma que utilizamos na aula passada!
       }
 
       filter {
