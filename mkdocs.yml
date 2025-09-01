@@ -41,6 +41,13 @@ nav:
       - 05 - Infrastructure as Code:
           - classes/05-iac/intro.md
           - classes/05-iac/pratica.md
+      - 06 - Intro Orquestração:
+          - classes/06-intro-orchestration/intro-cron.md
+          - classes/06-intro-orchestration/intro-orchestration.md
+          - classes/06-intro-orchestration/prefect.md
+          - classes/06-intro-orchestration/references.md
+      - 08 - Entrevista 01:
+          - classes/08-interview-01/faq.md
   - Regras: about.md
   - Deadlines: deadlines.md
   - Contribuições: contributions.md

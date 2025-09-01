@@ -8,7 +8,7 @@ Nos últimos dez anos, a quantidade de dados gerados cresceu de forma exponencia
 Aposto que você já cursou outras disciplina com a palavra *"Dado"* no título! Então, tente relembrar seus aprendizados e responder o exercício na sequência.
 
 !!! exercise text long
-     defina, com suas palavras, o conceito de **"Dado"**.
+    Defina, com suas palavras, o conceito de **"Dado"**.
 
     !!! answer "Answer"
         Um **dado** é a representação **bruta e não processada** de um fato, evento ou conceito. Ele é a unidade mais básica, isolada, que por si só não carrega um significado completo ou contexto. Pense no dado como a matéria-prima de todo o conhecimento.
