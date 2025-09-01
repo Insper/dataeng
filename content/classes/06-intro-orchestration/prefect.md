@@ -1345,17 +1345,20 @@ Agora é sua vez de experimentar e criar algo único!
     Escolha uma das opções abaixo ou crie algo próprio:
 
     **Opção 1: Pipeline de Análise de Logs**
+
     - Criar tarefas que simulem leitura de arquivos de log
     - Implementar validação e limpeza dos dados
     - Gerar estatísticas e alertas
 
     **Opção 2: Pipeline de Machine Learning**
+
     - Simular carregamento de dados de treinamento
     - Implementar pré-processamento
     - Simular treinamento de modelo
     - Validar resultados
 
     **Opção 3: Pipeline de Monitoramento**
+
     - Verificar status de serviços externos (APIs)
     - Coletar métricas de performance
     - Gerar alertas baseados em thresholds

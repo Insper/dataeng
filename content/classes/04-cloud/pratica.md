@@ -245,6 +245,8 @@ Agora que você tem acesso à VM, vamos clonar o repositório da API e testar se
     !!! warning "Atenção"
         Lembre-se de substituir `<Public_IP>` pelo endereço **IP público** da sua instância **EC2**.
 
+        Não irá funcionar, mas tente mesmo assim e siga o *handout*!
+
 Provavelmente não irá funcionar. Por questão de segurança, o **EC2** bloqueia o acesso à porta **8000** por padrão. Para resolver isso, você precisará ajustar as regras de segurança do grupo de segurança associado à sua instância.
 
 !!! exercise
