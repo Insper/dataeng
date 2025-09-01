@@ -85,8 +85,7 @@ Agora considere os arquivos:
     WORKDIR /app
 
     # Copie o script Python para o diretório de trabalho
-    # COPY app.py .
-    COPY app_v2.py app.py
+    COPY app.py .
 
     # Execute o script Python quando o container for iniciado
     CMD ["python", "app.py"]
