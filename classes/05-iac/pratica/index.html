@@ -16,7 +16,7 @@
         <link rel="prev" href="../intro/">
       
       
-        <link rel="next" href="../../../about/">
+        <link rel="next" href="../../06-intro-orchestration/intro-cron/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -418,6 +418,10 @@
   
     
     
+      
+        
+      
+        
       
         
       
@@ -1600,6 +1604,233 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    06 - Intro Orquestração
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            06 - Intro Orquestração
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06-intro-orchestration/intro-cron/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introdução
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06-intro-orchestration/intro-orchestration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Orquestração
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06-intro-orchestration/prefect/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Orquestração com Prefect
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06-intro-orchestration/references/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Referências
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    08 - Entrevista 01
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            08 - Entrevista 01
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08-interview-01/faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FAQ - Entrevista 01
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2515,7 +2746,7 @@ body {
 <button class="quiz-submit-button" type="submit">Submit</button>
 </div></form><div class="admonition answer quiz-answer no-indent">
 <p class="admonition-title">Answer</p>
-<p>Ubuntu 22.04 LTS</p>
+<p>Ubuntu 24.04 LTS</p>
 </div>
 </div>
 <div class="admonition exercise text short exercise-short" id="exercise_3">
@@ -2843,6 +3074,11 @@ body {
 </code></pre></div></p>
 </div>
 <p>Deverá ficar assim:</p>
+<div class="admonition warning">
+<p class="admonition-title">Atenção!</p>
+<p>Perceba que liberamos o acesso à porta <code>22</code> (<strong>SSH</strong>) de qualquer <strong>IP</strong>.</p>
+<p>Por segurança, não é uma boa prática fazer isto em ambientes de produção.</p>
+</div>
 <div class="language-hcl copy highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="kr">resource</span><span class="w"> </span><span class="nc">&quot;aws_instance&quot;</span><span class="w"> </span><span class="nv">&quot;movies_api&quot;</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="w">  </span><span class="na">ami</span><span class="w">             </span><span class="o">=</span><span class="w"> </span><span class="nv">data.aws_ami.ubuntu.id</span>
 <a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="w">  </span><span class="na">instance_type</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;t3a.micro&quot;</span>
@@ -2928,7 +3164,7 @@ body {
 <p class="admonition-title">Exercício</p>
 <form class="quiz-form"><p>Verifique se o serviço está rodando corretamente conectando via SSH:</p>
 <div class="termy">
-<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>$<span class="w"> </span>ssh<span class="w"> </span>ubuntu@&lt;IP_PUBLICO&gt;<span class="w"> </span>-i<span class="w"> </span>~/.ssh/id_ed25519
+<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>$<span class="w"> </span>ssh<span class="w"> </span>ubuntu@IP_PUBLICO<span class="w"> </span>-i<span class="w"> </span>~/.ssh/id_ed25519
 <a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>$<span class="w"> </span>sudo<span class="w"> </span>systemctl<span class="w"> </span>status<span class="w"> </span>movies-api
 <a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>$<span class="w"> </span>sudo<span class="w"> </span>journalctl<span class="w"> </span>-u<span class="w"> </span>movies-api<span class="w"> </span>-f
 </code></pre></div>
@@ -3061,7 +3297,7 @@ body {
 <a id="__codelineno-29-19" name="__codelineno-29-19" href="#__codelineno-29-19"></a>
 <a id="__codelineno-29-20" name="__codelineno-29-20" href="#__codelineno-29-20"></a><span class="w">  </span><span class="nb">filter</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-29-21" name="__codelineno-29-21" href="#__codelineno-29-21"></a><span class="w">    </span><span class="na">name</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;name&quot;</span>
-<a id="__codelineno-29-22" name="__codelineno-29-22" href="#__codelineno-29-22"></a><span class="w">    </span><span class="na">values</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-amd64-server-*&quot;</span><span class="p">]</span>
+<a id="__codelineno-29-22" name="__codelineno-29-22" href="#__codelineno-29-22"></a><span class="w">    </span><span class="na">values</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;ubuntu/images/hvm-ssd-gp3/ubuntu-noble-24.04-amd64-server-*&quot;</span><span class="p">]</span><span class="c1"> # A mesma que utilizamos na aula passada!</span>
 <a id="__codelineno-29-23" name="__codelineno-29-23" href="#__codelineno-29-23"></a><span class="w">  </span><span class="p">}</span>
 <a id="__codelineno-29-24" name="__codelineno-29-24" href="#__codelineno-29-24"></a>
 <a id="__codelineno-29-25" name="__codelineno-29-25" href="#__codelineno-29-25"></a><span class="w">  </span><span class="nb">filter</span><span class="w"> </span><span class="p">{</span>
@@ -4277,13 +4513,13 @@ document.addEventListener('click', function(e) {
         
         
           
-          <a href="../../../about/" class="md-footer__link md-footer__link--next" aria-label="Next: Regras">
+          <a href="../../06-intro-orchestration/intro-cron/" class="md-footer__link md-footer__link--next" aria-label="Next: Introdução">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Regras
+                Introdução
               </div>
             </div>
             <div class="md-footer__button md-icon">
