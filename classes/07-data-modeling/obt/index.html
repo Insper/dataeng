@@ -13,10 +13,10 @@
       
       
       
-        <link rel="prev" href="../../05-iac/pratica/">
+        <link rel="prev" href="../intro-data-modeling/">
       
       
-        <link rel="next" href="../intro-orchestration/">
+        <link rel="next" href="../star-schema/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Introdução - Engenharia de Dados</title>
+        <title>One Big Table (OBT) - Engenharia de Dados</title>
       
     
     
@@ -81,7 +81,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introducao" class="md-skip">
+        <a href="#one-big-table-obt" class="md-skip">
           Skip to content
         </a>
       
@@ -117,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Introdução
+              One Big Table (OBT)
             
           </span>
         </div>
@@ -1437,10 +1437,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -1459,11 +1457,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
         
           
           <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
@@ -1479,7 +1477,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_6">
             <span class="md-nav__icon md-icon"></span>
             06 - Intro Orquestração
@@ -1490,32 +1488,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Introdução
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../06-intro-orchestration/intro-cron/" class="md-nav__link">
         
   
   
@@ -1526,62 +1502,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#agendamento" class="md-nav__link">
-    <span class="md-ellipsis">
-      Agendamento
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#simulando-a-atividade" class="md-nav__link">
-    <span class="md-ellipsis">
-      Simulando a atividade
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cron" class="md-nav__link">
-    <span class="md-ellipsis">
-      Cron
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#atualizacao-para-o-uso-do-cron" class="md-nav__link">
-    <span class="md-ellipsis">
-      Atualização para o uso do cron
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1594,7 +1514,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../intro-orchestration/" class="md-nav__link">
+      <a href="../../06-intro-orchestration/intro-orchestration/" class="md-nav__link">
         
   
   
@@ -1617,7 +1537,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../prefect/" class="md-nav__link">
+      <a href="../../06-intro-orchestration/prefect/" class="md-nav__link">
         
   
   
@@ -1640,7 +1560,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../references/" class="md-nav__link">
+      <a href="../../06-intro-orchestration/references/" class="md-nav__link">
         
   
   
@@ -1668,8 +1588,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -1690,11 +1612,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" checked>
         
           
           <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
@@ -1710,7 +1632,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_7">
             <span class="md-nav__icon md-icon"></span>
             07 - Modelagem de Dados
@@ -1724,7 +1646,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../07-data-modeling/intro-data-modeling/" class="md-nav__link">
+      <a href="../intro-data-modeling/" class="md-nav__link">
         
   
   
@@ -1744,10 +1666,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../07-data-modeling/obt/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    One Big Table (OBT)
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1758,6 +1702,203 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#relembrando-a-aula-03" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relembrando a aula 03
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#o-que-e-one-big-table-obt" class="md-nav__link">
+    <span class="md-ellipsis">
+      O que é One Big Table (OBT)?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemplo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemplo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exemplo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tabelas-originais" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tabelas Originais
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tabelas Originais">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tabela-paciente" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tabela: paciente
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabela-medico" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tabela: medico
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabela-atendimento" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tabela: atendimento
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabela-obt-resultante" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tabela OBT Resultante
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contexto-historico" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contexto Histórico
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vantagens-da-abordagem-obt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vantagens da Abordagem OBT
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#desvantagens-da-abordagem-obt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Desvantagens da Abordagem OBT
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quando-usar-obt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quando Usar OBT?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementando-obt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementando OBT
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementando OBT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#projetando-a-obt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Projetando a OBT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#campos-da-obt-de-vendas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Campos da OBT de Vendas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#criando-a-obt-na-pratica" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criando a OBT na Prática
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Criando a OBT na Prática">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#consultas-normalizado-vs-obt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consultas: Normalizado vs OBT
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1770,7 +1911,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../07-data-modeling/star-schema/" class="md-nav__link">
+      <a href="../star-schema/" class="md-nav__link">
         
   
   
@@ -1793,7 +1934,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../07-data-modeling/snowflake/" class="md-nav__link">
+      <a href="../snowflake/" class="md-nav__link">
         
   
   
@@ -1816,7 +1957,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../07-data-modeling/references/" class="md-nav__link">
+      <a href="../references/" class="md-nav__link">
         
   
   
@@ -2016,38 +2157,179 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#agendamento" class="md-nav__link">
+  <a href="#relembrando-a-aula-03" class="md-nav__link">
     <span class="md-ellipsis">
-      Agendamento
+      Relembrando a aula 03
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#simulando-a-atividade" class="md-nav__link">
+  <a href="#o-que-e-one-big-table-obt" class="md-nav__link">
     <span class="md-ellipsis">
-      Simulando a atividade
+      O que é One Big Table (OBT)?
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#cron" class="md-nav__link">
+  <a href="#exemplo" class="md-nav__link">
     <span class="md-ellipsis">
-      Cron
+      Exemplo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exemplo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tabelas-originais" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tabelas Originais
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tabelas Originais">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tabela-paciente" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tabela: paciente
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabela-medico" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tabela: medico
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabela-atendimento" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tabela: atendimento
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabela-obt-resultante" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tabela OBT Resultante
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contexto-historico" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contexto Histórico
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#atualizacao-para-o-uso-do-cron" class="md-nav__link">
+  <a href="#vantagens-da-abordagem-obt" class="md-nav__link">
     <span class="md-ellipsis">
-      Atualização para o uso do cron
+      Vantagens da Abordagem OBT
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#desvantagens-da-abordagem-obt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Desvantagens da Abordagem OBT
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quando-usar-obt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quando Usar OBT?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementando-obt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementando OBT
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementando OBT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#projetando-a-obt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Projetando a OBT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#campos-da-obt-de-vendas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Campos da OBT de Vendas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#criando-a-obt-na-pratica" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criando a OBT na Prática
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Criando a OBT na Prática">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#consultas-normalizado-vs-obt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consultas: Normalizado vs OBT
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2484,61 +2766,13 @@ body {
   }
 }
 </style>
-<h1 id="introducao">Introdução</h1>
-<h2 id="agendamento">Agendamento</h2>
-<p>Na <a href="../../03-data-warehouse/pratica/">aula 03</a> discutimos sobre processos de <strong>ETL</strong> / <strong>ELT</strong>.</p>
-<p>No exemplo da aula, implementamos uma <strong>pipeline</strong> de dados que extrai informações de um banco de dados <strong>PostgreSQL</strong>, transforma esses dados e os carrega em um <strong>data warehouse Clickhouse</strong>.</p>
-<div class="admonition exercise text short exercise-short" id="exercise_1">
-<p class="admonition-title">Exercício</p>
-<form class="quiz-form"><p>De quanto em quanto tempo a tarefa de <strong>ETL</strong> era executada?</p>
-<div class="form-elements">
-<div class="quiz-text-container">
-
-<input type="text" value="" name="data" class="quiz-text-input" 
-       placeholder="Enter your answer..." autocomplete="off"/>
-
-</div>
-<button class="quiz-submit-button" type="submit">Submit</button>
-</div></form><div class="admonition answer quiz-answer no-indent">
-<p class="admonition-title">Answer</p>
-<p>A cada dois minutos.</p>
-<p>Um tempo baixo para que conseguíssemos simular uma rotina diária sem esperar tanto.</p>
-</div>
-</div>
-<div class="admonition exercise text short exercise-short" id="exercise_2">
-<p class="admonition-title">Exercício</p>
-<form class="quiz-form"><p>Como isto foi implementado?</p>
-<div class="form-elements">
-<div class="quiz-text-container">
-
-<input type="text" value="" name="data" class="quiz-text-input" 
-       placeholder="Enter your answer..." autocomplete="off"/>
-
-</div>
-<button class="quiz-submit-button" type="submit">Submit</button>
-</div></form><div class="admonition answer quiz-answer no-indent">
-<p class="admonition-title">Answer</p>
-<p>De forma rudimentar, esperando <code>120</code> segundos em um loop infinito.</p>
-<div class="language-yaml highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Recorte de parte do docker-compose.yml</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">&gt;</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="no">bash -c &quot;</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">        </span><span class="no">pip install -r /app/requirements.txt &amp;&amp;</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">        </span><span class="no">echo &#39;Inicializando banco de dados warehouse...&#39; &amp;&amp;</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">        </span><span class="no">python src/init_database.py &amp;&amp;</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">        </span><span class="no">echo &#39;Iniciando ETL (executará a cada 2 minutos)...&#39; &amp;&amp;</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">        </span><span class="no">while true; do</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">        </span><span class="no">echo &#39;Executando ETL...&#39; &amp;&amp;</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">        </span><span class="no">python src/etl_vendas.py &amp;&amp;</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">        </span><span class="no">echo &#39;ETL concluído. Aguardando 2 minutos...&#39; &amp;&amp;</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">        </span><span class="no">sleep 120</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">        </span><span class="no">done</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">    </span><span class="no">&quot;</span>
-</code></pre></div>
-</div>
-</div>
-<div class="admonition exercise text long exercise-long" id="exercise_3">
-<p class="admonition-title">Exercício</p>
-<form class="quiz-form"><p>Vê algum problema na forma como fizemos?</p>
+<h1 id="one-big-table-obt">One Big Table (OBT)</h1>
+<h2 id="relembrando-a-aula-03">Relembrando a aula 03</h2>
+<p>Na aula 03, quando fizemos a implementação do nosso <strong>Data Warehouse (DW)</strong>, foi preciso decidir como organizar os dados no <strong>DW</strong>.</p>
+<div class="admonition exercise text long exercise-long" id="exercise_1">
+<p class="admonition-title">Exercise</p>
+<form class="quiz-form"><p>Como definimos o modelo de dados do <strong>DW</strong>?</p>
+<p>Como ele se diferenciava do modelo de dados operacional (<strong>PostgreSQL OLTP</strong>)?</p>
 <div class="form-elements">
 <div class="quiz-text-container">
 
@@ -2549,301 +2783,445 @@ body {
 <button class="quiz-submit-button" type="submit">Submit</button>
 </div></form><div class="admonition answer quiz-answer no-indent">
 <p class="admonition-title">Answer</p>
-<p>A <em>query</em> de <strong>SQL</strong> utilizada para extrair os dados extraía informações desde o segundo zero do minuto atual. Entretanto, caso o processo de <strong>ETL</strong> demorasse mais que um minuto, parte dos dados não seriam ingeridos/tratados.</p>
-<p>Ainda, o máximo que obtínhamos de controle era o tempo de espera. Não havia como, por exemplo, executar o processo de <strong>ETL</strong> às 3 da manhã todos os dias.</p>
+<p>Nós removemos as chaves estrangeiras e a obrigatoriedade de alguns atributos.</p>
+<p>Ademais, a estrutura foi mantida.</p>
 </div>
 </div>
-<h2 id="simulando-a-atividade">Simulando a atividade</h2>
-<p>Vamos simular a execução de um processo que precisa ser agendado. Para isto, vamos partir dos seguintes arquivos:</p>
-<div class="admonition exercise exercise-self-progress" id="exercise_1">
+<div class="admonition exercise text long exercise-long" id="exercise_2">
 <p class="admonition-title">Exercise</p>
-<form class="quiz-form"><p>Antes, crie um pasta para esta parte da aula.</p>
-<p>Os próximos arquivos devem ser criados nesta pasta.</p>
-<div class="termy">
-<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>$<span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span><span class="m">06</span>-intro-orchestration/01-intro
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span><span class="m">06</span>-intro-orchestration/01-intro
-</code></pre></div>
-</div>
-<div class="form-elements">
-<div class="quiz-self-progress">
-<input type="hidden" name="data" value="done" />
-<button class="quiz-submit-button" type="submit">Mark as done</button>
-</div>
-</div></form></div>
-<p>Agora considere os arquivos:</p>
-<details>
-<summary><code>app.py</code></summary>
-<div class="language-python copy highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">datetime</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Olá do Docker! A hora atual é: </span><span class="si">{</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">flush</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    <span class="n">main</span><span class="p">()</span>
-</code></pre></div>
-</details>
-<details>
-<summary><code>Dockerfile</code></summary>
-<div class="language-dockerfile copy highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c"># Use uma imagem base oficial do Python</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">FROM</span><span class="w"> </span><span class="s">python:3.12-slim</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c"># Defina o diretório de trabalho no container</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="k">WORKDIR</span><span class="w"> </span><span class="s">/app</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="c"># Copie o script Python para o diretório de trabalho</span>
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="k">COPY</span><span class="w"> </span>app.py<span class="w"> </span>.
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="c"># Execute o script Python quando o container for iniciado</span>
-<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;python&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;app.py&quot;</span><span class="p">]</span>
-</code></pre></div>
-</details>
-<details>
-<summary><code>docker-compose.yml</code></summary>
-<div class="language-yaml copy highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nt">services</span><span class="p">:</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="nt">python-app</span><span class="p">:</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">        </span><span class="nt">build</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">        </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python-scheduler</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">        </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">always</span>
-</code></pre></div>
-</details>
-<div class="admonition exercise exercise-self-progress" id="exercise_2">
-<p class="admonition-title">Exercise</p>
-<form class="quiz-form"><p>Crie cada um dos arquivos na pasta <code>06-intro-orchestration/01-intro</code>.</p>
-<div class="form-elements">
-<div class="quiz-self-progress">
-<input type="hidden" name="data" value="done" />
-<button class="quiz-submit-button" type="submit">Mark as done</button>
-</div>
-</div></form></div>
-<div class="admonition exercise text short exercise-short" id="exercise_4">
-<p class="admonition-title">Exercise</p>
-<form class="quiz-form"><p>Faça a inicialização com:</p>
-<div class="termy">
-<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>$<span class="w"> </span>docker<span class="w"> </span>compose<span class="w"> </span>build
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>$<span class="w"> </span>docker<span class="w"> </span>compose<span class="w"> </span>up
-</code></pre></div>
-</div>
-<p>De quanto em quanto tempo a tarefa é executada (<code>print</code>)?</p>
+<form class="quiz-form"><p>O que você acha de mantermos a estrutura do <strong>DW</strong> quase idêntia à do banco operacional?</p>
 <div class="form-elements">
 <div class="quiz-text-container">
 
-<input type="text" value="" name="data" class="quiz-text-input" 
-       placeholder="Enter your answer..." autocomplete="off"/>
+<textarea name="data" class="quiz-text-input" 
+          placeholder="Enter your detailed answer..." rows="4"></textarea>
 
 </div>
 <button class="quiz-submit-button" type="submit">Submit</button>
 </div></form><div class="admonition answer quiz-answer no-indent">
 <p class="admonition-title">Answer</p>
-<p>Assim que possível!</p>
-<p>Após a execução, o processo encerra. Então, instantaneamente o <em>container</em> é reiniciado e ocorre novo <code>print</code>.</p>
+<p>O padrão de acesso <strong>OLTP</strong> geralmente envolve transações rápidas e de curto prazo, envolvendo poucas linhas.</p>
+<p>Por outro lado, o <strong>DW</strong> é otimizado para <strong>OLAP</strong>, envolvendo consultas complexas, acesso colunar e com grande volume de dados.</p>
+<p>Portanto, manter a estrutura idêntica pode não ser a melhor abordagem para atender a essas diferentes necessidades.</p>
 </div>
 </div>
-<div class="admonition exercise exercise-self-progress" id="exercise_3">
-<p class="admonition-title">Exercise</p>
-<form class="quiz-form"><p>Altere o arquivo <code>app.py</code> para que o <code>print</code> ocorra a cada <code>5</code> segundos.</p>
-<p>Pode ser com <code>time.sleep(5)</code>!</p>
-<div class="form-elements">
-<div class="quiz-self-progress">
-<input type="hidden" name="data" value="done" />
-<button class="quiz-submit-button" type="submit">Mark as done</button>
-</div>
-</div></form><div class="admonition answer quiz-answer no-indent">
-<p class="admonition-title">Answer</p>
-<div class="language-python copy highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">datetime</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Olá do Docker! A hora atual é: </span><span class="si">{</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">flush</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>
-<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>    <span class="n">main</span><span class="p">()</span>
-</code></pre></div>
-</div>
-</div>
-<p>Anteriormente, já discutimos por que o <code>time.sleep</code> não é uma boa solução. Vamos buscar uma alternativa melhor!</p>
-<h2 id="cron">Cron</h2>
-<p>O <strong>cron</strong> é um agendador de tarefas do <em>Unix</em> que permite executar <em>scripts</em> ou comandos em intervalos regulares.</p>
-<p>Ele opera em segundo plano como um <em>daemon</em>, verificando a cada minuto um arquivo de configuração chamado <code>crontab</code> (<strong>cron table</strong>) para saber quais tarefas devem ser executadas.</p>
-<div class="admonition info">
-<p class="admonition-title">Daemon</p>
-<p>Um <em>daemon</em> é um tipo especial de programa que roda em segundo plano em sistemas Unix e semelhantes.</p>
-<p>Ele geralmente inicia junto com o sistema e fica aguardando por eventos ou condições específicas para executar suas tarefas (Ex: <code>sshd</code>).</p>
-</div>
-<p>As tarefas são definidas usando uma sintaxe de cinco campos para especificar o minuto, a hora, o dia do mês, o mês e o dia da semana em que o comando deve rodar:</p>
-<div class="language-console highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="go">* * * * *</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="go">| | | | |</span>
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="go">| | | | ----- Dia da semana (0 - 7, onde 0 ou 7 é Domingo)</span>
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="go">| | | ------- Mês (1 - 12)</span>
-<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="go">| | --------- Dia do mês (1 - 31)</span>
-<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="go">| ----------- Hora (0 - 23)</span>
-<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="go">------------- Minuto (0 - 59)</span>
-</code></pre></div>
+<p>Conforme os dados forem disponibilizados para análise no <strong>DW</strong>, <em>queries</em> complexas podem demandar a junção de diversas tabelas, as quais podem conter grande volume de dados. Isto será computacionalmente custoso, especialmente quando o <strong>DW</strong> crescer em volume de dados e complexidade estrutural.</p>
+<p>Uma solução possível é o uso do padrão <strong>One Big Table (OBT)</strong>.</p>
+<h2 id="o-que-e-one-big-table-obt">O que é One Big Table (OBT)?</h2>
+<p>A abordagem <strong>One Big Table (OBT)</strong> representa uma estratégia de modelagem onde todos os dados relevantes para análise são consolidados em uma única tabela <strong>desnormalizada</strong>.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
+<p>Desnormalização é o processo de, intencionalmente, adicionar <strong>redundância</strong> a um banco de dados previamente normalizado para <strong>melhorar o desempenho de leitura</strong>, através da combinação de tabelas ou <strong>duplicação</strong> de dados!</p>
+</div>
+<p>Esta técnica surgiu como uma resposta às limitações de performance em consultas analíticas que envolvem múltiplos <code>JOINs</code> entre tabelas normalizadas.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Resumo!</p>
+<p>Em um modelo <strong>OBT</strong>, ao invés de manter dados distribuídos em várias tabelas relacionais, todas as informações necessárias são combinadas em uma única estrutura tabular.</p>
+<p>Isso elimina a necessidade de operações custosas de <code>JOIN</code> durante as consultas analíticas.</p>
+</div>
+<h2 id="exemplo">Exemplo</h2>
+<p>Vamos ilustrar o conceito de OBT com um exemplo de dados hospitalares.</p>
+<h3 id="tabelas-originais">Tabelas Originais</h3>
+<h4 id="tabela-paciente">Tabela: <code>paciente</code></h4>
+<table>
+<thead>
+<tr>
+<th>id_paciente</th>
+<th>nome</th>
+<th>uf</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Carla Dias</td>
+<td>SP</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Lucas Prado</td>
+<td>RJ</td>
+</tr>
+</tbody>
+</table>
+<h4 id="tabela-medico">Tabela: <code>medico</code></h4>
+<table>
+<thead>
+<tr>
+<th>id_medico</th>
+<th>nome_medico</th>
+<th>especialidade</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10</td>
+<td>Dr. Silva</td>
+<td>Cardiologia</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Dra. Souza</td>
+<td>Pediatria</td>
+</tr>
+</tbody>
+</table>
+<h4 id="tabela-atendimento">Tabela: <code>atendimento</code></h4>
+<table>
+<thead>
+<tr>
+<th>id_atendimento</th>
+<th>id_paciente</th>
+<th>id_medico</th>
+<th>data</th>
+<th>procedimento</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1001</td>
+<td>1</td>
+<td>10</td>
+<td>2025-08-01</td>
+<td>Consulta</td>
+</tr>
+<tr>
+<td>1002</td>
+<td>2</td>
+<td>20</td>
+<td>2025-08-02</td>
+<td>Exame</td>
+</tr>
+<tr>
+<td>1003</td>
+<td>1</td>
+<td>20</td>
+<td>2025-08-03</td>
+<td>Vacina</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tabela-obt-resultante">Tabela OBT Resultante</h3>
+<table>
+<thead>
+<tr>
+<th>id_atendimento</th>
+<th>data</th>
+<th>nome_paciente</th>
+<th>uf</th>
+<th>nome_medico</th>
+<th>especialidade</th>
+<th>procedimento</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1001</td>
+<td>2025-08-01</td>
+<td>Carla Dias</td>
+<td>SP</td>
+<td>Dr. Silva</td>
+<td>Cardiologia</td>
+<td>Consulta</td>
+</tr>
+<tr>
+<td>1002</td>
+<td>2025-08-02</td>
+<td>Lucas Prado</td>
+<td>RJ</td>
+<td>Dra. Souza</td>
+<td>Pediatria</td>
+<td>Exame</td>
+</tr>
+<tr>
+<td>1003</td>
+<td>2025-08-03</td>
+<td>Carla Dias</td>
+<td>SP</td>
+<td>Dra. Souza</td>
+<td>Pediatria</td>
+<td>Vacina</td>
+</tr>
+</tbody>
+</table>
+<p>Assim, todas as informações relevantes para análise de atendimentos estão consolidadas em uma única tabela, eliminando a necessidade de JOINs.</p>
+<div class="admonition info">
+<p class="admonition-title">Conceito Fundamental</p>
+<p>O <strong>OBT</strong> prioriza <strong>performance de leitura</strong> sobre <strong>otimização de armazenamento</strong>, sendo especialmente útil em cenários de <strong>OLAP</strong> onde a velocidade das consultas é crítica.</p>
+</div>
+<h2 id="contexto-historico">Contexto Histórico</h2>
+<p>O conceito de <strong>OBT</strong> ganhou popularidade com o advento do <strong>Big Data</strong> e ferramentas de processamento distribuído como <strong>Hadoop</strong> e <strong>Spark</strong>. Com a queda do custo de armazenamento e a necessidade crescente de análises em tempo real, a redundância de dados tornou-se um <em>trade-off</em> aceitável em muitos cenários.</p>
+<p>A abordagem também se tornou viável com o desenvolvimento de <strong>sistemas de armazenamento colunar</strong> como <strong>Parquet</strong>, que consegue comprimir dados redundantes de forma eficiente, minimizando o impacto do aumento no volume de dados.</p>
+<h2 id="vantagens-da-abordagem-obt">Vantagens da Abordagem OBT</h2>
+<p>Dentre as vantagens do uso de <strong>OBT</strong>, podemos citar:</p>
 <ul>
-<li>Um asterisco (<code>*</code>) em um campo significa "todos os valores possíveis" para aquele campo.</li>
-<li>Valores específicos podem ser listados, separados por vírgulas (ex: <code>1,15</code> no campo de minutos significa "no minuto 1 e no minuto 15").</li>
-<li>Intervalos podem ser especificados com um hífen (ex: <code>1-5</code> no campo de horas significa "da 1h às 5h").</li>
-<li>Passos podem ser definidos com uma barra (ex: <code>*/10</code> no campo de minutos significa "a cada 10 minutos").</li>
+<li>
+<p><strong>Performance de Consultas</strong>: A principal vantagem do OBT é a <strong>eliminação de JOINs</strong> complexos. Em um <strong>DW</strong> tradicional, uma consulta simples pode requerer junções entre múltiplas tabelas, criando gargalos de performance significativos.</p>
+</li>
+<li>
+<p><strong>Simplicidade de Consultas</strong>: Analistas e cientistas de dados podem escrever consultas mais diretas, sem precisar compreender relações complexas entre tabelas ou memorizar esquemas de junção.</p>
+</li>
+<li>
+<p><strong>Otimização para Ferramentas de BI</strong>: Muitas ferramentas <strong>Business Intelligence</strong> trabalham melhor com estruturas desnormalizadas, aproveitando otimizações internas quando os dados estão em formato <em>flat</em>.</p>
+</li>
+<li>
+<p><strong>Paralelização</strong>: Em ambientes distribuídos, consultas em uma única tabela podem ser facilmente paralelizadas e distribuídas entre múltiplos nós de processamento.</p>
+</li>
 </ul>
-</div>
-<p>Isso torna o <strong>cron</strong> extremamente útil para tarefas rotineiras, como backups de banco de dados ou limpeza de arquivos temporários.</p>
-<div class="admonition exercise exercise-self-progress" id="exercise_4">
-<p class="admonition-title">Exercise</p>
-<form class="quiz-form"><p>Antes de continuar, encerre a execução dos <em>containers</em> e remova-os.</p>
-<div class="termy">
-<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>$<span class="w"> </span>docker<span class="w"> </span>compose<span class="w"> </span>down
-</code></pre></div>
-</div>
-<div class="form-elements">
-<div class="quiz-self-progress">
-<input type="hidden" name="data" value="done" />
-<button class="quiz-submit-button" type="submit">Mark as done</button>
-</div>
-</div></form></div>
-<h2 id="atualizacao-para-o-uso-do-cron">Atualização para o uso do cron</h2>
-<p>Vamos utilizar o <strong>cron</strong> para agendar a execução do nossa tarefa (por enquanto, apenas um <code>print</code>).</p>
-<p>Para isto, considere os arquivos:</p>
-<div class="admonition exercise exercise-self-progress" id="exercise_5">
-<p class="admonition-title">Exercise</p>
-<form class="quiz-form"><p>Crie uma nova pasta <code>06-intro-orchestration/02-cron</code> e copie os arquivos na sequência:</p>
-<div class="form-elements">
-<div class="quiz-self-progress">
-<input type="hidden" name="data" value="done" />
-<button class="quiz-submit-button" type="submit">Mark as done</button>
-</div>
-</div></form></div>
-<details>
-<summary><code>app.py</code></summary>
-<p>Será igual ao primeiro arquivo <code>app.py</code> proposto nesta aula.
-<div class="language-python copy highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>    <span class="kn">import</span><span class="w"> </span><span class="nn">datetime</span>
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
-<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Olá do Docker! A hora atual é: </span><span class="si">{</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">flush</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>
-<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>    <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>        <span class="n">main</span><span class="p">()</span>
-</code></pre></div></p>
-</details>
-<details>
-<summary><code>crontab.txt</code></summary>
-<div class="language-text copy highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>* * * * * /usr/local/bin/python3 /app/app.py &gt;&gt; /var/log/cron.log 2&gt;&amp;1
-</code></pre></div>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>A linha acima agenda a execução do <code>app.py</code> a cada minuto (de cada hora, de cada dia, de cada mês, etc.).</p>
-<p>A saída padrão e a saída de erro são redirecionadas para o arquivo <code>/var/log/cron.log</code>.</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Atenção!</p>
-<p>Deixe uma linha em branco no final do arquivo <code>crontab.txt</code>. O <strong>cron</strong> exige isto.</p>
-</div>
-</details>
-<details>
-<summary><code>Dockerfile</code></summary>
-<p>Atualizaremos para uso do <code>cron</code>:
-<div class="language-dockerfile copy highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">FROM</span><span class="w"> </span><span class="s">python:3.12-slim</span>
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>
-<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="c"># Instala o cron</span>
-<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="k">RUN</span><span class="w"> </span>apt-get<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>cron<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>rm<span class="w"> </span>-rf<span class="w"> </span>/var/lib/apt/lists/*
-<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>
-<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="k">WORKDIR</span><span class="w"> </span><span class="s">/app</span>
-<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>
-<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="k">COPY</span><span class="w"> </span>app.py<span class="w"> </span>.
-<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="k">COPY</span><span class="w"> </span>crontab.txt<span class="w"> </span>.
-<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>
-<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="c"># Adiciona o crontab ao cron do sistema</span>
-<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="k">RUN</span><span class="w"> </span>crontab<span class="w"> </span>crontab.txt
-<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>
-<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a><span class="c"># Cria um arquivo de log para o cron</span>
-<a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a><span class="k">RUN</span><span class="w"> </span>touch<span class="w"> </span>/var/log/cron.log
-<a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a>
-<a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a><span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;cron&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;-f&quot;</span><span class="p">]</span>
-</code></pre></div></p>
-</details>
-<details>
-<summary><code>docker-compose.yml</code></summary>
-<p>De importante, apenas a atualização no nome do container!
-<div class="language-yaml copy highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nt">services</span><span class="p">:</span>
-<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="nt">python-app</span><span class="p">:</span>
-<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">    </span><span class="nt">build</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.</span>
-<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
-<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PYTHONUNBUFFERED=1</span>
-<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python-scheduler-cron</span>
-<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">always</span>
-</code></pre></div></p>
-</details>
-<div class="admonition exercise exercise-self-progress" id="exercise_6">
-<p class="admonition-title">Exercise</p>
-<form class="quiz-form"><p>Faça a reinicialização com:</p>
-<div class="admonition warning">
-<p class="admonition-title">Atenção!</p>
-<p>Garanta que esteja no diretório <code>06-intro-orchestration/02-cron</code>!</p>
-</div>
-<div class="termy">
-<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>$<span class="w"> </span>docker<span class="w"> </span>compose<span class="w"> </span>build
-<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>$<span class="w"> </span>docker<span class="w"> </span>compose<span class="w"> </span>up
-</code></pre></div>
-</div>
-<div class="form-elements">
-<div class="quiz-self-progress">
-<input type="hidden" name="data" value="done" />
-<button class="quiz-submit-button" type="submit">Mark as done</button>
-</div>
-</div></form></div>
-<p>Se aguardar um minuto ou dois, irá perceber que não terá nenhum <em>feedback</em>. Isto ocorre porque os <em>logs</em> foram redirecionados para o arquivo <code>/var/log/cron.log</code> (dentro do <em>container</em>).</p>
-<div class="admonition exercise text short exercise-short" id="exercise_5">
-<p class="admonition-title">Exercise</p>
-<form class="quiz-form"><p>Vamos inspecionar os <em>logs</em>.</p>
-<p>Com o o <em>container</em> em execução, abra outro terminal e execute:</p>
-<div class="termy">
-<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>$<span class="w"> </span>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>python-scheduler-cron<span class="w"> </span>cat<span class="w"> </span>/var/log/cron.log
-</code></pre></div>
-</div>
-<p>Aproveite e explique o que este comando faz!</p>
-<div class="form-elements">
-<div class="quiz-text-container">
-
-<input type="text" value="" name="data" class="quiz-text-input" 
-       placeholder="Enter your answer..." autocomplete="off"/>
-
-</div>
-<button class="quiz-submit-button" type="submit">Submit</button>
-</div></form><div class="admonition answer quiz-answer no-indent">
-<p class="admonition-title">Answer</p>
-<p>O comando <code>docker exec python-scheduler-cron cat /var/log/cron.log</code> é utilizado para acessar o <em>container</em> em execução chamado <code>python-scheduler-cron</code> e executar o comando <code>cat /var/log/cron.log</code> dentro dele.</p>
-<p>Isso permite visualizar o conteúdo do arquivo de log do cron, onde estão registrados os resultados das execuções agendadas.</p>
-</div>
-</div>
-<div class="admonition exercise choice exercise-choice" data-answer-idx="0" id="exercise_1">
-<p class="admonition-title">Exercise</p>
-<form class="quiz-form"><p>Funcionou? A tarefa está sendo executada a cada minuto?</p>
+<div class="admonition exercise choice exercise-choice" data-answer-idx="1" id="exercise_1">
+<p class="admonition-title">Question</p>
+<form class="quiz-form"><p>Qual é a principal vantagem de performance do modelo <strong>OBT</strong> em relação a modelos normalizados?</p>
 <div class="form-elements">
 <div class="quiz-alternative-set">
   
 <label class="quiz-alternative" data-alt-index="0">
   <div class="content">
     <input type="hidden" name="data" value="">
-    <span class="choice-text">Sim</span>
+    <span class="choice-text">Menor uso de memória</span>
   </div>
 </label>
 
 <label class="quiz-alternative" data-alt-index="1">
   <div class="content">
     <input type="hidden" name="data" value="">
-    <span class="choice-text">Não</span>
+    <span class="choice-text">Eliminação de operações JOIN</span>
+  </div>
+</label>
+
+<label class="quiz-alternative" data-alt-index="2">
+  <div class="content">
+    <input type="hidden" name="data" value="">
+    <span class="choice-text">Menor volume de dados</span>
+  </div>
+</label>
+
+<label class="quiz-alternative" data-alt-index="3">
+  <div class="content">
+    <input type="hidden" name="data" value="">
+    <span class="choice-text">Maior segurança dos dados</span>
   </div>
 </label>
 
 </div>
 <button class="quiz-submit-button" type="submit">Submit</button>
 </div></form></div>
-<div class="admonition exercise text long exercise-long" id="exercise_6">
+<h2 id="desvantagens-da-abordagem-obt">Desvantagens da Abordagem OBT</h2>
+<p>Mas o uso de <strong>OBT</strong> também apresenta desvantagens que devem ser consideradas. Dentre elas:</p>
+<ul>
+<li>
+<p><strong>Redundância de Dados</strong>: A desnormalização resulta em <strong>duplicação massiva</strong> de informações. Dados que antes apareciam uma única vez em tabelas normalizadas agora são replicados em cada linha da <strong>OBT</strong>.</p>
+</li>
+<li>
+<p><strong>Maior Consumo de Armazenamento</strong>: O volume de dados pode crescer significativamente, resultando em maiores custos de armazenamento e backup.</p>
+</li>
+<li>
+<p><strong>Maior Complexidade de Atualização</strong>: Quando um dado mestre é alterado (como o nome de um cliente), essa mudança precisa ser propagada para <strong>todas as linhas</strong> da <strong>OBT</strong> onde esse cliente aparece, tornando as atualizações mais complexas e custosas.</p>
+</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Info!</p>
+<p>Em muitos casos, a <strong>OBT</strong> é <em>append-only</em>.</p>
+</div>
+<ul>
+<li>
+<p><strong>Potencial Inconsistência</strong>: A redundância aumenta o risco de <strong>inconsistências</strong>, especialmente se o processo de <strong>ETL</strong> não for bem projetado ou se houver falhas na sincronização dos dados.</p>
+</li>
+<li>
+<p><strong>Gestão de Migrações</strong>: Alterações no modelo de dados podem exigir migrações complexas, uma vez que a estrutura desnormalizada pode não se adaptar facilmente a mudanças.</p>
+</li>
+</ul>
+<h2 id="quando-usar-obt">Quando Usar OBT?</h2>
+<p>A decisão de implementar um OBT deve considerar diversos fatores:</p>
+<ul>
+<li>
+<p><strong>Cenários Adequados:</strong></p>
+<ul>
+<li><strong>Análises frequentes</strong> que sempre envolvem os mesmos conjuntos de dados</li>
+<li><strong>Relatórios padronizados</strong> com consultas previsíveis</li>
+<li>Ambientes onde a <strong>performance de leitura</strong> é mais crítica que eficiência de armazenamento</li>
+<li><strong>Data marts</strong> específicos para áreas de negócio</li>
+</ul>
+</li>
+<li>
+<p><strong>Cenários Inadequados:</strong></p>
+<ul>
+<li>Dados com <strong>alta frequência de atualização</strong></li>
+<li>Ambientes com <strong>recursos limitados</strong> de armazenamento</li>
+<li>Casos onde a <strong>consistência transacional</strong> é crítica</li>
+<li>Sistemas principalmente <strong>OLTP</strong></li>
+</ul>
+</li>
+</ul>
+<h2 id="implementando-obt">Implementando OBT</h2>
+<p>Vamos trabalhar com a transformação do nosso modelo de vendas normalizado em uma OBT. Primeiro, vamos relembrar a estrutura original:</p>
+<p><img alt="Estrutura Normalizada Original" src="../modelo-relacional-vendas.png" /></p>
+<h3 id="projetando-a-obt">Projetando a OBT</h3>
+<p>Para criar nossa <strong>OBT</strong>, precisamos identificar qual será o <strong>grão</strong> (<strong>granularidade</strong>) da tabela.</p>
+<p>No nosso caso, o grão natural seria <strong>cada item vendido</strong>, pois representa o nível mais detalhado de informação disponível.</p>
+<div class="admonition exercise text short exercise-short" id="exercise_3">
 <p class="admonition-title">Exercise</p>
-<form class="quiz-form"><p>O que você acha de utilizar o <code>cron</code> para agendar tarefas em produção?</p>
-<p>Analise, de forma crítica, com foco em engenharia de dados.</p>
+<form class="quiz-form"><p>Por que escolhemos <strong>"item vendido"</strong> como grão da <strong>OBT</strong> ao invés de <strong>"venda"</strong>?</p>
+<div class="form-elements">
+<div class="quiz-text-container">
+
+<input type="text" value="" name="data" class="quiz-text-input" 
+       placeholder="Enter your answer..." autocomplete="off"/>
+
+</div>
+<button class="quiz-submit-button" type="submit">Submit</button>
+</div></form><div class="admonition answer quiz-answer no-indent">
+<p class="admonition-title">Answer</p>
+<p>Porque uma venda pode conter múltiplos produtos.</p>
+<p>Se usássemos <strong>"venda"</strong> como grão, perderiamos o <strong>detalhamento por produto</strong>!</p>
+</div>
+</div>
+<h3 id="campos-da-obt-de-vendas">Campos da OBT de Vendas</h3>
+<p>Nossa OBT incluirá todos os campos necessários para análises de vendas, eliminando a necessidade de JOINs:</p>
+<ul>
+<li>
+<p><strong>Informações da Venda:</strong> <code>id_venda</code>, <code>data_venda</code>, <code>entregue</code>, <code>valor_total_venda</code></p>
+</li>
+<li>
+<p><strong>Informações do Item:</strong> <code>id_item</code>, <code>quantidade</code>, <code>valor_unitario</code>, <code>valor_total_item</code></p>
+</li>
+<li>
+<p><strong>Informações do Produto:</strong> <code>id_produto</code>, <code>nome_produto</code>, <code>descricao_produto</code>, <code>preco_base</code></p>
+</li>
+<li>
+<p><strong>Informações do Cliente:</strong> <code>id_cliente</code>, <code>nome_cliente</code>, <code>data_nasc</code>, <code>data_cad</code>, <code>cpf</code></p>
+</li>
+<li>
+<p><strong>Informações Geográficas:</strong> <code>cidade</code>, <code>uf</code>, <code>pais</code></p>
+</li>
+</ul>
+<div class="admonition exercise choice exercise-choice" data-answer-idx="3" id="exercise_2">
+<p class="admonition-title">Question</p>
+<form class="quiz-form"><p>Quantas vezes os dados do cliente "João Silva" aparecerão na <strong>OBT</strong> se ele fez 5 compras com 3 itens cada?</p>
+<div class="form-elements">
+<div class="quiz-alternative-set">
+  
+<label class="quiz-alternative" data-alt-index="0">
+  <div class="content">
+    <input type="hidden" name="data" value="">
+    <span class="choice-text">1 vez</span>
+  </div>
+</label>
+
+<label class="quiz-alternative" data-alt-index="1">
+  <div class="content">
+    <input type="hidden" name="data" value="">
+    <span class="choice-text">5 vezes</span>
+  </div>
+</label>
+
+<label class="quiz-alternative" data-alt-index="2">
+  <div class="content">
+    <input type="hidden" name="data" value="">
+    <span class="choice-text">3 vezes</span>
+  </div>
+</label>
+
+<label class="quiz-alternative" data-alt-index="3">
+  <div class="content">
+    <input type="hidden" name="data" value="">
+    <span class="choice-text">15 vezes</span>
+  </div>
+</label>
+
+<label class="quiz-alternative" data-alt-index="4">
+  <div class="content">
+    <input type="hidden" name="data" value="">
+    <span class="choice-text">Depende dos produtos</span>
+  </div>
+</label>
+
+</div>
+<button class="quiz-submit-button" type="submit">Submit</button>
+</div></form></div>
+<h2 id="criando-a-obt-na-pratica">Criando a OBT na Prática</h2>
+<p>A transformação do modelo normalizado para <strong>OBT</strong>, usando <strong>SQL</strong>, pode ser representada pela seguinte <em>query</em>:</p>
+<div class="admonition warning">
+<p class="admonition-title">Atenção</p>
+<p>Esta é uma versão refatorada, o nome dos atributos (colunas) pode não bater com o utilizado na aula 03.</p>
+</div>
+<div class="language-sql copy highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w">    </span><span class="c1">-- Criação da OBT de Vendas</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">obt_vendas</span><span class="w"> </span><span class="k">AS</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="k">SELECT</span><span class="w"> </span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">        </span><span class="c1">-- Informações da venda</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">        </span><span class="n">v</span><span class="p">.</span><span class="n">id_venda</span><span class="p">,</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">        </span><span class="n">v</span><span class="p">.</span><span class="k">data</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">data_venda</span><span class="p">,</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">        </span><span class="n">v</span><span class="p">.</span><span class="n">entregue</span><span class="p">,</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">        </span><span class="n">v</span><span class="p">.</span><span class="n">valor_total</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">valor_total_venda</span><span class="p">,</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">        </span><span class="c1">-- Informações do item</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">        </span><span class="n">iv</span><span class="p">.</span><span class="n">id_item</span><span class="p">,</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">        </span><span class="n">iv</span><span class="p">.</span><span class="n">quantidade</span><span class="p">,</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">        </span><span class="n">iv</span><span class="p">.</span><span class="n">valor_unitario</span><span class="p">,</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">        </span><span class="n">iv</span><span class="p">.</span><span class="n">valor_total</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">valor_total_item</span><span class="p">,</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">        </span><span class="c1">-- Informações do produto</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">        </span><span class="n">p</span><span class="p">.</span><span class="n">id_produto</span><span class="p">,</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">        </span><span class="n">p</span><span class="p">.</span><span class="n">nome</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">nome_produto</span><span class="p">,</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">        </span><span class="n">p</span><span class="p">.</span><span class="n">descricao</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">descricao_produto</span><span class="p">,</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">        </span><span class="n">p</span><span class="p">.</span><span class="n">preco_base</span><span class="p">,</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">        </span><span class="n">p</span><span class="p">.</span><span class="n">ativo</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">produto_ativo</span><span class="p">,</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">        </span><span class="c1">-- Informações do cliente</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">        </span><span class="k">c</span><span class="p">.</span><span class="n">id_cliente</span><span class="p">,</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">        </span><span class="k">c</span><span class="p">.</span><span class="n">nome</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">nome_cliente</span><span class="p">,</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">        </span><span class="k">c</span><span class="p">.</span><span class="n">data_nasc</span><span class="p">,</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="w">        </span><span class="k">c</span><span class="p">.</span><span class="n">data_cad</span><span class="p">,</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="w">        </span><span class="k">c</span><span class="p">.</span><span class="n">cpf</span><span class="p">,</span>
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="w">        </span><span class="c1">-- Informações geográficas</span>
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="w">        </span><span class="n">cid</span><span class="p">.</span><span class="n">cidade_desc</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">cidade</span><span class="p">,</span>
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="w">        </span><span class="n">cid</span><span class="p">.</span><span class="n">cidade_uf</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">uf</span><span class="p">,</span>
+<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="w">        </span><span class="n">pa</span><span class="p">.</span><span class="n">pais</span>
+<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>
+<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">item_venda</span><span class="w"> </span><span class="n">iv</span>
+<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="w">    </span><span class="k">JOIN</span><span class="w"> </span><span class="n">venda</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">iv</span><span class="p">.</span><span class="n">id_venda</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">id_venda</span>
+<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a><span class="w">    </span><span class="k">JOIN</span><span class="w"> </span><span class="n">produto</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">iv</span><span class="p">.</span><span class="n">id_produto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">id_produto</span>
+<a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a><span class="w">    </span><span class="k">JOIN</span><span class="w"> </span><span class="n">cliente</span><span class="w"> </span><span class="k">c</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">id_cliente</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">id_cliente</span>
+<a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a><span class="w">    </span><span class="k">JOIN</span><span class="w"> </span><span class="n">cidade</span><span class="w"> </span><span class="n">cid</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">id_cidade</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cid</span><span class="p">.</span><span class="n">id_cidade</span>
+<a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a><span class="w">    </span><span class="k">JOIN</span><span class="w"> </span><span class="n">pais</span><span class="w"> </span><span class="n">pa</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">cid</span><span class="p">.</span><span class="n">id_pais</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pa</span><span class="p">.</span><span class="n">id_pais</span><span class="p">;</span>
+</code></pre></div>
+<h3 id="consultas-normalizado-vs-obt">Consultas: Normalizado <em>vs</em> OBT</h3>
+<p>Podemos comparar como seria a estrutura básica de consultas no modelo normalizado e na OBT.</p>
+<p>Por exemplo, para obter as vendas por país no último mês, teríamos:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Normalizado</label><label for="__tabbed_1_2">OBT</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-sql copy highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">-- Vendas por país no último mês</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">SELECT</span><span class="w"> </span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="n">pa</span><span class="p">.</span><span class="n">pais</span><span class="p">,</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">total_vendas</span><span class="p">,</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="k">SUM</span><span class="p">(</span><span class="n">v</span><span class="p">.</span><span class="n">valor_total</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">receita_total</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="k">FROM</span><span class="w"> </span><span class="n">venda</span><span class="w"> </span><span class="n">v</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="k">JOIN</span><span class="w"> </span><span class="n">cliente</span><span class="w"> </span><span class="k">c</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">id_cliente</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">id_cliente</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="k">JOIN</span><span class="w"> </span><span class="n">cidade</span><span class="w"> </span><span class="n">cid</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">id_cidade</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cid</span><span class="p">.</span><span class="n">id_cidade</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="k">JOIN</span><span class="w"> </span><span class="n">pais</span><span class="w"> </span><span class="n">pa</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">cid</span><span class="p">.</span><span class="n">id_pais</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pa</span><span class="p">.</span><span class="n">id_pais</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="k">data</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">DATE_SUB</span><span class="p">(</span><span class="k">CURRENT_DATE</span><span class="p">,</span><span class="w"> </span><span class="nb">INTERVAL</span><span class="w"> </span><span class="mi">30</span><span class="w"> </span><span class="k">DAY</span><span class="p">)</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">pa</span><span class="p">.</span><span class="n">pais</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">receita_total</span><span class="w"> </span><span class="k">DESC</span><span class="p">;</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-sql copy highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1">-- Vendas por país no último mês</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">SELECT</span><span class="w"> </span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="n">pais</span><span class="p">,</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="k">COUNT</span><span class="p">(</span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">id_venda</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">total_vendas</span><span class="p">,</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="k">SUM</span><span class="p">(</span><span class="n">valor_total_venda</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">receita_total</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="k">FROM</span><span class="w"> </span><span class="n">obt_vendas</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">data_venda</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">DATE_SUB</span><span class="p">(</span><span class="k">CURRENT_DATE</span><span class="p">,</span><span class="w"> </span><span class="nb">INTERVAL</span><span class="w"> </span><span class="mi">30</span><span class="w"> </span><span class="k">DAY</span><span class="p">)</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">pais</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">receita_total</span><span class="w"> </span><span class="k">DESC</span><span class="p">;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<div class="admonition exercise text long exercise-long" id="exercise_4">
+<p class="admonition-title">Exercise</p>
+<form class="quiz-form"><p>Compare as duas consultas acima. Quais diferenças você observa em termos de complexidade e potencial performance?</p>
 <div class="form-elements">
 <div class="quiz-text-container">
 
@@ -2854,36 +3232,52 @@ body {
 <button class="quiz-submit-button" type="submit">Submit</button>
 </div></form><div class="admonition answer quiz-answer no-indent">
 <p class="admonition-title">Answer</p>
-<p>O <strong>cron</strong> é um agendador <strong>simples</strong>.</p>
-<p>Suas limitações incluem:</p>
-<ul>
-<li><strong>Sem dependências</strong>: Não consegue gerenciar dependências entre tarefas</li>
-<li><strong>Sem estado</strong>: Não rastreia se tarefas anteriores falharam ou tiveram sucesso</li>
-<li><strong>Sem <em>retry</em></strong>: Não tem mecanismos automáticos de reexecução em caso de falha</li>
-<li><strong>Sem paralelização inteligente</strong>: Executa tarefas de forma isolada</li>
-<li><strong>Monitoramento limitado</strong>: <em>Logging</em> básico, sem <em>dashboards</em> ou alertas</li>
-<li><strong>Sem fluxo condicional</strong>: Não pode executar tarefas baseadas em resultados de outras</li>
-<li><strong>Sem gestão de recursos</strong>: Não controla uso de CPU, memória ou concorrência</li>
-</ul>
-<p>Com o <code>cron</code>, tudo isto precisaria ser implementado pelo <em>script</em> iniciado ou por ferramentas externas.</p>
-<p>Se quisermos um controle mais avançado sobre a execução das tarefas, precisamos considerar outras soluções.</p>
+<p>A consulta <strong>OBT</strong> é mais simples (sem <strong>JOINs</strong>), potencialmente mais rápida, mas requer atenção especial ao usar <code>COUNT(DISTINCT id_venda)</code> para evitar contar a mesma venda múltiplas vezes devido aos múltiplos itens.</p>
 </div>
 </div>
-<p>Em ambientes de produção, o uso do <strong>cron</strong> pode não ser a melhor escolha devido às suas limitações. É importante avaliar outras opções que ofereçam mais robustez e recursos para o agendamento de tarefas.</p>
-<p>Vamos discutir algumas alternativas na próxima página!</p>
-<div class="admonition exercise exercise-self-progress" id="exercise_7">
-<p class="admonition-title">Exercise</p>
-<form class="quiz-form"><p>Antes de continuar, encerre a execução dos <em>containers</em> e remova-os.</p>
-<div class="termy">
-<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>$<span class="w"> </span>docker<span class="w"> </span>compose<span class="w"> </span>down
+<div class="admonition tip">
+<p class="admonition-title">Otimizações!</p>
+<p>Como a OBT será consultada frequentemente, é fundamental criar índices nas colunas mais utilizadas em filtros e agrupamentos:</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Explosão de Cardinalidade!</p>
+<p>Em relacionamentos <strong>muitos-para-muitos</strong>, a OBT pode crescer exponencialmente.</p>
+<p>É importante monitorar o tamanho da tabela resultante.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Cuidado!</p>
+<p>Ao fazer agregações na OBT, tenha cuidado para não <strong>contar duplicatas</strong>:</p>
+<div class="language-sql highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1">-- INCORRETO: conta o mesmo cliente múltiplas vezes</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">total_clientes</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">obt_vendas</span><span class="p">;</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1">-- CORRETO: conta clientes únicos</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">id_cliente</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">total_clientes</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">obt_vendas</span><span class="p">;</span>
 </code></pre></div>
 </div>
-<div class="form-elements">
-<div class="quiz-self-progress">
-<input type="hidden" name="data" value="done" />
-<button class="quiz-submit-button" type="submit">Mark as done</button>
+<div class="admonition warning">
+<p class="admonition-title">Manutenção de Consistência</p>
+<p>A redundância exige processos robustos de <strong>ETL</strong> para garantir que todas as cópias dos dados permaneçam consistentes.</p>
 </div>
-</div></form></div>
+<div class="admonition exercise text long exercise-long" id="exercise_5">
+<p class="admonition-title">Exercise</p>
+<form class="quiz-form"><p>Que estratégias você implementaria para detectar e corrigir inconsistências em uma <strong>OBT</strong>?</p>
+<div class="form-elements">
+<div class="quiz-text-container">
+
+<textarea name="data" class="quiz-text-input" 
+          placeholder="Enter your detailed answer..." rows="4"></textarea>
+
+</div>
+<button class="quiz-submit-button" type="submit">Submit</button>
+</div></form><div class="admonition answer quiz-answer no-indent">
+<p class="admonition-title">Answer</p>
+<ul>
+<li>Monitoramento contínuo de dados para identificar anomalias.</li>
+<li>Implementação de testes automatizados para validar a integridade dos dados.</li>
+<li>Processos de reconciliação periódicos entre a <strong>OBT</strong> e as fontes de dados originais.</li>
+</ul>
+</div>
+</div>
 <script type="text/javascript">
 // Sistema de processamento de exercícios de múltipla escolha
 function processChoiceExercises() {
@@ -3975,7 +4369,7 @@ document.addEventListener('click', function(e) {
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../05-iac/pratica/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Prática IaC">
+          <a href="../intro-data-modeling/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Modelagem de Dados">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -3985,20 +4379,20 @@ document.addEventListener('click', function(e) {
                 Previous
               </span>
               <div class="md-ellipsis">
-                Prática IaC
+                Modelagem de Dados
               </div>
             </div>
           </a>
         
         
           
-          <a href="../intro-orchestration/" class="md-footer__link md-footer__link--next" aria-label="Next: Orquestração">
+          <a href="../star-schema/" class="md-footer__link md-footer__link--next" aria-label="Next: Star Schema">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Orquestração
+                Star Schema
               </div>
             </div>
             <div class="md-footer__button md-icon">

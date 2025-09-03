@@ -13,10 +13,10 @@
       
       
       
-        <link rel="prev" href="../../05-iac/pratica/">
+        <link rel="prev" href="../obt/">
       
       
-        <link rel="next" href="../intro-orchestration/">
+        <link rel="next" href="../snowflake/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Introdução - Engenharia de Dados</title>
+        <title>Star Schema - Engenharia de Dados</title>
       
     
     
@@ -81,7 +81,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introducao" class="md-skip">
+        <a href="#star-schema" class="md-skip">
           Skip to content
         </a>
       
@@ -117,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Introdução
+              Star Schema
             
           </span>
         </div>
@@ -1437,10 +1437,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -1459,11 +1457,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
         
           
           <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
@@ -1479,7 +1477,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_6">
             <span class="md-nav__icon md-icon"></span>
             06 - Intro Orquestração
@@ -1490,32 +1488,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Introdução
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../06-intro-orchestration/intro-cron/" class="md-nav__link">
         
   
   
@@ -1526,62 +1502,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#agendamento" class="md-nav__link">
-    <span class="md-ellipsis">
-      Agendamento
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#simulando-a-atividade" class="md-nav__link">
-    <span class="md-ellipsis">
-      Simulando a atividade
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cron" class="md-nav__link">
-    <span class="md-ellipsis">
-      Cron
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#atualizacao-para-o-uso-do-cron" class="md-nav__link">
-    <span class="md-ellipsis">
-      Atualização para o uso do cron
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1594,7 +1514,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../intro-orchestration/" class="md-nav__link">
+      <a href="../../06-intro-orchestration/intro-orchestration/" class="md-nav__link">
         
   
   
@@ -1617,7 +1537,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../prefect/" class="md-nav__link">
+      <a href="../../06-intro-orchestration/prefect/" class="md-nav__link">
         
   
   
@@ -1640,7 +1560,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../references/" class="md-nav__link">
+      <a href="../../06-intro-orchestration/references/" class="md-nav__link">
         
   
   
@@ -1668,8 +1588,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -1690,11 +1612,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" checked>
         
           
           <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
@@ -1710,7 +1632,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_7">
             <span class="md-nav__icon md-icon"></span>
             07 - Modelagem de Dados
@@ -1724,7 +1646,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../07-data-modeling/intro-data-modeling/" class="md-nav__link">
+      <a href="../intro-data-modeling/" class="md-nav__link">
         
   
   
@@ -1747,7 +1669,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../07-data-modeling/obt/" class="md-nav__link">
+      <a href="../obt/" class="md-nav__link">
         
   
   
@@ -1767,10 +1689,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../07-data-modeling/star-schema/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Star Schema
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1781,6 +1725,164 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introducao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introdução
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#o-que-e-star-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      O que é Star Schema?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contexto-historico" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contexto Histórico
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tabela-fato" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tabela Fato
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tabelas-dimensao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tabelas Dimensão
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vantagens-do-star-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vantagens do Star Schema
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementando-star-schema-para-vendas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementando Star Schema para Vendas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementando Star Schema para Vendas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tabelas-dimensao_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tabelas Dimensão
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabela-fato_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tabela Fato
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consultando-o-star-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consultando o Star Schema
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#desvantagens" class="md-nav__link">
+    <span class="md-ellipsis">
+      Desvantagens
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slowly-changing-dimensions-scd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Slowly Changing Dimensions (SCD)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#star-schema-vs-outras-abordagens" class="md-nav__link">
+    <span class="md-ellipsis">
+      Star Schema vs Outras Abordagens
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Star Schema vs Outras Abordagens">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comparacao-resumida" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparação Resumida
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1793,7 +1895,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../07-data-modeling/snowflake/" class="md-nav__link">
+      <a href="../snowflake/" class="md-nav__link">
         
   
   
@@ -1816,7 +1918,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../07-data-modeling/references/" class="md-nav__link">
+      <a href="../references/" class="md-nav__link">
         
   
   
@@ -2016,38 +2118,140 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#agendamento" class="md-nav__link">
+  <a href="#introducao" class="md-nav__link">
     <span class="md-ellipsis">
-      Agendamento
+      Introdução
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#simulando-a-atividade" class="md-nav__link">
+  <a href="#o-que-e-star-schema" class="md-nav__link">
     <span class="md-ellipsis">
-      Simulando a atividade
+      O que é Star Schema?
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#cron" class="md-nav__link">
+  <a href="#contexto-historico" class="md-nav__link">
     <span class="md-ellipsis">
-      Cron
+      Contexto Histórico
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#atualizacao-para-o-uso-do-cron" class="md-nav__link">
+  <a href="#tabela-fato" class="md-nav__link">
     <span class="md-ellipsis">
-      Atualização para o uso do cron
+      Tabela Fato
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tabelas-dimensao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tabelas Dimensão
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vantagens-do-star-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vantagens do Star Schema
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementando-star-schema-para-vendas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementando Star Schema para Vendas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementando Star Schema para Vendas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tabelas-dimensao_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tabelas Dimensão
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabela-fato_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tabela Fato
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consultando-o-star-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consultando o Star Schema
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#desvantagens" class="md-nav__link">
+    <span class="md-ellipsis">
+      Desvantagens
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slowly-changing-dimensions-scd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Slowly Changing Dimensions (SCD)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#star-schema-vs-outras-abordagens" class="md-nav__link">
+    <span class="md-ellipsis">
+      Star Schema vs Outras Abordagens
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Star Schema vs Outras Abordagens">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comparacao-resumida" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparação Resumida
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2484,61 +2688,14 @@ body {
   }
 }
 </style>
-<h1 id="introducao">Introdução</h1>
-<h2 id="agendamento">Agendamento</h2>
-<p>Na <a href="../../03-data-warehouse/pratica/">aula 03</a> discutimos sobre processos de <strong>ETL</strong> / <strong>ELT</strong>.</p>
-<p>No exemplo da aula, implementamos uma <strong>pipeline</strong> de dados que extrai informações de um banco de dados <strong>PostgreSQL</strong>, transforma esses dados e os carrega em um <strong>data warehouse Clickhouse</strong>.</p>
-<div class="admonition exercise text short exercise-short" id="exercise_1">
-<p class="admonition-title">Exercício</p>
-<form class="quiz-form"><p>De quanto em quanto tempo a tarefa de <strong>ETL</strong> era executada?</p>
-<div class="form-elements">
-<div class="quiz-text-container">
-
-<input type="text" value="" name="data" class="quiz-text-input" 
-       placeholder="Enter your answer..." autocomplete="off"/>
-
-</div>
-<button class="quiz-submit-button" type="submit">Submit</button>
-</div></form><div class="admonition answer quiz-answer no-indent">
-<p class="admonition-title">Answer</p>
-<p>A cada dois minutos.</p>
-<p>Um tempo baixo para que conseguíssemos simular uma rotina diária sem esperar tanto.</p>
-</div>
-</div>
-<div class="admonition exercise text short exercise-short" id="exercise_2">
-<p class="admonition-title">Exercício</p>
-<form class="quiz-form"><p>Como isto foi implementado?</p>
-<div class="form-elements">
-<div class="quiz-text-container">
-
-<input type="text" value="" name="data" class="quiz-text-input" 
-       placeholder="Enter your answer..." autocomplete="off"/>
-
-</div>
-<button class="quiz-submit-button" type="submit">Submit</button>
-</div></form><div class="admonition answer quiz-answer no-indent">
-<p class="admonition-title">Answer</p>
-<p>De forma rudimentar, esperando <code>120</code> segundos em um loop infinito.</p>
-<div class="language-yaml highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Recorte de parte do docker-compose.yml</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">&gt;</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="no">bash -c &quot;</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">        </span><span class="no">pip install -r /app/requirements.txt &amp;&amp;</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">        </span><span class="no">echo &#39;Inicializando banco de dados warehouse...&#39; &amp;&amp;</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">        </span><span class="no">python src/init_database.py &amp;&amp;</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">        </span><span class="no">echo &#39;Iniciando ETL (executará a cada 2 minutos)...&#39; &amp;&amp;</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">        </span><span class="no">while true; do</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">        </span><span class="no">echo &#39;Executando ETL...&#39; &amp;&amp;</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">        </span><span class="no">python src/etl_vendas.py &amp;&amp;</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">        </span><span class="no">echo &#39;ETL concluído. Aguardando 2 minutos...&#39; &amp;&amp;</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">        </span><span class="no">sleep 120</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">        </span><span class="no">done</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">    </span><span class="no">&quot;</span>
-</code></pre></div>
-</div>
-</div>
-<div class="admonition exercise text long exercise-long" id="exercise_3">
-<p class="admonition-title">Exercício</p>
-<form class="quiz-form"><p>Vê algum problema na forma como fizemos?</p>
+<h1 id="star-schema">Star Schema</h1>
+<h2 id="introducao">Introdução</h2>
+<p>Na seção anterior, exploramos o conceito de <strong>One Big Table (OBT)</strong>, que propõe uma estratégia de desnormalização completa.</p>
+<p>Agora, vamos estudar uma abordagem mais equilibrada: o <strong>Star Schema</strong>!</p>
+<p>O <strong>Star Schema</strong> representa um meio-termo entre a normalização completa dos sistemas <strong>OLTP</strong> e a desnormalização total da <strong>OBT</strong>, oferecendo uma estrutura <strong>otimizada para consultas analíticas</strong>.</p>
+<div class="admonition exercise text long exercise-long" id="exercise_1">
+<p class="admonition-title">Exercise</p>
+<form class="quiz-form"><p>Considerando as limitações da <strong>OBT</strong> discutidas na aula anterior (como redundância e complexidade de atualização), como você imagina que um modelo "meio-termo" poderia resolver alguns desses problemas?</p>
 <div class="form-elements">
 <div class="quiz-text-container">
 
@@ -2549,301 +2706,185 @@ body {
 <button class="quiz-submit-button" type="submit">Submit</button>
 </div></form><div class="admonition answer quiz-answer no-indent">
 <p class="admonition-title">Answer</p>
-<p>A <em>query</em> de <strong>SQL</strong> utilizada para extrair os dados extraía informações desde o segundo zero do minuto atual. Entretanto, caso o processo de <strong>ETL</strong> demorasse mais que um minuto, parte dos dados não seriam ingeridos/tratados.</p>
-<p>Ainda, o máximo que obtínhamos de controle era o tempo de espera. Não havia como, por exemplo, executar o processo de <strong>ETL</strong> às 3 da manhã todos os dias.</p>
-</div>
-</div>
-<h2 id="simulando-a-atividade">Simulando a atividade</h2>
-<p>Vamos simular a execução de um processo que precisa ser agendado. Para isto, vamos partir dos seguintes arquivos:</p>
-<div class="admonition exercise exercise-self-progress" id="exercise_1">
-<p class="admonition-title">Exercise</p>
-<form class="quiz-form"><p>Antes, crie um pasta para esta parte da aula.</p>
-<p>Os próximos arquivos devem ser criados nesta pasta.</p>
-<div class="termy">
-<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>$<span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span><span class="m">06</span>-intro-orchestration/01-intro
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span><span class="m">06</span>-intro-orchestration/01-intro
-</code></pre></div>
-</div>
-<div class="form-elements">
-<div class="quiz-self-progress">
-<input type="hidden" name="data" value="done" />
-<button class="quiz-submit-button" type="submit">Mark as done</button>
-</div>
-</div></form></div>
-<p>Agora considere os arquivos:</p>
-<details>
-<summary><code>app.py</code></summary>
-<div class="language-python copy highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">datetime</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Olá do Docker! A hora atual é: </span><span class="si">{</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">flush</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    <span class="n">main</span><span class="p">()</span>
-</code></pre></div>
-</details>
-<details>
-<summary><code>Dockerfile</code></summary>
-<div class="language-dockerfile copy highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c"># Use uma imagem base oficial do Python</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">FROM</span><span class="w"> </span><span class="s">python:3.12-slim</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c"># Defina o diretório de trabalho no container</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="k">WORKDIR</span><span class="w"> </span><span class="s">/app</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="c"># Copie o script Python para o diretório de trabalho</span>
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="k">COPY</span><span class="w"> </span>app.py<span class="w"> </span>.
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="c"># Execute o script Python quando o container for iniciado</span>
-<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;python&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;app.py&quot;</span><span class="p">]</span>
-</code></pre></div>
-</details>
-<details>
-<summary><code>docker-compose.yml</code></summary>
-<div class="language-yaml copy highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nt">services</span><span class="p">:</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="nt">python-app</span><span class="p">:</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">        </span><span class="nt">build</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">        </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python-scheduler</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">        </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">always</span>
-</code></pre></div>
-</details>
-<div class="admonition exercise exercise-self-progress" id="exercise_2">
-<p class="admonition-title">Exercise</p>
-<form class="quiz-form"><p>Crie cada um dos arquivos na pasta <code>06-intro-orchestration/01-intro</code>.</p>
-<div class="form-elements">
-<div class="quiz-self-progress">
-<input type="hidden" name="data" value="done" />
-<button class="quiz-submit-button" type="submit">Mark as done</button>
-</div>
-</div></form></div>
-<div class="admonition exercise text short exercise-short" id="exercise_4">
-<p class="admonition-title">Exercise</p>
-<form class="quiz-form"><p>Faça a inicialização com:</p>
-<div class="termy">
-<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>$<span class="w"> </span>docker<span class="w"> </span>compose<span class="w"> </span>build
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>$<span class="w"> </span>docker<span class="w"> </span>compose<span class="w"> </span>up
-</code></pre></div>
-</div>
-<p>De quanto em quanto tempo a tarefa é executada (<code>print</code>)?</p>
-<div class="form-elements">
-<div class="quiz-text-container">
-
-<input type="text" value="" name="data" class="quiz-text-input" 
-       placeholder="Enter your answer..." autocomplete="off"/>
-
-</div>
-<button class="quiz-submit-button" type="submit">Submit</button>
-</div></form><div class="admonition answer quiz-answer no-indent">
-<p class="admonition-title">Answer</p>
-<p>Assim que possível!</p>
-<p>Após a execução, o processo encerra. Então, instantaneamente o <em>container</em> é reiniciado e ocorre novo <code>print</code>.</p>
-</div>
-</div>
-<div class="admonition exercise exercise-self-progress" id="exercise_3">
-<p class="admonition-title">Exercise</p>
-<form class="quiz-form"><p>Altere o arquivo <code>app.py</code> para que o <code>print</code> ocorra a cada <code>5</code> segundos.</p>
-<p>Pode ser com <code>time.sleep(5)</code>!</p>
-<div class="form-elements">
-<div class="quiz-self-progress">
-<input type="hidden" name="data" value="done" />
-<button class="quiz-submit-button" type="submit">Mark as done</button>
-</div>
-</div></form><div class="admonition answer quiz-answer no-indent">
-<p class="admonition-title">Answer</p>
-<div class="language-python copy highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">datetime</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Olá do Docker! A hora atual é: </span><span class="si">{</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">flush</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>
-<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>    <span class="n">main</span><span class="p">()</span>
-</code></pre></div>
-</div>
-</div>
-<p>Anteriormente, já discutimos por que o <code>time.sleep</code> não é uma boa solução. Vamos buscar uma alternativa melhor!</p>
-<h2 id="cron">Cron</h2>
-<p>O <strong>cron</strong> é um agendador de tarefas do <em>Unix</em> que permite executar <em>scripts</em> ou comandos em intervalos regulares.</p>
-<p>Ele opera em segundo plano como um <em>daemon</em>, verificando a cada minuto um arquivo de configuração chamado <code>crontab</code> (<strong>cron table</strong>) para saber quais tarefas devem ser executadas.</p>
-<div class="admonition info">
-<p class="admonition-title">Daemon</p>
-<p>Um <em>daemon</em> é um tipo especial de programa que roda em segundo plano em sistemas Unix e semelhantes.</p>
-<p>Ele geralmente inicia junto com o sistema e fica aguardando por eventos ou condições específicas para executar suas tarefas (Ex: <code>sshd</code>).</p>
-</div>
-<p>As tarefas são definidas usando uma sintaxe de cinco campos para especificar o minuto, a hora, o dia do mês, o mês e o dia da semana em que o comando deve rodar:</p>
-<div class="language-console highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="go">* * * * *</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="go">| | | | |</span>
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="go">| | | | ----- Dia da semana (0 - 7, onde 0 ou 7 é Domingo)</span>
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="go">| | | ------- Mês (1 - 12)</span>
-<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="go">| | --------- Dia do mês (1 - 31)</span>
-<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="go">| ----------- Hora (0 - 23)</span>
-<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="go">------------- Minuto (0 - 59)</span>
-</code></pre></div>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
+<p>Um modelo "meio-termo" poderia resolver alguns dos problemas da <strong>OBT</strong> ao:</p>
 <ul>
-<li>Um asterisco (<code>*</code>) em um campo significa "todos os valores possíveis" para aquele campo.</li>
-<li>Valores específicos podem ser listados, separados por vírgulas (ex: <code>1,15</code> no campo de minutos significa "no minuto 1 e no minuto 15").</li>
-<li>Intervalos podem ser especificados com um hífen (ex: <code>1-5</code> no campo de horas significa "da 1h às 5h").</li>
-<li>Passos podem ser definidos com uma barra (ex: <code>*/10</code> no campo de minutos significa "a cada 10 minutos").</li>
+<li><strong>Reduzir Redundância</strong>: Separando parte dos dados em tabelas, evitando duplicação excessiva.</li>
+<li><strong>Facilitar Atualizações</strong>: Com menos redundância, atualizações em dados seriam mais simples e menos propensas a erros.</li>
+<li><strong>Otimizar Consultas</strong>: Estruturando os dados para consultas analíticas comuns, melhorando a performance sem sacrificar a integridade.</li>
 </ul>
 </div>
-<p>Isso torna o <strong>cron</strong> extremamente útil para tarefas rotineiras, como backups de banco de dados ou limpeza de arquivos temporários.</p>
-<div class="admonition exercise exercise-self-progress" id="exercise_4">
-<p class="admonition-title">Exercise</p>
-<form class="quiz-form"><p>Antes de continuar, encerre a execução dos <em>containers</em> e remova-os.</p>
-<div class="termy">
-<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>$<span class="w"> </span>docker<span class="w"> </span>compose<span class="w"> </span>down
-</code></pre></div>
 </div>
-<div class="form-elements">
-<div class="quiz-self-progress">
-<input type="hidden" name="data" value="done" />
-<button class="quiz-submit-button" type="submit">Mark as done</button>
-</div>
-</div></form></div>
-<h2 id="atualizacao-para-o-uso-do-cron">Atualização para o uso do cron</h2>
-<p>Vamos utilizar o <strong>cron</strong> para agendar a execução do nossa tarefa (por enquanto, apenas um <code>print</code>).</p>
-<p>Para isto, considere os arquivos:</p>
-<div class="admonition exercise exercise-self-progress" id="exercise_5">
-<p class="admonition-title">Exercise</p>
-<form class="quiz-form"><p>Crie uma nova pasta <code>06-intro-orchestration/02-cron</code> e copie os arquivos na sequência:</p>
-<div class="form-elements">
-<div class="quiz-self-progress">
-<input type="hidden" name="data" value="done" />
-<button class="quiz-submit-button" type="submit">Mark as done</button>
-</div>
-</div></form></div>
-<details>
-<summary><code>app.py</code></summary>
-<p>Será igual ao primeiro arquivo <code>app.py</code> proposto nesta aula.
-<div class="language-python copy highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>    <span class="kn">import</span><span class="w"> </span><span class="nn">datetime</span>
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
-<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Olá do Docker! A hora atual é: </span><span class="si">{</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">flush</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>
-<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>    <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>        <span class="n">main</span><span class="p">()</span>
-</code></pre></div></p>
-</details>
-<details>
-<summary><code>crontab.txt</code></summary>
-<div class="language-text copy highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>* * * * * /usr/local/bin/python3 /app/app.py &gt;&gt; /var/log/cron.log 2&gt;&amp;1
-</code></pre></div>
+<h2 id="o-que-e-star-schema">O que é Star Schema?</h2>
+<p>O <strong>Star Schema</strong> é um <strong>modelo de dados dimensional</strong> que organiza informações em duas categorias principais:</p>
+<ul>
+<li><strong>Tabela Fato</strong> (<em>Fact Table</em>): contém as <strong>métricas</strong> e <strong>medidas numéricas</strong> do negócio</li>
+<li><strong>Tabelas Dimensão</strong> (<em>Dimension Tables</em>): contêm os <strong>atributos descritivos</strong> e contextuais</li>
+</ul>
+<p>A estrutura recebe esse nome porque, quando visualizada em um diagrama, lembra uma <strong>estrela</strong>: a tabela fato no centro conectada às dimensões ao redor:</p>
+<pre class="mermaid"><code>graph LR
+    subgraph "Star Schema - Vendas"
+        Produto[📦 dim_produto&lt;br/&gt;id_produto&lt;br/&gt;nome&lt;br/&gt;categoria&lt;br/&gt;preco_base] 
+        Cliente[👤 dim_cliente&lt;br/&gt;id_cliente&lt;br/&gt;nome&lt;br/&gt;idade&lt;br/&gt;cidade&lt;br/&gt;uf&lt;br/&gt;pais]
+        Tempo[📅 dim_tempo&lt;br/&gt;data&lt;br/&gt;ano&lt;br/&gt;mes&lt;br/&gt;trimestre&lt;br/&gt;dia_semana]
+
+        Fato[🎯 fato_vendas&lt;br/&gt;id_venda&lt;br/&gt;id_cliente&lt;br/&gt;id_produto&lt;br/&gt;data&lt;br/&gt;quantidade&lt;br/&gt;valor_unitario&lt;br/&gt;valor_total]
+
+        Cliente --&gt; Fato
+        Produto --&gt; Fato
+        Tempo --&gt; Fato
+    end</code></pre>
+<h2 id="contexto-historico">Contexto Histórico</h2>
+<p>O <strong>Star Schema</strong> foi formalizado por <strong>Ralph Kimball</strong> na década de 1990 como parte da metodologia <strong>Kimball</strong> para <strong>DW</strong>.</p>
+<p>Kimball observou que as consultas analíticas típicas seguiam padrões previsíveis: geralmente envolviam <strong>agregações</strong> numéricas (vendas, quantidades, valores) <strong>agrupadas</strong> por atributos descritivos (tempo, geografia, produtos).</p>
 <div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>A linha acima agenda a execução do <code>app.py</code> a cada minuto (de cada hora, de cada dia, de cada mês, etc.).</p>
-<p>A saída padrão e a saída de erro são redirecionadas para o arquivo <code>/var/log/cron.log</code>.</p>
+<p class="admonition-title">O que <em>vs</em> como!</p>
+<p>Esta observação levou ao desenvolvimento de uma estrutura que separa claramente <strong>"o que medir"</strong> (fatos) de <strong>"como agrupar"</strong> (dimensões), otimizando ambos para seus respectivos propósitos.</p>
 </div>
-<div class="admonition warning">
-<p class="admonition-title">Atenção!</p>
-<p>Deixe uma linha em branco no final do arquivo <code>crontab.txt</code>. O <strong>cron</strong> exige isto.</p>
+<p>A abordagem dimensional de Kimball contrastava com a metodologia <strong>Inmon</strong>, que defendia estruturas mais normalizadas. Esta diferença gerou o famoso debate <strong>"Kimball vs Inmon"</strong> na comunidade de <strong>DW</strong>.</p>
+<div class="admonition info">
+<p class="admonition-title">Metodologias Clássicas</p>
+<ul>
+<li><strong>Kimball</strong> (dimensional): foco na facilidade de uso para analistas</li>
+<li><strong>Inmon</strong> (normalizada): foco na integridade e consistência dos dados</li>
+</ul>
 </div>
-</details>
-<details>
-<summary><code>Dockerfile</code></summary>
-<p>Atualizaremos para uso do <code>cron</code>:
-<div class="language-dockerfile copy highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">FROM</span><span class="w"> </span><span class="s">python:3.12-slim</span>
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>
-<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="c"># Instala o cron</span>
-<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="k">RUN</span><span class="w"> </span>apt-get<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>cron<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>rm<span class="w"> </span>-rf<span class="w"> </span>/var/lib/apt/lists/*
-<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>
-<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="k">WORKDIR</span><span class="w"> </span><span class="s">/app</span>
-<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>
-<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="k">COPY</span><span class="w"> </span>app.py<span class="w"> </span>.
-<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="k">COPY</span><span class="w"> </span>crontab.txt<span class="w"> </span>.
-<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>
-<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="c"># Adiciona o crontab ao cron do sistema</span>
-<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="k">RUN</span><span class="w"> </span>crontab<span class="w"> </span>crontab.txt
-<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>
-<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a><span class="c"># Cria um arquivo de log para o cron</span>
-<a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a><span class="k">RUN</span><span class="w"> </span>touch<span class="w"> </span>/var/log/cron.log
-<a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a>
-<a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a><span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;cron&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;-f&quot;</span><span class="p">]</span>
-</code></pre></div></p>
-</details>
-<details>
-<summary><code>docker-compose.yml</code></summary>
-<p>De importante, apenas a atualização no nome do container!
-<div class="language-yaml copy highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nt">services</span><span class="p">:</span>
-<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="nt">python-app</span><span class="p">:</span>
-<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">    </span><span class="nt">build</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.</span>
-<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
-<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PYTHONUNBUFFERED=1</span>
-<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python-scheduler-cron</span>
-<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">always</span>
-</code></pre></div></p>
-</details>
-<div class="admonition exercise exercise-self-progress" id="exercise_6">
-<p class="admonition-title">Exercise</p>
-<form class="quiz-form"><p>Faça a reinicialização com:</p>
-<div class="admonition warning">
-<p class="admonition-title">Atenção!</p>
-<p>Garanta que esteja no diretório <code>06-intro-orchestration/02-cron</code>!</p>
-</div>
-<div class="termy">
-<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>$<span class="w"> </span>docker<span class="w"> </span>compose<span class="w"> </span>build
-<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>$<span class="w"> </span>docker<span class="w"> </span>compose<span class="w"> </span>up
+<p>Vamos explorar um pouco mais os conceitos de <strong>tabelas fato</strong> e <strong>tabelas dimensão</strong>.</p>
+<h2 id="tabela-fato">Tabela Fato</h2>
+<p>A <strong>tabela fato</strong> é o coração do Star Schema. Ela contém:</p>
+<ul>
+<li><strong>Chaves estrangeiras</strong> para as dimensões</li>
+<li><strong>Medidas numéricas</strong> (métricas de negócio)</li>
+<li><strong>Chaves compostas</strong> quando necessário</li>
+</ul>
+<p>No nosso exemplo de vendas, a tabela fato conteria:</p>
+<div class="language-sql copy highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">fato_vendas</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="n">id_venda</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="n">id_item</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="n">id_cliente</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="n">id_produto</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="n">data_venda</span><span class="w"> </span><span class="nb">DATE</span><span class="p">,</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="c1">-- Medidas (sempre numéricas)</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="n">quantidade</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="n">valor_unitario</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="n">valor_total</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">    </span><span class="c1">-- Chave primária composta</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">    </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">id_venda</span><span class="p">,</span><span class="w"> </span><span class="n">id_item</span><span class="p">)</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="p">);</span>
+</code></pre></div>
+<h2 id="tabelas-dimensao">Tabelas Dimensão</h2>
+<p>As <strong>tabelas dimensão</strong> fornecem <strong>contexto descritivo</strong> para as medidas. Elas são tipicamente <strong>desnormalizadas</strong> para facilitar consultas.</p>
+<p>Por exemplo:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Dimensão Cliente</label><label for="__tabbed_1_2">Dimensão Produto</label><label for="__tabbed_1_3">Dimensão Tempo</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-sql copy highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">dim_cliente</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="n">id_cliente</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="n">nome</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">60</span><span class="p">),</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="n">data_nasc</span><span class="w"> </span><span class="nb">DATE</span><span class="p">,</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="n">data_cad</span><span class="w"> </span><span class="nb">DATE</span><span class="p">,</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="n">cpf</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">15</span><span class="p">),</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="n">idade_atual</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="n">faixa_etaria</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">20</span><span class="p">),</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="c1">-- Informações geográficas desnormalizadas</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="n">cidade</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">60</span><span class="p">),</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">    </span><span class="n">uf</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">    </span><span class="n">pais</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">60</span><span class="p">)</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="p">);</span>
 </code></pre></div>
 </div>
-<div class="form-elements">
-<div class="quiz-self-progress">
-<input type="hidden" name="data" value="done" />
-<button class="quiz-submit-button" type="submit">Mark as done</button>
-</div>
-</div></form></div>
-<p>Se aguardar um minuto ou dois, irá perceber que não terá nenhum <em>feedback</em>. Isto ocorre porque os <em>logs</em> foram redirecionados para o arquivo <code>/var/log/cron.log</code> (dentro do <em>container</em>).</p>
-<div class="admonition exercise text short exercise-short" id="exercise_5">
-<p class="admonition-title">Exercise</p>
-<form class="quiz-form"><p>Vamos inspecionar os <em>logs</em>.</p>
-<p>Com o o <em>container</em> em execução, abra outro terminal e execute:</p>
-<div class="termy">
-<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>$<span class="w"> </span>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>python-scheduler-cron<span class="w"> </span>cat<span class="w"> </span>/var/log/cron.log
+<div class="tabbed-block">
+<div class="language-sql copy highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">dim_produto</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="n">id_produto</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="n">nome</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="n">descricao</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="n">preco_base</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="n">ativo</span><span class="w"> </span><span class="nb">BOOLEAN</span><span class="p">,</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="c1">-- Categorização</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">    </span><span class="n">categoria</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">),</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">    </span><span class="n">subcategoria</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="p">);</span>
 </code></pre></div>
 </div>
-<p>Aproveite e explique o que este comando faz!</p>
-<div class="form-elements">
-<div class="quiz-text-container">
-
-<input type="text" value="" name="data" class="quiz-text-input" 
-       placeholder="Enter your answer..." autocomplete="off"/>
-
+<div class="tabbed-block">
+<p>A <strong>dimensão tempo</strong> é fundamental em praticamente todos os <strong>data warehouses</strong>:</p>
+<div class="language-sql copy highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">dim_tempo</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="k">data</span><span class="w"> </span><span class="nb">DATE</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="n">ano</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="n">mes</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="n">mes_nome</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">20</span><span class="p">),</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="n">trimestre</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="n">semestre</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">    </span><span class="n">dia_mes</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">    </span><span class="n">dia_ano</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">    </span><span class="n">dia_semana</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">    </span><span class="n">dia_semana_nome</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">20</span><span class="p">),</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">    </span><span class="n">eh_feriado</span><span class="w"> </span><span class="nb">BOOLEAN</span><span class="p">,</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">    </span><span class="n">eh_fim_semana</span><span class="w"> </span><span class="nb">BOOLEAN</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="p">);</span>
+</code></pre></div>
 </div>
-<button class="quiz-submit-button" type="submit">Submit</button>
-</div></form><div class="admonition answer quiz-answer no-indent">
-<p class="admonition-title">Answer</p>
-<p>O comando <code>docker exec python-scheduler-cron cat /var/log/cron.log</code> é utilizado para acessar o <em>container</em> em execução chamado <code>python-scheduler-cron</code> e executar o comando <code>cat /var/log/cron.log</code> dentro dele.</p>
-<p>Isso permite visualizar o conteúdo do arquivo de log do cron, onde estão registrados os resultados das execuções agendadas.</p>
 </div>
 </div>
-<div class="admonition exercise choice exercise-choice" data-answer-idx="0" id="exercise_1">
-<p class="admonition-title">Exercise</p>
-<form class="quiz-form"><p>Funcionou? A tarefa está sendo executada a cada minuto?</p>
+<div class="admonition exercise choice exercise-choice" data-answer-idx="1" id="exercise_1">
+<p class="admonition-title">Question</p>
+<form class="quiz-form"><p>Por que a dimensão tempo geralmente é pré-populada com todos os dias do ano ao invés de ser populada conforme as vendas ocorrem?</p>
 <div class="form-elements">
 <div class="quiz-alternative-set">
   
 <label class="quiz-alternative" data-alt-index="0">
   <div class="content">
     <input type="hidden" name="data" value="">
-    <span class="choice-text">Sim</span>
+    <span class="choice-text">Para economizar espaço</span>
   </div>
 </label>
 
 <label class="quiz-alternative" data-alt-index="1">
   <div class="content">
     <input type="hidden" name="data" value="">
-    <span class="choice-text">Não</span>
+    <span class="choice-text">Para facilitar análises de períodos sem vendas</span>
+  </div>
+</label>
+
+<label class="quiz-alternative" data-alt-index="2">
+  <div class="content">
+    <input type="hidden" name="data" value="">
+    <span class="choice-text">Por questões de performance</span>
+  </div>
+</label>
+
+<label class="quiz-alternative" data-alt-index="3">
+  <div class="content">
+    <input type="hidden" name="data" value="">
+    <span class="choice-text">É uma obrigação do modelo dimensional</span>
   </div>
 </label>
 
 </div>
 <button class="quiz-submit-button" type="submit">Submit</button>
 </div></form></div>
-<div class="admonition exercise text long exercise-long" id="exercise_6">
+<h2 id="vantagens-do-star-schema">Vantagens do Star Schema</h2>
+<p>Dentre as vantagens do <strong>Star Schema</strong>, podemos destacar:</p>
+<ul>
+<li>
+<p><strong>Equilibrio Entre Performance e Manutenibilidade</strong>: O Star Schema oferece <strong>boa performance</strong> para consultas analíticas (menos <strong>JOINs</strong> que modelos normalizados) mantendo <strong>facilidade de manutenção</strong> (menos redundância que OBT).</p>
+</li>
+<li>
+<p><strong>Intuitividade para Analistas</strong>: A estrutura é intuitiva para usuários de negócio, separando claramente <em>"medidas"</em> (o que medir) de <em>"dimensões"</em> (como agrupar).</p>
+</li>
+<li>
+<p><strong>Compatibilidade com Ferramentas de BI</strong>: A maioria das ferramentas de <strong>OLAP</strong> é otimizada para trabalhar com <strong>Star Schemas</strong>, oferecendo recursos automáticos de <em>drill-down</em> e <em>roll-up</em>.</p>
+</li>
+<li>
+<p><strong>Flexibilidade Analítica</strong>: Novas análises podem ser facilmente implementadas combinando diferentes dimensões sem modificar a estrutura básica.</p>
+</li>
+</ul>
+<div class="admonition exercise text long exercise-long" id="exercise_2">
 <p class="admonition-title">Exercise</p>
-<form class="quiz-form"><p>O que você acha de utilizar o <code>cron</code> para agendar tarefas em produção?</p>
-<p>Analise, de forma crítica, com foco em engenharia de dados.</p>
+<form class="quiz-form"><p>Compare as vantagens do <strong>Star Schema</strong> com as da <strong>OBT</strong>. Em que situações cada abordagem seria mais adequada?</p>
 <div class="form-elements">
 <div class="quiz-text-container">
 
@@ -2852,37 +2893,368 @@ body {
 
 </div>
 <button class="quiz-submit-button" type="submit">Submit</button>
-</div></form><div class="admonition answer quiz-answer no-indent">
-<p class="admonition-title">Answer</p>
-<p>O <strong>cron</strong> é um agendador <strong>simples</strong>.</p>
-<p>Suas limitações incluem:</p>
-<ul>
-<li><strong>Sem dependências</strong>: Não consegue gerenciar dependências entre tarefas</li>
-<li><strong>Sem estado</strong>: Não rastreia se tarefas anteriores falharam ou tiveram sucesso</li>
-<li><strong>Sem <em>retry</em></strong>: Não tem mecanismos automáticos de reexecução em caso de falha</li>
-<li><strong>Sem paralelização inteligente</strong>: Executa tarefas de forma isolada</li>
-<li><strong>Monitoramento limitado</strong>: <em>Logging</em> básico, sem <em>dashboards</em> ou alertas</li>
-<li><strong>Sem fluxo condicional</strong>: Não pode executar tarefas baseadas em resultados de outras</li>
-<li><strong>Sem gestão de recursos</strong>: Não controla uso de CPU, memória ou concorrência</li>
-</ul>
-<p>Com o <code>cron</code>, tudo isto precisaria ser implementado pelo <em>script</em> iniciado ou por ferramentas externas.</p>
-<p>Se quisermos um controle mais avançado sobre a execução das tarefas, precisamos considerar outras soluções.</p>
-</div>
-</div>
-<p>Em ambientes de produção, o uso do <strong>cron</strong> pode não ser a melhor escolha devido às suas limitações. É importante avaliar outras opções que ofereçam mais robustez e recursos para o agendamento de tarefas.</p>
-<p>Vamos discutir algumas alternativas na próxima página!</p>
-<div class="admonition exercise exercise-self-progress" id="exercise_7">
+</div></form></div>
+<div class="admonition exercise text long exercise-long" id="exercise_3">
 <p class="admonition-title">Exercise</p>
-<form class="quiz-form"><p>Antes de continuar, encerre a execução dos <em>containers</em> e remova-os.</p>
-<div class="termy">
-<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>$<span class="w"> </span>docker<span class="w"> </span>compose<span class="w"> </span>down
-</code></pre></div>
-</div>
+<form class="quiz-form"><p>Quais são as principais diferenças em termos de <strong>redundância de dados</strong> entre <strong>Star Schema</strong>, modelo normalizado (<strong>3NF</strong>) e <strong>OBT</strong>?</p>
 <div class="form-elements">
-<div class="quiz-self-progress">
-<input type="hidden" name="data" value="done" />
-<button class="quiz-submit-button" type="submit">Mark as done</button>
+<div class="quiz-text-container">
+
+<textarea name="data" class="quiz-text-input" 
+          placeholder="Enter your detailed answer..." rows="4"></textarea>
+
 </div>
+<button class="quiz-submit-button" type="submit">Submit</button>
+</div></form></div>
+<h2 id="implementando-star-schema-para-vendas">Implementando Star Schema para Vendas</h2>
+<h3 id="tabelas-dimensao_1">Tabelas Dimensão</h3>
+<div class="admonition warning">
+<p class="admonition-title">Atenção</p>
+<p>Esta é uma versão refatorada, o nome dos atributos (colunas) pode não bater com o utilizado na aula 03.</p>
+</div>
+<p>A criação da dimensão cliente, incluindo campos calculados úteis para análise, poderia ser realizada pelo uso de uma <em>query</em> semelhante a:</p>
+<div class="language-sql copy highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">dim_cliente</span><span class="w"> </span><span class="k">AS</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="k">SELECT</span><span class="w"> </span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="k">c</span><span class="p">.</span><span class="n">id_cliente</span><span class="p">,</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="k">c</span><span class="p">.</span><span class="n">nome</span><span class="p">,</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="k">c</span><span class="p">.</span><span class="n">data_nasc</span><span class="p">,</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="k">c</span><span class="p">.</span><span class="n">data_cad</span><span class="p">,</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="k">c</span><span class="p">.</span><span class="n">cpf</span><span class="p">,</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">    </span><span class="c1">-- Campos calculados</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">    </span><span class="n">TIMESTAMPDIFF</span><span class="p">(</span><span class="k">YEAR</span><span class="p">,</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">data_nasc</span><span class="p">,</span><span class="w"> </span><span class="k">CURRENT_DATE</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">idade_atual</span><span class="p">,</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">    </span><span class="k">CASE</span><span class="w"> </span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">        </span><span class="k">WHEN</span><span class="w"> </span><span class="n">TIMESTAMPDIFF</span><span class="p">(</span><span class="k">YEAR</span><span class="p">,</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">data_nasc</span><span class="p">,</span><span class="w"> </span><span class="k">CURRENT_DATE</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">25</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="s1">&#39;Jovem&#39;</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">        </span><span class="k">WHEN</span><span class="w"> </span><span class="n">TIMESTAMPDIFF</span><span class="p">(</span><span class="k">YEAR</span><span class="p">,</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">data_nasc</span><span class="p">,</span><span class="w"> </span><span class="k">CURRENT_DATE</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">45</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="s1">&#39;Adulto&#39;</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="w">        </span><span class="k">WHEN</span><span class="w"> </span><span class="n">TIMESTAMPDIFF</span><span class="p">(</span><span class="k">YEAR</span><span class="p">,</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">data_nasc</span><span class="p">,</span><span class="w"> </span><span class="k">CURRENT_DATE</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">65</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="s1">&#39;Meia-idade&#39;</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="w">        </span><span class="k">ELSE</span><span class="w"> </span><span class="s1">&#39;Senior&#39;</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="w">    </span><span class="k">END</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">faixa_etaria</span><span class="p">,</span>
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="w">    </span><span class="c1">-- Informações geográficas (desnormalizadas)</span>
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="w">    </span><span class="n">cid</span><span class="p">.</span><span class="n">cidade_desc</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">cidade</span><span class="p">,</span>
+<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="w">    </span><span class="n">cid</span><span class="p">.</span><span class="n">cidade_uf</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">uf</span><span class="p">,</span>
+<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="w">    </span><span class="n">pa</span><span class="p">.</span><span class="n">pais</span><span class="p">,</span>
+<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>
+<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a><span class="w">    </span><span class="c1">-- Auditoria</span>
+<a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a><span class="w">    </span><span class="k">c</span><span class="p">.</span><span class="n">created_at</span><span class="p">,</span>
+<a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a><span class="w">    </span><span class="k">c</span><span class="p">.</span><span class="n">updated_at</span>
+<a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a>
+<a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a><span class="k">FROM</span><span class="w"> </span><span class="n">cliente</span><span class="w"> </span><span class="k">c</span>
+<a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a><span class="k">JOIN</span><span class="w"> </span><span class="n">cidade</span><span class="w"> </span><span class="n">cid</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">id_cidade</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cid</span><span class="p">.</span><span class="n">id_cidade</span>
+<a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a><span class="k">JOIN</span><span class="w"> </span><span class="n">pais</span><span class="w"> </span><span class="n">pa</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">cid</span><span class="p">.</span><span class="n">id_pais</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pa</span><span class="p">.</span><span class="n">id_pais</span><span class="p">;</span>
+</code></pre></div>
+<p>A dimensão produto, com categorização adequada:</p>
+<div class="language-sql copy highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">dim_produto</span><span class="w"> </span><span class="k">AS</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">SELECT</span><span class="w"> </span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="n">p</span><span class="p">.</span><span class="n">id_produto</span><span class="p">,</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="n">p</span><span class="p">.</span><span class="n">nome</span><span class="p">,</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="n">p</span><span class="p">.</span><span class="n">descricao</span><span class="p">,</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="n">p</span><span class="p">.</span><span class="n">preco_base</span><span class="p">,</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">    </span><span class="n">p</span><span class="p">.</span><span class="n">ativo</span><span class="p">,</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">    </span><span class="c1">-- Categorização baseada no nome (exemplo simples)</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">    </span><span class="k">CASE</span><span class="w"> </span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">        </span><span class="k">WHEN</span><span class="w"> </span><span class="k">LOWER</span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="n">nome</span><span class="p">)</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">&#39;%eletrônico%&#39;</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="s1">&#39;Eletrônicos&#39;</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="w">        </span><span class="k">WHEN</span><span class="w"> </span><span class="k">LOWER</span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="n">nome</span><span class="p">)</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">&#39;%livro%&#39;</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="s1">&#39;Livros&#39;</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="w">        </span><span class="k">WHEN</span><span class="w"> </span><span class="k">LOWER</span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="n">nome</span><span class="p">)</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">&#39;%roupa%&#39;</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="s1">&#39;Vestuário&#39;</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="w">        </span><span class="k">ELSE</span><span class="w"> </span><span class="s1">&#39;Outros&#39;</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="w">    </span><span class="k">END</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">categoria</span><span class="p">,</span>
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="w">    </span><span class="c1">-- Classificação por faixa de preço</span>
+<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="w">    </span><span class="k">CASE</span><span class="w"> </span>
+<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a><span class="w">        </span><span class="k">WHEN</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">preco_base</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">50</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="s1">&#39;Baixo&#39;</span>
+<a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a><span class="w">        </span><span class="k">WHEN</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">preco_base</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">200</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="s1">&#39;Médio&#39;</span>
+<a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a><span class="w">        </span><span class="k">ELSE</span><span class="w"> </span><span class="s1">&#39;Alto&#39;</span>
+<a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a><span class="w">    </span><span class="k">END</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">faixa_preco</span><span class="p">,</span>
+<a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a>
+<a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a><span class="w">    </span><span class="n">p</span><span class="p">.</span><span class="n">created_at</span><span class="p">,</span>
+<a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a><span class="w">    </span><span class="n">p</span><span class="p">.</span><span class="n">updated_at</span>
+<a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a>
+<a id="__codelineno-5-27" name="__codelineno-5-27" href="#__codelineno-5-27"></a><span class="k">FROM</span><span class="w"> </span><span class="n">produto</span><span class="w"> </span><span class="n">p</span><span class="p">;</span>
+</code></pre></div>
+<p>E a dimensão tempo:</p>
+<div class="language-sql copy highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1">-- Criar dimensão tempo para os últimos 5 anos</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">dim_tempo</span><span class="w"> </span><span class="k">AS</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="k">WITH</span><span class="w"> </span><span class="k">RECURSIVE</span><span class="w"> </span><span class="n">date_range</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="nb">DATE</span><span class="p">(</span><span class="s1">&#39;2020-01-01&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="k">data</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">    </span><span class="k">UNION</span><span class="w"> </span><span class="k">ALL</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="n">DATE_ADD</span><span class="p">(</span><span class="k">data</span><span class="p">,</span><span class="w"> </span><span class="nb">INTERVAL</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">DAY</span><span class="p">)</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">date_range</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">    </span><span class="k">WHERE</span><span class="w"> </span><span class="k">data</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nb">DATE</span><span class="p">(</span><span class="s1">&#39;2025-12-31&#39;</span><span class="p">)</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="p">)</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="k">SELECT</span><span class="w"> </span>
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">    </span><span class="k">data</span><span class="p">,</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="w">    </span><span class="k">YEAR</span><span class="p">(</span><span class="k">data</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">ano</span><span class="p">,</span>
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="w">    </span><span class="k">MONTH</span><span class="p">(</span><span class="k">data</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">mes</span><span class="p">,</span>
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="w">    </span><span class="n">MONTHNAME</span><span class="p">(</span><span class="k">data</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">mes_nome</span><span class="p">,</span>
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="w">    </span><span class="n">QUARTER</span><span class="p">(</span><span class="k">data</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">trimestre</span><span class="p">,</span>
+<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="w">    </span><span class="k">CASE</span><span class="w"> </span><span class="k">WHEN</span><span class="w"> </span><span class="k">MONTH</span><span class="p">(</span><span class="k">data</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">ELSE</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="k">END</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">semestre</span><span class="p">,</span>
+<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a><span class="w">    </span><span class="k">DAY</span><span class="p">(</span><span class="k">data</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">dia_mes</span><span class="p">,</span>
+<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a><span class="w">    </span><span class="n">DAYOFYEAR</span><span class="p">(</span><span class="k">data</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">dia_ano</span><span class="p">,</span>
+<a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a><span class="w">    </span><span class="n">WEEKDAY</span><span class="p">(</span><span class="k">data</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">dia_semana</span><span class="p">,</span>
+<a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a><span class="w">    </span><span class="n">DAYNAME</span><span class="p">(</span><span class="k">data</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">dia_semana_nome</span><span class="p">,</span>
+<a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a><span class="w">    </span><span class="k">CASE</span><span class="w"> </span><span class="k">WHEN</span><span class="w"> </span><span class="n">WEEKDAY</span><span class="p">(</span><span class="k">data</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="k">TRUE</span><span class="w"> </span><span class="k">ELSE</span><span class="w"> </span><span class="k">FALSE</span><span class="w"> </span><span class="k">END</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">eh_fim_semana</span>
+<a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a><span class="k">FROM</span><span class="w"> </span><span class="n">date_range</span><span class="p">;</span>
+</code></pre></div>
+<h3 id="tabela-fato_1">Tabela Fato</h3>
+<p>Para a tabela <code>fato_vendas</code>, a criação poderia ser realizada com a seguinte <em>query</em>:</p>
+<div class="language-sql copy highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">fato_vendas</span><span class="w"> </span><span class="k">AS</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="k">SELECT</span><span class="w"> </span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="c1">-- Chaves para dimensões</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">    </span><span class="n">v</span><span class="p">.</span><span class="n">id_venda</span><span class="p">,</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">    </span><span class="n">iv</span><span class="p">.</span><span class="n">id_item</span><span class="p">,</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">    </span><span class="n">v</span><span class="p">.</span><span class="n">id_cliente</span><span class="p">,</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">    </span><span class="n">iv</span><span class="p">.</span><span class="n">id_produto</span><span class="p">,</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">    </span><span class="n">v</span><span class="p">.</span><span class="k">data</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">data_venda</span><span class="p">,</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">    </span><span class="c1">-- Medidas</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="w">    </span><span class="n">iv</span><span class="p">.</span><span class="n">quantidade</span><span class="p">,</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="w">    </span><span class="n">iv</span><span class="p">.</span><span class="n">valor_unitario</span><span class="p">,</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="w">    </span><span class="n">iv</span><span class="p">.</span><span class="n">valor_total</span><span class="p">,</span>
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="w">    </span><span class="n">v</span><span class="p">.</span><span class="n">valor_total</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">valor_total_venda</span><span class="p">,</span>
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>
+<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a><span class="w">    </span><span class="c1">-- Medidas derivadas</span>
+<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a><span class="w">    </span><span class="p">(</span><span class="n">iv</span><span class="p">.</span><span class="n">valor_unitario</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">iv</span><span class="p">.</span><span class="n">quantidade</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">receita_item</span><span class="p">,</span>
+<a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a>
+<a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a><span class="w">    </span><span class="c1">-- Status</span>
+<a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a><span class="w">    </span><span class="n">v</span><span class="p">.</span><span class="n">entregue</span><span class="p">,</span>
+<a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a>
+<a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a><span class="w">    </span><span class="c1">-- Auditoria</span>
+<a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a><span class="w">    </span><span class="n">v</span><span class="p">.</span><span class="n">created_at</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">venda_created_at</span>
+<a id="__codelineno-7-24" name="__codelineno-7-24" href="#__codelineno-7-24"></a>
+<a id="__codelineno-7-25" name="__codelineno-7-25" href="#__codelineno-7-25"></a><span class="k">FROM</span><span class="w"> </span><span class="n">item_venda</span><span class="w"> </span><span class="n">iv</span>
+<a id="__codelineno-7-26" name="__codelineno-7-26" href="#__codelineno-7-26"></a><span class="k">JOIN</span><span class="w"> </span><span class="n">venda</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">iv</span><span class="p">.</span><span class="n">id_venda</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">id_venda</span><span class="p">;</span>
+</code></pre></div>
+<h2 id="consultando-o-star-schema">Consultando o Star Schema</h2>
+<p>Com o Star Schema implementado, as consultas analíticas tornam-se mais diretas:</p>
+<div class="language-sql copy highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1">-- Vendas por país e trimestre</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="k">SELECT</span><span class="w"> </span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span><span class="n">dc</span><span class="p">.</span><span class="n">pais</span><span class="p">,</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">    </span><span class="n">dt</span><span class="p">.</span><span class="n">ano</span><span class="p">,</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">    </span><span class="n">dt</span><span class="p">.</span><span class="n">trimestre</span><span class="p">,</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">    </span><span class="k">SUM</span><span class="p">(</span><span class="n">fv</span><span class="p">.</span><span class="n">valor_total</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">receita_total</span><span class="p">,</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">    </span><span class="k">COUNT</span><span class="p">(</span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">fv</span><span class="p">.</span><span class="n">id_venda</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">total_vendas</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="k">FROM</span><span class="w"> </span><span class="n">fato_vendas</span><span class="w"> </span><span class="n">fv</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="k">JOIN</span><span class="w"> </span><span class="n">dim_cliente</span><span class="w"> </span><span class="n">dc</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">fv</span><span class="p">.</span><span class="n">id_cliente</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dc</span><span class="p">.</span><span class="n">id_cliente</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="k">JOIN</span><span class="w"> </span><span class="n">dim_tempo</span><span class="w"> </span><span class="n">dt</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">fv</span><span class="p">.</span><span class="n">data_venda</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dt</span><span class="p">.</span><span class="k">data</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">dc</span><span class="p">.</span><span class="n">pais</span><span class="p">,</span><span class="w"> </span><span class="n">dt</span><span class="p">.</span><span class="n">ano</span><span class="p">,</span><span class="w"> </span><span class="n">dt</span><span class="p">.</span><span class="n">trimestre</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">dt</span><span class="p">.</span><span class="n">ano</span><span class="p">,</span><span class="w"> </span><span class="n">dt</span><span class="p">.</span><span class="n">trimestre</span><span class="p">,</span><span class="w"> </span><span class="n">receita_total</span><span class="w"> </span><span class="k">DESC</span><span class="p">;</span>
+</code></pre></div>
+<div class="language-sql copy highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1">-- Análise de produtos por faixa etária</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="k">SELECT</span><span class="w"> </span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">    </span><span class="n">dp</span><span class="p">.</span><span class="n">categoria</span><span class="p">,</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">    </span><span class="n">dc</span><span class="p">.</span><span class="n">faixa_etaria</span><span class="p">,</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="w">    </span><span class="k">SUM</span><span class="p">(</span><span class="n">fv</span><span class="p">.</span><span class="n">quantidade</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">quantidade_total</span><span class="p">,</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">    </span><span class="k">SUM</span><span class="p">(</span><span class="n">fv</span><span class="p">.</span><span class="n">valor_total</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">receita_total</span><span class="p">,</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="w">    </span><span class="k">AVG</span><span class="p">(</span><span class="n">fv</span><span class="p">.</span><span class="n">valor_unitario</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">preco_medio</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="k">FROM</span><span class="w"> </span><span class="n">fato_vendas</span><span class="w"> </span><span class="n">fv</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="k">JOIN</span><span class="w"> </span><span class="n">dim_produto</span><span class="w"> </span><span class="n">dp</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">fv</span><span class="p">.</span><span class="n">id_produto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dp</span><span class="p">.</span><span class="n">id_produto</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="k">JOIN</span><span class="w"> </span><span class="n">dim_cliente</span><span class="w"> </span><span class="n">dc</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">fv</span><span class="p">.</span><span class="n">id_cliente</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dc</span><span class="p">.</span><span class="n">id_cliente</span>
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">dp</span><span class="p">.</span><span class="n">categoria</span><span class="p">,</span><span class="w"> </span><span class="n">dc</span><span class="p">.</span><span class="n">faixa_etaria</span>
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">receita_total</span><span class="w"> </span><span class="k">DESC</span><span class="p">;</span>
+</code></pre></div>
+<div class="admonition exercise choice exercise-choice" data-answer-idx="1" id="exercise_2">
+<p class="admonition-title">Question</p>
+<form class="quiz-form"><p>Em um <strong>Star Schema</strong>, onde geralmente ficam os campos que são usados em filtros <code>WHERE</code> das consultas analíticas?</p>
+<div class="form-elements">
+<div class="quiz-alternative-set">
+  
+<label class="quiz-alternative" data-alt-index="0">
+  <div class="content">
+    <input type="hidden" name="data" value="">
+    <span class="choice-text">Apenas na tabela fato</span>
+  </div>
+</label>
+
+<label class="quiz-alternative" data-alt-index="1">
+  <div class="content">
+    <input type="hidden" name="data" value="">
+    <span class="choice-text">Principalmente nas tabelas dimensão</span>
+  </div>
+</label>
+
+<label class="quiz-alternative" data-alt-index="2">
+  <div class="content">
+    <input type="hidden" name="data" value="">
+    <span class="choice-text">Distribuídos igualmente</span>
+  </div>
+</label>
+
+<label class="quiz-alternative" data-alt-index="3">
+  <div class="content">
+    <input type="hidden" name="data" value="">
+    <span class="choice-text">Apenas em índices</span>
+  </div>
+</label>
+
+</div>
+<button class="quiz-submit-button" type="submit">Submit</button>
+</div></form></div>
+<h2 id="desvantagens">Desvantagens</h2>
+<p>Como desvantagens do <strong>Star Schema</strong>, podemos citar:</p>
+<ul>
+<li>
+<p><strong>Desnormalização Parcial</strong>: Embora menor que na <strong>OBT</strong>, ainda existe redundância nas tabelas dimensão.</p>
+</li>
+<li>
+<p><strong>Complexidade de Manutenção das Dimensões</strong>: Mudanças em dados mestres (como alteração do nome de um cliente) ainda requerem atualizações nas dimensões, embora em menor escala que na <strong>OBT</strong>.</p>
+</li>
+<li>
+<p><strong>Limitações em Hierarquias Complexas</strong>: Hierarquias muito profundas podem tornar as tabelas dimensão extensas e difíceis de manter.</p>
+</li>
+</ul>
+<h2 id="slowly-changing-dimensions-scd">Slowly Changing Dimensions (SCD)</h2>
+<p>Um desafio importante no <strong>Star Schema</strong> é como lidar com <strong>mudanças nas dimensões</strong> ao longo do tempo. Por exemplo, o que acontece quando um cliente muda de cidade?</p>
+<ul>
+<li>
+<p><strong>SCD Tipo 1:</strong> Sobrescrever. O registro é atualizado ou sobrescrito.
+<div class="language-sql highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1">-- Cliente mudou de cidade: atualiza e perde histórico</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="k">UPDATE</span><span class="w"> </span><span class="n">dim_cliente</span><span class="w"> </span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="k">SET</span><span class="w"> </span><span class="n">cidade</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Nova Cidade&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">uf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;SP&#39;</span><span class="w"> </span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">id_cliente</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">123</span><span class="p">;</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>SCD Tipo 2:</strong> Versionamento. A linha anterior é inativada e uma nova linha é criada.
+<div class="language-sql highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="c1">-- Mantém histórico criando nova versão</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">dim_cliente</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">    </span><span class="n">id_cliente_original</span><span class="p">,</span><span class="w"> </span><span class="n">nome</span><span class="p">,</span><span class="w"> </span><span class="n">cidade</span><span class="p">,</span><span class="w"> </span><span class="n">uf</span><span class="p">,</span><span class="w"> </span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">    </span><span class="n">data_inicio</span><span class="p">,</span><span class="w"> </span><span class="n">data_fim</span><span class="p">,</span><span class="w"> </span><span class="n">versao_atual</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="p">)</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="w">    </span><span class="mi">123</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;João Silva&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Nova Cidade&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;SP&#39;</span><span class="p">,</span><span class="w"> </span>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="w">    </span><span class="s1">&#39;2025-01-01&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;9999-12-31&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">TRUE</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="p">);</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="c1">-- Inativa versão anterior</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="k">UPDATE</span><span class="w"> </span><span class="n">dim_cliente</span><span class="w"> </span>
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="k">SET</span><span class="w"> </span><span class="n">data_fim</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;2024-12-31&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">versao_atual</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">FALSE</span><span class="w"> </span>
+<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">id_cliente_original</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">123</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">versao_atual</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">TRUE</span><span class="p">;</span>
+</code></pre></div></p>
+</li>
+</ul>
+<div class="admonition exercise choice exercise-choice" data-answer-idx="1" id="exercise_3">
+<p class="admonition-title">Question</p>
+<form class="quiz-form"><p>Para análises históricas de vendas, qual tipo de SCD seria mais apropriado para a dimensão cliente?</p>
+<div class="form-elements">
+<div class="quiz-alternative-set">
+  
+<label class="quiz-alternative" data-alt-index="0">
+  <div class="content">
+    <input type="hidden" name="data" value="">
+    <span class="choice-text">SCD Tipo 1, pela simplicidade</span>
+  </div>
+</label>
+
+<label class="quiz-alternative" data-alt-index="1">
+  <div class="content">
+    <input type="hidden" name="data" value="">
+    <span class="choice-text">SCD Tipo 2, para manter histórico</span>
+  </div>
+</label>
+
+<label class="quiz-alternative" data-alt-index="2">
+  <div class="content">
+    <input type="hidden" name="data" value="">
+    <span class="choice-text">Depende do volume de dados</span>
+  </div>
+</label>
+
+<label class="quiz-alternative" data-alt-index="3">
+  <div class="content">
+    <input type="hidden" name="data" value="">
+    <span class="choice-text">Qualquer um serve</span>
+  </div>
+</label>
+
+</div>
+<button class="quiz-submit-button" type="submit">Submit</button>
+</div></form></div>
+<h2 id="star-schema-vs-outras-abordagens">Star Schema vs Outras Abordagens</h2>
+<h3 id="comparacao-resumida">Comparação Resumida</h3>
+<table>
+<thead>
+<tr>
+<th>Aspecto</th>
+<th>Modelo Normalizado</th>
+<th>Star Schema</th>
+<th>OBT</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>JOINs em consultas</strong></td>
+<td>Muitos (5-8)</td>
+<td>Poucos (2-4)</td>
+<td>Nenhum</td>
+</tr>
+<tr>
+<td><strong>Redundância</strong></td>
+<td>Mínima</td>
+<td>Moderada</td>
+<td>Máxima</td>
+</tr>
+<tr>
+<td><strong>Performance de leitura</strong></td>
+<td>Lenta</td>
+<td>Boa</td>
+<td>Excelente</td>
+</tr>
+<tr>
+<td><strong>Facilidade de atualização</strong></td>
+<td>Complexa</td>
+<td>Moderada</td>
+<td>Difícil</td>
+</tr>
+<tr>
+<td><strong>Uso de espaço</strong></td>
+<td>Mínimo</td>
+<td>Moderado</td>
+<td>Máximo</td>
+</tr>
+<tr>
+<td><strong>Intuitividade para analistas</strong></td>
+<td>Baixa</td>
+<td>Alta</td>
+<td>Muito Alta</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition exercise choice exercise-choice" data-answer-idx="1" id="exercise_4">
+<p class="admonition-title">Question</p>
+<form class="quiz-form"><p>Para um <strong>DW</strong> que precisa ser atualizado diariamente com milhões de transações, qual abordagem seria mais adequada?</p>
+<div class="form-elements">
+<div class="quiz-alternative-set">
+  
+<label class="quiz-alternative" data-alt-index="0">
+  <div class="content">
+    <input type="hidden" name="data" value="">
+    <span class="choice-text">Modelo completamente normalizado</span>
+  </div>
+</label>
+
+<label class="quiz-alternative" data-alt-index="1">
+  <div class="content">
+    <input type="hidden" name="data" value="">
+    <span class="choice-text">Star Schema com <strong>SCD</strong> apropriado</span>
+  </div>
+</label>
+
+<label class="quiz-alternative" data-alt-index="2">
+  <div class="content">
+    <input type="hidden" name="data" value="">
+    <span class="choice-text">OBT atualizada integralmente</span>
+  </div>
+</label>
+
+<label class="quiz-alternative" data-alt-index="3">
+  <div class="content">
+    <input type="hidden" name="data" value="">
+    <span class="choice-text">Híbrido de acordo com a consulta</span>
+  </div>
+</label>
+
+</div>
+<button class="quiz-submit-button" type="submit">Submit</button>
 </div></form></div>
 <script type="text/javascript">
 // Sistema de processamento de exercícios de múltipla escolha
@@ -3975,7 +4347,7 @@ document.addEventListener('click', function(e) {
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../05-iac/pratica/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Prática IaC">
+          <a href="../obt/" class="md-footer__link md-footer__link--prev" aria-label="Previous: One Big Table (OBT)">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -3985,20 +4357,20 @@ document.addEventListener('click', function(e) {
                 Previous
               </span>
               <div class="md-ellipsis">
-                Prática IaC
+                One Big Table (OBT)
               </div>
             </div>
           </a>
         
         
           
-          <a href="../intro-orchestration/" class="md-footer__link md-footer__link--next" aria-label="Next: Orquestração">
+          <a href="../snowflake/" class="md-footer__link md-footer__link--next" aria-label="Next: Snowflake Schema">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Orquestração
+                Snowflake Schema
               </div>
             </div>
             <div class="md-footer__button md-icon">

@@ -433,6 +433,8 @@
       
         
       
+        
+      
     
     
     
@@ -1785,24 +1787,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#monitoramento-e-observabilidade" class="md-nav__link">
-    <span class="md-ellipsis">
-      Monitoramento e Observabilidade
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#comparacao-com-cron" class="md-nav__link">
-    <span class="md-ellipsis">
-      Comparação com Cron
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#experimentacao-livre" class="md-nav__link">
     <span class="md-ellipsis">
       Experimentação Livre
@@ -1871,6 +1855,14 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -1890,7 +1882,7 @@
   
   
   <span class="md-ellipsis">
-    08 - Entrevista 01
+    07 - Modelagem de Dados
     
   </span>
   
@@ -1900,6 +1892,174 @@
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            07 - Modelagem de Dados
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../07-data-modeling/intro-data-modeling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Modelagem de Dados
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../07-data-modeling/obt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    One Big Table (OBT)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../07-data-modeling/star-schema/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Star Schema
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../07-data-modeling/snowflake/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Snowflake Schema
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../07-data-modeling/references/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Referências
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    08 - Entrevista 01
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8">
             <span class="md-nav__icon md-icon"></span>
             08 - Entrevista 01
           </label>
@@ -2230,24 +2390,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#monitoramento-e-observabilidade" class="md-nav__link">
-    <span class="md-ellipsis">
-      Monitoramento e Observabilidade
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#comparacao-com-cron" class="md-nav__link">
-    <span class="md-ellipsis">
-      Comparação com Cron
-    </span>
-  </a>
   
 </li>
       
@@ -2963,7 +3105,9 @@ body {
 </div>
 </div></form></div>
 <h2 id="explorando-a-interface">Explorando a Interface</h2>
-<p>A interface web do Prefect oferece visibilidade completa sobre a execução dos <em>flows</em>. Vamos explorar suas funcionalidades principais.</p>
+<p>A interface web do Prefect oferece visibilidade completa sobre a execução dos <em>flows</em>.</p>
+<p>Uma das principais vantagens da orquestração é a <strong>observabilidade</strong> dos processos.</p>
+<p>Vamos explorar suas funcionalidades principais.</p>
 <div class="admonition exercise exercise-self-progress" id="exercise_11">
 <p class="admonition-title">Exercício</p>
 <form class="quiz-form"><p>Efetue a correção do arquivo <code>primeiro_flow.py</code> com o seguinte conteúdo:</p>
@@ -2993,7 +3137,7 @@ body {
 </div></form></div>
 <div class="admonition exercise exercise-self-progress" id="exercise_12">
 <p class="admonition-title">Exercício</p>
-<form class="quiz-form"><p>Na interface do Prefect, clique no <em>flow run</em> que acabou de ser executado para ver os detalhes.</p>
+<form class="quiz-form"><p>Na interface do Prefect, no menu <strong>Flow</strong>, clique no <em>flow run</em> que acabou de ser executado para ver os detalhes.</p>
 <p>Considere o <em>flow</em> executado com sucesso!</p>
 <div class="form-elements">
 <div class="quiz-self-progress">
@@ -3025,10 +3169,36 @@ body {
 </div>
 <button class="quiz-submit-button" type="submit">Submit</button>
 </div></form></div>
+<div class="admonition exercise exercise-self-progress" id="exercise_13">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>No menu <strong>Runs</strong>, explore as seguintes seções:</p>
+<ul>
+<li><strong>Flows</strong>: Lista todos os <em>flows</em> criados</li>
+<li><strong>Flow Runs</strong>: Histórico de execuções</li>
+<li><strong>Task Runs</strong>: Detalhes de cada tarefa executada</li>
+</ul>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
+</div></form></div>
+<div class="admonition exercise text long exercise-long" id="exercise_6">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Quais métricas e informações você considera mais úteis para monitorar um pipeline em produção? O Prefect fornece essas informações?</p>
+<div class="form-elements">
+<div class="quiz-text-container">
+
+<textarea name="data" class="quiz-text-input" 
+          placeholder="Enter your detailed answer..." rows="4"></textarea>
+
+</div>
+<button class="quiz-submit-button" type="submit">Submit</button>
+</div></form></div>
 <h2 id="tarefas-com-tempo-de-execucao">Tarefas com Tempo de Execução</h2>
 <p>Vamos agora criar um exemplo mais realista, simulando tarefas que demandam tempo de processamento.</p>
 <p>Isso nos permitirá observar melhor o comportamento do Prefect durante a execução.</p>
-<div class="admonition exercise exercise-self-progress" id="exercise_13">
+<div class="admonition exercise exercise-self-progress" id="exercise_14">
 <p class="admonition-title">Exercício</p>
 <form class="quiz-form"><p>Crie um arquivo <code>flow_processamento.py</code> com o seguinte conteúdo:</p>
 <div class="language-python copy highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">dotenv</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_dotenv</span>
@@ -3062,7 +3232,7 @@ body {
 <button class="quiz-submit-button" type="submit">Mark as done</button>
 </div>
 </div></form></div>
-<div class="admonition exercise exercise-self-progress" id="exercise_14">
+<div class="admonition exercise exercise-self-progress" id="exercise_15">
 <p class="admonition-title">Exercício</p>
 <form class="quiz-form"><p>Execute o novo script. Repita umas duas ou três vezes o comando:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Com <code>uv</code></label><label for="__tabbed_2_2">Com <code>python</code></label></div>
@@ -3087,7 +3257,7 @@ body {
 <button class="quiz-submit-button" type="submit">Mark as done</button>
 </div>
 </div></form></div>
-<div class="admonition exercise text short exercise-short" id="exercise_6">
+<div class="admonition exercise text short exercise-short" id="exercise_7">
 <p class="admonition-title">Exercício</p>
 <form class="quiz-form"><p>Quanto tempo demorou para a execução completa? Por que as duas tarefas não executaram em paralelo?</p>
 <div class="form-elements">
@@ -3099,7 +3269,7 @@ body {
 </div>
 <button class="quiz-submit-button" type="submit">Submit</button>
 </div></form></div>
-<div class="admonition exercise exercise-self-progress" id="exercise_15">
+<div class="admonition exercise exercise-self-progress" id="exercise_16">
 <p class="admonition-title">Exercício</p>
 <form class="quiz-form"><p>Acesse a interface web e examine os detalhes dessa nova execução. Observe particularmente:</p>
 <ul>
@@ -3113,9 +3283,23 @@ body {
 <button class="quiz-submit-button" type="submit">Mark as done</button>
 </div>
 </div></form></div>
-<div class="admonition exercise text long exercise-long" id="exercise_7">
+<div class="admonition exercise exercise-self-progress" id="exercise_17">
 <p class="admonition-title">Exercício</p>
-<form class="quiz-form"><p>Compare a experiência de monitoramento no Prefect com o que seria possível usando apenas cron. Quais diferenças você identifica?</p>
+<form class="quiz-form"><p>Execute novamente o <em>pipeline</em> e, enquanto ele executa, observe em tempo real:</p>
+<ul>
+<li>O status da execução na interface web</li>
+<li>Os logs sendo gerados</li>
+<li>A progressão através das tarefas</li>
+</ul>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
+</div></form></div>
+<div class="admonition exercise text long exercise-long" id="exercise_8">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Compare a experiência de monitoramento no Prefect com o que seria possível usando apenas <em>cron</em>. Quais diferenças você identifica?</p>
 <div class="form-elements">
 <div class="quiz-text-container">
 
@@ -3127,7 +3311,7 @@ body {
 </div></form></div>
 <h2 id="paralelizacao-de-tarefas">Paralelização de Tarefas</h2>
 <p>Uma das grandes vantagens dos orquestradores é a capacidade de executar tarefas independentes em paralelo. Vamos modificar nosso <em>flow</em> para demonstrar essa funcionalidade.</p>
-<div class="admonition exercise exercise-self-progress" id="exercise_16">
+<div class="admonition exercise exercise-self-progress" id="exercise_18">
 <p class="admonition-title">Exercício</p>
 <form class="quiz-form"><p>Crie um arquivo <code>flow_paralelo.py</code>:</p>
 <div class="language-python copy highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">dotenv</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_dotenv</span>
@@ -3179,7 +3363,7 @@ body {
 <button class="quiz-submit-button" type="submit">Mark as done</button>
 </div>
 </div></form></div>
-<div class="admonition exercise exercise-self-progress" id="exercise_17">
+<div class="admonition exercise exercise-self-progress" id="exercise_19">
 <p class="admonition-title">Exercício</p>
 <form class="quiz-form"><p>Execute o script e observe o tempo total de execução:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Com <code>uv</code></label><label for="__tabbed_3_2">Com <code>python</code></label></div>
@@ -3204,7 +3388,7 @@ body {
 <button class="quiz-submit-button" type="submit">Mark as done</button>
 </div>
 </div></form></div>
-<div class="admonition exercise text short exercise-short" id="exercise_8">
+<div class="admonition exercise text short exercise-short" id="exercise_9">
 <p class="admonition-title">Exercício</p>
 <form class="quiz-form"><p>Qual foi o tempo total de execução? Foi menor que a soma dos tempos individuais das tarefas?</p>
 <div class="form-elements">
@@ -3216,7 +3400,7 @@ body {
 </div>
 <button class="quiz-submit-button" type="submit">Submit</button>
 </div></form></div>
-<div class="admonition exercise exercise-self-progress" id="exercise_18">
+<div class="admonition exercise exercise-self-progress" id="exercise_20">
 <p class="admonition-title">Exercício</p>
 <form class="quiz-form"><p>Na interface web, examine o gráfico de execução deste <em>flow</em>. Como as tarefas aparecem representadas visualmente?</p>
 <div class="form-elements">
@@ -3227,7 +3411,7 @@ body {
 </div></form></div>
 <h2 id="dependencias-entre-tarefas">Dependências Entre Tarefas</h2>
 <p>Vamos agora implementar um <em>pipeline</em> mais realista com dependências entre tarefas, simulando um processo de ETL onde cada etapa depende da anterior.</p>
-<div class="admonition exercise exercise-self-progress" id="exercise_19">
+<div class="admonition exercise exercise-self-progress" id="exercise_21">
 <p class="admonition-title">Exercício</p>
 <form class="quiz-form"><p>Crie um arquivo <code>flow_dependencias.py</code>:</p>
 <details>
@@ -3320,7 +3504,7 @@ body {
 <button class="quiz-submit-button" type="submit">Mark as done</button>
 </div>
 </div></form></div>
-<div class="admonition exercise exercise-self-progress" id="exercise_20">
+<div class="admonition exercise exercise-self-progress" id="exercise_22">
 <p class="admonition-title">Exercício</p>
 <form class="quiz-form"><p>Execute o pipeline ETL:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Com <code>uv</code></label><label for="__tabbed_4_2">Com <code>python</code></label></div>
@@ -3345,7 +3529,7 @@ body {
 <button class="quiz-submit-button" type="submit">Mark as done</button>
 </div>
 </div></form></div>
-<div class="admonition exercise text short exercise-short" id="exercise_9">
+<div class="admonition exercise text short exercise-short" id="exercise_10">
 <p class="admonition-title">Exercício</p>
 <form class="quiz-form"><p>Quanto tempo demorou a execução total?</p>
 <div class="form-elements">
@@ -3357,7 +3541,7 @@ body {
 </div>
 <button class="quiz-submit-button" type="submit">Submit</button>
 </div></form></div>
-<div class="admonition exercise exercise-self-progress" id="exercise_21">
+<div class="admonition exercise exercise-self-progress" id="exercise_23">
 <p class="admonition-title">Exercício</p>
 <form class="quiz-form"><p>Na interface web, explore o <em>flow run</em> recém executado.</p>
 <p>Examine:</p>
@@ -3372,7 +3556,7 @@ body {
 <button class="quiz-submit-button" type="submit">Mark as done</button>
 </div>
 </div></form></div>
-<div class="admonition exercise text long exercise-long" id="exercise_10">
+<div class="admonition exercise text long exercise-long" id="exercise_11">
 <p class="admonition-title">Exercício</p>
 <form class="quiz-form"><p>Analisando o grafo visual do <em>pipeline</em>, como o <strong>Prefect</strong> representa as dependências entre as tarefas?</p>
 <p>Isso facilita o entendimento do <em>flow</em>?</p>
@@ -3387,7 +3571,7 @@ body {
 </div></form></div>
 <h2 id="tratamento-de-erros">Tratamento de Erros</h2>
 <p>Uma das grandes vantagens dos orquestradores é o tratamento robusto de erros. Vamos simular falhas para observar como o Prefect lida com essas situações.</p>
-<div class="admonition exercise exercise-self-progress" id="exercise_22">
+<div class="admonition exercise exercise-self-progress" id="exercise_24">
 <p class="admonition-title">Exercício</p>
 <form class="quiz-form"><p>Crie um arquivo <code>flow_erros.py</code>:</p>
 <details>
@@ -3439,7 +3623,7 @@ body {
 <button class="quiz-submit-button" type="submit">Mark as done</button>
 </div>
 </div></form></div>
-<div class="admonition exercise exercise-self-progress" id="exercise_23">
+<div class="admonition exercise exercise-self-progress" id="exercise_25">
 <p class="admonition-title">Exercício</p>
 <form class="quiz-form"><p>Execute o script algumas vezes para observar o comportamento com falhas:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Com <code>uv</code></label><label for="__tabbed_5_2">Com <code>python</code></label></div>
@@ -3464,7 +3648,7 @@ body {
 <button class="quiz-submit-button" type="submit">Mark as done</button>
 </div>
 </div></form></div>
-<div class="admonition exercise text short exercise-short" id="exercise_11">
+<div class="admonition exercise text short exercise-short" id="exercise_12">
 <p class="admonition-title">Exercício</p>
 <form class="quiz-form"><p>Quantas tentativas (retries) foram feitas antes da tarefa ter sucesso ou falhar definitivamente?</p>
 <div class="form-elements">
@@ -3476,7 +3660,7 @@ body {
 </div>
 <button class="quiz-submit-button" type="submit">Submit</button>
 </div></form></div>
-<div class="admonition exercise exercise-self-progress" id="exercise_24">
+<div class="admonition exercise exercise-self-progress" id="exercise_26">
 <p class="admonition-title">Exercício</p>
 <form class="quiz-form"><p>Na interface web, examine as execuções que falharam. Como o Prefect apresenta as informações sobre:</p>
 <ul>
@@ -3490,7 +3674,7 @@ body {
 <button class="quiz-submit-button" type="submit">Mark as done</button>
 </div>
 </div></form></div>
-<div class="admonition exercise text long exercise-long" id="exercise_12">
+<div class="admonition exercise text long exercise-long" id="exercise_13">
 <p class="admonition-title">Exercício</p>
 <form class="quiz-form"><p>Liste algumas situações em que <em>retry</em> é um recurso interessante.</p>
 <div class="form-elements">
@@ -3509,9 +3693,9 @@ body {
 </ul>
 </div>
 </div>
-<div class="admonition exercise text long exercise-long" id="exercise_13">
+<div class="admonition exercise text long exercise-long" id="exercise_14">
 <p class="admonition-title">Exercício</p>
-<form class="quiz-form"><p>Como você implementaria esse mesmo tratamento de erros usando apenas cron? Quais seriam as dificuldades?</p>
+<form class="quiz-form"><p>Como você implementaria esse mesmo tratamento de erros usando apenas <em>cron</em>? Quais seriam as dificuldades?</p>
 <div class="form-elements">
 <div class="quiz-text-container">
 
@@ -3523,7 +3707,7 @@ body {
 </div></form></div>
 <h2 id="pipeline-de-dados">Pipeline de Dados</h2>
 <p>Vamos agora criar um <em>pipeline</em> mais próximo da realidade, simulando um processo de <strong>ETL</strong> que poderia ser usado em produção.</p>
-<div class="admonition exercise exercise-self-progress" id="exercise_25">
+<div class="admonition exercise exercise-self-progress" id="exercise_27">
 <p class="admonition-title">Exercício</p>
 <form class="quiz-form"><p>Crie um arquivo <code>pipeline_vendas.py</code>:</p>
 <details>
@@ -3686,7 +3870,7 @@ body {
 <button class="quiz-submit-button" type="submit">Mark as done</button>
 </div>
 </div></form></div>
-<div class="admonition exercise exercise-self-progress" id="exercise_26">
+<div class="admonition exercise exercise-self-progress" id="exercise_28">
 <p class="admonition-title">Exercício</p>
 <form class="quiz-form"><p>Execute o pipeline completo:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Com <code>uv</code></label><label for="__tabbed_6_2">Com <code>python</code></label></div>
@@ -3711,7 +3895,7 @@ body {
 <button class="quiz-submit-button" type="submit">Mark as done</button>
 </div>
 </div></form></div>
-<div class="admonition exercise text short exercise-short" id="exercise_14">
+<div class="admonition exercise text short exercise-short" id="exercise_15">
 <p class="admonition-title">Exercício</p>
 <form class="quiz-form"><p>Quantas tarefas foram executadas no total? Qual foi a duração total do pipeline?</p>
 <div class="form-elements">
@@ -3723,7 +3907,7 @@ body {
 </div>
 <button class="quiz-submit-button" type="submit">Submit</button>
 </div></form></div>
-<div class="admonition exercise exercise-self-progress" id="exercise_27">
+<div class="admonition exercise exercise-self-progress" id="exercise_29">
 <p class="admonition-title">Exercício</p>
 <form class="quiz-form"><p>Na interface web, analise a execução completa:</p>
 <ul>
@@ -3737,7 +3921,7 @@ body {
 <button class="quiz-submit-button" type="submit">Mark as done</button>
 </div>
 </div></form></div>
-<div class="admonition exercise text long exercise-long" id="exercise_15">
+<div class="admonition exercise text long exercise-long" id="exercise_16">
 <p class="admonition-title">Exercício</p>
 <form class="quiz-form"><p>Agora que você viu um pipeline completo, quais vantagens da orquestração ficaram mais evidentes? Compare com uma implementação usando apenas scripts <strong>Python</strong> e <strong>cron</strong>.</p>
 <div class="form-elements">
@@ -3751,7 +3935,7 @@ body {
 </div></form></div>
 <h2 id="executando-multiplas-vezes">Executando Múltiplas Vezes</h2>
 <p>Para simular um ambiente mais próximo da produção, vamos executar o pipeline várias vezes e observar o histórico de execuções.</p>
-<div class="admonition exercise exercise-self-progress" id="exercise_28">
+<div class="admonition exercise exercise-self-progress" id="exercise_30">
 <p class="admonition-title">Exercício</p>
 <form class="quiz-form"><p>Execute o pipeline de vendas cinco vezes consecutivas:</p>
 <div class="termy">
@@ -3764,7 +3948,7 @@ body {
 <button class="quiz-submit-button" type="submit">Mark as done</button>
 </div>
 </div></form></div>
-<div class="admonition exercise exercise-self-progress" id="exercise_29">
+<div class="admonition exercise exercise-self-progress" id="exercise_31">
 <p class="admonition-title">Exercício</p>
 <form class="quiz-form"><p>Na interface web, explore a seção <strong>Flow Runs</strong> e examine:</p>
 <ul>
@@ -3783,7 +3967,7 @@ body {
 <p>O <strong>Prefect</strong> oferece várias formas de configurar agendamentos, desde intervalos simples até expressões <strong>cron</strong>.</p>
 <h3 id="deployments">Deployments</h3>
 <p>No <strong>Prefect</strong>, o agendamento é feito através de <strong>deployments</strong>. Um <em>deployment</em> é uma configuração que define como e quando um <em>flow</em> deve ser executado.</p>
-<div class="admonition exercise exercise-self-progress" id="exercise_30">
+<div class="admonition exercise exercise-self-progress" id="exercise_32">
 <p class="admonition-title">Exercício</p>
 <form class="quiz-form"><p>Primeiro, vamos criar um flow simples para agendar. Crie um arquivo <code>flow_para_agendar.py</code>:</p>
 <details>
@@ -3828,7 +4012,7 @@ body {
 <button class="quiz-submit-button" type="submit">Mark as done</button>
 </div>
 </div></form></div>
-<div class="admonition exercise exercise-self-progress" id="exercise_31">
+<div class="admonition exercise exercise-self-progress" id="exercise_33">
 <p class="admonition-title">Exercício</p>
 <form class="quiz-form"><p>Execute uma vez para testar:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">Com <code>uv</code></label><label for="__tabbed_7_2">Com <code>python</code></label></div>
@@ -3855,7 +4039,7 @@ body {
 </div></form></div>
 <h3 id="criando-um-deployment">Criando um Deployment</h3>
 <p>Agora vamos criar um <em>deployment</em> que executará nosso <em>flow</em> automaticamente em intervalos regulares.</p>
-<div class="admonition exercise exercise-self-progress" id="exercise_32">
+<div class="admonition exercise exercise-self-progress" id="exercise_34">
 <p class="admonition-title">Exercício</p>
 <form class="quiz-form"><p>Crie um arquivo <code>deploy_pipeline.py</code> para configurar o agendamento:</p>
 <div class="language-python copy highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">prefect</span><span class="w"> </span><span class="kn">import</span> <span class="n">serve</span>
@@ -3879,7 +4063,7 @@ body {
 <button class="quiz-submit-button" type="submit">Mark as done</button>
 </div>
 </div></form></div>
-<div class="admonition exercise exercise-self-progress" id="exercise_33">
+<div class="admonition exercise exercise-self-progress" id="exercise_35">
 <p class="admonition-title">Exercício</p>
 <form class="quiz-form"><p>Execute o deployment em background:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">Com <code>uv</code></label><label for="__tabbed_8_2">Com <code>python</code></label></div>
@@ -3905,7 +4089,7 @@ body {
 <button class="quiz-submit-button" type="submit">Mark as done</button>
 </div>
 </div></form></div>
-<div class="admonition exercise exercise-self-progress" id="exercise_34">
+<div class="admonition exercise exercise-self-progress" id="exercise_36">
 <p class="admonition-title">Exercício</p>
 <form class="quiz-form"><p>Acesse a interface web do Prefect e observe:
 - Na seção <strong>Deployments</strong>, você deve ver o deployment criado
@@ -3916,7 +4100,7 @@ body {
 <button class="quiz-submit-button" type="submit">Mark as done</button>
 </div>
 </div></form></div>
-<div class="admonition exercise text short exercise-short" id="exercise_16">
+<div class="admonition exercise text short exercise-short" id="exercise_17">
 <p class="admonition-title">Exercício</p>
 <form class="quiz-form"><p>Quantas execuções foram criadas após 2 minutos? O agendamento está funcionando corretamente?</p>
 <div class="form-elements">
@@ -3930,7 +4114,7 @@ body {
 </div></form></div>
 <h3 id="agendamento-com-cron">Agendamento com Cron</h3>
 <p>O Prefect também suporta expressões cron tradicionais para agendamentos mais complexos.</p>
-<div class="admonition exercise exercise-self-progress" id="exercise_35">
+<div class="admonition exercise exercise-self-progress" id="exercise_37">
 <p class="admonition-title">Exercício</p>
 <form class="quiz-form"><p>Crie um arquivo <code>deploy_cron.py</code>:</p>
 <div class="language-python copy highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">prefect</span><span class="w"> </span><span class="kn">import</span> <span class="n">serve</span>
@@ -3952,7 +4136,7 @@ body {
 <button class="quiz-submit-button" type="submit">Mark as done</button>
 </div>
 </div></form></div>
-<div class="admonition exercise text short exercise-short" id="exercise_17">
+<div class="admonition exercise text short exercise-short" id="exercise_18">
 <p class="admonition-title">Exercício</p>
 <form class="quiz-form"><p>O que significa a expressão cron <code>*/2 * * * *</code>? Compare com o que aprendemos sobre cron na aula anterior.</p>
 <div class="form-elements">
@@ -3964,7 +4148,7 @@ body {
 </div>
 <button class="quiz-submit-button" type="submit">Submit</button>
 </div></form></div>
-<div class="admonition exercise exercise-self-progress" id="exercise_36">
+<div class="admonition exercise exercise-self-progress" id="exercise_38">
 <p class="admonition-title">Exercício</p>
 <form class="quiz-form"><p>Pare o deployment anterior (Ctrl+C no terminal) e execute o novo:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">Com <code>uv</code></label><label for="__tabbed_9_2">Com <code>python</code></label></div>
@@ -3991,7 +4175,7 @@ body {
 </div></form></div>
 <h3 id="multiplos-agendamentos">Múltiplos Agendamentos</h3>
 <p>Podemos ter múltiplos <em>deployments</em> do mesmo <em>flow</em> com agendamentos diferentes.</p>
-<div class="admonition exercise exercise-self-progress" id="exercise_37">
+<div class="admonition exercise exercise-self-progress" id="exercise_39">
 <p class="admonition-title">Exercício</p>
 <form class="quiz-form"><p>Crie um arquivo <code>deploy_multiplos.py</code>:</p>
 <div class="language-python copy highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">prefect</span><span class="w"> </span><span class="kn">import</span> <span class="n">serve</span>
@@ -4022,7 +4206,7 @@ body {
 <button class="quiz-submit-button" type="submit">Mark as done</button>
 </div>
 </div></form></div>
-<div class="admonition exercise exercise-self-progress" id="exercise_38">
+<div class="admonition exercise exercise-self-progress" id="exercise_40">
 <p class="admonition-title">Exercício</p>
 <form class="quiz-form"><p>Execute os múltiplos deployments:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><input id="__tabbed_10_2" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="__tabbed_10_1">Com <code>uv</code></label><label for="__tabbed_10_2">Com <code>python</code></label></div>
@@ -4047,7 +4231,7 @@ body {
 <button class="quiz-submit-button" type="submit">Mark as done</button>
 </div>
 </div></form></div>
-<div class="admonition exercise exercise-self-progress" id="exercise_39">
+<div class="admonition exercise exercise-self-progress" id="exercise_41">
 <p class="admonition-title">Exercício</p>
 <form class="quiz-form"><p>Na interface web, observe:</p>
 <ul>
@@ -4061,7 +4245,7 @@ body {
 <button class="quiz-submit-button" type="submit">Mark as done</button>
 </div>
 </div></form></div>
-<div class="admonition exercise text short exercise-short" id="exercise_18">
+<div class="admonition exercise text short exercise-short" id="exercise_19">
 <p class="admonition-title">Exercício</p>
 <form class="quiz-form"><p>Qual deployment executa com mais frequência? Como isso aparece no histórico de execuções?</p>
 <div class="form-elements">
@@ -4075,7 +4259,7 @@ body {
 </div></form></div>
 <h3 id="agendamento-personalizado">Agendamento Personalizado</h3>
 <p>Para cenários mais complexos, podemos criar agendamentos personalizados.</p>
-<div class="admonition exercise exercise-self-progress" id="exercise_40">
+<div class="admonition exercise exercise-self-progress" id="exercise_42">
 <p class="admonition-title">Exercício</p>
 <form class="quiz-form"><p>Crie um arquivo <code>deploy_personalizado.py</code>:</p>
 <div class="language-python copy highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">prefect</span><span class="w"> </span><span class="kn">import</span> <span class="n">serve</span>
@@ -4104,7 +4288,7 @@ body {
 <button class="quiz-submit-button" type="submit">Mark as done</button>
 </div>
 </div></form></div>
-<div class="admonition exercise text short exercise-short" id="exercise_19">
+<div class="admonition exercise text short exercise-short" id="exercise_20">
 <p class="admonition-title">Exercício</p>
 <form class="quiz-form"><p>Como você interpretaria a expressão cron <code>0 9-18 * * 1-5</code>? Quebre cada campo e explique.</p>
 <div class="form-elements">
@@ -4116,7 +4300,7 @@ body {
 </div>
 <button class="quiz-submit-button" type="submit">Submit</button>
 </div></form></div>
-<div class="admonition exercise exercise-self-progress" id="exercise_41">
+<div class="admonition exercise exercise-self-progress" id="exercise_43">
 <p class="admonition-title">Exercício</p>
 <form class="quiz-form"><p>Execute o deployment personalizado:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio" /><input id="__tabbed_11_2" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="__tabbed_11_1">Com <code>uv</code></label><label for="__tabbed_11_2">Com <code>python</code></label></div>
@@ -4147,21 +4331,9 @@ body {
 <p class="admonition-title">Parando Deployments</p>
 <p>Para parar os deployments em execução, use Ctrl+C nos terminais onde estão rodando, ou mate os processo no gerenciador de tarefas!</p>
 </div>
-<div class="admonition exercise text long exercise-long" id="exercise_20">
-<p class="admonition-title">Exercício</p>
-<form class="quiz-form"><p>Compare a experiência de agendamento no Prefect com <strong>cron</strong>. Quais vantagens você identifica no uso de deployments do Prefect?</p>
-<div class="form-elements">
-<div class="quiz-text-container">
-
-<textarea name="data" class="quiz-text-input" 
-          placeholder="Enter your detailed answer..." rows="4"></textarea>
-
-</div>
-<button class="quiz-submit-button" type="submit">Submit</button>
-</div></form></div>
 <h3 id="pipeline-incremental-com-agendamento">Pipeline Incremental com Agendamento</h3>
 <p>Um padrão comum em produção é agendar pipelines que executam regularmente, mas que possuem lógica condicional para processar apenas quando há dados novos disponíveis.</p>
-<div class="admonition exercise exercise-self-progress" id="exercise_42">
+<div class="admonition exercise exercise-self-progress" id="exercise_44">
 <p class="admonition-title">Exercício</p>
 <form class="quiz-form"><p>Crie um arquivo <code>pipeline_incremental.py</code>:</p>
 <div class="language-python copy highlight"><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">dotenv</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_dotenv</span>
@@ -4254,7 +4426,7 @@ body {
 <button class="quiz-submit-button" type="submit">Mark as done</button>
 </div>
 </div></form></div>
-<div class="admonition exercise exercise-self-progress" id="exercise_43">
+<div class="admonition exercise exercise-self-progress" id="exercise_45">
 <p class="admonition-title">Exercício</p>
 <form class="quiz-form"><p>Teste o pipeline incremental algumas vezes manualmente:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="12:2"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio" /><input id="__tabbed_12_2" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="__tabbed_12_1">Com <code>uv</code></label><label for="__tabbed_12_2">Com <code>python</code></label></div>
@@ -4291,7 +4463,7 @@ body {
 </div>
 <button class="quiz-submit-button" type="submit">Submit</button>
 </div></form></div>
-<div class="admonition exercise exercise-self-progress" id="exercise_44">
+<div class="admonition exercise exercise-self-progress" id="exercise_46">
 <p class="admonition-title">Exercício</p>
 <form class="quiz-form"><p>Agora vamos agendar este pipeline para executar automaticamente. Crie um arquivo <code>deploy_incremental.py</code>:</p>
 <div class="language-python copy highlight"><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">prefect</span><span class="w"> </span><span class="kn">import</span> <span class="n">serve</span>
@@ -4314,7 +4486,7 @@ body {
 <button class="quiz-submit-button" type="submit">Mark as done</button>
 </div>
 </div></form></div>
-<div class="admonition exercise exercise-self-progress" id="exercise_45">
+<div class="admonition exercise exercise-self-progress" id="exercise_47">
 <p class="admonition-title">Exercício</p>
 <form class="quiz-form"><p>Execute o deployment incremental:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="13:2"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio" /><input id="__tabbed_13_2" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="__tabbed_13_1">Com <code>uv</code></label><label for="__tabbed_13_2">Com <code>python</code></label></div>
@@ -4341,7 +4513,7 @@ body {
 <button class="quiz-submit-button" type="submit">Mark as done</button>
 </div>
 </div></form></div>
-<div class="admonition exercise exercise-self-progress" id="exercise_46">
+<div class="admonition exercise exercise-self-progress" id="exercise_48">
 <p class="admonition-title">Exercício</p>
 <form class="quiz-form"><p>Na interface web, analise o comportamento do pipeline incremental:</p>
 <ul>
@@ -4359,66 +4531,9 @@ body {
 <p class="admonition-title">Dica!</p>
 <p>Este padrão de <em>"pipeline agendado com lógica condicional"</em> é muito comum em produção.</p>
 </div>
-<h2 id="monitoramento-e-observabilidade">Monitoramento e Observabilidade</h2>
-<p>Uma das principais vantagens da orquestração é a <strong>observabilidade</strong> completa dos processos.</p>
-<p>Vamos explorar as capacidades de monitoramento do Prefect.</p>
-<div class="admonition exercise exercise-self-progress" id="exercise_47">
-<p class="admonition-title">Exercício</p>
-<form class="quiz-form"><p>Na interface web do Prefect, explore as seguintes seções:</p>
-<ul>
-<li><strong>Flows</strong>: Lista todos os <em>flows</em> criados</li>
-<li><strong>Flow Runs</strong>: Histórico de execuções</li>
-<li><strong>Task Runs</strong>: Detalhes de cada tarefa executada</li>
-</ul>
-<div class="form-elements">
-<div class="quiz-self-progress">
-<input type="hidden" name="data" value="done" />
-<button class="quiz-submit-button" type="submit">Mark as done</button>
-</div>
-</div></form></div>
 <div class="admonition exercise text long exercise-long" id="exercise_22">
 <p class="admonition-title">Exercício</p>
-<form class="quiz-form"><p>Quais métricas e informações você considera mais úteis para monitorar um pipeline em produção? O Prefect fornece essas informações?</p>
-<div class="form-elements">
-<div class="quiz-text-container">
-
-<textarea name="data" class="quiz-text-input" 
-          placeholder="Enter your detailed answer..." rows="4"></textarea>
-
-</div>
-<button class="quiz-submit-button" type="submit">Submit</button>
-</div></form></div>
-<div class="admonition exercise exercise-self-progress" id="exercise_48">
-<p class="admonition-title">Exercício</p>
-<form class="quiz-form"><p>Execute novamente um dos pipelines anteriores e, enquanto ele executa, observe em tempo real:</p>
-<ul>
-<li>O status da execução na interface web</li>
-<li>Os logs sendo gerados</li>
-<li>A progressão através das tarefas</li>
-</ul>
-<div class="form-elements">
-<div class="quiz-self-progress">
-<input type="hidden" name="data" value="done" />
-<button class="quiz-submit-button" type="submit">Mark as done</button>
-</div>
-</div></form></div>
-<h2 id="comparacao-com-cron">Comparação com Cron</h2>
-<p>Agora que experimentamos o Prefect, vamos refletir sobre as diferenças práticas em relação ao agendamento tradicional.</p>
-<div class="admonition exercise text long exercise-long" id="exercise_23">
-<p class="admonition-title">Exercício</p>
-<form class="quiz-form"><p>Considerando sua experiência com ambas as abordagens, liste pelo menos 3 vantagens específicas que observou ao usar Prefect em comparação com cron.</p>
-<div class="form-elements">
-<div class="quiz-text-container">
-
-<textarea name="data" class="quiz-text-input" 
-          placeholder="Enter your detailed answer..." rows="4"></textarea>
-
-</div>
-<button class="quiz-submit-button" type="submit">Submit</button>
-</div></form></div>
-<div class="admonition exercise text long exercise-long" id="exercise_24">
-<p class="admonition-title">Exercício</p>
-<form class="quiz-form"><p>Em que cenários você ainda consideraria usar cron ao invés de um orquestrador como Prefect? Explique seu raciocínio.</p>
+<form class="quiz-form"><p>Agora que experimentamos o Prefect, em que cenários você ainda consideraria usar cron ao invés de um orquestrador como Prefect? Explique seu raciocínio.</p>
 <div class="form-elements">
 <div class="quiz-text-container">
 
@@ -4458,13 +4573,15 @@ body {
 <button class="quiz-submit-button" type="submit">Mark as done</button>
 </div>
 </div></form></div>
-<div class="admonition exercise text long exercise-long" id="exercise_25">
+<div class="admonition exercise text long exercise-long" id="exercise_23">
 <p class="admonition-title">Exercício</p>
-<form class="quiz-form"><p>Após implementar seu pipeline customizado, descreva:
-- Qual problema seu pipeline resolve
-- Como você estruturou as dependências
-- Que tipo de tratamento de erro implementou
-- Quais melhorias faria para uso em produção</p>
+<form class="quiz-form"><p>Após implementar seu pipeline customizado, descreva:</p>
+<ul>
+<li>Qual problema seu pipeline resolve</li>
+<li>Como você estruturou as dependências</li>
+<li>Que tipo de tratamento de erro implementou</li>
+<li>Quais melhorias faria para uso em produção</li>
+</ul>
 <div class="form-elements">
 <div class="quiz-text-container">
 
@@ -5662,6 +5779,8 @@ document.addEventListener('click', function(e) {
         <script src="../../../js/termynal.js"></script>
       
         <script src="../../../js/custom.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
