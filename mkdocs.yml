@@ -46,6 +46,12 @@ nav:
           - classes/06-intro-orchestration/intro-orchestration.md
           - classes/06-intro-orchestration/prefect.md
           - classes/06-intro-orchestration/references.md
+      - 07 - Modelagem de Dados:
+          - classes/07-data-modeling/intro-data-modeling.md
+          - classes/07-data-modeling/obt.md
+          - classes/07-data-modeling/star-schema.md
+          - classes/07-data-modeling/snowflake.md
+          - classes/07-data-modeling/references.md
       - 08 - Entrevista 01:
           - classes/08-interview-01/faq.md
   - Regras: about.md
@@ -90,7 +96,7 @@ extra_javascript:
   - js/tabs.js
   - js/termynal.js
   - js/custom.js
-  # - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
   - https://unpkg.com/mermaid/dist/mermaid.min.js
 extra_css:
@@ -166,6 +172,8 @@ markdown_extensions:
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
   - abbr
+  - pymdownx.arithmatex:
+      generic: true
 
 plugins:
   - search

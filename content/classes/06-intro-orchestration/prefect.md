@@ -212,7 +212,11 @@ Para desenvolver localmente, precisamos instalar o Prefect em nossa máquina.
 
 ## Explorando a Interface
 
-A interface web do Prefect oferece visibilidade completa sobre a execução dos *flows*. Vamos explorar suas funcionalidades principais.
+A interface web do Prefect oferece visibilidade completa sobre a execução dos *flows*.
+
+Uma das principais vantagens da orquestração é a **observabilidade** dos processos.
+
+Vamos explorar suas funcionalidades principais.
 
 !!! exercise "Exercício"
     Efetue a correção do arquivo `primeiro_flow.py` com o seguinte conteúdo:
@@ -240,7 +244,7 @@ A interface web do Prefect oferece visibilidade completa sobre a execução dos 
     Confira as mudanças refletidas no terminal e na interface.
 
 !!! exercise "Exercício"
-    Na interface do Prefect, clique no *flow run* que acabou de ser executado para ver os detalhes.
+    Na interface do Prefect, no menu **Flow**, clique no *flow run* que acabou de ser executado para ver os detalhes.
 
     Considere o *flow* executado com sucesso!
 
@@ -249,6 +253,16 @@ A interface web do Prefect oferece visibilidade completa sobre a execução dos 
 
 !!! exercise text short "Exercício"
     Há alguma representação visual do *flow* (como um grafo/DAG)? Descreva o que observa.
+
+!!! exercise "Exercício"
+    No menu **Runs**, explore as seguintes seções:
+
+    - **Flows**: Lista todos os *flows* criados
+    - **Flow Runs**: Histórico de execuções
+    - **Task Runs**: Detalhes de cada tarefa executada
+
+!!! exercise text long "Exercício"
+    Quais métricas e informações você considera mais úteis para monitorar um pipeline em produção? O Prefect fornece essas informações?
 
 ## Tarefas com Tempo de Execução
 
@@ -317,8 +331,15 @@ Isso nos permitirá observar melhor o comportamento do Prefect durante a execuç
     - O tempo individual de cada tarefa
     - Os logs gerados
 
+!!! exercise "Exercício"
+    Execute novamente o *pipeline* e, enquanto ele executa, observe em tempo real:
+
+    - O status da execução na interface web
+    - Os logs sendo gerados
+    - A progressão através das tarefas
+
 !!! exercise text long "Exercício"
-    Compare a experiência de monitoramento no Prefect com o que seria possível usando apenas cron. Quais diferenças você identifica?
+    Compare a experiência de monitoramento no Prefect com o que seria possível usando apenas *cron*. Quais diferenças você identifica?
 
 ## Paralelização de Tarefas
 
@@ -617,7 +638,7 @@ Uma das grandes vantagens dos orquestradores é o tratamento robusto de erros. V
         - Tarefas que dependem de recursos externos, como bancos de dados ou serviços de fila.
 
 !!! exercise text long "Exercício"
-    Como você implementaria esse mesmo tratamento de erros usando apenas cron? Quais seriam as dificuldades?
+    Como você implementaria esse mesmo tratamento de erros usando apenas *cron*? Quais seriam as dificuldades?
 
 ## Pipeline de Dados
 
@@ -1130,9 +1151,6 @@ Para cenários mais complexos, podemos criar agendamentos personalizados.
 !!! tip "Parando Deployments"
     Para parar os deployments em execução, use Ctrl+C nos terminais onde estão rodando, ou mate os processo no gerenciador de tarefas!
 
-!!! exercise text long "Exercício"
-    Compare a experiência de agendamento no Prefect com **cron**. Quais vantagens você identifica no uso de deployments do Prefect?
-
 ### Pipeline Incremental com Agendamento
 
 Um padrão comum em produção é agendar pipelines que executam regularmente, mas que possuem lógica condicional para processar apenas quando há dados novos disponíveis.
@@ -1304,38 +1322,8 @@ Um padrão comum em produção é agendar pipelines que executam regularmente, m
 !!! tip "Dica!"
     Este padrão de *"pipeline agendado com lógica condicional"* é muito comum em produção.
 
-## Monitoramento e Observabilidade
-
-Uma das principais vantagens da orquestração é a **observabilidade** completa dos processos.
-
-Vamos explorar as capacidades de monitoramento do Prefect.
-
-!!! exercise "Exercício"
-    Na interface web do Prefect, explore as seguintes seções:
-
-    - **Flows**: Lista todos os *flows* criados
-    - **Flow Runs**: Histórico de execuções
-    - **Task Runs**: Detalhes de cada tarefa executada
-
 !!! exercise text long "Exercício"
-    Quais métricas e informações você considera mais úteis para monitorar um pipeline em produção? O Prefect fornece essas informações?
-
-!!! exercise "Exercício"
-    Execute novamente um dos pipelines anteriores e, enquanto ele executa, observe em tempo real:
-
-    - O status da execução na interface web
-    - Os logs sendo gerados
-    - A progressão através das tarefas
-
-## Comparação com Cron
-
-Agora que experimentamos o Prefect, vamos refletir sobre as diferenças práticas em relação ao agendamento tradicional.
-
-!!! exercise text long "Exercício"
-    Considerando sua experiência com ambas as abordagens, liste pelo menos 3 vantagens específicas que observou ao usar Prefect em comparação com cron.
-
-!!! exercise text long "Exercício"
-    Em que cenários você ainda consideraria usar cron ao invés de um orquestrador como Prefect? Explique seu raciocínio.
+    Agora que experimentamos o Prefect, em que cenários você ainda consideraria usar cron ao invés de um orquestrador como Prefect? Explique seu raciocínio.
 
 ## Experimentação Livre
 
@@ -1365,6 +1353,7 @@ Agora é sua vez de experimentar e criar algo único!
 
 !!! exercise text long "Exercício"
     Após implementar seu pipeline customizado, descreva:
+
     - Qual problema seu pipeline resolve
     - Como você estruturou as dependências
     - Que tipo de tratamento de erro implementou
