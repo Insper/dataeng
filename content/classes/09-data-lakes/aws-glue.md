@@ -20,24 +20,62 @@ meu-data-lake-<INSPER_USERNAME>/
   raw/
   processed/
 ```
+!!! exercise
+    Antes de prosseguir, faça login SSO na AWS com o perfil `dataeng`:
 
+    <div class="termy">
+
+    ```
+    $ aws sso login --profile dataeng
+    ```
+
+    </div>
 !!! exercise
     Crie um *bucket* no **S3** com o nome `meu-data-lake-<INSPER_USERNAME>`
 
     !!! warning "Atenção"
         Defina corretamente a variável de ambiente `INSPER_USERNAME` com seu **usuário insper**, pois o nome do *bucket* deve ser globalmente único!
 
-    <div class="termy">
+    === "Linux/Mac"
+        <div class="termy">
 
-    ```
-    $INSPER_USERNAME=seu-usuario-insper
-    $aws s3api create-bucket \
-        --bucket meu-data-lake-$INSPER_USERNAME \
-        --region us-east-1 \
-        --profile dataeng
-    ```
+        ```
+        $ INSPER_USERNAME=seu-usuario-insper
+        $ aws s3api create-bucket \
+            --bucket meu-data-lake-$INSPER_USERNAME \
+            --region us-east-1 \
+            --profile dataeng
+        ```
 
-    </div>
+        </div>
+    
+    === "Powershell"
+        <div class="termy">
+
+        ```
+        $ $env:INSPER_USERNAME = "seu-usuario-insper"
+
+        $ aws s3api create-bucket `
+            --bucket "meu-data-lake-$($env:INSPER_USERNAME)" `
+            --region us-east-1 `
+            --profile dataeng
+        ```
+
+        </div>
+    
+    === "CMD"
+        <div class="termy">
+
+        ```
+        $ set INSPER_USERNAME=seu-usuario-insper
+
+        $ aws s3api create-bucket ^
+            --bucket meu-data-lake-%INSPER_USERNAME% ^
+            --region us-east-1 ^
+            --profile dataeng
+        ```
+
+        </div>
 
 !!! exercise
     Dentro do *bucket*, crie as seguintes pastas (prefixos):
@@ -48,41 +86,115 @@ meu-data-lake-<INSPER_USERNAME>/
     !!! warning "Atenção"
         Caso esteja na mesma sessão do terminal, não precisa redefinir a variável de ambiente `$INSPER_USERNAME`.
 
-    <div class="termy">
+    === "Linux/Mac"
+        
+        <div class="termy">
 
-    ```
-    $INSPER_USERNAME=seu-usuario-insper
-    $aws s3api put-object \
-        --bucket meu-data-lake-$INSPER_USERNAME \
-        --key raw/ \
-        --profile dataeng
-    ```
+        ```
+        $ INSPER_USERNAME=seu-usuario-insper
+        $ aws s3api put-object \
+            --bucket meu-data-lake-$INSPER_USERNAME \
+            --key raw/ \
+            --profile dataeng
+        ```
 
-    </div>
-    <br><br>
+        </div>
+        <br><br>
 
-    <div class="termy">
+        <div class="termy">
 
-    ```
-    $INSPER_USERNAME=seu-usuario-insper
-    $aws s3api put-object \
-        --bucket meu-data-lake-$INSPER_USERNAME \
-        --key processed/ \
-        --profile dataeng
-    ```
+        ```
+        $ INSPER_USERNAME=seu-usuario-insper
+        $ aws s3api put-object \
+            --bucket meu-data-lake-$INSPER_USERNAME \
+            --key processed/ \
+            --profile dataeng
+        ```
 
-    </div>
+        </div>
+    
+    === "Powershell"
+        <div class="termy">
+
+        ```
+        $ $env:INSPER_USERNAME = "seu-usuario-insper"
+        $ aws s3api put-object `
+            --bucket "meu-data-lake-$($env:INSPER_USERNAME)" `
+            --key raw/ `
+            --profile dataeng
+        ```
+
+        </div>
+
+        <div class="termy">
+
+        ```
+        $ $env:INSPER_USERNAME = "seu-usuario-insper"
+        $ aws s3api put-object `
+            --bucket "meu-data-lake-$($env:INSPER_USERNAME)" `
+            --key processed/ `
+            --profile dataeng
+        ```
+
+        </div>
+    
+    === "CMD"
+        <div class="termy">
+
+        ```
+        $ set INSPER_USERNAME=seu-usuario-insper
+        $ aws s3api put-object ^
+            --bucket meu-data-lake-%INSPER_USERNAME% ^
+            --key raw/ ^
+            --profile dataeng
+        ```
+
+        </div>
+
+        <div class="termy">
+
+        ```
+        $ set INSPER_USERNAME=seu-usuario-insper
+        $ aws s3api put-object ^
+            --bucket meu-data-lake-%INSPER_USERNAME% ^
+            --key processed/ ^
+            --profile dataeng
+        ```
+
+        </div>
 
 !!! exercise
     Verifique se as pastas foram criadas corretamente.
-    <div class="termy">
 
-    ```
-    $INSPER_USERNAME=seu-usuario-insper
-    $aws s3 ls meu-data-lake-$INSPER_USERNAME --recursive --profile dataeng
-    ```
+    === "Linux/Mac"
+        <div class="termy">
 
-    </div>
+        ```
+        $ INSPER_USERNAME=seu-usuario-insper
+        $ aws s3 ls meu-data-lake-$INSPER_USERNAME --recursive --profile dataeng
+        ```
+
+        </div>
+
+    === "Powershell"
+        <div class="termy">
+
+        ```
+        $ $env:INSPER_USERNAME = "seu-usuario-insper"
+        $ aws s3 ls "meu-data-lake-$($env:INSPER_USERNAME)" --recursive --profile dataeng
+        ```
+
+        </div>
+    
+    === "CMD"
+        <div class="termy">
+
+        ```
+        $ set INSPER_USERNAME=seu-usuario-insper
+        $ aws s3 ls meu-data-lake-%INSPER_USERNAME% --recursive --profile dataeng
+        ```
+
+        </div>
 
 ## Base de Dados
 
@@ -102,18 +214,47 @@ Agora vamos subir a base de dados de **itens vendidos** (`olist_order_items`):
     !!! warning "Atenção"
         Caso esteja na mesma sessão do terminal, não precisa redefinir a variável de ambiente `$INSPER_USERNAME`.
 
-    <div class="termy">
+    === "Linux/Mac"
+        <div class="termy">
 
-    ```
-    $INSPER_USERNAME=seu-usuario-insper
-    $aws s3api put-object \
-        --bucket meu-data-lake-$INSPER_USERNAME \
-        --key raw/olist_order_items/olist_order_items_dataset.csv \
-        --body olist_order_items_dataset.csv \
-        --profile dataeng
-    ```
+        ```
+        $ INSPER_USERNAME=seu-usuario-insper
+        $ aws s3api put-object \
+            --bucket meu-data-lake-$INSPER_USERNAME \
+            --key raw/olist_order_items/olist_order_items_dataset.csv \
+            --body olist_order_items_dataset.csv \
+            --profile dataeng
+        ```
 
-    </div>
+        </div>
+
+    === "Powershell"
+        <div class="termy">
+
+        ```
+        $ $env:INSPER_USERNAME = "seu-usuario-insper"
+        $ aws s3api put-object `
+            --bucket "meu-data-lake-$($env:INSPER_USERNAME)" `
+            --key "raw/olist_order_items/olist_order_items_dataset.csv" `
+            --body "olist_order_items_dataset.csv" `
+            --profile dataeng
+        ```
+
+        </div>
+    
+    === "CMD"
+        <div class="termy">
+
+        ```
+        $ set INSPER_USERNAME=seu-usuario-insper
+        $ aws s3api put-object ^
+            --bucket meu-data-lake-%INSPER_USERNAME% ^
+            --key raw/olist_order_items/olist_order_items_dataset.csv ^
+            --body olist_order_items_dataset.csv ^
+            --profile dataeng
+        ```
+
+        </div>
 
 Agora vamos subir a base de dados de **products** (`olist_products`):
 
@@ -123,29 +264,80 @@ Agora vamos subir a base de dados de **products** (`olist_products`):
     !!! warning "Atenção"
         Caso esteja na mesma sessão do terminal, não precisa redefinir a variável de ambiente `$INSPER_USERNAME`.
 
-    <div class="termy">
+    === "Linux/Mac"
+        <div class="termy">
 
-    ```
-    $INSPER_USERNAME=seu-usuario-insper
-    $aws s3api put-object \
-        --bucket meu-data-lake-$INSPER_USERNAME \
-        --key raw/olist_products/olist_products_dataset.csv \
-        --body olist_products_dataset.csv \
-        --profile dataeng
-    ```
+        ```
+        $ INSPER_USERNAME=seu-usuario-insper
+        $ aws s3api put-object \
+            --bucket meu-data-lake-$INSPER_USERNAME \
+            --key raw/olist_products/olist_products_dataset.csv \
+            --body olist_products_dataset.csv \
+            --profile dataeng
+        ```
 
-    </div>
+        </div>
+
+    === "Powershell"
+        <div class="termy">
+
+        ```
+        $ $env:INSPER_USERNAME = "seu-usuario-insper"
+        $ aws s3api put-object `
+            --bucket "meu-data-lake-$($env:INSPER_USERNAME)" `
+            --key "raw/olist_products/olist_products_dataset.csv" `
+            --body "olist_products_dataset.csv" `
+            --profile dataeng
+        ```
+
+        </div>
+    
+    === "CMD"
+        <div class="termy">
+
+        ```
+        $ set INSPER_USERNAME=seu-usuario-insper
+        $ aws s3api put-object ^
+            --bucket meu-data-lake-%INSPER_USERNAME% ^
+            --key raw/olist_products/olist_products_dataset.csv ^
+            --body olist_products_dataset.csv ^
+            --profile dataeng
+        ```
+
+        </div>
 
 !!! exercise
     Verifique se os arquivos foram criados corretamente.
-    <div class="termy">
 
-    ```
-    $INSPER_USERNAME=seu-usuario-insper
-    $aws s3 ls meu-data-lake-$INSPER_USERNAME --recursive --profile dataeng
-    ```
+    === "Linux/Mac"
+        <div class="termy">
 
-    </div>
+        ```
+        $ INSPER_USERNAME=seu-usuario-insper
+        $ aws s3 ls meu-data-lake-$INSPER_USERNAME --recursive --profile dataeng
+        ```
+
+        </div>
+
+    === "Powershell"
+        <div class="termy">
+
+        ```
+        $ $env:INSPER_USERNAME = "seu-usuario-insper"
+        $ aws s3 ls "meu-data-lake-$($env:INSPER_USERNAME)" --recursive --profile dataeng
+        ```
+
+        </div>
+    
+    === "CMD"
+        <div class="termy">
+
+        ```
+        $ set INSPER_USERNAME=seu-usuario-insper
+        $ aws s3 ls meu-data-lake-%INSPER_USERNAME% --recursive --profile dataeng
+        ```
+
+        </div>
 
 ## Glue: Características Principais
 
@@ -338,7 +530,7 @@ Agora precisamos criar uma **role IAM** para o **Glue** ter permissão de ler os
     $ aws iam create-role \
         --role-name role-glue-meu-data-lake-s3 \
         --assume-role-policy-document file://glue_etl_crawler_s3_role.json \
-        --profile dataeng-prof-oficial
+        --profile dataeng
     ```
 
     </div>
@@ -351,7 +543,7 @@ Agora precisamos criar uma **role IAM** para o **Glue** ter permissão de ler os
         --role-name role-glue-meu-data-lake-s3 \
         --policy-name policy-glue-meu-data-lake-s3 \
         --policy-document file://glue_etl_crawler_s3_policy.json \
-        --profile dataeng-prof-oficial
+        --profile dataeng
     ```
 
     </div>
@@ -359,20 +551,55 @@ Agora precisamos criar uma **role IAM** para o **Glue** ter permissão de ler os
 !!! exercise
     Para criar o **crawler**, utilize:
 
-    <div class="termy">
+    === "Linux/Mac"
+        <div class="termy">
 
-    ```
-    $ aws glue create-crawler \
-        --profile dataeng \
-        --region us-east-1 \
-        --name meu-crawler-olist \
-        --role role-glue-meu-data-lake-s3 \
-        --database-name meu-db-olist \
-        --targets "S3Targets=[{Path=\"s3://meu-data-lake-$INSPER_USERNAME/raw/\"}]" \
-        --schema-change-policy UpdateBehavior=UPDATE_IN_DATABASE,DeleteBehavior=DEPRECATE_IN_DATABASE
-    ```
+        ```
+        $ aws glue create-crawler \
+            --profile dataeng \
+            --region us-east-1 \
+            --name meu-crawler-olist \
+            --role role-glue-meu-data-lake-s3 \
+            --database-name meu-db-olist \
+            --targets "S3Targets=[{Path=\"s3://meu-data-lake-$INSPER_USERNAME/raw/\"}]" \
+            --schema-change-policy UpdateBehavior=UPDATE_IN_DATABASE,DeleteBehavior=DEPRECATE_IN_DATABASE
+        ```
 
-    </div>
+        </div>
+
+    === "Powershell"
+        <div class="termy">
+
+        ```
+        $ $env:INSPER_USERNAME = "seu-usuario-insper"
+        $ aws glue create-crawler `
+            --profile dataeng `
+            --region us-east-1 `
+            --name meu-crawler-olist `
+            --role role-glue-meu-data-lake-s3 `
+            --database-name meu-db-olist `
+            --targets "S3Targets=[{Path='s3://meu-data-lake-$($env:INSPER_USERNAME)/raw/'}]" `
+            --schema-change-policy UpdateBehavior=UPDATE_IN_DATABASE,DeleteBehavior=DEPRECATE_IN_DATABASE
+        ```
+
+        </div>
+    
+    === "CMD"
+        <div class="termy">
+
+        ```
+        $ set INSPER_USERNAME=seu-usuario-insper
+        $ aws glue create-crawler ^
+            --profile dataeng ^
+            --region us-east-1 ^
+            --name meu-crawler-olist ^
+            --role role-glue-meu-data-lake-s3 ^
+            --database-name meu-db-olist ^
+            --targets "S3Targets=[{Path=\"s3://meu-data-lake-%INSPER_USERNAME%/raw/\"}]" ^
+            --schema-change-policy UpdateBehavior=UPDATE_IN_DATABASE,DeleteBehavior=DEPRECATE_IN_DATABASE
+        ```
+
+        </div>
     
 !!! exercise
     Acesse o console do **AWS Glue** e verifique se o crawler `meu-crawler-olist` foi criado corretamente.

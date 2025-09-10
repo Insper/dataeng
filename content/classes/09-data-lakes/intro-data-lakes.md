@@ -98,7 +98,7 @@ Na prática vocês verão essas camadas mapeadas em prefixos de caminhos (ex.: `
 !!! exercise text long
 	Em poucas frases, compare *schema-on-write* e *schema-on-read*, destacando impacto no tempo de disponibilização dos dados.
 
-	!!! answer "Resposta
+	!!! answer "Resposta"
 		- *Schema-on-write* exige definir o esquema antes de armazenar os dados, o que pode atrasar a ingestão, mas garante consistência imediata.
 		- *Schema-on-read* permite armazenar dados brutos rapidamente, adiando a definição do esquema para o momento da leitura, o que acelera a disponibilização inicial dos dados.
 
