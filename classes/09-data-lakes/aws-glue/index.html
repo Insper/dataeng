@@ -2899,9 +2899,12 @@ body {
 <p class="admonition-title">Atenção</p>
 <p>Caso esteja na mesma sessão do terminal, não precisa redefinir a variável de ambiente <code>$INSPER_USERNAME</code>.</p>
 </div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Linux/Mac</label><label for="__tabbed_2_2">Powershell</label><label for="__tabbed_2_3">CMD</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="termy">
-<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>$INSPER_USERNAME=seu-usuario-insper
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>$aws s3api put-object \
+<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>$ INSPER_USERNAME=seu-usuario-insper
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>$ aws s3api put-object \
 <a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    --bucket meu-data-lake-$INSPER_USERNAME \
 <a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    --key raw/ \
 <a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    --profile dataeng
@@ -2909,12 +2912,51 @@ body {
 <p></div>
 <br><br></p>
 <div class="termy">
-<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>$INSPER_USERNAME=seu-usuario-insper
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>$aws s3api put-object \
+<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>$ INSPER_USERNAME=seu-usuario-insper
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>$ aws s3api put-object \
 <a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    --bucket meu-data-lake-$INSPER_USERNAME \
 <a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>    --key processed/ \
 <a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>    --profile dataeng
 </code></pre></div>
+</div>
+</div>
+<div class="tabbed-block">
+<div class="termy">
+<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>$ $env:INSPER_USERNAME = &quot;seu-usuario-insper&quot;
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>$ aws s3api put-object `
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    --bucket &quot;meu-data-lake-$($env:INSPER_USERNAME)&quot; `
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>    --key raw/ `
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>    --profile dataeng
+</code></pre></div>
+</div>
+<div class="termy">
+<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>$ $env:INSPER_USERNAME = &quot;seu-usuario-insper&quot;
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>$ aws s3api put-object `
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>    --bucket &quot;meu-data-lake-$($env:INSPER_USERNAME)&quot; `
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>    --key processed/ `
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>    --profile dataeng
+</code></pre></div>
+</div>
+</div>
+<div class="tabbed-block">
+<div class="termy">
+<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>$ set INSPER_USERNAME=seu-usuario-insper
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>$ aws s3api put-object ^
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>    --bucket meu-data-lake-%INSPER_USERNAME% ^
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>    --key raw/ ^
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>    --profile dataeng
+</code></pre></div>
+</div>
+<div class="termy">
+<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>$ set INSPER_USERNAME=seu-usuario-insper
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>$ aws s3api put-object ^
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>    --bucket meu-data-lake-%INSPER_USERNAME% ^
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>    --key processed/ ^
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>    --profile dataeng
+</code></pre></div>
+</div>
+</div>
+</div>
 </div>
 <div class="form-elements">
 <div class="quiz-self-progress">
@@ -2924,11 +2966,31 @@ body {
 </div></form></div>
 <div class="admonition exercise exercise-self-progress" id="exercise_4">
 <p class="admonition-title">Exercise</p>
-<form class="quiz-form"><p>Verifique se as pastas foram criadas corretamente.
-<div class="termy"></p>
-<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>$INSPER_USERNAME=seu-usuario-insper
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>$aws s3 ls meu-data-lake-$INSPER_USERNAME --recursive --profile dataeng
+<form class="quiz-form"><p>Verifique se as pastas foram criadas corretamente.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Linux/Mac</label><label for="__tabbed_3_2">Powershell</label><label for="__tabbed_3_3">CMD</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="termy">
+<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>$ INSPER_USERNAME=seu-usuario-insper
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>$ aws s3 ls meu-data-lake-$INSPER_USERNAME --recursive --profile dataeng
 </code></pre></div>
+</div>
+</div>
+<div class="tabbed-block">
+<div class="termy">
+<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>$ $env:INSPER_USERNAME = &quot;seu-usuario-insper&quot;
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>$ aws s3 ls &quot;meu-data-lake-$($env:INSPER_USERNAME)&quot; --recursive --profile dataeng
+</code></pre></div>
+</div>
+</div>
+<div class="tabbed-block">
+<div class="termy">
+<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>$ set INSPER_USERNAME=seu-usuario-insper
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>$ aws s3 ls meu-data-lake-%INSPER_USERNAME% --recursive --profile dataeng
+</code></pre></div>
+</div>
+</div>
+</div>
 </div>
 <div class="form-elements">
 <div class="quiz-self-progress">
@@ -2957,14 +3019,42 @@ body {
 <p class="admonition-title">Atenção</p>
 <p>Caso esteja na mesma sessão do terminal, não precisa redefinir a variável de ambiente <code>$INSPER_USERNAME</code>.</p>
 </div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:3"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><input id="__tabbed_4_3" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Linux/Mac</label><label for="__tabbed_4_2">Powershell</label><label for="__tabbed_4_3">CMD</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="termy">
-<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>$ INSPER_USERNAME=seu-usuario-insper
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>$ aws s3api put-object \
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>    --bucket meu-data-lake-$INSPER_USERNAME \
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>    --key raw/olist_order_items/olist_order_items_dataset.csv \
-<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>    --body olist_order_items_dataset.csv \
-<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>    --profile dataeng
+<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>$ INSPER_USERNAME=seu-usuario-insper
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>$ aws s3api put-object \
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>    --bucket meu-data-lake-$INSPER_USERNAME \
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>    --key raw/olist_order_items/olist_order_items_dataset.csv \
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>    --body olist_order_items_dataset.csv \
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>    --profile dataeng
 </code></pre></div>
+</div>
+</div>
+<div class="tabbed-block">
+<div class="termy">
+<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>$ $env:INSPER_USERNAME = &quot;seu-usuario-insper&quot;
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>$ aws s3api put-object `
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>    --bucket &quot;meu-data-lake-$($env:INSPER_USERNAME)&quot; `
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>    --key &quot;raw/olist_order_items/olist_order_items_dataset.csv&quot; `
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>    --body &quot;olist_order_items_dataset.csv&quot; `
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>    --profile dataeng
+</code></pre></div>
+</div>
+</div>
+<div class="tabbed-block">
+<div class="termy">
+<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>$ set INSPER_USERNAME=seu-usuario-insper
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>$ aws s3api put-object ^
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>    --bucket meu-data-lake-%INSPER_USERNAME% ^
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>    --key raw/olist_order_items/olist_order_items_dataset.csv ^
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>    --body olist_order_items_dataset.csv ^
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>    --profile dataeng
+</code></pre></div>
+</div>
+</div>
+</div>
 </div>
 <div class="form-elements">
 <div class="quiz-self-progress">
@@ -2980,14 +3070,42 @@ body {
 <p class="admonition-title">Atenção</p>
 <p>Caso esteja na mesma sessão do terminal, não precisa redefinir a variável de ambiente <code>$INSPER_USERNAME</code>.</p>
 </div>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:3"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><input id="__tabbed_5_3" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Linux/Mac</label><label for="__tabbed_5_2">Powershell</label><label for="__tabbed_5_3">CMD</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="termy">
-<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>$INSPER_USERNAME=seu-usuario-insper
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>$aws s3api put-object \
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>    --bucket meu-data-lake-$INSPER_USERNAME \
-<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>    --key raw/olist_products/olist_products_dataset.csv \
-<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>    --body olist_products_dataset.csv \
-<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>    --profile dataeng
+<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>$ INSPER_USERNAME=seu-usuario-insper
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>$ aws s3api put-object \
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>    --bucket meu-data-lake-$INSPER_USERNAME \
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>    --key raw/olist_products/olist_products_dataset.csv \
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>    --body olist_products_dataset.csv \
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>    --profile dataeng
 </code></pre></div>
+</div>
+</div>
+<div class="tabbed-block">
+<div class="termy">
+<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>$ $env:INSPER_USERNAME = &quot;seu-usuario-insper&quot;
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>$ aws s3api put-object `
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>    --bucket &quot;meu-data-lake-$($env:INSPER_USERNAME)&quot; `
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>    --key &quot;raw/olist_products/olist_products_dataset.csv&quot; `
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>    --body &quot;olist_products_dataset.csv&quot; `
+<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>    --profile dataeng
+</code></pre></div>
+</div>
+</div>
+<div class="tabbed-block">
+<div class="termy">
+<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>$ set INSPER_USERNAME=seu-usuario-insper
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>$ aws s3api put-object ^
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>    --bucket meu-data-lake-%INSPER_USERNAME% ^
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>    --key raw/olist_products/olist_products_dataset.csv ^
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>    --body olist_products_dataset.csv ^
+<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>    --profile dataeng
+</code></pre></div>
+</div>
+</div>
+</div>
 </div>
 <div class="form-elements">
 <div class="quiz-self-progress">
@@ -2997,11 +3115,31 @@ body {
 </div></form></div>
 <div class="admonition exercise exercise-self-progress" id="exercise_8">
 <p class="admonition-title">Exercise</p>
-<form class="quiz-form"><p>Verifique se os arquivos foram criados corretamente.
-<div class="termy"></p>
-<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>$ INSPER_USERNAME=seu-usuario-insper
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>$ aws s3 ls meu-data-lake-$INSPER_USERNAME --recursive --profile dataeng
+<form class="quiz-form"><p>Verifique se os arquivos foram criados corretamente.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:3"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><input id="__tabbed_6_3" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Linux/Mac</label><label for="__tabbed_6_2">Powershell</label><label for="__tabbed_6_3">CMD</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="termy">
+<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>$ INSPER_USERNAME=seu-usuario-insper
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>$ aws s3 ls meu-data-lake-$INSPER_USERNAME --recursive --profile dataeng
 </code></pre></div>
+</div>
+</div>
+<div class="tabbed-block">
+<div class="termy">
+<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>$ $env:INSPER_USERNAME = &quot;seu-usuario-insper&quot;
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>$ aws s3 ls &quot;meu-data-lake-$($env:INSPER_USERNAME)&quot; --recursive --profile dataeng
+</code></pre></div>
+</div>
+</div>
+<div class="tabbed-block">
+<div class="termy">
+<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>$ set INSPER_USERNAME=seu-usuario-insper
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>$ aws s3 ls meu-data-lake-%INSPER_USERNAME% --recursive --profile dataeng
+</code></pre></div>
+</div>
+</div>
+</div>
 </div>
 <div class="form-elements">
 <div class="quiz-self-progress">
@@ -3035,16 +3173,16 @@ body {
 <p class="admonition-title">Exercise</p>
 <form class="quiz-form"><p>Crie Database no Glue Data Catalog com o nome <code>meu-db-olist</code>. Execute este comando no terminal:</p>
 <!-- <div class="termy"> -->
-<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>aws glue create-database \
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>    --profile dataeng \
-<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>    --region us-east-1 \
-<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>    --database-input &#39;{
-<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>        &quot;Name&quot;: &quot;meu-db-olist&quot;,
-<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>        &quot;Description&quot;: &quot;Database de exemplo para Glue com base Olist&quot;,
-<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>        &quot;Parameters&quot;: {
-<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>        &quot;CreatedBy&quot;: &quot;AWS CLI&quot;
-<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>        }
-<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>    }&#39;
+<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>aws glue create-database \
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>    --profile dataeng \
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>    --region us-east-1 \
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>    --database-input &#39;{
+<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a>        &quot;Name&quot;: &quot;meu-db-olist&quot;,
+<a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a>        &quot;Description&quot;: &quot;Database de exemplo para Glue com base Olist&quot;,
+<a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a>        &quot;Parameters&quot;: {
+<a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a>        &quot;CreatedBy&quot;: &quot;AWS CLI&quot;
+<a id="__codelineno-23-9" name="__codelineno-23-9" href="#__codelineno-23-9"></a>        }
+<a id="__codelineno-23-10" name="__codelineno-23-10" href="#__codelineno-23-10"></a>    }&#39;
 </code></pre></div>
 <!-- </div> -->
 <div class="form-elements">
@@ -3069,18 +3207,18 @@ body {
 <form class="quiz-form"><p>Crie os arquivos <code>glue_etl_crawler_s3_role.json</code> e <code>glue_etl_crawler_s3_policy.json</code></p>
 <details>
 <summary><code>glue_etl_crawler_s3_role.json</code></summary>
-<div class="language-json highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="p">{</span>
-<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">    </span><span class="nt">&quot;Version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2012-10-17&quot;</span><span class="p">,</span>
-<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">    </span><span class="nt">&quot;Statement&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">    </span><span class="p">{</span>
-<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="w">        </span><span class="nt">&quot;Effect&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Allow&quot;</span><span class="p">,</span>
-<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="w">        </span><span class="nt">&quot;Principal&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="w">        </span><span class="nt">&quot;Service&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;glue.amazonaws.com&quot;</span>
-<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="w">        </span><span class="p">},</span>
-<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="w">        </span><span class="nt">&quot;Action&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sts:AssumeRole&quot;</span>
-<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="w">    </span><span class="p">]</span>
-<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="p">}</span>
+<div class="language-json highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="p">{</span>
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="w">    </span><span class="nt">&quot;Version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2012-10-17&quot;</span><span class="p">,</span>
+<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="w">    </span><span class="nt">&quot;Statement&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a><span class="w">        </span><span class="nt">&quot;Effect&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Allow&quot;</span><span class="p">,</span>
+<a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a><span class="w">        </span><span class="nt">&quot;Principal&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a><span class="w">        </span><span class="nt">&quot;Service&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;glue.amazonaws.com&quot;</span>
+<a id="__codelineno-24-8" name="__codelineno-24-8" href="#__codelineno-24-8"></a><span class="w">        </span><span class="p">},</span>
+<a id="__codelineno-24-9" name="__codelineno-24-9" href="#__codelineno-24-9"></a><span class="w">        </span><span class="nt">&quot;Action&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sts:AssumeRole&quot;</span>
+<a id="__codelineno-24-10" name="__codelineno-24-10" href="#__codelineno-24-10"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-24-11" name="__codelineno-24-11" href="#__codelineno-24-11"></a><span class="w">    </span><span class="p">]</span>
+<a id="__codelineno-24-12" name="__codelineno-24-12" href="#__codelineno-24-12"></a><span class="p">}</span>
 </code></pre></div>
 </details>
 <div class="admonition danger">
@@ -3089,105 +3227,105 @@ body {
 </div>
 <details>
 <summary><code>glue_etl_crawler_s3_policy.json</code></summary>
-<div class="language-json highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="p">{</span>
-<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">    </span><span class="nt">&quot;Version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2012-10-17&quot;</span><span class="p">,</span>
-<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">    </span><span class="nt">&quot;Statement&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">        </span><span class="p">{</span>
-<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="w">        </span><span class="nt">&quot;Effect&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Allow&quot;</span><span class="p">,</span>
-<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="w">        </span><span class="nt">&quot;Action&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="w">            </span><span class="s2">&quot;glue:*&quot;</span><span class="p">,</span>
-<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="w">            </span><span class="s2">&quot;s3:GetBucketLocation&quot;</span><span class="p">,</span>
-<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="w">            </span><span class="s2">&quot;s3:ListBucket&quot;</span><span class="p">,</span>
-<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="w">            </span><span class="s2">&quot;s3:ListAllMyBuckets&quot;</span><span class="p">,</span>
-<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="w">            </span><span class="s2">&quot;s3:GetBucketAcl&quot;</span><span class="p">,</span>
-<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a><span class="w">            </span><span class="s2">&quot;ec2:DescribeVpcEndpoints&quot;</span><span class="p">,</span>
-<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a><span class="w">            </span><span class="s2">&quot;ec2:DescribeRouteTables&quot;</span><span class="p">,</span>
-<a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a><span class="w">            </span><span class="s2">&quot;ec2:CreateNetworkInterface&quot;</span><span class="p">,</span>
-<a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a><span class="w">            </span><span class="s2">&quot;ec2:DeleteNetworkInterface&quot;</span><span class="p">,</span>
-<a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a><span class="w">            </span><span class="s2">&quot;ec2:DescribeNetworkInterfaces&quot;</span><span class="p">,</span>
-<a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a><span class="w">            </span><span class="s2">&quot;ec2:DescribeSecurityGroups&quot;</span><span class="p">,</span>
-<a id="__codelineno-13-18" name="__codelineno-13-18" href="#__codelineno-13-18"></a><span class="w">            </span><span class="s2">&quot;ec2:DescribeSubnets&quot;</span><span class="p">,</span>
-<a id="__codelineno-13-19" name="__codelineno-13-19" href="#__codelineno-13-19"></a><span class="w">            </span><span class="s2">&quot;ec2:DescribeVpcAttribute&quot;</span><span class="p">,</span>
-<a id="__codelineno-13-20" name="__codelineno-13-20" href="#__codelineno-13-20"></a><span class="w">            </span><span class="s2">&quot;iam:ListRolePolicies&quot;</span><span class="p">,</span>
-<a id="__codelineno-13-21" name="__codelineno-13-21" href="#__codelineno-13-21"></a><span class="w">            </span><span class="s2">&quot;iam:GetRole&quot;</span><span class="p">,</span>
-<a id="__codelineno-13-22" name="__codelineno-13-22" href="#__codelineno-13-22"></a><span class="w">            </span><span class="s2">&quot;iam:GetRolePolicy&quot;</span><span class="p">,</span>
-<a id="__codelineno-13-23" name="__codelineno-13-23" href="#__codelineno-13-23"></a><span class="w">            </span><span class="s2">&quot;cloudwatch:PutMetricData&quot;</span>
-<a id="__codelineno-13-24" name="__codelineno-13-24" href="#__codelineno-13-24"></a><span class="w">        </span><span class="p">],</span>
-<a id="__codelineno-13-25" name="__codelineno-13-25" href="#__codelineno-13-25"></a><span class="w">        </span><span class="nt">&quot;Resource&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;*&quot;</span>
-<a id="__codelineno-13-26" name="__codelineno-13-26" href="#__codelineno-13-26"></a><span class="w">        </span><span class="p">},</span>
-<a id="__codelineno-13-27" name="__codelineno-13-27" href="#__codelineno-13-27"></a><span class="w">        </span><span class="p">{</span>
-<a id="__codelineno-13-28" name="__codelineno-13-28" href="#__codelineno-13-28"></a><span class="w">        </span><span class="nt">&quot;Effect&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Allow&quot;</span><span class="p">,</span>
-<a id="__codelineno-13-29" name="__codelineno-13-29" href="#__codelineno-13-29"></a><span class="w">        </span><span class="nt">&quot;Action&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-13-30" name="__codelineno-13-30" href="#__codelineno-13-30"></a><span class="w">            </span><span class="s2">&quot;s3:CreateBucket&quot;</span>
-<a id="__codelineno-13-31" name="__codelineno-13-31" href="#__codelineno-13-31"></a><span class="w">        </span><span class="p">],</span>
-<a id="__codelineno-13-32" name="__codelineno-13-32" href="#__codelineno-13-32"></a><span class="w">        </span><span class="nt">&quot;Resource&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-13-33" name="__codelineno-13-33" href="#__codelineno-13-33"></a><span class="w">            </span><span class="s2">&quot;arn:aws:s3:::aws-glue-*&quot;</span>
-<a id="__codelineno-13-34" name="__codelineno-13-34" href="#__codelineno-13-34"></a><span class="w">        </span><span class="p">]</span>
-<a id="__codelineno-13-35" name="__codelineno-13-35" href="#__codelineno-13-35"></a><span class="w">        </span><span class="p">},</span>
-<a id="__codelineno-13-36" name="__codelineno-13-36" href="#__codelineno-13-36"></a><span class="w">        </span><span class="p">{</span>
-<a id="__codelineno-13-37" name="__codelineno-13-37" href="#__codelineno-13-37"></a><span class="w">        </span><span class="nt">&quot;Effect&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Allow&quot;</span><span class="p">,</span>
-<a id="__codelineno-13-38" name="__codelineno-13-38" href="#__codelineno-13-38"></a><span class="w">        </span><span class="nt">&quot;Action&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-13-39" name="__codelineno-13-39" href="#__codelineno-13-39"></a><span class="w">            </span><span class="s2">&quot;s3:GetObject&quot;</span><span class="p">,</span>
-<a id="__codelineno-13-40" name="__codelineno-13-40" href="#__codelineno-13-40"></a><span class="w">            </span><span class="s2">&quot;s3:PutObject&quot;</span><span class="p">,</span>
-<a id="__codelineno-13-41" name="__codelineno-13-41" href="#__codelineno-13-41"></a><span class="w">            </span><span class="s2">&quot;s3:DeleteObject&quot;</span>
-<a id="__codelineno-13-42" name="__codelineno-13-42" href="#__codelineno-13-42"></a><span class="w">        </span><span class="p">],</span>
-<a id="__codelineno-13-43" name="__codelineno-13-43" href="#__codelineno-13-43"></a><span class="w">        </span><span class="nt">&quot;Resource&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-13-44" name="__codelineno-13-44" href="#__codelineno-13-44"></a><span class="w">            </span><span class="s2">&quot;arn:aws:s3:::aws-glue-*/*&quot;</span><span class="p">,</span>
-<a id="__codelineno-13-45" name="__codelineno-13-45" href="#__codelineno-13-45"></a><span class="w">            </span><span class="s2">&quot;arn:aws:s3:::*/*aws-glue-*/*&quot;</span>
-<a id="__codelineno-13-46" name="__codelineno-13-46" href="#__codelineno-13-46"></a><span class="w">        </span><span class="p">]</span>
-<a id="__codelineno-13-47" name="__codelineno-13-47" href="#__codelineno-13-47"></a><span class="w">        </span><span class="p">},</span>
-<a id="__codelineno-13-48" name="__codelineno-13-48" href="#__codelineno-13-48"></a><span class="w">        </span><span class="p">{</span>
-<a id="__codelineno-13-49" name="__codelineno-13-49" href="#__codelineno-13-49"></a><span class="w">        </span><span class="nt">&quot;Effect&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Allow&quot;</span><span class="p">,</span>
-<a id="__codelineno-13-50" name="__codelineno-13-50" href="#__codelineno-13-50"></a><span class="w">        </span><span class="nt">&quot;Action&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-13-51" name="__codelineno-13-51" href="#__codelineno-13-51"></a><span class="w">            </span><span class="s2">&quot;s3:GetObject&quot;</span>
-<a id="__codelineno-13-52" name="__codelineno-13-52" href="#__codelineno-13-52"></a><span class="w">        </span><span class="p">],</span>
-<a id="__codelineno-13-53" name="__codelineno-13-53" href="#__codelineno-13-53"></a><span class="w">        </span><span class="nt">&quot;Resource&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-13-54" name="__codelineno-13-54" href="#__codelineno-13-54"></a><span class="w">            </span><span class="s2">&quot;arn:aws:s3:::crawler-public*&quot;</span><span class="p">,</span>
-<a id="__codelineno-13-55" name="__codelineno-13-55" href="#__codelineno-13-55"></a><span class="w">            </span><span class="s2">&quot;arn:aws:s3:::aws-glue-*&quot;</span>
-<a id="__codelineno-13-56" name="__codelineno-13-56" href="#__codelineno-13-56"></a><span class="w">        </span><span class="p">]</span>
-<a id="__codelineno-13-57" name="__codelineno-13-57" href="#__codelineno-13-57"></a><span class="w">        </span><span class="p">},</span>
-<a id="__codelineno-13-58" name="__codelineno-13-58" href="#__codelineno-13-58"></a><span class="w">        </span><span class="p">{</span>
-<a id="__codelineno-13-59" name="__codelineno-13-59" href="#__codelineno-13-59"></a><span class="w">        </span><span class="nt">&quot;Effect&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Allow&quot;</span><span class="p">,</span>
-<a id="__codelineno-13-60" name="__codelineno-13-60" href="#__codelineno-13-60"></a><span class="w">        </span><span class="nt">&quot;Action&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-13-61" name="__codelineno-13-61" href="#__codelineno-13-61"></a><span class="w">            </span><span class="s2">&quot;logs:CreateLogGroup&quot;</span><span class="p">,</span>
-<a id="__codelineno-13-62" name="__codelineno-13-62" href="#__codelineno-13-62"></a><span class="w">            </span><span class="s2">&quot;logs:CreateLogStream&quot;</span><span class="p">,</span>
-<a id="__codelineno-13-63" name="__codelineno-13-63" href="#__codelineno-13-63"></a><span class="w">            </span><span class="s2">&quot;logs:PutLogEvents&quot;</span>
-<a id="__codelineno-13-64" name="__codelineno-13-64" href="#__codelineno-13-64"></a><span class="w">        </span><span class="p">],</span>
-<a id="__codelineno-13-65" name="__codelineno-13-65" href="#__codelineno-13-65"></a><span class="w">        </span><span class="nt">&quot;Resource&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-13-66" name="__codelineno-13-66" href="#__codelineno-13-66"></a><span class="w">            </span><span class="s2">&quot;arn:aws:logs:*:*:*:/aws-glue/*&quot;</span>
-<a id="__codelineno-13-67" name="__codelineno-13-67" href="#__codelineno-13-67"></a><span class="w">        </span><span class="p">]</span>
-<a id="__codelineno-13-68" name="__codelineno-13-68" href="#__codelineno-13-68"></a><span class="w">        </span><span class="p">},</span>
-<a id="__codelineno-13-69" name="__codelineno-13-69" href="#__codelineno-13-69"></a><span class="w">        </span><span class="p">{</span>
-<a id="__codelineno-13-70" name="__codelineno-13-70" href="#__codelineno-13-70"></a><span class="w">        </span><span class="nt">&quot;Effect&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Allow&quot;</span><span class="p">,</span>
-<a id="__codelineno-13-71" name="__codelineno-13-71" href="#__codelineno-13-71"></a><span class="w">        </span><span class="nt">&quot;Action&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-13-72" name="__codelineno-13-72" href="#__codelineno-13-72"></a><span class="w">            </span><span class="s2">&quot;ec2:CreateTags&quot;</span><span class="p">,</span>
-<a id="__codelineno-13-73" name="__codelineno-13-73" href="#__codelineno-13-73"></a><span class="w">            </span><span class="s2">&quot;ec2:DeleteTags&quot;</span>
-<a id="__codelineno-13-74" name="__codelineno-13-74" href="#__codelineno-13-74"></a><span class="w">        </span><span class="p">],</span>
-<a id="__codelineno-13-75" name="__codelineno-13-75" href="#__codelineno-13-75"></a><span class="w">        </span><span class="nt">&quot;Condition&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-13-76" name="__codelineno-13-76" href="#__codelineno-13-76"></a><span class="w">            </span><span class="nt">&quot;ForAllValues:StringEquals&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-13-77" name="__codelineno-13-77" href="#__codelineno-13-77"></a><span class="w">            </span><span class="nt">&quot;aws:TagKeys&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-13-78" name="__codelineno-13-78" href="#__codelineno-13-78"></a><span class="w">                </span><span class="s2">&quot;aws-glue-service-resource&quot;</span>
-<a id="__codelineno-13-79" name="__codelineno-13-79" href="#__codelineno-13-79"></a><span class="w">            </span><span class="p">]</span>
-<a id="__codelineno-13-80" name="__codelineno-13-80" href="#__codelineno-13-80"></a><span class="w">            </span><span class="p">}</span>
-<a id="__codelineno-13-81" name="__codelineno-13-81" href="#__codelineno-13-81"></a><span class="w">        </span><span class="p">},</span>
-<a id="__codelineno-13-82" name="__codelineno-13-82" href="#__codelineno-13-82"></a><span class="w">        </span><span class="nt">&quot;Resource&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-13-83" name="__codelineno-13-83" href="#__codelineno-13-83"></a><span class="w">            </span><span class="s2">&quot;arn:aws:ec2:*:*:network-interface/*&quot;</span><span class="p">,</span>
-<a id="__codelineno-13-84" name="__codelineno-13-84" href="#__codelineno-13-84"></a><span class="w">            </span><span class="s2">&quot;arn:aws:ec2:*:*:security-group/*&quot;</span><span class="p">,</span>
-<a id="__codelineno-13-85" name="__codelineno-13-85" href="#__codelineno-13-85"></a><span class="w">            </span><span class="s2">&quot;arn:aws:ec2:*:*:instance/*&quot;</span>
-<a id="__codelineno-13-86" name="__codelineno-13-86" href="#__codelineno-13-86"></a><span class="w">        </span><span class="p">]</span>
-<a id="__codelineno-13-87" name="__codelineno-13-87" href="#__codelineno-13-87"></a><span class="w">        </span><span class="p">},</span>
-<a id="__codelineno-13-88" name="__codelineno-13-88" href="#__codelineno-13-88"></a><span class="w">        </span><span class="p">{</span>
-<a id="__codelineno-13-89" name="__codelineno-13-89" href="#__codelineno-13-89"></a><span class="w">        </span><span class="nt">&quot;Effect&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Allow&quot;</span><span class="p">,</span>
-<a id="__codelineno-13-90" name="__codelineno-13-90" href="#__codelineno-13-90"></a><span class="w">        </span><span class="nt">&quot;Action&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-13-91" name="__codelineno-13-91" href="#__codelineno-13-91"></a><span class="w">            </span><span class="s2">&quot;s3:GetObject&quot;</span><span class="p">,</span>
-<a id="__codelineno-13-92" name="__codelineno-13-92" href="#__codelineno-13-92"></a><span class="w">            </span><span class="s2">&quot;s3:PutObject&quot;</span>
-<a id="__codelineno-13-93" name="__codelineno-13-93" href="#__codelineno-13-93"></a><span class="w">        </span><span class="p">],</span>
-<a id="__codelineno-13-94" name="__codelineno-13-94" href="#__codelineno-13-94"></a><span class="w">        </span><span class="nt">&quot;Resource&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-13-95" name="__codelineno-13-95" href="#__codelineno-13-95"></a><span class="w">            </span><span class="s2">&quot;arn:aws:s3:::meu-data-lake-xxx/*&quot;</span>
-<a id="__codelineno-13-96" name="__codelineno-13-96" href="#__codelineno-13-96"></a><span class="w">        </span><span class="p">]</span>
-<a id="__codelineno-13-97" name="__codelineno-13-97" href="#__codelineno-13-97"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-13-98" name="__codelineno-13-98" href="#__codelineno-13-98"></a><span class="w">    </span><span class="p">]</span>
-<a id="__codelineno-13-99" name="__codelineno-13-99" href="#__codelineno-13-99"></a><span class="w">    </span><span class="p">}</span>
+<div class="language-json highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="p">{</span>
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="w">    </span><span class="nt">&quot;Version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2012-10-17&quot;</span><span class="p">,</span>
+<a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="w">    </span><span class="nt">&quot;Statement&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a><span class="w">        </span><span class="p">{</span>
+<a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a><span class="w">        </span><span class="nt">&quot;Effect&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Allow&quot;</span><span class="p">,</span>
+<a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a><span class="w">        </span><span class="nt">&quot;Action&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-25-7" name="__codelineno-25-7" href="#__codelineno-25-7"></a><span class="w">            </span><span class="s2">&quot;glue:*&quot;</span><span class="p">,</span>
+<a id="__codelineno-25-8" name="__codelineno-25-8" href="#__codelineno-25-8"></a><span class="w">            </span><span class="s2">&quot;s3:GetBucketLocation&quot;</span><span class="p">,</span>
+<a id="__codelineno-25-9" name="__codelineno-25-9" href="#__codelineno-25-9"></a><span class="w">            </span><span class="s2">&quot;s3:ListBucket&quot;</span><span class="p">,</span>
+<a id="__codelineno-25-10" name="__codelineno-25-10" href="#__codelineno-25-10"></a><span class="w">            </span><span class="s2">&quot;s3:ListAllMyBuckets&quot;</span><span class="p">,</span>
+<a id="__codelineno-25-11" name="__codelineno-25-11" href="#__codelineno-25-11"></a><span class="w">            </span><span class="s2">&quot;s3:GetBucketAcl&quot;</span><span class="p">,</span>
+<a id="__codelineno-25-12" name="__codelineno-25-12" href="#__codelineno-25-12"></a><span class="w">            </span><span class="s2">&quot;ec2:DescribeVpcEndpoints&quot;</span><span class="p">,</span>
+<a id="__codelineno-25-13" name="__codelineno-25-13" href="#__codelineno-25-13"></a><span class="w">            </span><span class="s2">&quot;ec2:DescribeRouteTables&quot;</span><span class="p">,</span>
+<a id="__codelineno-25-14" name="__codelineno-25-14" href="#__codelineno-25-14"></a><span class="w">            </span><span class="s2">&quot;ec2:CreateNetworkInterface&quot;</span><span class="p">,</span>
+<a id="__codelineno-25-15" name="__codelineno-25-15" href="#__codelineno-25-15"></a><span class="w">            </span><span class="s2">&quot;ec2:DeleteNetworkInterface&quot;</span><span class="p">,</span>
+<a id="__codelineno-25-16" name="__codelineno-25-16" href="#__codelineno-25-16"></a><span class="w">            </span><span class="s2">&quot;ec2:DescribeNetworkInterfaces&quot;</span><span class="p">,</span>
+<a id="__codelineno-25-17" name="__codelineno-25-17" href="#__codelineno-25-17"></a><span class="w">            </span><span class="s2">&quot;ec2:DescribeSecurityGroups&quot;</span><span class="p">,</span>
+<a id="__codelineno-25-18" name="__codelineno-25-18" href="#__codelineno-25-18"></a><span class="w">            </span><span class="s2">&quot;ec2:DescribeSubnets&quot;</span><span class="p">,</span>
+<a id="__codelineno-25-19" name="__codelineno-25-19" href="#__codelineno-25-19"></a><span class="w">            </span><span class="s2">&quot;ec2:DescribeVpcAttribute&quot;</span><span class="p">,</span>
+<a id="__codelineno-25-20" name="__codelineno-25-20" href="#__codelineno-25-20"></a><span class="w">            </span><span class="s2">&quot;iam:ListRolePolicies&quot;</span><span class="p">,</span>
+<a id="__codelineno-25-21" name="__codelineno-25-21" href="#__codelineno-25-21"></a><span class="w">            </span><span class="s2">&quot;iam:GetRole&quot;</span><span class="p">,</span>
+<a id="__codelineno-25-22" name="__codelineno-25-22" href="#__codelineno-25-22"></a><span class="w">            </span><span class="s2">&quot;iam:GetRolePolicy&quot;</span><span class="p">,</span>
+<a id="__codelineno-25-23" name="__codelineno-25-23" href="#__codelineno-25-23"></a><span class="w">            </span><span class="s2">&quot;cloudwatch:PutMetricData&quot;</span>
+<a id="__codelineno-25-24" name="__codelineno-25-24" href="#__codelineno-25-24"></a><span class="w">        </span><span class="p">],</span>
+<a id="__codelineno-25-25" name="__codelineno-25-25" href="#__codelineno-25-25"></a><span class="w">        </span><span class="nt">&quot;Resource&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;*&quot;</span>
+<a id="__codelineno-25-26" name="__codelineno-25-26" href="#__codelineno-25-26"></a><span class="w">        </span><span class="p">},</span>
+<a id="__codelineno-25-27" name="__codelineno-25-27" href="#__codelineno-25-27"></a><span class="w">        </span><span class="p">{</span>
+<a id="__codelineno-25-28" name="__codelineno-25-28" href="#__codelineno-25-28"></a><span class="w">        </span><span class="nt">&quot;Effect&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Allow&quot;</span><span class="p">,</span>
+<a id="__codelineno-25-29" name="__codelineno-25-29" href="#__codelineno-25-29"></a><span class="w">        </span><span class="nt">&quot;Action&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-25-30" name="__codelineno-25-30" href="#__codelineno-25-30"></a><span class="w">            </span><span class="s2">&quot;s3:CreateBucket&quot;</span>
+<a id="__codelineno-25-31" name="__codelineno-25-31" href="#__codelineno-25-31"></a><span class="w">        </span><span class="p">],</span>
+<a id="__codelineno-25-32" name="__codelineno-25-32" href="#__codelineno-25-32"></a><span class="w">        </span><span class="nt">&quot;Resource&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-25-33" name="__codelineno-25-33" href="#__codelineno-25-33"></a><span class="w">            </span><span class="s2">&quot;arn:aws:s3:::aws-glue-*&quot;</span>
+<a id="__codelineno-25-34" name="__codelineno-25-34" href="#__codelineno-25-34"></a><span class="w">        </span><span class="p">]</span>
+<a id="__codelineno-25-35" name="__codelineno-25-35" href="#__codelineno-25-35"></a><span class="w">        </span><span class="p">},</span>
+<a id="__codelineno-25-36" name="__codelineno-25-36" href="#__codelineno-25-36"></a><span class="w">        </span><span class="p">{</span>
+<a id="__codelineno-25-37" name="__codelineno-25-37" href="#__codelineno-25-37"></a><span class="w">        </span><span class="nt">&quot;Effect&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Allow&quot;</span><span class="p">,</span>
+<a id="__codelineno-25-38" name="__codelineno-25-38" href="#__codelineno-25-38"></a><span class="w">        </span><span class="nt">&quot;Action&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-25-39" name="__codelineno-25-39" href="#__codelineno-25-39"></a><span class="w">            </span><span class="s2">&quot;s3:GetObject&quot;</span><span class="p">,</span>
+<a id="__codelineno-25-40" name="__codelineno-25-40" href="#__codelineno-25-40"></a><span class="w">            </span><span class="s2">&quot;s3:PutObject&quot;</span><span class="p">,</span>
+<a id="__codelineno-25-41" name="__codelineno-25-41" href="#__codelineno-25-41"></a><span class="w">            </span><span class="s2">&quot;s3:DeleteObject&quot;</span>
+<a id="__codelineno-25-42" name="__codelineno-25-42" href="#__codelineno-25-42"></a><span class="w">        </span><span class="p">],</span>
+<a id="__codelineno-25-43" name="__codelineno-25-43" href="#__codelineno-25-43"></a><span class="w">        </span><span class="nt">&quot;Resource&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-25-44" name="__codelineno-25-44" href="#__codelineno-25-44"></a><span class="w">            </span><span class="s2">&quot;arn:aws:s3:::aws-glue-*/*&quot;</span><span class="p">,</span>
+<a id="__codelineno-25-45" name="__codelineno-25-45" href="#__codelineno-25-45"></a><span class="w">            </span><span class="s2">&quot;arn:aws:s3:::*/*aws-glue-*/*&quot;</span>
+<a id="__codelineno-25-46" name="__codelineno-25-46" href="#__codelineno-25-46"></a><span class="w">        </span><span class="p">]</span>
+<a id="__codelineno-25-47" name="__codelineno-25-47" href="#__codelineno-25-47"></a><span class="w">        </span><span class="p">},</span>
+<a id="__codelineno-25-48" name="__codelineno-25-48" href="#__codelineno-25-48"></a><span class="w">        </span><span class="p">{</span>
+<a id="__codelineno-25-49" name="__codelineno-25-49" href="#__codelineno-25-49"></a><span class="w">        </span><span class="nt">&quot;Effect&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Allow&quot;</span><span class="p">,</span>
+<a id="__codelineno-25-50" name="__codelineno-25-50" href="#__codelineno-25-50"></a><span class="w">        </span><span class="nt">&quot;Action&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-25-51" name="__codelineno-25-51" href="#__codelineno-25-51"></a><span class="w">            </span><span class="s2">&quot;s3:GetObject&quot;</span>
+<a id="__codelineno-25-52" name="__codelineno-25-52" href="#__codelineno-25-52"></a><span class="w">        </span><span class="p">],</span>
+<a id="__codelineno-25-53" name="__codelineno-25-53" href="#__codelineno-25-53"></a><span class="w">        </span><span class="nt">&quot;Resource&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-25-54" name="__codelineno-25-54" href="#__codelineno-25-54"></a><span class="w">            </span><span class="s2">&quot;arn:aws:s3:::crawler-public*&quot;</span><span class="p">,</span>
+<a id="__codelineno-25-55" name="__codelineno-25-55" href="#__codelineno-25-55"></a><span class="w">            </span><span class="s2">&quot;arn:aws:s3:::aws-glue-*&quot;</span>
+<a id="__codelineno-25-56" name="__codelineno-25-56" href="#__codelineno-25-56"></a><span class="w">        </span><span class="p">]</span>
+<a id="__codelineno-25-57" name="__codelineno-25-57" href="#__codelineno-25-57"></a><span class="w">        </span><span class="p">},</span>
+<a id="__codelineno-25-58" name="__codelineno-25-58" href="#__codelineno-25-58"></a><span class="w">        </span><span class="p">{</span>
+<a id="__codelineno-25-59" name="__codelineno-25-59" href="#__codelineno-25-59"></a><span class="w">        </span><span class="nt">&quot;Effect&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Allow&quot;</span><span class="p">,</span>
+<a id="__codelineno-25-60" name="__codelineno-25-60" href="#__codelineno-25-60"></a><span class="w">        </span><span class="nt">&quot;Action&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-25-61" name="__codelineno-25-61" href="#__codelineno-25-61"></a><span class="w">            </span><span class="s2">&quot;logs:CreateLogGroup&quot;</span><span class="p">,</span>
+<a id="__codelineno-25-62" name="__codelineno-25-62" href="#__codelineno-25-62"></a><span class="w">            </span><span class="s2">&quot;logs:CreateLogStream&quot;</span><span class="p">,</span>
+<a id="__codelineno-25-63" name="__codelineno-25-63" href="#__codelineno-25-63"></a><span class="w">            </span><span class="s2">&quot;logs:PutLogEvents&quot;</span>
+<a id="__codelineno-25-64" name="__codelineno-25-64" href="#__codelineno-25-64"></a><span class="w">        </span><span class="p">],</span>
+<a id="__codelineno-25-65" name="__codelineno-25-65" href="#__codelineno-25-65"></a><span class="w">        </span><span class="nt">&quot;Resource&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-25-66" name="__codelineno-25-66" href="#__codelineno-25-66"></a><span class="w">            </span><span class="s2">&quot;arn:aws:logs:*:*:*:/aws-glue/*&quot;</span>
+<a id="__codelineno-25-67" name="__codelineno-25-67" href="#__codelineno-25-67"></a><span class="w">        </span><span class="p">]</span>
+<a id="__codelineno-25-68" name="__codelineno-25-68" href="#__codelineno-25-68"></a><span class="w">        </span><span class="p">},</span>
+<a id="__codelineno-25-69" name="__codelineno-25-69" href="#__codelineno-25-69"></a><span class="w">        </span><span class="p">{</span>
+<a id="__codelineno-25-70" name="__codelineno-25-70" href="#__codelineno-25-70"></a><span class="w">        </span><span class="nt">&quot;Effect&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Allow&quot;</span><span class="p">,</span>
+<a id="__codelineno-25-71" name="__codelineno-25-71" href="#__codelineno-25-71"></a><span class="w">        </span><span class="nt">&quot;Action&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-25-72" name="__codelineno-25-72" href="#__codelineno-25-72"></a><span class="w">            </span><span class="s2">&quot;ec2:CreateTags&quot;</span><span class="p">,</span>
+<a id="__codelineno-25-73" name="__codelineno-25-73" href="#__codelineno-25-73"></a><span class="w">            </span><span class="s2">&quot;ec2:DeleteTags&quot;</span>
+<a id="__codelineno-25-74" name="__codelineno-25-74" href="#__codelineno-25-74"></a><span class="w">        </span><span class="p">],</span>
+<a id="__codelineno-25-75" name="__codelineno-25-75" href="#__codelineno-25-75"></a><span class="w">        </span><span class="nt">&quot;Condition&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-25-76" name="__codelineno-25-76" href="#__codelineno-25-76"></a><span class="w">            </span><span class="nt">&quot;ForAllValues:StringEquals&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-25-77" name="__codelineno-25-77" href="#__codelineno-25-77"></a><span class="w">            </span><span class="nt">&quot;aws:TagKeys&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-25-78" name="__codelineno-25-78" href="#__codelineno-25-78"></a><span class="w">                </span><span class="s2">&quot;aws-glue-service-resource&quot;</span>
+<a id="__codelineno-25-79" name="__codelineno-25-79" href="#__codelineno-25-79"></a><span class="w">            </span><span class="p">]</span>
+<a id="__codelineno-25-80" name="__codelineno-25-80" href="#__codelineno-25-80"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-25-81" name="__codelineno-25-81" href="#__codelineno-25-81"></a><span class="w">        </span><span class="p">},</span>
+<a id="__codelineno-25-82" name="__codelineno-25-82" href="#__codelineno-25-82"></a><span class="w">        </span><span class="nt">&quot;Resource&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-25-83" name="__codelineno-25-83" href="#__codelineno-25-83"></a><span class="w">            </span><span class="s2">&quot;arn:aws:ec2:*:*:network-interface/*&quot;</span><span class="p">,</span>
+<a id="__codelineno-25-84" name="__codelineno-25-84" href="#__codelineno-25-84"></a><span class="w">            </span><span class="s2">&quot;arn:aws:ec2:*:*:security-group/*&quot;</span><span class="p">,</span>
+<a id="__codelineno-25-85" name="__codelineno-25-85" href="#__codelineno-25-85"></a><span class="w">            </span><span class="s2">&quot;arn:aws:ec2:*:*:instance/*&quot;</span>
+<a id="__codelineno-25-86" name="__codelineno-25-86" href="#__codelineno-25-86"></a><span class="w">        </span><span class="p">]</span>
+<a id="__codelineno-25-87" name="__codelineno-25-87" href="#__codelineno-25-87"></a><span class="w">        </span><span class="p">},</span>
+<a id="__codelineno-25-88" name="__codelineno-25-88" href="#__codelineno-25-88"></a><span class="w">        </span><span class="p">{</span>
+<a id="__codelineno-25-89" name="__codelineno-25-89" href="#__codelineno-25-89"></a><span class="w">        </span><span class="nt">&quot;Effect&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Allow&quot;</span><span class="p">,</span>
+<a id="__codelineno-25-90" name="__codelineno-25-90" href="#__codelineno-25-90"></a><span class="w">        </span><span class="nt">&quot;Action&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-25-91" name="__codelineno-25-91" href="#__codelineno-25-91"></a><span class="w">            </span><span class="s2">&quot;s3:GetObject&quot;</span><span class="p">,</span>
+<a id="__codelineno-25-92" name="__codelineno-25-92" href="#__codelineno-25-92"></a><span class="w">            </span><span class="s2">&quot;s3:PutObject&quot;</span>
+<a id="__codelineno-25-93" name="__codelineno-25-93" href="#__codelineno-25-93"></a><span class="w">        </span><span class="p">],</span>
+<a id="__codelineno-25-94" name="__codelineno-25-94" href="#__codelineno-25-94"></a><span class="w">        </span><span class="nt">&quot;Resource&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-25-95" name="__codelineno-25-95" href="#__codelineno-25-95"></a><span class="w">            </span><span class="s2">&quot;arn:aws:s3:::meu-data-lake-xxx/*&quot;</span>
+<a id="__codelineno-25-96" name="__codelineno-25-96" href="#__codelineno-25-96"></a><span class="w">        </span><span class="p">]</span>
+<a id="__codelineno-25-97" name="__codelineno-25-97" href="#__codelineno-25-97"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-25-98" name="__codelineno-25-98" href="#__codelineno-25-98"></a><span class="w">    </span><span class="p">]</span>
+<a id="__codelineno-25-99" name="__codelineno-25-99" href="#__codelineno-25-99"></a><span class="w">    </span><span class="p">}</span>
 </code></pre></div>
 <p>Analise a política e liste algumas permissões concedidas.</p>
 </details>
@@ -3204,19 +3342,19 @@ body {
 <p class="admonition-title">Exercise</p>
 <form class="quiz-form"><p>Crie a role <code>role-glue-meu-data-lake-s3</code> com a política anexada <code>policy-glue-meu-data-lake-s3</code>.</p>
 <div class="termy">
-<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>$ aws iam create-role \
-<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>    --role-name role-glue-meu-data-lake-s3 \
-<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>    --assume-role-policy-document file://glue_etl_crawler_s3_role.json \
-<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>    --profile dataeng
+<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>$ aws iam create-role \
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>    --role-name role-glue-meu-data-lake-s3 \
+<a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>    --assume-role-policy-document file://glue_etl_crawler_s3_role.json \
+<a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a>    --profile dataeng
 </code></pre></div>
 <p></div>
 <br></p>
 <div class="termy">
-<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>$ aws iam put-role-policy \
-<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>    --role-name role-glue-meu-data-lake-s3 \
-<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>    --policy-name policy-glue-meu-data-lake-s3 \
-<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>    --policy-document file://glue_etl_crawler_s3_policy.json \
-<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>    --profile dataeng
+<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>$ aws iam put-role-policy \
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>    --role-name role-glue-meu-data-lake-s3 \
+<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>    --policy-name policy-glue-meu-data-lake-s3 \
+<a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a>    --policy-document file://glue_etl_crawler_s3_policy.json \
+<a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a>    --profile dataeng
 </code></pre></div>
 </div>
 <div class="form-elements">
@@ -3228,16 +3366,50 @@ body {
 <div class="admonition exercise exercise-self-progress" id="exercise_12">
 <p class="admonition-title">Exercise</p>
 <form class="quiz-form"><p>Para criar o <strong>crawler</strong>, utilize:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:3"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><input id="__tabbed_7_3" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">Linux/Mac</label><label for="__tabbed_7_2">Powershell</label><label for="__tabbed_7_3">CMD</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="termy">
-<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>$ aws glue create-crawler \
-<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>    --profile dataeng \
-<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>    --region us-east-1 \
-<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>    --name meu-crawler-olist \
-<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>    --role role-glue-meu-data-lake-s3 \
-<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>    --database-name meu-db-olist \
-<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>    --targets &quot;S3Targets=[{Path=\&quot;s3://meu-data-lake-$INSPER_USERNAME/raw/\&quot;}]&quot; \
-<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>    --schema-change-policy UpdateBehavior=UPDATE_IN_DATABASE,DeleteBehavior=DEPRECATE_IN_DATABASE
+<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>$ aws glue create-crawler \
+<a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>    --profile dataeng \
+<a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a>    --region us-east-1 \
+<a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a>    --name meu-crawler-olist \
+<a id="__codelineno-28-5" name="__codelineno-28-5" href="#__codelineno-28-5"></a>    --role role-glue-meu-data-lake-s3 \
+<a id="__codelineno-28-6" name="__codelineno-28-6" href="#__codelineno-28-6"></a>    --database-name meu-db-olist \
+<a id="__codelineno-28-7" name="__codelineno-28-7" href="#__codelineno-28-7"></a>    --targets &quot;S3Targets=[{Path=\&quot;s3://meu-data-lake-$INSPER_USERNAME/raw/\&quot;}]&quot; \
+<a id="__codelineno-28-8" name="__codelineno-28-8" href="#__codelineno-28-8"></a>    --schema-change-policy UpdateBehavior=UPDATE_IN_DATABASE,DeleteBehavior=DEPRECATE_IN_DATABASE
 </code></pre></div>
+</div>
+</div>
+<div class="tabbed-block">
+<div class="termy">
+<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>$ $env:INSPER_USERNAME = &quot;seu-usuario-insper&quot;
+<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>$ aws glue create-crawler `
+<a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a>    --profile dataeng `
+<a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a>    --region us-east-1 `
+<a id="__codelineno-29-5" name="__codelineno-29-5" href="#__codelineno-29-5"></a>    --name meu-crawler-olist `
+<a id="__codelineno-29-6" name="__codelineno-29-6" href="#__codelineno-29-6"></a>    --role role-glue-meu-data-lake-s3 `
+<a id="__codelineno-29-7" name="__codelineno-29-7" href="#__codelineno-29-7"></a>    --database-name meu-db-olist `
+<a id="__codelineno-29-8" name="__codelineno-29-8" href="#__codelineno-29-8"></a>    --targets &quot;S3Targets=[{Path=&#39;s3://meu-data-lake-$($env:INSPER_USERNAME)/raw/&#39;}]&quot; `
+<a id="__codelineno-29-9" name="__codelineno-29-9" href="#__codelineno-29-9"></a>    --schema-change-policy UpdateBehavior=UPDATE_IN_DATABASE,DeleteBehavior=DEPRECATE_IN_DATABASE
+</code></pre></div>
+</div>
+</div>
+<div class="tabbed-block">
+<div class="termy">
+<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>$ set INSPER_USERNAME=seu-usuario-insper
+<a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>$ aws glue create-crawler ^
+<a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a>    --profile dataeng ^
+<a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a>    --region us-east-1 ^
+<a id="__codelineno-30-5" name="__codelineno-30-5" href="#__codelineno-30-5"></a>    --name meu-crawler-olist ^
+<a id="__codelineno-30-6" name="__codelineno-30-6" href="#__codelineno-30-6"></a>    --role role-glue-meu-data-lake-s3 ^
+<a id="__codelineno-30-7" name="__codelineno-30-7" href="#__codelineno-30-7"></a>    --database-name meu-db-olist ^
+<a id="__codelineno-30-8" name="__codelineno-30-8" href="#__codelineno-30-8"></a>    --targets &quot;S3Targets=[{Path=\&quot;s3://meu-data-lake-%INSPER_USERNAME%/raw/\&quot;}]&quot; ^
+<a id="__codelineno-30-9" name="__codelineno-30-9" href="#__codelineno-30-9"></a>    --schema-change-policy UpdateBehavior=UPDATE_IN_DATABASE,DeleteBehavior=DEPRECATE_IN_DATABASE
+</code></pre></div>
+</div>
+</div>
+</div>
 </div>
 <div class="form-elements">
 <div class="quiz-self-progress">
@@ -3262,10 +3434,10 @@ body {
 <p class="admonition-title">Dica!</p>
 <p>Caso queira fazer por <strong>AWS CLI</strong>, utilize:</p>
 <div class="termy">
-<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>$ aws glue start-crawler \
-<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>    --profile dataeng \
-<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>    --region us-east-1 \
-<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>    --name meu-crawler-olist
+<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>$ aws glue start-crawler \
+<a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>    --profile dataeng \
+<a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a>    --region us-east-1 \
+<a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a>    --name meu-crawler-olist
 </code></pre></div>
 </div>
 </div>
@@ -3312,11 +3484,11 @@ body {
 <p>Em seguida, no menu esquerdo, escolha o database <code>meu-db-olist</code> criado anteriormente.</p>
 <p><img alt="" src="../athena-menu.png" /></p>
 <p>No editor de consultas, teste algumas consultas envolvendo as duas tabelas.</p>
-<div class="language-sql highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">qtde_itens_vendidos</span><span class="p">,</span>
-<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="w">      </span><span class="k">SUM</span><span class="p">(</span><span class="n">price</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">vlr_total_vendido</span>
-<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="k">FROM</span><span class="w"> </span><span class="n">olist_order_items</span><span class="p">;</span>
-<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>
-<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">olist_order_items</span><span class="w"> </span><span class="k">LIMIT</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<div class="language-sql highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">qtde_itens_vendidos</span><span class="p">,</span>
+<a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a><span class="w">      </span><span class="k">SUM</span><span class="p">(</span><span class="n">price</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">vlr_total_vendido</span>
+<a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a><span class="k">FROM</span><span class="w"> </span><span class="n">olist_order_items</span><span class="p">;</span>
+<a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a>
+<a id="__codelineno-32-5" name="__codelineno-32-5" href="#__codelineno-32-5"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">olist_order_items</span><span class="w"> </span><span class="k">LIMIT</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
 </code></pre></div>
 <div class="admonition tip">
 <p class="admonition-title">Dica!</p>
@@ -3341,8 +3513,8 @@ body {
 <li><code>olist_order_items</code>: 112650 linhas</li>
 <li><code>olist_products</code>: 32951 linhas</li>
 </ul>
-<div class="language-sql highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">olist_order_items</span><span class="p">;</span><span class="w"> </span><span class="c1">-- 112650</span>
-<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">olist_products</span><span class="p">;</span><span class="w"> </span><span class="c1">-- 32951</span>
+<div class="language-sql highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">olist_order_items</span><span class="p">;</span><span class="w"> </span><span class="c1">-- 112650</span>
+<a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">olist_products</span><span class="p">;</span><span class="w"> </span><span class="c1">-- 32951</span>
 </code></pre></div>
 </div>
 </div>
@@ -3359,12 +3531,12 @@ body {
 <button class="quiz-submit-button" type="submit">Submit</button>
 </div></form><div class="admonition answer quiz-answer no-indent">
 <p class="admonition-title">Answer</p>
-<div class="language-sql highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">product_category_name</span><span class="p">,</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">qtde_itens_vendidos</span>
-<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">olist_order_items</span><span class="w"> </span><span class="n">oi</span>
-<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="k">JOIN</span><span class="w"> </span><span class="n">olist_products</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">oi</span><span class="p">.</span><span class="n">product_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">product_id</span>
-<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">product_category_name</span>
-<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">qtde_itens_vendidos</span><span class="w"> </span><span class="k">DESC</span>
-<a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a><span class="k">LIMIT</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<div class="language-sql highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">product_category_name</span><span class="p">,</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">qtde_itens_vendidos</span>
+<a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">olist_order_items</span><span class="w"> </span><span class="n">oi</span>
+<a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a><span class="k">JOIN</span><span class="w"> </span><span class="n">olist_products</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">oi</span><span class="p">.</span><span class="n">product_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">product_id</span>
+<a id="__codelineno-34-4" name="__codelineno-34-4" href="#__codelineno-34-4"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">product_category_name</span>
+<a id="__codelineno-34-5" name="__codelineno-34-5" href="#__codelineno-34-5"></a><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">qtde_itens_vendidos</span><span class="w"> </span><span class="k">DESC</span>
+<a id="__codelineno-34-6" name="__codelineno-34-6" href="#__codelineno-34-6"></a><span class="k">LIMIT</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
 </code></pre></div>
 <table>
 <thead>
@@ -3621,7 +3793,7 @@ body {
 </div>
 </div></form><div class="admonition answer quiz-answer no-indent">
 <p class="admonition-title">Answer</p>
-<div class="language-sql highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">order_items_products</span><span class="p">;</span>
+<div class="language-sql highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">order_items_products</span><span class="p">;</span>
 </code></pre></div>
 </div>
 </div>
