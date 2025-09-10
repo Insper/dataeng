@@ -370,22 +370,70 @@ Inicialmente, criaremos um **database** no **Glue Data Catalog** para organizar 
 !!! exercise
     Crie Database no Glue Data Catalog com o nome `meu-db-olist`. Execute este comando no terminal:
 
-    <!-- <div class="termy"> -->
+    === "Linux/Mac"
+        <!-- <div class="termy"> -->
 
-    ```
-    aws glue create-database \
-        --profile dataeng \
-        --region us-east-1 \
-        --database-input '{
-            "Name": "meu-db-olist",
+        ```
+        aws glue create-database \
+            --profile dataeng \
+            --region us-east-1 \
+            --database-input '{
+                "Name": "meu-db-olist",
+                "Description": "Database de exemplo para Glue com base Olist",
+                "Parameters": {
+                "CreatedBy": "AWS CLI"
+                }
+            }'
+        ```
+
+        <!-- </div> -->
+    === "Powershell"
+        Crie um arquivo `db.json` com o seguinte conteúdo:
+
+        ```json
+        {
+            "Name": "meu-db-olistasd",
             "Description": "Database de exemplo para Glue com base Olist",
-            "Parameters": {
-            "CreatedBy": "AWS CLI"
-            }
-        }'
-    ```
+            "Parameters": { "CreatedBy": "AWS CLI" }
+        }
+        ```
 
-    <!-- </div> -->
+        Rode:
+
+        <div class="termy">
+
+        ```
+        $ aws glue create-database `
+            --profile dataeng `
+            --region us-east-1 `
+            --database-input file://db.json
+        ```
+
+        </div>
+    
+    === "CMD"
+        Crie um arquivo `db.json` com o seguinte conteúdo:
+
+        ```json
+        {
+            "Name": "meu-db-olistasd",
+            "Description": "Database de exemplo para Glue com base Olist",
+            "Parameters": { "CreatedBy": "AWS CLI" }
+        }
+        ```
+
+        Rode:
+
+        <div class="termy">
+
+        ```
+        $ aws glue create-database ^
+            --profile dataeng ^
+            --region us-east-1 ^
+            --database-input file://db.json
+        ```
+
+        </div>
 
 !!! exercise
     Acesse o console do **AWS Glue** e verifique se o database `meu-db-olist` foi criado corretamente.
@@ -646,6 +694,11 @@ Em seguida, no menu esquerdo, escolha o database `meu-db-olist` criado anteriorm
 ![](athena-menu.png)
 
 No editor de consultas, teste algumas consultas envolvendo as duas tabelas.
+
+!!! warning "Query result location"
+    Caso o **Athena** solicite uma pasta para salvar os resultados das consultas, informe a pasta `athena-results/` dentro do seu *bucket*.
+
+    Por exemplo: `s3://meu-data-lake-<INSPER_USERNAME>/athena-results/`
 
 ```sql
 SELECT COUNT(*) AS qtde_itens_vendidos,
