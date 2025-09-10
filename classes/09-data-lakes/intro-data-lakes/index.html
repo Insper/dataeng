@@ -2883,9 +2883,6 @@ body {
 <div class="admonition exercise text long exercise-long" id="exercise_4">
 <p class="admonition-title">Exercise</p>
 <form class="quiz-form"><p>Em poucas frases, compare <em>schema-on-write</em> e <em>schema-on-read</em>, destacando impacto no tempo de disponibilização dos dados.</p>
-<p>!!! answer "Resposta
-    - <em>Schema-on-write</em> exige definir o esquema antes de armazenar os dados, o que pode atrasar a ingestão, mas garante consistência imediata.
-    - <em>Schema-on-read</em> permite armazenar dados brutos rapidamente, adiando a definição do esquema para o momento da leitura, o que acelera a disponibilização inicial dos dados.</p>
 <div class="form-elements">
 <div class="quiz-text-container">
 
@@ -2894,7 +2891,14 @@ body {
 
 </div>
 <button class="quiz-submit-button" type="submit">Submit</button>
-</div></form></div>
+</div></form><div class="admonition answer quiz-answer no-indent">
+<p class="admonition-title">Answer</p>
+<ul>
+<li><em>Schema-on-write</em> exige definir o esquema antes de armazenar os dados, o que pode atrasar a ingestão, mas garante consistência imediata.</li>
+<li><em>Schema-on-read</em> permite armazenar dados brutos rapidamente, adiando a definição do esquema para o momento da leitura, o que acelera a disponibilização inicial dos dados.</li>
+</ul>
+</div>
+</div>
 <div class="admonition exercise choice exercise-choice" data-answer-idx="1" id="exercise_1">
 <p class="admonition-title">Question</p>
 <form class="quiz-form"><p>Em um <strong>Data Lake</strong> baseado em S3, não é permitido utilizar <em>Parquets</em>, dado que arquivos <em>Parquets</em> possuem <em>schema</em> embutido.</p>
