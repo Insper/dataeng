@@ -13,10 +13,10 @@
       
       
       
-        <link rel="prev" href="../intro-cron/">
+        <link rel="prev" href="../../08-interview-01/int01/">
       
       
-        <link rel="next" href="../prefect/">
+        <link rel="next" href="../aws-glue/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Orquestração - Engenharia de Dados</title>
+        <title>Introdução Data Lakes - Engenharia de Dados</title>
       
     
     
@@ -81,7 +81,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#orquestracao" class="md-skip">
+        <a href="#introducao-data-lakes" class="md-skip">
           Skip to content
         </a>
       
@@ -117,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Orquestração
+              Introdução Data Lakes
             
           </span>
         </div>
@@ -1461,10 +1461,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -1483,11 +1481,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
         
           
           <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
@@ -1503,7 +1501,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_6">
             <span class="md-nav__icon md-icon"></span>
             06 - Intro Orquestração
@@ -1517,7 +1515,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../intro-cron/" class="md-nav__link">
+      <a href="../../06-intro-orchestration/intro-cron/" class="md-nav__link">
         
   
   
@@ -1537,32 +1535,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Orquestração
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../06-intro-orchestration/intro-orchestration/" class="md-nav__link">
         
   
   
@@ -1573,155 +1549,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#introducao" class="md-nav__link">
-    <span class="md-ellipsis">
-      Introdução
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#o-que-e-orquestracao-de-dados" class="md-nav__link">
-    <span class="md-ellipsis">
-      O que é Orquestração de Dados?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conceitos-fundamentais" class="md-nav__link">
-    <span class="md-ellipsis">
-      Conceitos Fundamentais
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Conceitos Fundamentais">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#dag-directed-acyclic-graph" class="md-nav__link">
-    <span class="md-ellipsis">
-      DAG (Directed Acyclic Graph)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tarefas-tasks" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tarefas (Tasks)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dependencias" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dependências
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ferramentas-de-orquestracao" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ferramentas de Orquestração
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Ferramentas de Orquestração">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#apache-airflow" class="md-nav__link">
-    <span class="md-ellipsis">
-      Apache Airflow
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#prefect" class="md-nav__link">
-    <span class="md-ellipsis">
-      Prefect
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#outros-orquestradores" class="md-nav__link">
-    <span class="md-ellipsis">
-      Outros Orquestradores
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#por-que-usar-orquestracao" class="md-nav__link">
-    <span class="md-ellipsis">
-      Por que Usar Orquestração?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#quando-usar-orquestracao" class="md-nav__link">
-    <span class="md-ellipsis">
-      Quando Usar Orquestração?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#proximos-passos" class="md-nav__link">
-    <span class="md-ellipsis">
-      Próximos Passos
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1734,7 +1561,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../prefect/" class="md-nav__link">
+      <a href="../../06-intro-orchestration/prefect/" class="md-nav__link">
         
   
   
@@ -1757,7 +1584,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../references/" class="md-nav__link">
+      <a href="../../06-intro-orchestration/references/" class="md-nav__link">
         
   
   
@@ -2062,8 +1889,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -2078,11 +1907,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9" checked>
         
           
           <label class="md-nav__link" for="__nav_2_9" id="__nav_2_9_label" tabindex="0">
@@ -2098,7 +1927,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_9">
             <span class="md-nav__icon md-icon"></span>
             09 - Data Lakes
@@ -2109,10 +1938,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../09-data-lakes/intro-data-lakes/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Introdução Data Lakes
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -2123,6 +1974,71 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introducao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introdução
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#por-que-nao-so-data-warehouse" class="md-nav__link">
+    <span class="md-ellipsis">
+      Por que não só Data Warehouse?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caracteristicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Características
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#camadas-logicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Camadas Lógicas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checagem-rapida" class="md-nav__link">
+    <span class="md-ellipsis">
+      Checagem Rápida
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2135,7 +2051,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../09-data-lakes/aws-glue/" class="md-nav__link">
+      <a href="../aws-glue/" class="md-nav__link">
         
   
   
@@ -2343,120 +2259,36 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#o-que-e-orquestracao-de-dados" class="md-nav__link">
+  <a href="#por-que-nao-so-data-warehouse" class="md-nav__link">
     <span class="md-ellipsis">
-      O que é Orquestração de Dados?
+      Por que não só Data Warehouse?
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#conceitos-fundamentais" class="md-nav__link">
+  <a href="#caracteristicas" class="md-nav__link">
     <span class="md-ellipsis">
-      Conceitos Fundamentais
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Conceitos Fundamentais">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#dag-directed-acyclic-graph" class="md-nav__link">
-    <span class="md-ellipsis">
-      DAG (Directed Acyclic Graph)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tarefas-tasks" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tarefas (Tasks)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dependencias" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dependências
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ferramentas-de-orquestracao" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ferramentas de Orquestração
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Ferramentas de Orquestração">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#apache-airflow" class="md-nav__link">
-    <span class="md-ellipsis">
-      Apache Airflow
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#prefect" class="md-nav__link">
-    <span class="md-ellipsis">
-      Prefect
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#outros-orquestradores" class="md-nav__link">
-    <span class="md-ellipsis">
-      Outros Orquestradores
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#por-que-usar-orquestracao" class="md-nav__link">
-    <span class="md-ellipsis">
-      Por que Usar Orquestração?
+      Características
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#quando-usar-orquestracao" class="md-nav__link">
+  <a href="#camadas-logicas" class="md-nav__link">
     <span class="md-ellipsis">
-      Quando Usar Orquestração?
+      Camadas Lógicas
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#proximos-passos" class="md-nav__link">
+  <a href="#checagem-rapida" class="md-nav__link">
     <span class="md-ellipsis">
-      Próximos Passos
+      Checagem Rápida
     </span>
   </a>
   
@@ -2895,20 +2727,25 @@ body {
   }
 }
 </style>
-<h1 id="orquestracao">Orquestração</h1>
+<h1 id="introducao-data-lakes">Introdução Data Lakes</h1>
 <h2 id="introducao">Introdução</h2>
-<p>Na <a href="../intro-cron/">página anterior</a> exploramos como o <strong>cron</strong> pode ser utilizado para agendar tarefas, mas também identificamos suas limitações para ambientes de produção em engenharia de dados.</p>
-<p>Quando lidamos com <strong>pipelines de dados</strong> complexos, precisamos de algo mais robusto que simples agendamento temporal. Imagine um cenário onde você precisa:</p>
-<ul>
-<li>Processar dados de vendas após o backup do banco estar completo</li>
-<li>Executar transformações apenas quando novos arquivos chegarem</li>
-<li>Reprocessar dados caso uma etapa falhe</li>
-<li>Monitorar o <em>status</em> de cada etapa do <em>pipeline</em></li>
-</ul>
-<p>Para atender a essas necessidades, surgiu o conceito de <strong>orquestração de dados</strong>.</p>
+<p>No cenário atual, o engenheiro de dados nem sempre irá ingerir tabelas bem definidas. Logs de aplicação, eventos de sensores, cliques, imagens e textos competem por espaço nas arquiteturas de dados. Uma outra alternativa para armazenar esses dados é o <strong>Data Lake</strong>.</p>
+<p>Um <strong>Data Lake</strong> é um repositório de armazenamento de grande escala que mantém <strong>dados brutos no formato nativo</strong>.</p>
+<p>Sua popularização cresceu mais significativamente por volta de 2010, quando <strong>data warehouses</strong> relacionais passaram a sofrer com volume, variedade e velocidade de dados semi ou não estruturados.</p>
+<div class="admonition quote">
+<p class="admonition-title">A pergunta que motivou o surgimento do <strong>Data Lake</strong> foi:</p>
+<p><em>Como guardar tudo isso agora, mesmo sem saber ainda todos os usos futuros?</em></p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Metáfora</p>
+<p>Assim como um lago recebe diferentes afluentes sem tentar "padronizar" a água, o Data Lake aceita múltiplos formatos (estruturado, semi-estruturado, não estruturado) sem impor um esquema antecipado.</p>
+</div>
+<p>Um <strong>Data Lake</strong> funciona como um repositório centralizado que pode conter tanto cópias não processadas de dados de sistemas de origem, (sensores, logs, sistemas), quanto informações já transformadas para uso em <em>dashboards</em>, análises avançadas ou treinamento de modelos.</p>
+<h2 id="por-que-nao-so-data-warehouse">Por que não só Data Warehouse?</h2>
+<p>O warehouse tradicional parte de um modelo pré-definido (<strong>schema-on-write</strong>). Isso exige decidir colunas, tipos e regras antes de carregar. Para dados novos e caóticos, esse atrito gera atraso. O <strong>Data Lake</strong> inverte essa lógica: armazena agora, interpreta depois (<strong>schema-on-read</strong>). Assim, a modelagem e padronização ficam próximas do momento de consumo ou de etapas de refinamento.</p>
 <div class="admonition exercise text long exercise-long" id="exercise_1">
-<p class="admonition-title">Exercício</p>
-<form class="quiz-form"><p>Com base na sua experiência nas aulas anteriores, quais outros problemas você identifica ao usar apenas <strong>cron</strong> para pipelines de dados complexos?</p>
+<p class="admonition-title">Exercise</p>
+<form class="quiz-form"><p>Liste dois exemplos de fontes de dados que ficariam difíceis (ou custosos) de colocar diretamente em um <strong>data warehouse</strong> relacional sem um pré-processamento pesado.</p>
 <div class="form-elements">
 <div class="quiz-text-container">
 
@@ -2919,175 +2756,24 @@ body {
 <button class="quiz-submit-button" type="submit">Submit</button>
 </div></form><div class="admonition answer quiz-answer no-indent">
 <p class="admonition-title">Answer</p>
-<p>Além dos problemas já mencionados na aula do cron, outros desafios incluem:</p>
 <ul>
-<li><strong>Gerenciamento de dependências</strong>: Como garantir que a <strong>tarefa A</strong> execute antes da <strong>tarefa B</strong> (SisHard entrou no chat!)?</li>
-<li><strong>Tratamento de falhas</strong>: O que fazer quando uma etapa falha no meio do <em>pipeline</em>?</li>
-<li><strong>Monitoramento</strong>: Como saber se o <em>pipeline</em> está funcionando corretamente?</li>
-<li><strong>Versionamento</strong>: Como gerenciar diferentes versões do <em>pipeline</em>?</li>
-<li><strong>Teste</strong>: Como testar <em>pipelines</em> complexos antes de colocá-los em produção?</li>
+<li>Logs de servidores web, que podem ter formatos variados e mudanças frequentes.</li>
+<li>Dados de sensores IoT, que geram grandes volumes de dados em formatos não estruturados.</li>
 </ul>
 </div>
 </div>
-<h2 id="o-que-e-orquestracao-de-dados">O que é Orquestração de Dados?</h2>
-<p>A <strong>orquestração de dados</strong> é o processo de <strong>coordenar</strong> e <strong>gerenciar</strong> automaticamente a execução de <strong>múltiplas tarefas</strong> e <strong>fluxos de trabalho</strong> de dados, garantindo que sejam executados na <strong>ordem correta</strong>, com as <strong>dependências adequadas</strong> e com <strong>tratamento robusto de erros</strong>.</p>
-<p>Diferentemente do simples agendamento, a orquestração considera:</p>
-<ul>
-<li>
-<p><strong>Dependências Entre Tarefas</strong>: As tarefas podem depender umas das outras. Por exemplo, um processo de transformação só deve iniciar após a extração dos dados estar completa.</p>
-</li>
-<li>
-<p><strong>Gerenciamento de Estado</strong>: O orquestrador mantém o <strong>estado</strong> de cada tarefa, sabendo quais foram executadas com sucesso, quais falharam e quais estão em execução.</p>
-</li>
-<li>
-<p><strong>Tratamento de Falhas</strong>: Quando uma tarefa falha, o sistema pode automaticamente <strong>retentar</strong>, <strong>alertar</strong> os responsáveis ou <strong>parar</strong> o <em>pipeline</em> dependendo da configuração.</p>
-</li>
-<li>
-<p><strong>Monitoramento e Observabilidade</strong>: Fornece visibilidade completa sobre o status do <em>pipeline</em>, métricas de performance e <em>logs</em> detalhados.</p>
-</li>
-</ul>
-<div class="admonition example">
-<p class="admonition-title">Exemplo de <em>Pipeline</em> Orquestrado</p>
-<p>Considere um <em>pipeline</em> de análise de vendas:</p>
+<h2 id="caracteristicas">Características</h2>
+<p>Como características essenciais, um <strong>Data Lake</strong> geralmente apresenta:</p>
 <ol>
-<li><strong>Extração</strong>: Buscar dados do PostgreSQL</li>
-<li><strong>Validação</strong>: Verificar qualidade dos dados extraídos</li>
-<li><strong>Transformação</strong>: Agregar vendas por região e período</li>
-<li><strong>Carga</strong>: Inserir dados no <strong>data warehouse</strong></li>
-<li><strong>Notificação</strong>: Enviar email confirmando a atualização</li>
+<li><strong><em>Store first</em></strong>: ingestão rápida copiando arquivos (ou dados em fluxo) quase como chegam.</li>
+<li><strong>Escalabilidade horizontal</strong>: usando armazenamento de objetos (ex.: S3) com custo baixo, ou seja, foco em armazenar grandes volumes de dados de forma econômica.</li>
+<li><strong>Neutralidade de computação</strong>: tem capacidade de processar e analisar dados usando diferentes engines de computação e ferramentas analíticas, sem ficar restrito a uma única tecnologia.</li>
+<li><strong>Retenção histórica</strong>: raramente se apaga; mantém trilha de eventos brutos.</li>
 </ol>
-<p>Cada etapa depende da anterior e tem tratamento específico de erro.</p>
-</div>
-<div class="admonition info">
-<p class="admonition-title">Orquestração</p>
-<p>Em essência, a orquestração é como o maestro de uma orquestra de dados: ele não toca nenhum instrumento diretamente, mas coordena cada músico (cada <em>job</em> de dados) para que toquem na ordem certa!</p>
-</div>
-<h2 id="conceitos-fundamentais">Conceitos Fundamentais</h2>
-<h3 id="dag-directed-acyclic-graph">DAG (<em>Directed Acyclic Graph</em>)</h3>
-<p>Um <strong>DAG</strong> é a representação visual e lógica de um <em>pipeline</em> de dados.</p>
-<div class="admonition info">
-<p class="admonition-title">DAG: vertices e arestas</p>
-<p>Em um <strong>DAG</strong>, as <strong>tarefas</strong> são representadas como <strong>nós</strong> e as <strong>dependências</strong> como <strong>arestas direcionadas</strong>.</p>
-</div>
-<ul>
-<li><strong>Directed</strong>: As conexões têm direção (A → B)</li>
-<li><strong>Acyclic</strong>: Não há ciclos (A não pode depender de B se B depende de A)</li>
-<li><strong>Graph</strong>: Estrutura que conecta tarefas</li>
-</ul>
-<pre class="mermaid"><code>graph LR
-    A[Extração&lt;br/&gt;PostgreSQL] --&gt; B[Validação&lt;br/&gt;Dados]
-    B --&gt; C[Transformação&lt;br/&gt;Agregação]
-    C --&gt; D[Carga&lt;br/&gt;Data Warehouse]
-    D --&gt; E[Notificação&lt;br/&gt;Email]
-
-    style A fill:#2563eb,color:#ffffff
-    style B fill:#7c3aed,color:#ffffff
-    style C fill:#059669,color:#ffffff
-    style D fill:#ea580c,color:#ffffff
-    style E fill:#dc2626,color:#ffffff</code></pre>
-<h3 id="tarefas-tasks">Tarefas (<em>Tasks</em>)</h3>
-<p>Cada <strong>tarefa</strong> representa uma unidade de trabalho específica no <em>pipeline</em>, como extrair dados de uma <strong>API</strong>, executar uma transformação ou enviar uma notificação.</p>
-<h3 id="dependencias">Dependências</h3>
-<p>As <strong>dependências</strong> definem a <strong>ordem</strong> de execução das tarefas. Uma tarefa só executa quando todas as suas dependências foram concluídas com sucesso.</p>
-<p>No exemplo do gráfico, a tarefa de <strong>Validar Dados Clientes</strong> só pode começar após a <strong>Extração da Tabela Clientes</strong> ser concluída. Da mesma forma, a <strong>Transformação de Vendas por Cliente</strong> só pode ocorrer após a validação dos dados de vendas, clientes e produtos.</p>
-<p>Veja um outro exemplo de <strong>DAG</strong> com dependências:</p>
-<pre class="mermaid"><code>graph LR
-    A[Extrair&lt;br/&gt;Tabela Clientes] --&gt; D[Validar&lt;br/&gt;Dados Clientes]
-    B[Extrair&lt;br/&gt;Tabela Vendas] --&gt; E[Validar&lt;br/&gt;Dados Vendas]
-    C[Extrair&lt;br/&gt;Tabela Produtos] --&gt; F[Validar&lt;br/&gt;Dados Produtos]
-
-    D --&gt; G[Transformar&lt;br/&gt;Vendas por Cliente]
-    E --&gt; G
-    F --&gt; G
-
-    G --&gt; H[Carregar&lt;br/&gt;Data Warehouse]
-    H --&gt; I[Atualizar&lt;br/&gt;Dashboard]
-    H --&gt; J[Enviar&lt;br/&gt;Relatório Email]
-
-    style A fill:#2563eb,color:#ffffff
-    style B fill:#2563eb,color:#ffffff
-    style C fill:#2563eb,color:#ffffff
-    style D fill:#7c3aed,color:#ffffff
-    style E fill:#7c3aed,color:#ffffff
-    style F fill:#7c3aed,color:#ffffff
-    style G fill:#059669,color:#ffffff
-    style H fill:#ea580c,color:#ffffff
-    style I fill:#dc2626,color:#ffffff
-    style J fill:#dc2626,color:#ffffff</code></pre>
-<div class="admonition exercise choice exercise-choice" data-answer-idx="2" id="exercise_1">
-<p class="admonition-title">Conceitos</p>
-<form class="quiz-form"><p>Em um <strong>DAG</strong>, se a Tarefa <strong>C</strong> depende das Tarefas <strong>A</strong> e <strong>B</strong>, qual é a ordem correta de execução?</p>
-<div class="form-elements">
-<div class="quiz-alternative-set">
-  
-<label class="quiz-alternative" data-alt-index="0">
-  <div class="content">
-    <input type="hidden" name="data" value="">
-    <span class="choice-text">C → A → B</span>
-  </div>
-</label>
-
-<label class="quiz-alternative" data-alt-index="1">
-  <div class="content">
-    <input type="hidden" name="data" value="">
-    <span class="choice-text">A → C → B</span>
-  </div>
-</label>
-
-<label class="quiz-alternative" data-alt-index="2">
-  <div class="content">
-    <input type="hidden" name="data" value="">
-    <span class="choice-text">A e B (podem executar em paralelo) → C</span>
-  </div>
-</label>
-
-<label class="quiz-alternative" data-alt-index="3">
-  <div class="content">
-    <input type="hidden" name="data" value="">
-    <span class="choice-text">B → A → C</span>
-  </div>
-</label>
-
-</div>
-<button class="quiz-submit-button" type="submit">Submit</button>
-</div></form><div class="admonition answer quiz-answer no-indent">
-<p class="admonition-title">Answer</p>
-<p>Como <strong>C</strong> depende de <strong>A</strong> e <strong>B</strong>, estas duas tarefas precisam executar primeiro.</p>
-<p><strong>A</strong> e <strong>B</strong> podem executar em paralelo pois não dependem uma da outra, e <strong>C</strong> só executa após ambas terminarem.</p>
-<p>Lembram do ponto de encontro (<strong>RDV</strong>, <em>rendezvous</em>) de SisHard?!</p>
-</div>
-</div>
-<h2 id="ferramentas-de-orquestracao">Ferramentas de Orquestração</h2>
-<p>Existem diversas ferramentas de orquestração disponíveis no mercado, cada uma com suas características e casos de uso específicos.</p>
-<h3 id="apache-airflow">Apache Airflow</h3>
-<p>O <strong>Airflow</strong> é uma das ferramentas mais populares para orquestração de dados. Desenvolvido pelo <strong>Airbnb</strong> e depois doado para a <strong>Apache Foundation</strong>, permite definir <strong>DAGs</strong> usando código Python.</p>
-<p><strong>Características:</strong></p>
-<ul>
-<li>Interface web rica para monitoramento</li>
-<li>Ampla adoção no mercado</li>
-<li>Flexibilidade para integrações complexas</li>
-<li>Curva de aprendizado mais acentuada</li>
-</ul>
-<p>Iremos explorar o <strong>Airflow</strong> em aulas futuras.</p>
-<h3 id="prefect">Prefect</h3>
-<p>O <strong>Prefect</strong> é uma ferramenta moderna de orquestração que busca ser mais <strong>developer-friendly</strong> que o Airflow, com uma abordagem <strong>"Python-first"</strong>.</p>
-<p><strong>Características:</strong></p>
-<ul>
-<li>Sintaxe Python mais limpa e intuitiva</li>
-<li>Melhor tratamento de erros e retry automático</li>
-<li>Interface moderna e responsiva</li>
-<li>Facilidade para desenvolvimento local</li>
-</ul>
-<h3 id="outros-orquestradores">Outros Orquestradores</h3>
-<p>Além do <strong>Airflow</strong> e <strong>Prefect</strong>, existem outras ferramentas de orquestração. Alguns exemplos:</p>
-<ul>
-<li><strong>Dagster</strong>: Foco em qualidade de dados</li>
-<li><strong>Argo Workflows</strong>: Para ambientes Kubernetes</li>
-<li><strong>AWS Step Functions</strong> + <strong>AWS Glue</strong>: Nativos da AWS</li>
-</ul>
+<p>Observe que nenhuma dessas características garante valor por si só. Sem contexto e organização, vira apenas um repositório barato.</p>
 <div class="admonition exercise text short exercise-short" id="exercise_2">
-<p class="admonition-title">Exercício</p>
-<form class="quiz-form"><p>Qual é a principal diferença entre usar <strong>cron</strong> e usar um <strong>orquestrador</strong> como Prefect para pipelines de dados?</p>
+<p class="admonition-title">Exercise</p>
+<form class="quiz-form"><p>Por que reter dados brutos pode ajudar a corrigir um erro descoberto meses depois em uma transformação de <strong>ETL</strong>?</p>
 <div class="form-elements">
 <div class="quiz-text-container">
 
@@ -3098,71 +2784,134 @@ body {
 <button class="quiz-submit-button" type="submit">Submit</button>
 </div></form><div class="admonition answer quiz-answer no-indent">
 <p class="admonition-title">Answer</p>
-<p>A principal diferença é que o <strong>cron</strong> apenas agenda execuções baseadas em tempo, enquanto orquestradores como <strong>Prefect</strong> gerenciam <strong>dependências</strong>, <strong>estado das tarefas</strong>, <strong>tratamento de falhas</strong> e <strong>monitoramento</strong>, oferecendo controle completo sobre o fluxo de dados.</p>
+<p>Reter dados brutos permite <strong>reprocessar</strong> os dados originais com as correções necessárias, garantindo que qualquer erro na transformação anterior possa ser corrigido sem perda de informação.</p>
 </div>
 </div>
-<h2 id="por-que-usar-orquestracao">Por que Usar Orquestração?</h2>
-<p>A orquestração resolve problemas críticos em ambientes de produção:</p>
+<h2 id="camadas-logicas">Camadas Lógicas</h2>
+<p>Para evitar que o <strong>Data Lake</strong> se torne um pântano (<strong>data swamp</strong>), é necessário prover uma organização mínima.</p>
+<p>Isto pode ser obtido ao aplicar uma separação simples de camadas.</p>
+<p>Uma primeira divisão possível é separar dados brutos de dados processados.</p>
+<table>
+<thead>
+<tr>
+<th>Camada</th>
+<th>Objetivo</th>
+<th>Exemplo de conteúdo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>raw</code></td>
+<td>Captura dos dados</td>
+<td>JSON, CSV original, logs, imagens</td>
+</tr>
+<tr>
+<td><code>processed</code></td>
+<td>Limpeza, padronização, integração</td>
+<td>Colunas tipadas, normalização de datas, arquivos de formato colunar (Parquet)</td>
+</tr>
+</tbody>
+</table>
+<p>Uma melhor organização pode ser obtida com a separação em três camadas.</p>
+<table>
+<thead>
+<tr>
+<th>Camada</th>
+<th>Objetivo</th>
+<th>Exemplo de conteúdo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>raw</code> (<strong>Bronze</strong>)</td>
+<td>Captura integral e imutável</td>
+<td>JSON de eventos, CSV original, logs, imagens</td>
+</tr>
+<tr>
+<td><code>cleansed</code> (<strong>Silver</strong>)</td>
+<td>Limpeza, padronização, integração</td>
+<td>Colunas tipadas, normalização de datas, arquivos de formato colunar (Parquet)</td>
+</tr>
+<tr>
+<td><code>presentation</code> (<strong>Gold</strong>)</td>
+<td>Lógica de negócio pronta para consumo</td>
+<td>Tabelas derivadas, fatos e dimensões, conjuntos agregados</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">Info!</p>
+<p>Apesar de não ser a organização formal, a organização em três camadas (<em>Bronze</em>, <em>Silver</em>, <em>Gold</em>) é um <strong>padrão emergente</strong>, e bastante utilizada na prática.</p>
+</div>
+<p>Na prática vocês verão essas camadas mapeadas em prefixos de caminhos (ex.: <code>s3://meu-data-lake/raw/...</code>).</p>
+<div class="admonition tip">
+<p class="admonition-title">Arquitetura Medallion</p>
+<p>Este padrão de camadas (<em>Bronze</em>, <em>Silver</em>, <em>Gold</em>) é conhecido como <strong>Medallion Architecture</strong> e foi popularizado pela <strong>Databricks</strong>.</p>
+<p><img alt="Medallion Architecture" src="../medallion-architecture.png" />
+<strong>Fonte</strong>: Adaptado de <a href="https://www.databricks.com/sites/default/files/inline-images/building-data-pipelines-with-delta-lake-120823.png">Databricks</a></p>
+<p>Caso queira se aprofundar, veja este <a href="https://www.databricks.com/br/glossary/medallion-architecture">artigo da Databricks</a></p>
+</div>
+<div class="admonition exercise text short exercise-short" id="exercise_3">
+<p class="admonition-title">Exercise</p>
+<form class="quiz-form"><p>Dê um exemplo de transformação típica que ocorre ao mover um dataset de <code>raw</code> para <code>cleansed</code>.</p>
+<div class="form-elements">
+<div class="quiz-text-container">
+
+<input type="text" value="" name="data" class="quiz-text-input" 
+       placeholder="Enter your answer..." autocomplete="off"/>
+
+</div>
+<button class="quiz-submit-button" type="submit">Submit</button>
+</div></form><div class="admonition answer quiz-answer no-indent">
+<p class="admonition-title">Answer</p>
 <ul>
-<li>
-<p><strong>Confiabilidade</strong>: Sistemas orquestrados são mais <strong>resilientes a falhas</strong>, com mecanismos automáticos de <em>retry</em> e recuperação.</p>
-</li>
-<li>
-<p><strong>Visibilidade</strong>: Você pode acompanhar o status de cada tarefa em tempo real, identificar gargalos e diagnosticar problemas rapidamente.</p>
-</li>
-<li>
-<p><strong>Escalabilidade</strong>: Orquestradores permitem <strong>paralelização</strong> eficiente de tarefas independentes e <strong>distribuição</strong> de cargas de trabalho.</p>
-</li>
-<li>
-<p><strong>Manutenibilidade</strong>: O código fica mais <strong>organizado</strong> e <strong>versionado</strong>, facilitando atualizações e correções.</p>
-</li>
+<li>Conversão de tipos de dados (ex.: transformar strings em datas ou números).</li>
+<li>Remoção de duplicatas e tratamento de valores nulos.</li>
+<li>Normalização de formatos (ex.: padronizar datas para um formato único).</li>
 </ul>
+</div>
+</div>
 <div class="admonition warning">
-<p class="admonition-title">Complexidade <em>vs</em> Benefício</p>
-<p>A orquestração adiciona <strong>complexidade</strong> ao projeto.</p>
-<p>Para <strong>pipelines</strong> muito simples, pode ser <strong>over-engineering</strong>!</p>
-<p>Avalie sempre se os benefícios justificam a complexidade adicional para seu caso específico.</p>
+<p class="admonition-title">Vantagem x Risco</p>
+<p>Um <strong>Data Lake</strong> geralmente oferece custo baixo por terabyte e flexibilidade para novos usos. Entretanto, sem governança mínima (nomenclatura, controle de versões de <em>schema</em>, sem metadados ricos, políticas de retenção <span class="twemoji" title="Políticas de retenção são regras que definem por quanto tempo os dados devem ser mantidos em um repositório (data lake). Elas ajudam a gerenciar o ciclo de vida dos dados, garantindo que informações antigas ou desnecessárias sejam removidas após um período específico (regulatório ou por controle de custos)."><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 9h2V7h-2m1 13c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-1 15h2v-6h-2z"/></svg></span> e padrões de qualidade) ele degrada em um conjunto caótico de pastas!</p>
+<div class="admonition info">
+<p class="admonition-title">Data Swamp</p>
+<p>Usuários deixam de confiar e criam cópias paralelas.</p>
 </div>
-<h2 id="quando-usar-orquestracao">Quando Usar Orquestração?</h2>
-<p>A orquestração é recomendada quando você tem:</p>
-<ul>
-<li><strong>Múltiplas tarefas</strong> com dependências entre si</li>
-<li><strong>Pipelines críticos</strong> que não podem falhar</li>
-<li><strong>Necessidade de reprocessamento</strong> de dados históricos</li>
-<li><strong>Equipes</strong> que precisam colaborar no mesmo <em>pipeline</em></li>
-<li><strong>Requisitos de auditoria</strong> e rastreabilidade</li>
-</ul>
-<div class="admonition exercise choice exercise-choice" data-answer-idx="1" id="exercise_2">
-<p class="admonition-title">Cenários de Uso</p>
-<form class="quiz-form"><p>Qual cenário mais se beneficia de um orquestrador de dados?</p>
+</div>
+<h2 id="checagem-rapida">Checagem Rápida</h2>
+<div class="admonition exercise text long exercise-long" id="exercise_4">
+<p class="admonition-title">Exercise</p>
+<form class="quiz-form"><p>Em poucas frases, compare <em>schema-on-write</em> e <em>schema-on-read</em>, destacando impacto no tempo de disponibilização dos dados.</p>
+<p>!!! answer "Resposta
+    - <em>Schema-on-write</em> exige definir o esquema antes de armazenar os dados, o que pode atrasar a ingestão, mas garante consistência imediata.
+    - <em>Schema-on-read</em> permite armazenar dados brutos rapidamente, adiando a definição do esquema para o momento da leitura, o que acelera a disponibilização inicial dos dados.</p>
+<div class="form-elements">
+<div class="quiz-text-container">
+
+<textarea name="data" class="quiz-text-input" 
+          placeholder="Enter your detailed answer..." rows="4"></textarea>
+
+</div>
+<button class="quiz-submit-button" type="submit">Submit</button>
+</div></form></div>
+<div class="admonition exercise choice exercise-choice" data-answer-idx="1" id="exercise_1">
+<p class="admonition-title">Question</p>
+<form class="quiz-form"><p>Em um <strong>Data Lake</strong> baseado em S3, não é permitido utilizar <em>Parquets</em>, dado que arquivos <em>Parquets</em> possuem <em>schema</em> embutido.</p>
 <div class="form-elements">
 <div class="quiz-alternative-set">
   
 <label class="quiz-alternative" data-alt-index="0">
   <div class="content">
     <input type="hidden" name="data" value="">
-    <span class="choice-text">Script simples que roda uma vez por dia para backup</span>
+    <span class="choice-text">Verdadeiro</span>
   </div>
 </label>
 
 <label class="quiz-alternative" data-alt-index="1">
   <div class="content">
     <input type="hidden" name="data" value="">
-    <span class="choice-text">Pipeline com cinco etapas que processa dados de vendas e precisa alertar em caso de falha</span>
-  </div>
-</label>
-
-<label class="quiz-alternative" data-alt-index="2">
-  <div class="content">
-    <input type="hidden" name="data" value="">
-    <span class="choice-text">Aplicação web que consulta dados em tempo real</span>
-  </div>
-</label>
-
-<label class="quiz-alternative" data-alt-index="3">
-  <div class="content">
-    <input type="hidden" name="data" value="">
-    <span class="choice-text">Processo manual executado semanalmente</span>
+    <span class="choice-text">Falso</span>
   </div>
 </label>
 
@@ -3170,12 +2919,34 @@ body {
 <button class="quiz-submit-button" type="submit">Submit</button>
 </div></form><div class="admonition answer quiz-answer no-indent">
 <p class="admonition-title">Answer</p>
-<p>O <em>pipeline</em> com múltiplas etapas, dependências e necessidade de alertas é o cenário ideal para orquestração, pois requer coordenação, monitoramento e tratamento de falhas.</p>
+<p>Falso. Arquivos <strong>Parquet</strong> são amplamente utilizados em <strong>Data Lakes</strong> por serem eficientes em termos de armazenamento e consulta.</p>
+<p>Ao contrário dos bancos de dados tradicionais que impõem um <em>schema</em> fixo na escrita (<strong>schema-on-write</strong>), os <strong>Data Lakes</strong> operam com um modelo de schema-on-read. Isso significa que a estrutura dos dados (o <em>schema</em>) é definida e aplicada apenas no momento em que você lê e processa os dados.</p>
+<p>Ou seja, você irá conseguir escrever o arquivo <strong>Parquet</strong> no S3 normalmente!</p>
+<p>Obs: deverá haver organização mínima (camadas, catálogo) para evitar que o lago vire um pântano!</p>
 </div>
 </div>
-<h2 id="proximos-passos">Próximos Passos</h2>
-<p>Agora que entendemos os conceitos fundamentais de orquestração, vamos partir para a prática! Na próxima seção, implementaremos nosso primeiro <em>pipeline</em> usando <strong>Prefect</strong>, explorando como definir tarefas, dependências e monitorar a execução.</p>
-<p>Você verá como a orquestração transforma <em>pipelines</em> de dados complexos em fluxos <strong>confiáveis</strong>, <strong>observáveis</strong> e <strong>mantíveis</strong>.</p>
+<div class="admonition exercise text long exercise-long" id="exercise_5">
+<p class="admonition-title">Exercise</p>
+<form class="quiz-form"><p>Proponha um conjunto mínimo de pastas para iniciar um Data Lake em S3 alinhado às camadas discutidas.</p>
+<div class="form-elements">
+<div class="quiz-text-container">
+
+<textarea name="data" class="quiz-text-input" 
+          placeholder="Enter your detailed answer..." rows="4"></textarea>
+
+</div>
+<button class="quiz-submit-button" type="submit">Submit</button>
+</div></form><div class="admonition answer quiz-answer no-indent">
+<p class="admonition-title">Answer</p>
+<p>Um conjunto mínimo de pastas para iniciar um <strong>Data Lake</strong> em <strong>S3</strong> poderia ser:</p>
+<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>s3://meu-data-lake/
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    |-- raw/
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    |-- silver/
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    |-- gold/
+</code></pre></div>
+</div>
+</div>
+<p>Nesta introdução, definimos Data Lake, justificamos sua existência, diferenciamos de um <strong>warehouse</strong>, discutimos camadas e riscos. Com isso, vocês estão prontos para experimentar na prática! Siga para a próxima seção.</p>
 <script type="text/javascript">
 // Sistema de processamento de exercícios de múltipla escolha
 function processChoiceExercises() {
@@ -4267,7 +4038,7 @@ document.addEventListener('click', function(e) {
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../intro-cron/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Introdução">
+          <a href="../../08-interview-01/int01/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Interview 01">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -4277,20 +4048,20 @@ document.addEventListener('click', function(e) {
                 Previous
               </span>
               <div class="md-ellipsis">
-                Introdução
+                Interview 01
               </div>
             </div>
           </a>
         
         
           
-          <a href="../prefect/" class="md-footer__link md-footer__link--next" aria-label="Next: Orquestração com Prefect">
+          <a href="../aws-glue/" class="md-footer__link md-footer__link--next" aria-label="Next: AWS Glue">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Orquestração com Prefect
+                AWS Glue
               </div>
             </div>
             <div class="md-footer__button md-icon">
