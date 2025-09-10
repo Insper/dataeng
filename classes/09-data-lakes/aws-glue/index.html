@@ -2860,9 +2860,9 @@ body {
 </div>
 <div class="tabbed-block">
 <div class="termy">
-<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>$$env:INSPER_USERNAME = &quot;seu-usuario-insper&quot;
+<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>$ $env:INSPER_USERNAME = &quot;seu-usuario-insper&quot;
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>$aws s3api create-bucket `
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>$ aws s3api create-bucket `
 <a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    --bucket &quot;meu-data-lake-$($env:INSPER_USERNAME)&quot; `
 <a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    --region us-east-1 `
 <a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    --profile dataeng
@@ -2871,9 +2871,9 @@ body {
 </div>
 <div class="tabbed-block">
 <div class="termy">
-<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>$set INSPER_USERNAME=seu-usuario-insper
+<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>$ set INSPER_USERNAME=seu-usuario-insper
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>$aws s3api create-bucket ^
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>$ aws s3api create-bucket ^
 <a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    --bucket meu-data-lake-%INSPER_USERNAME% ^
 <a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    --region us-east-1 ^
 <a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>    --profile dataeng
@@ -2958,8 +2958,8 @@ body {
 <p>Caso esteja na mesma sessão do terminal, não precisa redefinir a variável de ambiente <code>$INSPER_USERNAME</code>.</p>
 </div>
 <div class="termy">
-<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>$INSPER_USERNAME=seu-usuario-insper
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>$aws s3api put-object \
+<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>$ INSPER_USERNAME=seu-usuario-insper
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>$ aws s3api put-object \
 <a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>    --bucket meu-data-lake-$INSPER_USERNAME \
 <a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>    --key raw/olist_order_items/olist_order_items_dataset.csv \
 <a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>    --body olist_order_items_dataset.csv \
@@ -3207,7 +3207,7 @@ body {
 <div class="language-text highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>$ aws iam create-role \
 <a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>    --role-name role-glue-meu-data-lake-s3 \
 <a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>    --assume-role-policy-document file://glue_etl_crawler_s3_role.json \
-<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>    --profile dataeng-prof-oficial
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>    --profile dataeng
 </code></pre></div>
 <p></div>
 <br></p>
@@ -3216,7 +3216,7 @@ body {
 <a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>    --role-name role-glue-meu-data-lake-s3 \
 <a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>    --policy-name policy-glue-meu-data-lake-s3 \
 <a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>    --policy-document file://glue_etl_crawler_s3_policy.json \
-<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>    --profile dataeng-prof-oficial
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>    --profile dataeng
 </code></pre></div>
 </div>
 <div class="form-elements">
