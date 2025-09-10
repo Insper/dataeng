@@ -3484,6 +3484,11 @@ body {
 <p>Em seguida, no menu esquerdo, escolha o database <code>meu-db-olist</code> criado anteriormente.</p>
 <p><img alt="" src="../athena-menu.png" /></p>
 <p>No editor de consultas, teste algumas consultas envolvendo as duas tabelas.</p>
+<div class="admonition warning">
+<p class="admonition-title">Query result location</p>
+<p>Caso o <strong>Athena</strong> solicite uma pasta para salvar os resultados das consultas, informe a pasta <code>athena-results/</code> dentro do seu <em>bucket</em>.</p>
+<p>Por exemplo: <code>s3://meu-data-lake-&lt;INSPER_USERNAME&gt;/athena-results/</code></p>
+</div>
 <div class="language-sql highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">qtde_itens_vendidos</span><span class="p">,</span>
 <a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a><span class="w">      </span><span class="k">SUM</span><span class="p">(</span><span class="n">price</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">vlr_total_vendido</span>
 <a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a><span class="k">FROM</span><span class="w"> </span><span class="n">olist_order_items</span><span class="p">;</span>
