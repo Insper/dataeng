@@ -402,7 +402,7 @@ WHERE id_cliente_original = 123 AND versao_atual = TRUE;
 | **JOINs em consultas** | Muitos (5-8) | Poucos (2-4) | Nenhum |
 | **Redundância** | Mínima | Moderada | Máxima |
 | **Performance de leitura** | Lenta | Boa | Excelente |
-| **Facilidade de atualização** | Complexa | Moderada | Difícil |
+| **Facilidade de atualização** :material-information-outline:{ title="Considera atualização dos dados." } | Alta | Moderada | Difícil |
 | **Uso de espaço** | Mínimo | Moderado | Máximo |
 | **Intuitividade para analistas** | Baixa | Alta | Muito Alta |
 

@@ -54,6 +54,12 @@ nav:
           - classes/07-data-modeling/references.md
       - 08 - Entrevista 01:
           - classes/08-interview-01/faq.md
+          - classes/08-interview-01/int01.md
+      - 09 - Data Lakes:
+          - classes/09-data-lakes/intro-data-lakes.md
+          - classes/09-data-lakes/aws-glue.md
+  - Entrevistas:
+      - classes/08-interview-01/int01.md
   - Regras: about.md
   - Deadlines: deadlines.md
   - Contribuições: contributions.md
