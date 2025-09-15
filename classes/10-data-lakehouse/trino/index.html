@@ -13,10 +13,10 @@
       
       
       
-        <link rel="prev" href="../docker/">
+        <link rel="prev" href="../iceberg/">
       
       
-        <link rel="next" href="../programar-sensores/">
+        <link rel="next" href="../references/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>RabbitMQ - Engenharia de Dados</title>
+        <title>Trino - Engenharia de Dados</title>
       
     
     
@@ -81,7 +81,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#rabbitmq" class="md-skip">
+        <a href="#trino" class="md-skip">
           Skip to content
         </a>
       
@@ -117,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              RabbitMQ
+              Trino
             
           </span>
         </div>
@@ -653,10 +653,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -679,11 +677,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
         
           
           <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
@@ -699,7 +697,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
             02 - Filas e Containers
@@ -713,7 +711,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../relembrar-ciclo/" class="md-nav__link">
+      <a href="../../02-docker-filas/relembrar-ciclo/" class="md-nav__link">
         
   
   
@@ -736,7 +734,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../filas/" class="md-nav__link">
+      <a href="../../02-docker-filas/filas/" class="md-nav__link">
         
   
   
@@ -759,7 +757,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker/" class="md-nav__link">
+      <a href="../../02-docker-filas/docker/" class="md-nav__link">
         
   
   
@@ -779,32 +777,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    RabbitMQ
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../02-docker-filas/rabbitmq/" class="md-nav__link">
         
   
   
@@ -815,68 +791,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#iniciar-o-rabbitmq" class="md-nav__link">
-    <span class="md-ellipsis">
-      Iniciar o RabbitMQ
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Iniciar o RabbitMQ">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#criar-docker-composeyml" class="md-nav__link">
-    <span class="md-ellipsis">
-      Criar docker-compose.yml
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#inicie-o-rabbitmq" class="md-nav__link">
-    <span class="md-ellipsis">
-      Inicie o RabbitMQ
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#painel-rabbitmq" class="md-nav__link">
-    <span class="md-ellipsis">
-      Painel RabbitMQ
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -889,7 +803,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../programar-sensores/" class="md-nav__link">
+      <a href="../../02-docker-filas/programar-sensores/" class="md-nav__link">
         
   
   
@@ -912,7 +826,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../programar-pipeline/" class="md-nav__link">
+      <a href="../../02-docker-filas/programar-pipeline/" class="md-nav__link">
         
   
   
@@ -2078,8 +1992,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -2100,11 +2016,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10" checked>
         
           
           <label class="md-nav__link" for="__nav_2_10" id="__nav_2_10_label" tabindex="0">
@@ -2120,7 +2036,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_10">
             <span class="md-nav__icon md-icon"></span>
             10 - Data Lakehouse
@@ -2134,7 +2050,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../10-data-lakehouse/intro-data-lakehouse/" class="md-nav__link">
+      <a href="../intro-data-lakehouse/" class="md-nav__link">
         
   
   
@@ -2157,7 +2073,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../10-data-lakehouse/minio/" class="md-nav__link">
+      <a href="../minio/" class="md-nav__link">
         
   
   
@@ -2180,7 +2096,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../10-data-lakehouse/iceberg/" class="md-nav__link">
+      <a href="../iceberg/" class="md-nav__link">
         
   
   
@@ -2200,10 +2116,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../10-data-lakehouse/trino/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Trino
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -2214,6 +2152,53 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#visao-geral" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visão Geral
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuração
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dbeaver" class="md-nav__link">
+    <span class="md-ellipsis">
+      DBeaver
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2226,7 +2211,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../10-data-lakehouse/references/" class="md-nav__link">
+      <a href="../references/" class="md-nav__link">
         
   
   
@@ -2425,42 +2410,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#iniciar-o-rabbitmq" class="md-nav__link">
+  <a href="#visao-geral" class="md-nav__link">
     <span class="md-ellipsis">
-      Iniciar o RabbitMQ
+      Visão Geral
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Iniciar o RabbitMQ">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#criar-docker-composeyml" class="md-nav__link">
-    <span class="md-ellipsis">
-      Criar docker-compose.yml
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#inicie-o-rabbitmq" class="md-nav__link">
-    <span class="md-ellipsis">
-      Inicie o RabbitMQ
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#painel-rabbitmq" class="md-nav__link">
+  <a href="#configuracao" class="md-nav__link">
     <span class="md-ellipsis">
-      Painel RabbitMQ
+      Configuração
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dbeaver" class="md-nav__link">
+    <span class="md-ellipsis">
+      DBeaver
     </span>
   </a>
   
@@ -2899,156 +2869,127 @@ body {
   }
 }
 </style>
-<h1 id="rabbitmq">RabbitMQ</h1>
-<p>O <strong>RabbitMQ</strong> é um sistema de mensageria de código aberto que implementa o padrão de fila de mensagens.</p>
-<p>Ele permite que diferentes partes de uma aplicação se comuniquem de forma assíncrona pelo protocolo <strong>AMQP</strong>, enviando mensagens <span class="twemoji" title="No exemplo, as mensagens são os JSONs de temperatura"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 9h2V7h-2m1 13c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-1 15h2v-6h-2z"/></svg></span> entre <strong>produtores</strong> e <strong>consumidores</strong>.</p>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>No exemplo, as mensagens são os <strong>JSONs</strong> de temperatura</p>
+<h1 id="trino">Trino</h1>
+<h2 id="visao-geral">Visão Geral</h2>
+<p>O <strong>Trino</strong> (anteriormente conhecido como PrestoSQL) é um mecanismo de consulta <strong>SQL</strong> distribuído e de alto desempenho, projetado para consultar dados onde quer que eles estejam armazenados.</p>
+<div class="admonition tip">
+<p class="admonition-title">Trino</p>
+<p>O <strong>Trino</strong> é uma das ferramentas essenciais em arquiteturas de <strong>Data Lakehouse</strong></p>
 </div>
-<pre class="mermaid"><code>graph LR
-    subgraph Produtores
-        P1[Sensor 1]
-        P2[Sensor 2]
-        P3[Sensor 3]
-    end
-
-    subgraph Fila
-        direction LR
-        F1[(Msg 1)]
-        F2[(Msg 2)]
-        F3[(Msg n)]
-
-    end
-
-    subgraph Consumidores
-        C1[Pipeline 1]
-        C2[Pipeline 2]
-    end
-
-    P1 --&gt; Fila
-    P2 --&gt; Fila
-    P3 --&gt; Fila
-    F1 --- F2
-    F2 --- F3
-    Fila --&gt; C1
-    Fila --&gt; C2</code></pre>
-<details class="info">
-<summary><strong>AMQP</strong></summary>
-<p>O <strong>AMQP</strong> (<strong>Advanced Message Queuing Protocol</strong>) é um protocolo aberto e padronizado para comunicação entre sistemas por meio de mensagens, usado pelo <strong>RabbitMQ</strong>.</p>
-<p>Ele define como as mensagens são formatadas, roteadas, entregues e confirmadas, permitindo que aplicações escritas em <strong>diferentes linguagens</strong> e <strong>rodando em diferentes plataformas</strong> troquem dados de forma <strong>confiável</strong> e <strong>desacoplada</strong>.</p>
-</details>
-<p>O <strong>RabbitMQ</strong> é amplamente utilizado em arquiteturas de <strong>microserviços</strong>, onde a comunicação entre serviços pode ser feita de forma desacoplada e escalável.</p>
-<h2 id="iniciar-o-rabbitmq">Iniciar o RabbitMQ</h2>
-<div class="admonition success">
-<p class="admonition-title">Sucesso!</p>
-<p>Para ter sucesso durante o curso, mantenha a organização!</p>
-<p>Crie um diretório para manter os arquivos da aula!</p>
-<div class="termy">
-<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>$<span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>~/aula02
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>~/aula02
+<p>Ele permite que você execute consultas analíticas complexas em grandes volumes de dados, sejam eles armazenados em <strong>data lakes</strong>, <strong>data warehouses</strong> ou outros sistemas de armazenamento, sem a necessidade de mover os dados.</p>
+<p>O Trino oferece suporte a uma ampla gama de fontes de dados por meio de conectores, permitindo que uma única camada de consulta acesse tanto sistemas de armazenamento quanto bancos de dados. Entre as opções estão object storages como S3, GCS e Azure Blob, além de HDFS, bancos relacionais como PostgreSQL, MySQL, Oracle e SQL Server, e ainda bancos NoSQL, como MongoDB, Cassandra e Elasticsearch. Essa versatilidade torna possível integrar diferentes tecnologias em uma mesma arquitetura de dados.</p>
+<p>Além disso, o Trino lida com múltiplos formatos de dados, como Parquet, ORC, Avro, JSON e CSV, garantindo flexibilidade na análise de dados estruturados e semiestruturados. Também se integra a sistemas especializados, como Apache Iceberg, Delta Lake e Apache Hudi para gerenciamento de tabelas em data lakes, bem como a data warehouses em nuvem, como BigQuery e Snowflake, permitindo cenários híbridos e distribuídos de análise em larga escala.</p>
+<div class="admonition tip">
+<p class="admonition-title">Curiosidade!</p>
+<p>O <strong>AWS Athena</strong> é baseado no <strong>Trino</strong>!</p>
+</div>
+<h2 id="configuracao">Configuração</h2>
+<p>Vamos atualizar o <code>docker-compose.yml</code> que utilizamos para o Iceberg, adicionando o serviço do Trino:</p>
+<div class="language-yaml copy highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w">  </span><span class="nt">trino</span><span class="p">:</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">trinodb/trino:latest</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">trino</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nt">depends_on</span><span class="p">:</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rest</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">minio</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="nt">networks</span><span class="p">:</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">iceberg_net</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8082:8080</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./catalog:/etc/trino/catalog</span>
 </code></pre></div>
-</div>
-</div>
-<h3 id="criar-docker-composeyml">Criar <code>docker-compose.yml</code></h3>
-<p>Vamos iniciar um serviço <strong>RabbitMQ</strong> usando <strong>Docker</strong>.</p>
-<p>Crie um arquivo <code>docker-compose.yml</code> com o seguinte conteúdo:</p>
-<div class="language-yaml highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">services</span><span class="p">:</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">rabbitmq</span><span class="p">:</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rabbitmq:3-management</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rabbitmq-sensores</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">always</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5672:5672</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">15672:15672</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./rabbitmq:/var/lib/rabbitmq</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RABBITMQ_DEFAULT_USER=admin</span>
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RABBITMQ_DEFAULT_PASS=112233</span>
+<p>Precisamos também configurar o <strong>Trino</strong> para se conectar ao <strong>MinIO</strong> e ao <strong>Iceberg</strong>. Para isso, crie a pasta <code>catalog</code> no mesmo diretório do <code>docker-compose.yml</code> e crie o arquivo <code>catalog/iceberg.properties</code> contendo as informações de acesso à API REST do Iceberg e ao MinIO:</p>
+<div class="language-properties copy highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="na">connector.name</span><span class="o">=</span><span class="s">iceberg</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="na">iceberg.catalog.type</span><span class="o">=</span><span class="s">rest</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="na">iceberg.rest-catalog.uri</span><span class="o">=</span><span class="s">http://rest:8181</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="na">iceberg.file-format</span><span class="o">=</span><span class="s">parquet</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="na">fs.native-s3.enabled</span><span class="o">=</span><span class="s">true</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="na">s3.endpoint</span><span class="o">=</span><span class="s">http://minio:9000</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="na">s3.path-style-access</span><span class="o">=</span><span class="s">true</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="na">s3.aws-access-key</span><span class="o">=</span><span class="s">admin</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="na">s3.aws-secret-key</span><span class="o">=</span><span class="s">password</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="na">s3.region</span><span class="o">=</span><span class="s">us-east-1</span>
 </code></pre></div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>É recomendável utilizar uma senha mais forte que <code>112233</code></p>
+<div class="admonition exercise exercise-self-progress" id="exercise_1">
+<p class="admonition-title">Exercise</p>
+<form class="quiz-form"><p>Atualize o arquivo <code>docker-compose.yml</code> que você criou na seção do Iceberg, adicionando o serviço do Trino.</p>
+<p>Inicialize todos os serviços.</p>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
 </div>
-<div class="admonition exercise text long exercise-long" id="exercise_1">
-<p class="admonition-title">Question</p>
-<form class="quiz-form"><p>Explique o que significa esta seção do <code>docker-compose.yml</code>:</p>
-<div class="language-yaml highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">ports</span><span class="p">:</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5672:5672</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">15672:15672</span>
+</div></form></div>
+<div class="admonition exercise exercise-self-progress" id="exercise_2">
+<p class="admonition-title">Exercise</p>
+<form class="quiz-form"><p>Acesse <a href="http://localhost:8082">http://localhost:8082</a> para verificar se o Trino está rodando.</p>
+<p>Utilize um usuário qualquer, como <code>admin</code>!</p>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
+</div></form></div>
+<p>Agora, vamos utilizar o <strong>Trino</strong> para consultar as tabelas que criamos no <strong>Iceberg</strong>. Iremos fazer isto utilizando o <strong>DBeaver</strong>.</p>
+<h2 id="dbeaver">DBeaver</h2>
+<p>Acesse o <strong>DBeaver</strong> e crie uma nova conexão com o banco de dados <strong>Trino</strong>.</p>
+<div class="admonition exercise exercise-self-progress" id="exercise_3">
+<p class="admonition-title">Exercise</p>
+<form class="quiz-form"><p>Crie uma nova conexão com o banco de dados <strong>Trino</strong> no <strong>DBeaver</strong>.</p>
+<p>Utilize as seguintes configurações:</p>
+<ul>
+<li>Host: <code>localhost</code></li>
+<li>Port: <code>8082</code></li>
+<li>User name: <code>admin</code></li>
+</ul>
+<p>Teste a conexão e salve.</p>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
+</div></form></div>
+<div class="admonition exercise exercise-self-progress" id="exercise_4">
+<p class="admonition-title">Exercise</p>
+<form class="quiz-form"><p>Crie uma nota aba de <strong>SQL script</strong> e execute algumas <em>queries</em> nas tabelas que você criou no Iceberg!</p>
+<div class="language-sql highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">iceberg</span><span class="p">.</span><span class="k">default</span><span class="p">.</span><span class="n">taxis</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="k">LIMIT</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+</code></pre></div>
+<div class="language-sql highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">avg</span><span class="p">(</span><span class="n">passenger_count</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">average_passenger_count</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">iceberg</span><span class="p">.</span><span class="k">default</span><span class="p">.</span><span class="n">taxis</span><span class="p">;</span>
 </code></pre></div>
 <div class="form-elements">
-<div class="quiz-text-container">
-
-<textarea name="data" class="quiz-text-input" 
-          placeholder="Enter your detailed answer..." rows="4"></textarea>
-
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
 </div>
-<button class="quiz-submit-button" type="submit">Submit</button>
-</div></form><div class="admonition answer quiz-answer no-indent">
-<p class="admonition-title">Answer</p>
-<p>A seção <em>ports</em> mapeia as portas do <em>container</em> (interna) para as portas do <em>host</em> (externa, sua máquina):</p>
-<ul>
-<li>
-<p><code>5672:5672</code>: Isso mapeia a porta <code>5672</code> do container RabbitMQ para a porta <code>5672</code> na máquina host. A porta <code>5672</code> é a porta padrão para <strong>AMQP</strong> (<em>Advanced Message Queuing Protocol</em>), que é usada para mensageria pelo RabbitMQ.</p>
-</li>
-<li>
-<p><code>15672:15672</code>: Isso mapeia a porta <code>15672</code> do container RabbitMQ para a porta <code>15672</code> na máquina host. A porta <code>15672</code> é a porta padrão para o <strong>RabbitMQ Management Plugin</strong>, que fornece uma interface web para gerenciar o RabbitMQ.</p>
-</li>
-</ul>
+</div></form></div>
+<div class="admonition exercise exercise-self-progress" id="exercise_5">
+<p class="admonition-title">Exercise</p>
+<form class="quiz-form"><p>Acesse <a href="http://localhost:8082">http://localhost:8082</a> para verificar o <em>status</em> do Trino.</p>
+<p>Você consegue ver alguma informação sobre as consultas que você fez?!</p>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
+</div></form></div>
+<div class="admonition exercise exercise-self-progress" id="exercise_6">
+<p class="admonition-title">Exercise</p>
+<form class="quiz-form"><p>Qual a distância média das corridas para cada <code>pulocationid</code>? Crie uma <em>query</em> para responder esta pergunta.</p>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
+</div></form></div>
 <div class="admonition tip">
-<p class="admonition-title">Dica</p>
-<p>Caso ocorra um conflito de porta (outros serviços que possam estar usando a mesma porta), você pode alterar a porta do host (a primeira) para um número diferente, como <code>15673:15672</code>.</p>
+<p class="admonition-title">Dica!</p>
+<p>Tente acessar as views que você criou pelo notebook. Você irá perceber que elas não são acessíveis pelo Trino.</p>
+<p>Crie outras views utilizando o Trino. Agora funciona?! Olha só que legal, você tem dados armazenados em um <strong>Parquet</strong> no <strong>MinIO</strong>, e pode criar <em>views</em> para estes dados!</p>
 </div>
-</div>
-</div>
-<h3 id="inicie-o-rabbitmq">Inicie o RabbitMQ</h3>
-<p>Para iniciar o RabbitMQ, execute o seguinte comando no terminal:</p>
-<div class="termy">
-
-    <div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>$<span class="w"> </span>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d
-</code></pre></div>
-
-</div>
-
-<p>Isso iniciará o RabbitMQ em segundo plano. Você pode verificar se o RabbitMQ está em execução acessando a interface de gerenciamento em <a href="http://localhost:15672">http://localhost:15672</a> com o usuário e senha definidos no <code>docker-compose.yml</code>.</p>
-<p>Para conferir se o RabbitMQ está em execução, você pode usar o seguinte comando:</p>
-<div class="termy">
-
-    <div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>$<span class="w"> </span>docker<span class="w"> </span>compose<span class="w"> </span>ps
-</code></pre></div>
-
-</div>
-
-<p>E para acompanhar os logs:</p>
-<div class="termy">
-
-    <div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>$<span class="w"> </span>docker<span class="w"> </span>compose<span class="w"> </span>logs<span class="w"> </span>-f
-</code></pre></div>
-
-</div>
-
-<details class="tip">
-<summary>Uma outra forma</summary>
-<p>Você pode usar o comando <code>docker logs</code> para visualizar os logs do container diretamente:</p>
-<div class="termy">
-<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>$<span class="w"> </span>docker<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>rabbitmq-sensores
-</code></pre></div>
-</div>
-<p>O mesmo para <code>docker ps</code>:</p>
-<div class="termy">
-<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>$<span class="w"> </span>docker<span class="w"> </span>ps
-</code></pre></div>
-</div>
-</details>
-<h2 id="painel-rabbitmq">Painel RabbitMQ</h2>
-<p>Acesse a interface de gerenciamento do RabbitMQ em <a href="http://localhost:15672">http://localhost:15672</a> com o usuário e senha definidos no <code>docker-compose.yml</code>.</p>
-<div class="admonition bug">
-<p class="admonition-title">Problema</p>
-<p>Caso você não consiga acessar a interface web, verifique se o container do RabbitMQ está em execução e se as portas estão corretamente mapeadas.</p>
-</div>
-<p><img alt="" src="../rabbit_web.png" /></p>
 <script type="text/javascript">
 // Sistema de processamento de exercícios de múltipla escolha
 function processChoiceExercises() {
@@ -4140,7 +4081,7 @@ document.addEventListener('click', function(e) {
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../docker/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Docker">
+          <a href="../iceberg/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Apache Iceberg">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -4150,20 +4091,20 @@ document.addEventListener('click', function(e) {
                 Previous
               </span>
               <div class="md-ellipsis">
-                Docker
+                Apache Iceberg
               </div>
             </div>
           </a>
         
         
           
-          <a href="../programar-sensores/" class="md-footer__link md-footer__link--next" aria-label="Next: Programar Sensores">
+          <a href="../references/" class="md-footer__link md-footer__link--next" aria-label="Next: Referências">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Programar Sensores
+                Referências
               </div>
             </div>
             <div class="md-footer__button md-icon">

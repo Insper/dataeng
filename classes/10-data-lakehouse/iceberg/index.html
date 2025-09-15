@@ -13,10 +13,10 @@
       
       
       
-        <link rel="prev" href="../docker/">
+        <link rel="prev" href="../minio/">
       
       
-        <link rel="next" href="../programar-sensores/">
+        <link rel="next" href="../trino/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>RabbitMQ - Engenharia de Dados</title>
+        <title>Apache Iceberg - Engenharia de Dados</title>
       
     
     
@@ -81,7 +81,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#rabbitmq" class="md-skip">
+        <a href="#apache-iceberg" class="md-skip">
           Skip to content
         </a>
       
@@ -117,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              RabbitMQ
+              Apache Iceberg
             
           </span>
         </div>
@@ -653,10 +653,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -679,11 +677,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
         
           
           <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
@@ -699,7 +697,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
             02 - Filas e Containers
@@ -713,7 +711,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../relembrar-ciclo/" class="md-nav__link">
+      <a href="../../02-docker-filas/relembrar-ciclo/" class="md-nav__link">
         
   
   
@@ -736,7 +734,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../filas/" class="md-nav__link">
+      <a href="../../02-docker-filas/filas/" class="md-nav__link">
         
   
   
@@ -759,7 +757,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker/" class="md-nav__link">
+      <a href="../../02-docker-filas/docker/" class="md-nav__link">
         
   
   
@@ -779,32 +777,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    RabbitMQ
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../02-docker-filas/rabbitmq/" class="md-nav__link">
         
   
   
@@ -815,68 +791,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#iniciar-o-rabbitmq" class="md-nav__link">
-    <span class="md-ellipsis">
-      Iniciar o RabbitMQ
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Iniciar o RabbitMQ">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#criar-docker-composeyml" class="md-nav__link">
-    <span class="md-ellipsis">
-      Criar docker-compose.yml
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#inicie-o-rabbitmq" class="md-nav__link">
-    <span class="md-ellipsis">
-      Inicie o RabbitMQ
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#painel-rabbitmq" class="md-nav__link">
-    <span class="md-ellipsis">
-      Painel RabbitMQ
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -889,7 +803,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../programar-sensores/" class="md-nav__link">
+      <a href="../../02-docker-filas/programar-sensores/" class="md-nav__link">
         
   
   
@@ -912,7 +826,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../programar-pipeline/" class="md-nav__link">
+      <a href="../../02-docker-filas/programar-pipeline/" class="md-nav__link">
         
   
   
@@ -2078,8 +1992,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -2100,11 +2016,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10" checked>
         
           
           <label class="md-nav__link" for="__nav_2_10" id="__nav_2_10_label" tabindex="0">
@@ -2120,7 +2036,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_10">
             <span class="md-nav__icon md-icon"></span>
             10 - Data Lakehouse
@@ -2134,7 +2050,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../10-data-lakehouse/intro-data-lakehouse/" class="md-nav__link">
+      <a href="../intro-data-lakehouse/" class="md-nav__link">
         
   
   
@@ -2157,7 +2073,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../10-data-lakehouse/minio/" class="md-nav__link">
+      <a href="../minio/" class="md-nav__link">
         
   
   
@@ -2177,10 +2093,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../10-data-lakehouse/iceberg/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Apache Iceberg
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -2191,6 +2129,71 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introducao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introdução
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#principais-caracteristicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Principais Características
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preparar-ambiente" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preparar ambiente
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker-compose" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker compose
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#criar-tabelas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criar tabelas
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2203,7 +2206,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../10-data-lakehouse/trino/" class="md-nav__link">
+      <a href="../trino/" class="md-nav__link">
         
   
   
@@ -2226,7 +2229,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../10-data-lakehouse/references/" class="md-nav__link">
+      <a href="../references/" class="md-nav__link">
         
   
   
@@ -2425,42 +2428,45 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#iniciar-o-rabbitmq" class="md-nav__link">
+  <a href="#introducao" class="md-nav__link">
     <span class="md-ellipsis">
-      Iniciar o RabbitMQ
+      Introdução
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Iniciar o RabbitMQ">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#criar-docker-composeyml" class="md-nav__link">
-    <span class="md-ellipsis">
-      Criar docker-compose.yml
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#inicie-o-rabbitmq" class="md-nav__link">
-    <span class="md-ellipsis">
-      Inicie o RabbitMQ
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#painel-rabbitmq" class="md-nav__link">
+  <a href="#principais-caracteristicas" class="md-nav__link">
     <span class="md-ellipsis">
-      Painel RabbitMQ
+      Principais Características
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preparar-ambiente" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preparar ambiente
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker-compose" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker compose
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#criar-tabelas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criar tabelas
     </span>
   </a>
   
@@ -2899,85 +2905,149 @@ body {
   }
 }
 </style>
-<h1 id="rabbitmq">RabbitMQ</h1>
-<p>O <strong>RabbitMQ</strong> é um sistema de mensageria de código aberto que implementa o padrão de fila de mensagens.</p>
-<p>Ele permite que diferentes partes de uma aplicação se comuniquem de forma assíncrona pelo protocolo <strong>AMQP</strong>, enviando mensagens <span class="twemoji" title="No exemplo, as mensagens são os JSONs de temperatura"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 9h2V7h-2m1 13c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-1 15h2v-6h-2z"/></svg></span> entre <strong>produtores</strong> e <strong>consumidores</strong>.</p>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>No exemplo, as mensagens são os <strong>JSONs</strong> de temperatura</p>
+<h1 id="apache-iceberg">Apache Iceberg</h1>
+<h2 id="introducao">Introdução</h2>
+<p>O <strong>Apache Iceberg</strong> é uma tecnologia de gerenciamento de tabelas de código aberto, que surgiu como uma das principais opções para implementar a camada de software de armazenamento transacional em arquiteturas <strong>Data Lakehouse</strong>. </p>
+<p>Desenvolvido inicialmente pela <strong>Netflix</strong> e posteriormente doado para a <strong>Apache Software Foundation</strong>, o <strong>Iceberg</strong> é uma alternativa ao <strong>Delta Lake</strong> e <strong>Apache Hudi</strong>, oferecendo características muito semelhantes para aprimorar as funcionalidades de um <strong>data lake</strong> tradicional.</p>
+<h2 id="principais-caracteristicas">Principais Características</h2>
+<p>As principais características e funcionalidades do <strong>Apache Iceberg</strong> incluem:</p>
+<ul>
+<li>
+<p><strong>Tecnologia de Gerenciamento de Tabelas</strong>: O <strong>Iceberg</strong> é, fundamentalmente, uma tecnologia que gerencia tabelas, assim como o <strong>Apache Hudi</strong>, proporcionando uma interface consistente para operações de dados.</p>
+</li>
+<li>
+<p><strong>Camada de Armazenamento Transacional</strong>: Ele atua como uma camada de software transacional que executa sobre um <strong>data lake</strong> existente, adicionando recursos semelhantes aos de um banco de dados relacional (RDW - Relational Data Warehouse), o que melhora significativamente a confiabilidade, segurança e desempenho do <strong>data lake</strong>.</p>
+</li>
+<li>
+<p><strong>Rastreamento de Arquivos</strong>: O <strong>Iceberg</strong> pode rastrear todos os arquivos que compõem uma tabela, mantendo um controle preciso sobre a estrutura e organização dos dados.</p>
+</li>
+<li>
+<p><strong>Viagem no Tempo (Time Travel)</strong>: Uma das funcionalidades mais poderosas do <strong>Iceberg</strong> é sua capacidade de rastrear arquivos em cada "snapshot" (instantâneo) da tabela ao longo do tempo, permitindo a funcionalidade de <strong>"viagem no tempo"</strong> (time travel) em um ambiente de <strong>data lake</strong>. Isso possibilita consultar dados em estados anteriores e recuperar versões específicas.</p>
+</li>
+<li>
+<p><strong>Evolução de Esquema</strong>: Suporta a evolução de esquema de forma seamless, o que significa que o esquema dos dados pode ser alterado ao longo do tempo sem quebrar consultas existentes, proporcionando flexibilidade para mudanças nos requisitos de negócio.</p>
+</li>
+<li>
+<p><strong>Escalabilidade</strong>: Projetado para gerenciar tabelas em escala de <strong>petabytes</strong>, atendendo às demandas de grandes volumes de dados empresariais.</p>
+</li>
+<li>
+<p><strong>Serialização Híbrida</strong>: É um exemplo de tecnologia de serialização híbrida, que combina múltiplas técnicas de serialização ou integra a serialização com camadas de abstração adicionais, como o gerenciamento de esquema, otimizando o desempenho e a eficiência.</p>
+</li>
+</ul>
+<p>Em suma, o <strong>Apache Iceberg</strong> é uma solução essencial para transformar um <strong>data lake</strong> tradicional em um <strong>Data Lakehouse</strong> robusto, conferindo-lhe recursos de gerenciamento e confiabilidade que antes eram exclusivos dos <strong>data warehouses</strong> relacionais.</p>
+<p>Com o <strong>Iceberg</strong>, organizações podem:
+- Manter a flexibilidade e economia de um <strong>data lake</strong>
+- Obter a confiabilidade e performance de um <strong>data warehouse</strong>
+- Implementar operações <strong>ACID</strong> em ambientes distribuídos
+- Facilitar a governança e auditoria de dados</p>
+<div class="admonition tip">
+<p class="admonition-title">Leitura recomendada</p>
+<p><a href="https://www.dqlabs.ai/blog/why-did-databricks-acquire-tabular/">Why did Databricks Acquire Tabular</a></p>
 </div>
-<pre class="mermaid"><code>graph LR
-    subgraph Produtores
-        P1[Sensor 1]
-        P2[Sensor 2]
-        P3[Sensor 3]
-    end
-
-    subgraph Fila
-        direction LR
-        F1[(Msg 1)]
-        F2[(Msg 2)]
-        F3[(Msg n)]
-
-    end
-
-    subgraph Consumidores
-        C1[Pipeline 1]
-        C2[Pipeline 2]
-    end
-
-    P1 --&gt; Fila
-    P2 --&gt; Fila
-    P3 --&gt; Fila
-    F1 --- F2
-    F2 --- F3
-    Fila --&gt; C1
-    Fila --&gt; C2</code></pre>
-<details class="info">
-<summary><strong>AMQP</strong></summary>
-<p>O <strong>AMQP</strong> (<strong>Advanced Message Queuing Protocol</strong>) é um protocolo aberto e padronizado para comunicação entre sistemas por meio de mensagens, usado pelo <strong>RabbitMQ</strong>.</p>
-<p>Ele define como as mensagens são formatadas, roteadas, entregues e confirmadas, permitindo que aplicações escritas em <strong>diferentes linguagens</strong> e <strong>rodando em diferentes plataformas</strong> troquem dados de forma <strong>confiável</strong> e <strong>desacoplada</strong>.</p>
-</details>
-<p>O <strong>RabbitMQ</strong> é amplamente utilizado em arquiteturas de <strong>microserviços</strong>, onde a comunicação entre serviços pode ser feita de forma desacoplada e escalável.</p>
-<h2 id="iniciar-o-rabbitmq">Iniciar o RabbitMQ</h2>
-<div class="admonition success">
-<p class="admonition-title">Sucesso!</p>
-<p>Para ter sucesso durante o curso, mantenha a organização!</p>
-<p>Crie um diretório para manter os arquivos da aula!</p>
+<p>Vamos praticar com o Apache Iceberg.</p>
+<h2 id="preparar-ambiente">Preparar ambiente</h2>
+<div class="admonition exercise exercise-self-progress" id="exercise_1">
+<p class="admonition-title">Exercise</p>
+<form class="quiz-form"><p>Crie uma pasta <code>10-data-lakehouse/02-iceberg</code> em seu diretório de trabalho e navegue até ela:</p>
 <div class="termy">
-<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>$<span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>~/aula02
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>~/aula02
+<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>$ mkdir -p 10-data-lakehouse/02-iceberg
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>$ cd 10-data-lakehouse/02-iceberg
 </code></pre></div>
 </div>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
 </div>
-<h3 id="criar-docker-composeyml">Criar <code>docker-compose.yml</code></h3>
-<p>Vamos iniciar um serviço <strong>RabbitMQ</strong> usando <strong>Docker</strong>.</p>
-<p>Crie um arquivo <code>docker-compose.yml</code> com o seguinte conteúdo:</p>
-<div class="language-yaml highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">services</span><span class="p">:</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">rabbitmq</span><span class="p">:</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rabbitmq:3-management</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rabbitmq-sensores</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">always</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5672:5672</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">15672:15672</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./rabbitmq:/var/lib/rabbitmq</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RABBITMQ_DEFAULT_USER=admin</span>
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RABBITMQ_DEFAULT_PASS=112233</span>
+</div></form></div>
+<h2 id="docker-compose">Docker compose</h2>
+<p>Para esta seção da aula, o arquivo <code>docker-compose.yml</code> deve conter:</p>
+<div class="language-yaml copy highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">services</span><span class="p">:</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">spark-iceberg</span><span class="p">:</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tabulario/spark-iceberg</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">spark-iceberg</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="nt">build</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">spark/</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="nt">networks</span><span class="p">:</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">      </span><span class="nt">iceberg_net</span><span class="p">:</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="nt">depends_on</span><span class="p">:</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rest</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">minio</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./warehouse:/home/iceberg/warehouse</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./notebooks:/home/iceberg/notebooks/notebooks</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AWS_ACCESS_KEY_ID=admin</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AWS_SECRET_ACCESS_KEY=password</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AWS_REGION=us-east-1</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8888:8888</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8080:8080</span>
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10000:10000</span>
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10001:10001</span>
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="w">  </span><span class="nt">rest</span><span class="p">:</span>
+<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">apache/iceberg-rest-fixture</span>
+<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">iceberg-rest</span>
+<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="w">    </span><span class="nt">networks</span><span class="p">:</span>
+<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="w">      </span><span class="nt">iceberg_net</span><span class="p">:</span>
+<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8181:8181</span>
+<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a><span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AWS_ACCESS_KEY_ID=admin</span>
+<a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AWS_SECRET_ACCESS_KEY=password</span>
+<a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AWS_REGION=us-east-1</span>
+<a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CATALOG_WAREHOUSE=s3://warehouse/</span>
+<a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CATALOG_IO__IMPL=org.apache.iceberg.aws.s3.S3FileIO</span>
+<a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CATALOG_S3_ENDPOINT=http://minio:9000</span>
+<a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a><span class="w">  </span><span class="nt">minio</span><span class="p">:</span>
+<a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">minio/minio</span>
+<a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">minio</span>
+<a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a><span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MINIO_ROOT_USER=admin</span>
+<a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MINIO_ROOT_PASSWORD=password</span>
+<a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MINIO_DOMAIN=minio</span>
+<a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a><span class="w">    </span><span class="nt">networks</span><span class="p">:</span>
+<a id="__codelineno-1-45" name="__codelineno-1-45" href="#__codelineno-1-45"></a><span class="w">      </span><span class="nt">iceberg_net</span><span class="p">:</span>
+<a id="__codelineno-1-46" name="__codelineno-1-46" href="#__codelineno-1-46"></a><span class="w">        </span><span class="nt">aliases</span><span class="p">:</span>
+<a id="__codelineno-1-47" name="__codelineno-1-47" href="#__codelineno-1-47"></a><span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">warehouse.minio</span>
+<a id="__codelineno-1-48" name="__codelineno-1-48" href="#__codelineno-1-48"></a><span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<a id="__codelineno-1-49" name="__codelineno-1-49" href="#__codelineno-1-49"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">9001:9001</span>
+<a id="__codelineno-1-50" name="__codelineno-1-50" href="#__codelineno-1-50"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">9000:9000</span>
+<a id="__codelineno-1-51" name="__codelineno-1-51" href="#__codelineno-1-51"></a><span class="w">    </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;server&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;/data&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;--console-address&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;:9001&quot;</span><span class="p p-Indicator">]</span>
+<a id="__codelineno-1-52" name="__codelineno-1-52" href="#__codelineno-1-52"></a><span class="w">  </span><span class="nt">mc</span><span class="p">:</span>
+<a id="__codelineno-1-53" name="__codelineno-1-53" href="#__codelineno-1-53"></a><span class="w">    </span><span class="nt">depends_on</span><span class="p">:</span>
+<a id="__codelineno-1-54" name="__codelineno-1-54" href="#__codelineno-1-54"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">minio</span>
+<a id="__codelineno-1-55" name="__codelineno-1-55" href="#__codelineno-1-55"></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">minio/mc</span>
+<a id="__codelineno-1-56" name="__codelineno-1-56" href="#__codelineno-1-56"></a><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mc</span>
+<a id="__codelineno-1-57" name="__codelineno-1-57" href="#__codelineno-1-57"></a><span class="w">    </span><span class="nt">networks</span><span class="p">:</span>
+<a id="__codelineno-1-58" name="__codelineno-1-58" href="#__codelineno-1-58"></a><span class="w">      </span><span class="nt">iceberg_net</span><span class="p">:</span>
+<a id="__codelineno-1-59" name="__codelineno-1-59" href="#__codelineno-1-59"></a><span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<a id="__codelineno-1-60" name="__codelineno-1-60" href="#__codelineno-1-60"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AWS_ACCESS_KEY_ID=admin</span>
+<a id="__codelineno-1-61" name="__codelineno-1-61" href="#__codelineno-1-61"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AWS_SECRET_ACCESS_KEY=password</span>
+<a id="__codelineno-1-62" name="__codelineno-1-62" href="#__codelineno-1-62"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AWS_REGION=us-east-1</span>
+<a id="__codelineno-1-63" name="__codelineno-1-63" href="#__codelineno-1-63"></a><span class="w">    </span><span class="nt">entrypoint</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<a id="__codelineno-1-64" name="__codelineno-1-64" href="#__codelineno-1-64"></a><span class="w">      </span><span class="no">/bin/sh -c &quot;</span>
+<a id="__codelineno-1-65" name="__codelineno-1-65" href="#__codelineno-1-65"></a><span class="w">      </span><span class="no">until (/usr/bin/mc alias set minio http://minio:9000 admin password) do echo &#39;...waiting...&#39; &amp;&amp; sleep 1; done;</span>
+<a id="__codelineno-1-66" name="__codelineno-1-66" href="#__codelineno-1-66"></a><span class="w">      </span><span class="no">/usr/bin/mc rm -r --force minio/warehouse;</span>
+<a id="__codelineno-1-67" name="__codelineno-1-67" href="#__codelineno-1-67"></a><span class="w">      </span><span class="no">/usr/bin/mc mb minio/warehouse;</span>
+<a id="__codelineno-1-68" name="__codelineno-1-68" href="#__codelineno-1-68"></a><span class="w">      </span><span class="no">/usr/bin/mc policy set public minio/warehouse;</span>
+<a id="__codelineno-1-69" name="__codelineno-1-69" href="#__codelineno-1-69"></a><span class="w">      </span><span class="no">tail -f /dev/null</span>
+<a id="__codelineno-1-70" name="__codelineno-1-70" href="#__codelineno-1-70"></a><span class="w">      </span><span class="no">&quot;</span>
+<a id="__codelineno-1-71" name="__codelineno-1-71" href="#__codelineno-1-71"></a><span class="nt">networks</span><span class="p">:</span>
+<a id="__codelineno-1-72" name="__codelineno-1-72" href="#__codelineno-1-72"></a><span class="w">  </span><span class="nt">iceberg_net</span><span class="p">:</span>
 </code></pre></div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>É recomendável utilizar uma senha mais forte que <code>112233</code></p>
+<div class="admonition exercise exercise-self-progress" id="exercise_2">
+<p class="admonition-title">Exercise</p>
+<form class="quiz-form"><p>Dê uma lida com atenção no arquivo <code>docker-compose.yml</code>.</p>
+<p>Chame o professor se não entender alguma coisa.</p>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
 </div>
+</div></form></div>
 <div class="admonition exercise text long exercise-long" id="exercise_1">
-<p class="admonition-title">Question</p>
-<form class="quiz-form"><p>Explique o que significa esta seção do <code>docker-compose.yml</code>:</p>
-<div class="language-yaml highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">ports</span><span class="p">:</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5672:5672</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">15672:15672</span>
-</code></pre></div>
+<p class="admonition-title">Exercise</p>
+<form class="quiz-form"><p>Quantos serviços estão sendo inicializados com este <code>docker-compose.yml</code>? Quais são eles e qual a função de cada um?</p>
 <div class="form-elements">
 <div class="quiz-text-container">
 
@@ -2988,67 +3058,110 @@ body {
 <button class="quiz-submit-button" type="submit">Submit</button>
 </div></form><div class="admonition answer quiz-answer no-indent">
 <p class="admonition-title">Answer</p>
-<p>A seção <em>ports</em> mapeia as portas do <em>container</em> (interna) para as portas do <em>host</em> (externa, sua máquina):</p>
-<ul>
-<li>
-<p><code>5672:5672</code>: Isso mapeia a porta <code>5672</code> do container RabbitMQ para a porta <code>5672</code> na máquina host. A porta <code>5672</code> é a porta padrão para <strong>AMQP</strong> (<em>Advanced Message Queuing Protocol</em>), que é usada para mensageria pelo RabbitMQ.</p>
-</li>
-<li>
-<p><code>15672:15672</code>: Isso mapeia a porta <code>15672</code> do container RabbitMQ para a porta <code>15672</code> na máquina host. A porta <code>15672</code> é a porta padrão para o <strong>RabbitMQ Management Plugin</strong>, que fornece uma interface web para gerenciar o RabbitMQ.</p>
-</li>
-</ul>
-<div class="admonition tip">
-<p class="admonition-title">Dica</p>
-<p>Caso ocorra um conflito de porta (outros serviços que possam estar usando a mesma porta), você pode alterar a porta do host (a primeira) para um número diferente, como <code>15673:15672</code>.</p>
+<p>Quatro serviços estão sendo inicializados:</p>
+<ol>
+<li><strong>spark-iceberg</strong>: Este serviço executa o Apache Spark com suporte ao Apache Iceberg, permitindo a criação e manipulação de tabelas Iceberg.</li>
+<li><strong>rest</strong>: Este serviço é um fixture REST para o Apache Iceberg, que fornece uma API REST para interagir com o catálogo Iceberg.</li>
+<li><strong>minio</strong>: Este serviço executa o MinIO, um armazenamento de objetos compatível com S3, que serve como o backend de armazenamento para os dados do Iceberg.</li>
+<li><strong>mc</strong>: Este serviço executa o cliente MinIO (mc) para configurar o bucket necessário no MinIO e garantir que o ambiente esteja pronto para uso.</li>
+</ol>
+<p>Esses serviços juntos criam um ambiente completo para trabalhar com tabelas Iceberg em um data lakehouse.</p>
 </div>
 </div>
-</div>
-<h3 id="inicie-o-rabbitmq">Inicie o RabbitMQ</h3>
-<p>Para iniciar o RabbitMQ, execute o seguinte comando no terminal:</p>
+<div class="admonition exercise exercise-self-progress" id="exercise_3">
+<p class="admonition-title">Exercise</p>
+<form class="quiz-form"><p>Crie um arquivo <code>docker-compose.yml</code> com o conteúdo acima e inicialize os serviços:</p>
 <div class="termy">
-
-    <div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>$<span class="w"> </span>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d
-</code></pre></div>
-
-</div>
-
-<p>Isso iniciará o RabbitMQ em segundo plano. Você pode verificar se o RabbitMQ está em execução acessando a interface de gerenciamento em <a href="http://localhost:15672">http://localhost:15672</a> com o usuário e senha definidos no <code>docker-compose.yml</code>.</p>
-<p>Para conferir se o RabbitMQ está em execução, você pode usar o seguinte comando:</p>
-<div class="termy">
-
-    <div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>$<span class="w"> </span>docker<span class="w"> </span>compose<span class="w"> </span>ps
-</code></pre></div>
-
-</div>
-
-<p>E para acompanhar os logs:</p>
-<div class="termy">
-
-    <div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>$<span class="w"> </span>docker<span class="w"> </span>compose<span class="w"> </span>logs<span class="w"> </span>-f
-</code></pre></div>
-
-</div>
-
-<details class="tip">
-<summary>Uma outra forma</summary>
-<p>Você pode usar o comando <code>docker logs</code> para visualizar os logs do container diretamente:</p>
-<div class="termy">
-<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>$<span class="w"> </span>docker<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>rabbitmq-sensores
+<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>$ docker compose up
 </code></pre></div>
 </div>
-<p>O mesmo para <code>docker ps</code>:</p>
-<div class="termy">
-<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>$<span class="w"> </span>docker<span class="w"> </span>ps
-</code></pre></div>
+<p>Aguarde uns instantes até que os serviços estejam totalmente inicializados.</p>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
 </div>
-</details>
-<h2 id="painel-rabbitmq">Painel RabbitMQ</h2>
-<p>Acesse a interface de gerenciamento do RabbitMQ em <a href="http://localhost:15672">http://localhost:15672</a> com o usuário e senha definidos no <code>docker-compose.yml</code>.</p>
-<div class="admonition bug">
-<p class="admonition-title">Problema</p>
-<p>Caso você não consiga acessar a interface web, verifique se o container do RabbitMQ está em execução e se as portas estão corretamente mapeadas.</p>
+</div></form></div>
+<div class="admonition exercise text short exercise-short" id="exercise_2">
+<p class="admonition-title">Exercise</p>
+<form class="quiz-form"><p>Acesse o serviço do <strong>MinIO</strong>. Existe algum bucket já criado? Como ele foi criado?</p>
+<div class="admonition info">
+<p class="admonition-title">Info!</p>
+<p>O serviço <strong>MinIO</strong> está disponível na URL <a href="http://localhost:9001">http://localhost:9001</a> em seu navegador.</p>
 </div>
-<p><img alt="" src="../rabbit_web.png" /></p>
+<div class="form-elements">
+<div class="quiz-text-container">
+
+<input type="text" value="" name="data" class="quiz-text-input" 
+       placeholder="Enter your answer..." autocomplete="off"/>
+
+</div>
+<button class="quiz-submit-button" type="submit">Submit</button>
+</div></form><div class="admonition answer quiz-answer no-indent">
+<p class="admonition-title">Answer</p>
+<p>Sim, existe um bucket <code>warehouse</code> já criado. Ele foi criado automaticamente pelo serviço <strong>mc</strong> na primeira vez que foi executado.</p>
+</div>
+</div>
+<h2 id="criar-tabelas">Criar tabelas</h2>
+<p>Vamos utilizar o <strong>PyIceberg</strong> para criar e manipular tabelas no Iceberg.</p>
+<div class="admonition exercise exercise-self-progress" id="exercise_4">
+<p class="admonition-title">Exercise</p>
+<form class="quiz-form"><p>A imagem <strong>Docker</strong> que estamos utilizando já contém alguns notebooks de exemplo.</p>
+<p>Acesse o <a href="http://localhost:8888/notebooks/PyIceberg%20-%20Getting%20Started.ipynb">Jupyter Notebook Getting Started</a>.</p>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
+</div></form></div>
+<div class="admonition exercise exercise-self-progress" id="exercise_5">
+<p class="admonition-title">Exercise</p>
+<form class="quiz-form"><p>Leia o notebook com atenção e execute os códigos até antes de iniciar a seção <strong>DuckDB</strong>.</p>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
+</div></form></div>
+<div class="admonition exercise text long exercise-long" id="exercise_3">
+<p class="admonition-title">Exercise</p>
+<form class="quiz-form"><p>Ao terminar a execução do notebook, confira no serviço <strong>MinIO</strong> se os arquivos da tabela foram criados.</p>
+<p>Acesse <code>warehouse/default/taxis</code> e veja os arquivos. Qual a função das pastas <code>data</code> e <code>metadata</code>?</p>
+<div class="form-elements">
+<div class="quiz-text-container">
+
+<textarea name="data" class="quiz-text-input" 
+          placeholder="Enter your detailed answer..." rows="4"></textarea>
+
+</div>
+<button class="quiz-submit-button" type="submit">Submit</button>
+</div></form><div class="admonition answer quiz-answer no-indent">
+<p class="admonition-title">Answer</p>
+<p>A pasta <code>data</code> contém os arquivos de dados reais da tabela, enquanto a pasta <code>metadata</code> contém os arquivos de metadados que descrevem a estrutura da tabela, incluindo informações sobre partições, esquema e snapshots.</p>
+</div>
+</div>
+<div class="admonition exercise exercise-self-progress" id="exercise_6">
+<p class="admonition-title">Exercise</p>
+<form class="quiz-form"><p>Acesse o <a href="http://localhost:8888/notebooks/PyIceberg%20-%20Write%20support.ipynb">Jupyter Notebook PyIceberg - Write support</a>.</p>
+<p>Execute os códigos do notebook. Se tiver dúvidas, chame o professor.</p>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
+</div></form></div>
+<div class="admonition exercise exercise-self-progress" id="exercise_7">
+<p class="admonition-title">Exercise</p>
+<form class="quiz-form"><p>Acesse o <a href="http://localhost:8888/notebooks/Iceberg%20-%20View%20Support.ipynb">Jupyter Notebook Iceberg - View Support</a>.</p>
+<p>Execute os códigos do notebook. Se tiver dúvidas, chame o professor.</p>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
+</div></form></div>
+<p>Acesse o servidor <strong>Jupyter Notebook</strong> no endereço <a href="http://localhost:8888">http://localhost:8888</a>. Você irá encontrar vários notebooks de exemplo para explorar o <strong>Iceberg</strong>!</p>
+<p>Na próxima seção, iremos utilizar o <strong>Trino</strong> para consultar as tabelas que criamos utilizando o formato <strong>Iceberg</strong>.</p>
 <script type="text/javascript">
 // Sistema de processamento de exercícios de múltipla escolha
 function processChoiceExercises() {
@@ -4140,7 +4253,7 @@ document.addEventListener('click', function(e) {
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../docker/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Docker">
+          <a href="../minio/" class="md-footer__link md-footer__link--prev" aria-label="Previous: MinIO">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -4150,20 +4263,20 @@ document.addEventListener('click', function(e) {
                 Previous
               </span>
               <div class="md-ellipsis">
-                Docker
+                MinIO
               </div>
             </div>
           </a>
         
         
           
-          <a href="../programar-sensores/" class="md-footer__link md-footer__link--next" aria-label="Next: Programar Sensores">
+          <a href="../trino/" class="md-footer__link md-footer__link--next" aria-label="Next: Trino">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Programar Sensores
+                Trino
               </div>
             </div>
             <div class="md-footer__button md-icon">
