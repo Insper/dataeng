@@ -3691,7 +3691,12 @@ body {
 <p><img alt="" src="../iam-user-create-1.png" /></p>
 </li>
 <li>
-<p>Clique em <strong>Next</strong> e selecione <strong>Attach policies directly</strong>. Procure pelas políticas gerenciadas <code>AmazonS3FullAccess</code> e <code>AmazonEMRFullAccessPolicy_v2</code> e selecione-as.</p>
+<p>Clique em <strong>Next</strong> e selecione <strong>Attach policies directly</strong>. Procure pelas políticas gerenciadas <code>AmazonS3FullAccess</code>, <code>AmazonElasticMapReduceFullAccess</code>, <code>CloudWatchFullAccess</code> e <code>AmazonEMRFullAccessPolicy_v2</code> e selecione-as.</p>
+<div class="admonition warning">
+<p class="admonition-title">Atenção</p>
+<p>Em um ambiente de produção, é recomendável criar uma política personalizada com permissões mínimas necessárias para o usuário.</p>
+<p>Aqui, estamos utilizando políticas gerenciadas para simplificar o processo.</p>
+</div>
 </li>
 <li>
 <p>Clique em <strong>Next</strong>. Você deve ver as políticas selecionadas.</p>
