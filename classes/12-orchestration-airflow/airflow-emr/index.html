@@ -3651,14 +3651,18 @@ body {
 <div class="admonition exercise exercise-self-progress" id="exercise_2">
 <p class="admonition-title">Exercício</p>
 <form class="quiz-form"><p>Crie um arquivo <code>.env</code>.</p>
-<p>Nele, configure o <code>AIRFLOW_UID</code> e suas credenciais AWS:</p>
+<p>Nele, configure o <code>AIRFLOW_UID</code> e suas credenciais <strong>AWS</strong>.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Após este exercício, deixei um tutorial sobre como criar as credenciais <strong>AWS</strong>.</p>
+</div>
 <div class="admonition warning">
 <p class="admonition-title">Linux/Mac</p>
 <p>Caso esteja no Linux ou Mac, substitua o <code>AIRFLOW_UID</code> pelo resultado do comando <code>id -u</code> (execute no terminal).</p>
 </div>
 <div class="admonition danger">
 <p class="admonition-title">Credenciais</p>
-<p>Nunca compartilhe suas credenciais AWS publicamente!</p>
+<p>Nunca compartilhe suas credenciais <strong>AWS</strong> publicamente!</p>
 <p>Se utilizar o Git, adicione o <code>.env</code> ao <code>.gitignore</code>.</p>
 </div>
 <div class="language-bash copy highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nv">AIRFLOW_UID</span><span class="o">=</span><span class="m">50000</span>
@@ -3672,6 +3676,42 @@ body {
 <button class="quiz-submit-button" type="submit">Mark as done</button>
 </div>
 </div></form></div>
+<details>
+<summary>Criar <code>AWS_ACCESS_KEY_ID</code> e <code>AWS_SECRET_ACCESS_KEY</code></summary>
+<p>Para criar as credenciais da <strong>AWS</strong>, siga o passo a passo:</p>
+<ol>
+<li>
+<p>Acesse o <strong>AWS Management Console</strong> e vá para o serviço <strong>IAM</strong>.</p>
+</li>
+<li>
+<p>No menu lateral, clique em <strong>Users</strong> e depois em <strong>Create user</strong>.</p>
+</li>
+<li>
+<p>Dê um nome ao usuário (ex: <code>u_airflow_emr</code>) e selecione a opção <strong>Programmatic access</strong>.</p>
+<p><img alt="" src="../iam-user-create-1.png" /></p>
+</li>
+<li>
+<p>Clique em <strong>Next</strong> e selecione <strong>Attach policies directly</strong>. Procure pelas políticas gerenciadas <code>AmazonS3FullAccess</code> e <code>AmazonEMRFullAccessPolicy_v2</code> e selecione-as.</p>
+</li>
+<li>
+<p>Clique em <strong>Next</strong>. Você deve ver as políticas selecionadas.</p>
+<p><img alt="" src="../iam-user-policies-2.png" /></p>
+</li>
+<li>
+<p>Clique em <strong>Create user</strong>.</p>
+</li>
+<li>
+<p>Com o usuário criado, clique no nome de usuário. Na seção superior, você deve ver uma opção <strong>Access key 1 Create access key</strong>. Clique nela e selecione a opção <strong>Other</strong>.</p>
+<p><img alt="" src="../iam-user-access-key-3.png" /></p>
+</li>
+<li>
+<p>Na próxima página você terá a opção de adicionar <em>tags</em> (opcional). Clique em <strong>Next</strong>.</p>
+</li>
+<li>
+<p>Na última página, você verá a <strong>Access Key ID</strong> e a <strong>Secret Access Key</strong>. Copie ambas e utilize no arquivo <code>.env</code>.</p>
+</li>
+</ol>
+</details>
 <details>
 <summary><code>docker-compose.yml</code>:</summary>
 <div class="language-yaml copy highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Basic Airflow cluster configuration for LocalExecutor.</span>
