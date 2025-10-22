@@ -4432,6 +4432,23 @@ body {
 <p>Descomente o trecho no arquivo <code>replica/sql/003-load-status.sql</code> se quiser popular a tabela.</p>
 </div>
 <p>Aguarde alguns segundos, você verá mensagens indicando que o <strong>PostgreSQL</strong> primário e a réplica estão operacionais.</p>
+<div class="admonition danger">
+<p class="admonition-title">Windows</p>
+<p>Se utilizar <strong>Windows</strong> e obter um erro <code>'required file not found'</code> no nó primário (<code>docker logs postgres-sfbikeshare-primary</code>), você precisará editar os arquivos <code>scripts/01-replication-setup.sh</code> e <code>scripts/02-replication-setup-replica.sh</code>, removendo os caracteres <code>\r</code> (<em>carriage return</em>) do final de cada linha.</p>
+<p>Para fazer isto:</p>
+<ul>
+<li>Abra os dois arquivos de <em>script</em> no <strong>VSCode</strong></li>
+<li>Para cada arquivo, no canto inferior direito, clique em <code>CRLF</code> e selecione <code>LF</code></li>
+<li>Salve os arquivos e reinicie os serviços com o comando <code>docker compose down</code> seguido de <code>docker compose up</code>.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">CRLF vs LF</p>
+<ul>
+<li><code>CRLF</code> (<strong>Carriage Return + Line Feed</strong>) é o formato de final de linha usado no Windows.</li>
+<li><code>LF</code> (<strong>Line Feed</strong>) é o formato de final de linha usado em sistemas Unix/Linux e é o esperado em scripts de shell.</li>
+</ul>
+</div>
+</div>
 <div class="form-elements">
 <div class="quiz-self-progress">
 <input type="hidden" name="data" value="done" />
