@@ -13,10 +13,10 @@
       
       
       
-        <link rel="prev" href="../iceberg/">
+        <link rel="prev" href="../indexes-views-subqueries/">
       
       
-        <link rel="next" href="../references/">
+        <link rel="next" href="../../08-interview-01/int01/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Trino - Engenharia de Dados</title>
+        <title>Read Replica - Engenharia de Dados</title>
       
     
     
@@ -81,7 +81,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#trino" class="md-skip">
+        <a href="#read-replica" class="md-skip">
           Skip to content
         </a>
       
@@ -117,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Trino
+              Read Replica
             
           </span>
         </div>
@@ -2043,10 +2043,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -2067,11 +2065,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10" >
         
           
           <label class="md-nav__link" for="__nav_2_10" id="__nav_2_10_label" tabindex="0">
@@ -2087,7 +2085,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_10">
             <span class="md-nav__icon md-icon"></span>
             10 - Data Lakehouse
@@ -2101,7 +2099,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../intro-data-lakehouse/" class="md-nav__link">
+      <a href="../../10-data-lakehouse/intro-data-lakehouse/" class="md-nav__link">
         
   
   
@@ -2124,7 +2122,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../minio/" class="md-nav__link">
+      <a href="../../10-data-lakehouse/minio/" class="md-nav__link">
         
   
   
@@ -2147,7 +2145,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../iceberg/" class="md-nav__link">
+      <a href="../../10-data-lakehouse/iceberg/" class="md-nav__link">
         
   
   
@@ -2167,32 +2165,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Trino
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../10-data-lakehouse/trino/" class="md-nav__link">
         
   
   
@@ -2203,53 +2179,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#visao-geral" class="md-nav__link">
-    <span class="md-ellipsis">
-      Visão Geral
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configuracao" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configuração
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dbeaver" class="md-nav__link">
-    <span class="md-ellipsis">
-      DBeaver
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2262,7 +2191,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../references/" class="md-nav__link">
+      <a href="../../10-data-lakehouse/references/" class="md-nav__link">
         
   
   
@@ -3081,8 +3010,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -3097,11 +3028,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_15" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_15" checked>
         
           
           <label class="md-nav__link" for="__nav_2_15" id="__nav_2_15_label" tabindex="0">
@@ -3117,7 +3048,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_15_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_15_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_15">
             <span class="md-nav__icon md-icon"></span>
             15 - SGBDR - Performance
@@ -3184,7 +3115,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../15-query-opt/intro/" class="md-nav__link">
+      <a href="../intro/" class="md-nav__link">
         
   
   
@@ -3207,7 +3138,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../15-query-opt/config-db/" class="md-nav__link">
+      <a href="../config-db/" class="md-nav__link">
         
   
   
@@ -3230,7 +3161,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../15-query-opt/tpcb/" class="md-nav__link">
+      <a href="../tpcb/" class="md-nav__link">
         
   
   
@@ -3253,7 +3184,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../15-query-opt/intro-indexes/" class="md-nav__link">
+      <a href="../intro-indexes/" class="md-nav__link">
         
   
   
@@ -3276,7 +3207,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../15-query-opt/pratica-indexes/" class="md-nav__link">
+      <a href="../pratica-indexes/" class="md-nav__link">
         
   
   
@@ -3304,8 +3235,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -3320,11 +3253,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_15_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_15_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2_15_2" id="__nav_2_15_2_label" tabindex="0">
@@ -3340,7 +3273,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_15_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_15_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_15_2">
             <span class="md-nav__icon md-icon"></span>
             Parte II
@@ -3354,7 +3287,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../15-query-opt/indexes-views-subqueries/" class="md-nav__link">
+      <a href="../indexes-views-subqueries/" class="md-nav__link">
         
   
   
@@ -3374,10 +3307,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../15-query-opt/pg-read-replica/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Read Replica
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -3388,6 +3343,104 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#beneficios-da-arquitetura" class="md-nav__link">
+    <span class="md-ellipsis">
+      Benefícios da Arquitetura
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pratica" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prática
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Prática">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configurar-ambiente" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configurar Ambiente
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configurar-variaveis-de-ambiente" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configurar Variáveis de Ambiente
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iniciar-servicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Iniciar Serviços
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conexao-dbeaver" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conexão DBeaver
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uso-pratico" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uso prático
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aws-rds" class="md-nav__link">
+    <span class="md-ellipsis">
+      AWS RDS
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -3706,27 +3759,78 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#visao-geral" class="md-nav__link">
+  <a href="#beneficios-da-arquitetura" class="md-nav__link">
     <span class="md-ellipsis">
-      Visão Geral
+      Benefícios da Arquitetura
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuracao" class="md-nav__link">
+  <a href="#pratica" class="md-nav__link">
     <span class="md-ellipsis">
-      Configuração
+      Prática
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Prática">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configurar-ambiente" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configurar Ambiente
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configurar-variaveis-de-ambiente" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configurar Variáveis de Ambiente
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iniciar-servicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Iniciar Serviços
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conexao-dbeaver" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conexão DBeaver
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#dbeaver" class="md-nav__link">
+  <a href="#uso-pratico" class="md-nav__link">
     <span class="md-ellipsis">
-      DBeaver
+      Uso prático
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aws-rds" class="md-nav__link">
+    <span class="md-ellipsis">
+      AWS RDS
     </span>
   </a>
   
@@ -4165,97 +4269,207 @@ body {
   }
 }
 </style>
-<h1 id="trino">Trino</h1>
-<h2 id="visao-geral">Visão Geral</h2>
-<p>O <strong>Trino</strong> (anteriormente conhecido como PrestoSQL) é um mecanismo de consulta <strong>SQL</strong> distribuído e de alto desempenho, projetado para consultar dados onde quer que eles estejam armazenados.</p>
-<div class="admonition tip">
-<p class="admonition-title">Trino</p>
-<p>O <strong>Trino</strong> é uma das ferramentas essenciais em arquiteturas de <strong>Data Lakehouse</strong></p>
+<h1 id="read-replica">Read Replica</h1>
+<p>Uma réplica de leitura (<em>read replica</em>) é uma cópia <strong>somente leitura</strong> de um banco de dados primário.</p>
+<p>As réplicas de leitura são utilizadas principalmente paraÇ</p>
+<ul>
+<li>distribuir a carga de leitura,</li>
+<li>melhorar a disponibilidade e</li>
+<li>fornecer redundância.</li>
+</ul>
+<p>Considere o diagrama na sequência, que ilustra o funcionamento da replicação e seu uso:</p>
+<pre class="mermaid"><code>graph TB
+    subgraph "Cliente / Aplicação"
+        APP[Aplicação]
+        WRITE[Operações de Escrita&lt;br/&gt;INSERT, UPDATE, DELETE]
+        READ[Operações de Leitura&lt;br/&gt;SELECT]
+    end
+
+    subgraph "Servidor Principal"
+        PRIMARY[(Primary Database&lt;br/&gt;Servidor Primário)]
+        WAL[WAL&lt;br/&gt;Write-Ahead Log]
+    end
+
+    subgraph "Servidores de Réplica"
+        REPLICA1[(Read Replica 1)]
+        REPLICA2[(Read Replica 2)]
+        REPLICA3[(Read Replica 3)]
+    end
+
+    subgraph "Processo de Replicação"
+        STREAM[Streaming Replication]
+        APPLY[Aplicação do WAL&lt;br/&gt;nas Réplicas]
+    end
+
+    APP --&gt; WRITE
+    APP --&gt; READ
+
+    WRITE --&gt; PRIMARY
+    PRIMARY --&gt; WAL
+
+    WAL --&gt; STREAM
+    STREAM --&gt; APPLY
+
+    APPLY --&gt; REPLICA1
+    APPLY --&gt; REPLICA2
+    APPLY --&gt; REPLICA3
+
+    READ --&gt; REPLICA1
+    READ --&gt; REPLICA2
+    READ --&gt; REPLICA3
+    READ -.também pode.-&gt; PRIMARY
+
+    style PRIMARY fill:#ff6b6b,stroke:#c92a2a,color:#fff
+    style REPLICA1 fill:#4dabf7,stroke:#1971c2,color:#fff
+    style REPLICA2 fill:#4dabf7,stroke:#1971c2,color:#fff
+    style REPLICA3 fill:#4dabf7,stroke:#1971c2,color:#fff
+    style WAL fill:#ffd43b,stroke:#f08c00
+    style WRITE fill:#ff8787,stroke:#c92a2a
+    style READ fill:#74c0fc,stroke:#1971c2</code></pre>
+<p>Os componentes principais são:</p>
+<ul>
+<li><strong>Primary Database</strong>: servidor principal que recebe todas as operações de escrita. É a fonte única de verdade para os dados e o ponto central da arquitetura de replicação.</li>
+<li><strong>Read Replicas</strong>: servidores secundários que recebem cópias dos dados do servidor primário. Podem ser múltiplas réplicas para distribuir a carga de leitura.</li>
+<li><strong>WAL (Write-Ahead Log)</strong>: mecanismo de registro de transações do <strong>PostgreSQL</strong>. Todas as modificações são primeiro escritas no <strong>WAL</strong> antes de serem aplicadas aos dados, garantindo durabilidade e possibilitando a replicação.</li>
+<li><strong>Streaming Replication</strong>: processo que transmite continuamente as mudanças do <strong>WAL</strong> do servidor primário para as réplicas em tempo real ou quase real.</li>
+</ul>
+<div class="admonition exercise text short exercise-short" id="exercise_1">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>As operações de <strong>DML</strong> (Data Manipulation Language) são tratadas de forma diferente entre o servidor primário e as réplicas de leitura.</p>
+<p>Explique como essas operações são gerenciadas em cada tipo de servidor.</p>
+<div class="form-elements">
+<div class="quiz-text-container">
+
+<input type="text" value="" name="data" class="quiz-text-input" 
+       placeholder="Enter your answer..." autocomplete="off"/>
+
 </div>
-<p>Ele permite que você execute consultas analíticas complexas em grandes volumes de dados, sejam eles armazenados em <strong>data lakes</strong>, <strong>data warehouses</strong> ou outros sistemas de armazenamento, sem a necessidade de mover os dados.</p>
-<p>O Trino oferece suporte a uma ampla gama de fontes de dados por meio de conectores, permitindo que uma única camada de consulta acesse tanto sistemas de armazenamento quanto bancos de dados. Entre as opções estão object storages como S3, GCS e Azure Blob, além de HDFS, bancos relacionais como PostgreSQL, MySQL, Oracle e SQL Server, e ainda bancos NoSQL, como MongoDB, Cassandra e Elasticsearch. Essa versatilidade torna possível integrar diferentes tecnologias em uma mesma arquitetura de dados.</p>
-<p>Além disso, o Trino lida com múltiplos formatos de dados, como Parquet, ORC, Avro, JSON e CSV, garantindo flexibilidade na análise de dados estruturados e semiestruturados. Também se integra a sistemas especializados, como Apache Iceberg, Delta Lake e Apache Hudi para gerenciamento de tabelas em data lakes, bem como a data warehouses em nuvem, como BigQuery e Snowflake, permitindo cenários híbridos e distribuídos de análise em larga escala.</p>
-<div class="admonition tip">
-<p class="admonition-title">Curiosidade!</p>
-<p>O <strong>AWS Athena</strong> é baseado no <strong>Trino</strong>!</p>
+<button class="quiz-submit-button" type="submit">Submit</button>
+</div></form><div class="admonition answer quiz-answer no-indent">
+<p class="admonition-title">Answer</p>
+<p>Todas as operações de <code>INSERT</code>, <code>UPDATE</code> e <code>DELETE</code> devem ser direcionadas exclusivamente para o servidor primário.</p>
+<p>As réplicas <strong>não aceitam escritas</strong>, operando apenas em <strong>modo de leitura</strong>.</p>
 </div>
-<h2 id="configuracao">Configuração</h2>
-<p>Vamos atualizar o <code>docker-compose.yml</code> que utilizamos para o Iceberg, adicionando o serviço do Trino:</p>
-<div class="language-yaml copy highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w">  </span><span class="nt">trino</span><span class="p">:</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">trinodb/trino:latest</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">trino</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nt">depends_on</span><span class="p">:</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rest</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">minio</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="nt">networks</span><span class="p">:</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">iceberg_net</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8082:8080</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./catalog:/etc/trino/catalog</span>
-</code></pre></div>
-<p>Precisamos também configurar o <strong>Trino</strong> para se conectar ao <strong>MinIO</strong> e ao <strong>Iceberg</strong>. Para isso, crie a pasta <code>catalog</code> no mesmo diretório do <code>docker-compose.yml</code> e crie o arquivo <code>catalog/iceberg.properties</code> contendo as informações de acesso à API REST do Iceberg e ao MinIO:</p>
-<div class="language-properties copy highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="na">connector.name</span><span class="o">=</span><span class="s">iceberg</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="na">iceberg.catalog.type</span><span class="o">=</span><span class="s">rest</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="na">iceberg.rest-catalog.uri</span><span class="o">=</span><span class="s">http://rest:8181</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="na">iceberg.file-format</span><span class="o">=</span><span class="s">parquet</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="na">fs.native-s3.enabled</span><span class="o">=</span><span class="s">true</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="na">s3.endpoint</span><span class="o">=</span><span class="s">http://minio:9000</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="na">s3.path-style-access</span><span class="o">=</span><span class="s">true</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="na">s3.aws-access-key</span><span class="o">=</span><span class="s">admin</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="na">s3.aws-secret-key</span><span class="o">=</span><span class="s">password</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="na">s3.region</span><span class="o">=</span><span class="s">us-east-1</span>
-</code></pre></div>
+</div>
+<div class="admonition exercise choice exercise-choice" data-answer-idx="1" id="exercise_1">
+<p class="admonition-title">Benefícios da IaC</p>
+<form class="quiz-form"><p>Operações de leitura <strong>SELECT</strong> são executadas exclusivamente nas <strong>read replicas</strong>.</p>
+<div class="form-elements">
+<div class="quiz-alternative-set">
+  
+<label class="quiz-alternative" data-alt-index="0">
+  <div class="content">
+    <input type="hidden" name="data" value="">
+    <span class="choice-text">Verdadeiro</span>
+  </div>
+</label>
+
+<label class="quiz-alternative" data-alt-index="1">
+  <div class="content">
+    <input type="hidden" name="data" value="">
+    <span class="choice-text">Falso</span>
+  </div>
+</label>
+
+</div>
+<button class="quiz-submit-button" type="submit">Submit</button>
+</div></form><div class="admonition answer quiz-answer no-indent">
+<p class="admonition-title">Answer</p>
+<p>Falso.</p>
+<p>Operações <code>SELECT</code> podem ser distribuídas entre as múltiplas réplicas, aliviando a carga do servidor primário.</p>
+<p>Mas as leituras também podem ser feitas no primário, se necessário.</p>
+</div>
+</div>
+<h2 id="beneficios-da-arquitetura">Benefícios da Arquitetura</h2>
+<p>A arquitetura de <strong>read replicas</strong> no <strong>PostgreSQL</strong> oferece <strong>escalabilidade horizontal</strong> ao distribuir a carga de leitura entre múltiplos servidores, o que aumenta a <strong>disponibilidade</strong> e garante maior <strong>tolerância a falhas</strong>.</p>
+<p>Esta distribuição resulta em melhorias de <strong>performance</strong>, especialmente para aplicações com alto volume de consultas de leitura. Além disso, as réplicas podem estar em regiões geográficas diferentes (para reduzir a latência dos usuários) e também servem como recursos dedicados para operações de <strong>backup</strong> e execução de <strong>queries analíticas</strong> sem comprometer o desempenho do servidor primário.</p>
+<h2 id="pratica">Prática</h2>
+<p>Vamos configurar uma réplica de leitura para um banco de dados <strong>PostgreSQL</strong>.</p>
+<h3 id="configurar-ambiente">Configurar Ambiente</h3>
+<p>Vamos configurar o ambiente necessário para a aula. Utilizaremos a mesma pasta da aula anterior.</p>
 <div class="admonition exercise exercise-self-progress" id="exercise_1">
-<p class="admonition-title">Exercise</p>
-<form class="quiz-form"><p>Atualize o arquivo <code>docker-compose.yml</code> que você criou na seção do Iceberg, adicionando o serviço do Trino.</p>
-<p>Inicialize todos os serviços.</p>
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Navegue até a pasta <code>15-query-opt</code> da aula anterior.</p>
+<p>Então, clone o repositório com os arquivos base para a aula:</p>
+<div class="termy">
+<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>$ cd 15-query-opt
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>$ git clone https://github.com/macielcalebe/dataeng-query-opt-replica-base.git replica
+</code></pre></div>
+</div>
 <div class="form-elements">
 <div class="quiz-self-progress">
 <input type="hidden" name="data" value="done" />
 <button class="quiz-submit-button" type="submit">Mark as done</button>
 </div>
 </div></form></div>
+<h3 id="configurar-variaveis-de-ambiente">Configurar Variáveis de Ambiente</h3>
+<p>Vamos configurar as variáveis de ambiente para o <strong>PostgreSQL</strong>.</p>
 <div class="admonition exercise exercise-self-progress" id="exercise_2">
-<p class="admonition-title">Exercise</p>
-<form class="quiz-form"><p>Acesse <a href="http://localhost:8082">http://localhost:8082</a> para verificar se o Trino está rodando.</p>
-<p>Utilize um usuário qualquer, como <code>admin</code>!</p>
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Crie um arquivo <code>.env</code> a partir do arquivo <code>replica/.env.example</code> e altere as variáveis de ambiente.</p>
+<p><strong>OBS</strong>: apenas as senhas são de alteração obrigatória.</p>
 <div class="form-elements">
 <div class="quiz-self-progress">
 <input type="hidden" name="data" value="done" />
 <button class="quiz-submit-button" type="submit">Mark as done</button>
 </div>
 </div></form></div>
-<p>Agora, vamos utilizar o <strong>Trino</strong> para consultar as tabelas que criamos no <strong>Iceberg</strong>. Iremos fazer isto utilizando o <strong>DBeaver</strong>.</p>
-<h2 id="dbeaver">DBeaver</h2>
-<p>Acesse o <strong>DBeaver</strong> e crie uma nova conexão com o banco de dados <strong>Trino</strong>.</p>
+<h3 id="iniciar-servicos">Iniciar Serviços</h3>
 <div class="admonition exercise exercise-self-progress" id="exercise_3">
-<p class="admonition-title">Exercise</p>
-<form class="quiz-form"><p>Crie uma nova conexão com o banco de dados <strong>Trino</strong> no <strong>DBeaver</strong>.</p>
-<p>Utilize as seguintes configurações:</p>
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Inicie os serviços com o <strong>Docker Compose</strong>:</p>
+<div class="admonition danger">
+<p class="admonition-title">Atenção!</p>
+<p>Garanta que você está na pasta <code>15-query-opt/replica</code> antes de executar o comando abaixo.</p>
+</div>
+<div class="termy">
+<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>$ docker compose up
+</code></pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Atenção!</p>
+<p>Para maior velocidade, nesta aula, a tabela <code>status</code> será criada mas não será populada.</p>
+<p>Descomente o trecho no arquivo <code>replica/sql/003-load-status.sql</code> se quiser popular a tabela.</p>
+</div>
+<p>Aguarde alguns segundos, você verá mensagens indicando que o <strong>PostgreSQL</strong> primário e a réplica estão operacionais.</p>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
+</div></form></div>
+<h2 id="conexao-dbeaver">Conexão DBeaver</h2>
+<p>Vamos conectar ao banco de dados primário e à réplica utilizando o <strong>DBeaver</strong>.</p>
+<div class="admonition exercise exercise-self-progress" id="exercise_4">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>No <strong>DBeaver</strong>, crie duas conexões separadas:</p>
+<div class="admonition warning">
+<p class="admonition-title">Atenção!</p>
+<p>Confira as variáveis de ambiente <code>POSTGRES_PORT_APP</code> e <code>POSTGRES_PORT_REPLICA</code> no arquivo <code>.env</code> para saber as portas corretas.</p>
+</div>
+<ol>
+<li>
+<p>Conexão para o banco de dados <strong>primário</strong> utilizando as credenciais do arquivo <code>.env</code>:</p>
 <ul>
 <li>Host: <code>localhost</code></li>
-<li>Port: <code>8082</code></li>
-<li>User name: <code>admin</code></li>
+<li>Porta: <code>5434</code></li>
+<li>Usuário: conforme o arquivo <code>.env</code></li>
+<li>Senha: conforme o arquivo <code>.env</code></li>
+<li>Banco de dados: <code>sfbikeshare</code></li>
 </ul>
-<p>Teste a conexão e salve.</p>
-<div class="form-elements">
-<div class="quiz-self-progress">
-<input type="hidden" name="data" value="done" />
-<button class="quiz-submit-button" type="submit">Mark as done</button>
-</div>
-</div></form></div>
-<div class="admonition exercise exercise-self-progress" id="exercise_4">
-<p class="admonition-title">Exercise</p>
-<form class="quiz-form"><p>Crie uma nota aba de <strong>SQL script</strong> e execute algumas <em>queries</em> nas tabelas que você criou no Iceberg!</p>
-<div class="language-sql copy highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">iceberg</span><span class="p">.</span><span class="k">default</span><span class="p">.</span><span class="n">taxis</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="k">LIMIT</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
-</code></pre></div>
-<div class="language-sql highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">avg</span><span class="p">(</span><span class="n">passenger_count</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">average_passenger_count</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">iceberg</span><span class="p">.</span><span class="k">default</span><span class="p">.</span><span class="n">taxis</span><span class="p">;</span>
-</code></pre></div>
+</li>
+<li>
+<p>Conexão para a <strong>réplica de leitura</strong> utilizando as credenciais do arquivo <code>.env</code>:</p>
+<ul>
+<li>Host: <code>localhost</code></li>
+<li>Porta: <code>5435</code></li>
+<li>Usuário: conforme o arquivo <code>.env</code></li>
+<li>Senha: conforme o arquivo <code>.env</code></li>
+<li>Banco de dados: <code>sfbikeshare</code></li>
+</ul>
+</li>
+</ol>
+<p>Teste ambas as conexões para garantir que estão funcionando corretamente.</p>
 <div class="form-elements">
 <div class="quiz-self-progress">
 <input type="hidden" name="data" value="done" />
@@ -4263,29 +4477,181 @@ body {
 </div>
 </div></form></div>
 <div class="admonition exercise exercise-self-progress" id="exercise_5">
-<p class="admonition-title">Exercise</p>
-<form class="quiz-form"><p>Acesse <a href="http://localhost:8082">http://localhost:8082</a> para verificar o <em>status</em> do Trino.</p>
-<p>Você consegue ver alguma informação sobre as consultas que você fez?!</p>
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Em cada conexão, execute uma consulta qualquer para verificar se está tudo funcionando.</p>
+<p>É esperado que ambas as conexões retornem resultados idênticos, já que a réplica deve refletir o estado atual do banco primário.</p>
+<div class="language-sql copy highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w">  </span><span class="k">AS</span><span class="w"> </span><span class="n">qtde</span><span class="p">,</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">        </span><span class="k">MIN</span><span class="p">(</span><span class="n">t</span><span class="p">.</span><span class="n">start_date</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">first_start_date</span><span class="p">,</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">        </span><span class="k">MAX</span><span class="p">(</span><span class="n">t</span><span class="p">.</span><span class="n">start_date</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">last_start_date</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="k">FROM</span><span class="w"> </span><span class="n">trip</span><span class="w"> </span><span class="n">t</span><span class="p">;</span>
+</code></pre></div>
 <div class="form-elements">
 <div class="quiz-self-progress">
 <input type="hidden" name="data" value="done" />
 <button class="quiz-submit-button" type="submit">Mark as done</button>
 </div>
 </div></form></div>
+<div class="admonition exercise choice exercise-choice" data-answer-idx="1" id="exercise_2">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p><strong>Apenas na conexão com a réplica</strong>, tente executar uma operação de <code>DELETE</code> em qualquer tabela.</p>
+<div class="language-sql copy highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">trip</span><span class="w"> </span><span class="n">t</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">t</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">913000</span><span class="p">;</span>
+</code></pre></div>
+<p>Irá funcionar?</p>
+<div class="form-elements">
+<div class="quiz-alternative-set">
+  
+<label class="quiz-alternative" data-alt-index="0">
+  <div class="content">
+    <input type="hidden" name="data" value="">
+    <span class="choice-text">Sim</span>
+  </div>
+</label>
+
+<label class="quiz-alternative" data-alt-index="1">
+  <div class="content">
+    <input type="hidden" name="data" value="">
+    <span class="choice-text">Não</span>
+  </div>
+</label>
+
+</div>
+<button class="quiz-submit-button" type="submit">Submit</button>
+</div></form><div class="admonition answer quiz-answer no-indent">
+<p class="admonition-title">Answer</p>
+<p>Não. A réplica de leitura é configurada para não aceitar operações de escrita, como <code>INSERT</code>, <code>UPDATE</code> ou <code>DELETE</code>.</p>
+</div>
+</div>
 <div class="admonition exercise exercise-self-progress" id="exercise_6">
-<p class="admonition-title">Exercise</p>
-<form class="quiz-form"><p>Qual a distância média das corridas para cada <code>pulocationid</code>? Crie uma <em>query</em> para responder esta pergunta.</p>
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Em cada conexão, execute a seguinte consulta e visualize o resultado:</p>
+<div class="language-sql copy highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">trip</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="k">DESC</span><span class="p">;</span>
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Observe que ambas as conexões retornam os mesmos dados, confirmando que a réplica está sincronizada com o primário.</p>
+<p>Estamos listando as últimas linhas inseridas na tabela <code>trip</code> para facilitar a visualização.</p>
+</div>
 <div class="form-elements">
 <div class="quiz-self-progress">
 <input type="hidden" name="data" value="done" />
 <button class="quiz-submit-button" type="submit">Mark as done</button>
 </div>
 </div></form></div>
-<div class="admonition tip">
-<p class="admonition-title">Dica!</p>
-<p>Tente acessar as views que você criou pelo notebook. Você irá perceber que elas não são acessíveis pelo Trino.</p>
-<p>Crie outras views utilizando o Trino. Agora funciona?! Olha só que legal, você tem dados armazenados em um <strong>Parquet</strong> no <strong>MinIO</strong>, e pode criar <em>views</em> para estes dados!</p>
+<div class="admonition exercise choices exercise-self-progress" id="exercise_7">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p><strong>Apenas na conexão primária</strong>, tente executar a operação de <code>DELETE</code>:</p>
+<div class="language-sql copy highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">trip</span><span class="w"> </span><span class="n">t</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">t</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">913000</span><span class="p">;</span>
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>A operação de <code>DELETE</code> deve ser bem-sucedida no banco primário, removendo as linhas especificadas.</p>
+<p>Estamos deletando todas as linhas com <code>id</code> maior que <code>913000</code> na tabela <code>trip</code>.</p>
 </div>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
+</div></form></div>
+<div class="admonition exercise exercise-self-progress" id="exercise_8">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Em cada conexão, verifique as as linhas foram realmente deletadas.</p>
+<div class="language-sql copy highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">trip</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="k">DESC</span><span class="p">;</span>
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Observe que ambas as conexões retornam os mesmos dados, confirmando que a réplica está sincronizada com o primário.</p>
+</div>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
+</div></form></div>
+<div class="admonition exercise exercise-self-progress" id="exercise_9">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Em cada conexão, execute a seguinte consulta para verificar o status da replicação:</p>
+<div class="language-sql copy highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">SELECT</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="n">pg_is_in_recovery</span><span class="p">()</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">is_replica</span><span class="p">,</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="n">now</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">pg_last_xact_replay_timestamp</span><span class="p">()</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">replication_lag</span><span class="p">;</span>
+</code></pre></div>
+<ul>
+<li>No banco primário, <code>is_replica</code> deve retornar <code>false</code>.</li>
+<li>Na réplica, <code>is_replica</code> deve retornar <code>true</code> e <code>replication_lag</code> deve ser um valor pequeno (ou zero), evidenciando que a réplica está atualizada.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>A função <code>pg_is_in_recovery()</code> indica se o servidor está operando como uma réplica (em recuperação).</p>
+<p>A função <code>pg_last_xact_replay_timestamp()</code> retorna o timestamp da última transação aplicada na réplica, permitindo medir o atraso na replicação.</p>
+</div>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
+</div></form></div>
+<h2 id="uso-pratico">Uso prático</h2>
+<div class="admonition exercise text long exercise-long" id="exercise_2">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Considere um cenário onde uma aplicação web realiza muitas operações de leitura e escrita no banco de dados.</p>
+<p>Explique como a arquitetura de réplica de leitura pode beneficiar essa aplicação em termos de performance e escalabilidade.</p>
+<div class="form-elements">
+<div class="quiz-text-container">
+
+<textarea name="data" class="quiz-text-input" 
+          placeholder="Enter your detailed answer..." rows="4"></textarea>
+
+</div>
+<button class="quiz-submit-button" type="submit">Submit</button>
+</div></form><div class="admonition answer quiz-answer no-indent">
+<p class="admonition-title">Answer</p>
+<p>A arquitetura de réplica de leitura pode beneficiar a aplicação web ao distribuir a carga de leitura entre múltiplas réplicas, aliviando o servidor primário que lida com as operações de escrita.</p>
+<p>Isso resulta em tempos de resposta mais rápidos para consultas <code>SELECT</code>, melhorando a experiência do usuário.</p>
+<p>Além disso, a escalabilidade horizontal permite adicionar mais réplicas conforme a demanda aumenta, garantindo que o sistema possa crescer sem comprometer a performance.</p>
+</div>
+</div>
+<div class="admonition exercise text long exercise-long" id="exercise_3">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Mas como a aplicação sabe quando deve se conectar ao banco primário ou à réplica de leitura?</p>
+<div class="form-elements">
+<div class="quiz-text-container">
+
+<textarea name="data" class="quiz-text-input" 
+          placeholder="Enter your detailed answer..." rows="4"></textarea>
+
+</div>
+<button class="quiz-submit-button" type="submit">Submit</button>
+</div></form><div class="admonition answer quiz-answer no-indent">
+<p class="admonition-title">Answer</p>
+<p>A aplicação deve ser configurada para direcionar as operações de escrita (<code>INSERT</code>, <code>UPDATE</code>, <code>DELETE</code>) para o banco primário, enquanto as operações de leitura (<code>SELECT</code>) podem ser distribuídas entre as réplicas de leitura.</p>
+<p>Isso pode ser feito através de um <em>load balancer</em> ou lógica na camada de aplicação que gerencia as conexões ao banco de dados.</p>
+<p>Algumas bibliotecas e frameworks oferecem suporte nativo para essa separação de leitura e escrita, facilitando a implementação dessa arquitetura.</p>
+<p>Pesquise por:</p>
+<ul>
+<li><em>read-write splitting</em></li>
+<li><strong>pgbouncer read write split</strong></li>
+<li><strong>pgpool-ii read write split</strong></li>
+</ul>
+</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Dica</p>
+<p>Leia esta página da documentação oficial para se aprofundar:</p>
+<ul>
+<li><a href="https://www.postgresql.org/docs/current/high-availability.html">PostgreSQL High Availability</a></li>
+<li><a href="https://www.postgresql.org/docs/current/warm-standby.html">PostgreSQL warm standby</a></li>
+</ul>
+</div>
+<h2 id="aws-rds">AWS RDS</h2>
+<p>A Amazon Web Services (AWS) oferece suporte a réplicas de leitura para bancos de dados <strong>PostgreSQL</strong> gerenciados através do serviço <strong>Amazon RDS</strong> (Relational Database Service).</p>
+<p>Na plataforma, este processo de configuração é simplificado e já faz parte das opções disponíveis ao criar uma instância de banco de dados.</p>
+<p>Por hoje é só!</p>
 <script type="text/javascript">
 // Sistema de processamento de exercícios de múltipla escolha
 function processChoiceExercises() {
@@ -5377,7 +5743,7 @@ document.addEventListener('click', function(e) {
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../iceberg/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Apache Iceberg">
+          <a href="../indexes-views-subqueries/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Mais Recursos">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -5387,20 +5753,20 @@ document.addEventListener('click', function(e) {
                 Previous
               </span>
               <div class="md-ellipsis">
-                Apache Iceberg
+                Mais Recursos
               </div>
             </div>
           </a>
         
         
           
-          <a href="../references/" class="md-footer__link md-footer__link--next" aria-label="Next: Referências">
+          <a href="../../08-interview-01/int01/" class="md-footer__link md-footer__link--next" aria-label="Next: Interview 01">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Referências
+                Interview 01
               </div>
             </div>
             <div class="md-footer__button md-icon">

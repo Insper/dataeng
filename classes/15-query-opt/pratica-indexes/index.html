@@ -16,7 +16,7 @@
         <link rel="prev" href="../intro-indexes/">
       
       
-        <link rel="next" href="../../08-interview-01/int01/">
+        <link rel="next" href="../indexes-views-subqueries/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -3021,12 +3021,6 @@
       
         
       
-        
-      
-        
-      
-        
-      
     
     
     
@@ -3058,6 +3052,61 @@
           <label class="md-nav__title" for="__nav_2_15">
             <span class="md-nav__icon md-icon"></span>
             15 - SGBDR - Performance
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_15_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_15_1" id="__nav_2_15_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Parte I
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_15_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_15_1">
+            <span class="md-nav__icon md-icon"></span>
+            Parte I
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -3236,9 +3285,127 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#exercicio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercício
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_15_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_15_2" id="__nav_2_15_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Parte II
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_15_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_15_2">
+            <span class="md-nav__icon md-icon"></span>
+            Parte II
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../indexes-views-subqueries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mais Recursos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pg-read-replica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Read Replica
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -3571,6 +3738,15 @@
   <a href="#indices-para-analises-temporais" class="md-nav__link">
     <span class="md-ellipsis">
       Índices para Análises Temporais
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercicio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercício
     </span>
   </a>
   
@@ -4033,7 +4209,7 @@ body {
 <p class="admonition-title">Select ALL</p>
 <p>Utilizar <code>SELECT *</code> não é recomendado em produção!</p>
 </div>
-<div class="language-sql highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">EXPLAIN</span><span class="w"> </span><span class="p">(</span><span class="k">ANALYZE</span><span class="p">,</span><span class="w"> </span><span class="n">BUFFERS</span><span class="p">)</span>
+<div class="language-sql copy highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">EXPLAIN</span><span class="w"> </span><span class="p">(</span><span class="k">ANALYZE</span><span class="p">,</span><span class="w"> </span><span class="n">BUFFERS</span><span class="p">)</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">FROM</span><span class="w"> </span><span class="n">trip</span><span class="w"> </span>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">start_station_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">50</span><span class="p">;</span>
@@ -4073,7 +4249,7 @@ body {
 <div class="admonition exercise exercise-self-progress" id="exercise_2">
 <p class="admonition-title">Exercício</p>
 <form class="quiz-form"><p>Execute a seguinte consulta com análise de plano:</p>
-<div class="language-sql highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">EXPLAIN</span><span class="w"> </span><span class="p">(</span><span class="k">ANALYZE</span><span class="p">,</span><span class="w"> </span><span class="n">BUFFERS</span><span class="p">)</span>
+<div class="language-sql copy highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">EXPLAIN</span><span class="w"> </span><span class="p">(</span><span class="k">ANALYZE</span><span class="p">,</span><span class="w"> </span><span class="n">BUFFERS</span><span class="p">)</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">t</span><span class="p">.</span><span class="n">id</span><span class="p">,</span>
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">       </span><span class="n">t</span><span class="p">.</span><span class="n">duration</span><span class="p">,</span>
 <a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">       </span><span class="n">t</span><span class="p">.</span><span class="n">start_date</span><span class="p">,</span>
@@ -4100,7 +4276,7 @@ body {
 <div class="admonition exercise exercise-self-progress" id="exercise_3">
 <p class="admonition-title">Exercício</p>
 <form class="quiz-form"><p>Crie um índice B-Tree na coluna <code>start_station_id</code>:</p>
-<div class="language-sql highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">idx_trip_start_station</span><span class="w"> </span>
+<div class="language-sql copy highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">idx_trip_start_station</span><span class="w"> </span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">ON</span><span class="w"> </span><span class="n">trip</span><span class="w"> </span><span class="k">USING</span><span class="w"> </span><span class="n">btree</span><span class="w"> </span><span class="p">(</span><span class="n">start_station_id</span><span class="p">);</span>
 </code></pre></div>
 <div class="admonition warning">
@@ -4168,7 +4344,7 @@ body {
 <div class="admonition exercise exercise-self-progress" id="exercise_5">
 <p class="admonition-title">Exercício</p>
 <form class="quiz-form"><p>Execute esta consulta:</p>
-<div class="language-sql highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">EXPLAIN</span><span class="w"> </span><span class="p">(</span><span class="k">ANALYZE</span><span class="p">,</span><span class="w"> </span><span class="n">BUFFERS</span><span class="p">)</span>
+<div class="language-sql copy highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">EXPLAIN</span><span class="w"> </span><span class="p">(</span><span class="k">ANALYZE</span><span class="p">,</span><span class="w"> </span><span class="n">BUFFERS</span><span class="p">)</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">t</span><span class="p">.</span><span class="n">station_id</span><span class="p">,</span>
 <a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">       </span><span class="k">AVG</span><span class="p">(</span><span class="n">t</span><span class="p">.</span><span class="n">bikes_available</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">qt_bikes_avaiable_avg</span>
 <a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="k">FROM</span><span class="w"> </span><span class="k">public</span><span class="p">.</span><span class="n">status</span><span class="w"> </span><span class="n">t</span>
@@ -4185,7 +4361,7 @@ body {
 <div class="admonition exercise exercise-self-progress" id="exercise_6">
 <p class="admonition-title">Exercício</p>
 <form class="quiz-form"><p>Crie um índice <strong>B-Tree</strong> na coluna <code>time</code>:</p>
-<div class="language-sql highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">idx_status_time</span>
+<div class="language-sql copy highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">idx_status_time</span>
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="k">ON</span><span class="w"> </span><span class="n">status</span><span class="w"> </span><span class="k">USING</span><span class="w"> </span><span class="n">btree</span><span class="w"> </span><span class="p">(</span><span class="k">time</span><span class="p">);</span>
 </code></pre></div>
 <p>Execute novamente a consulta de agregação. Houve melhoria? Por que sim ou por que não?</p>
@@ -4217,7 +4393,7 @@ body {
 <div class="admonition exercise exercise-self-progress" id="exercise_7">
 <p class="admonition-title">Exercício</p>
 <form class="quiz-form"><p>Faça <strong>DROP</strong> no índice anterior e crie um índice <strong>BRIN</strong> na coluna <code>time</code>:</p>
-<div class="language-sql highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">DROP</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">idx_status_time</span><span class="p">;</span>
+<div class="language-sql copy highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">DROP</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">idx_status_time</span><span class="p">;</span>
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
 <a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">idx_status_time_brin</span>
 <a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">    </span><span class="k">ON</span><span class="w"> </span><span class="n">status</span><span class="w"> </span><span class="k">USING</span><span class="w"> </span><span class="n">brin</span><span class="p">(</span><span class="k">time</span><span class="p">);</span>
@@ -4232,7 +4408,7 @@ body {
 <div class="admonition exercise exercise-self-progress" id="exercise_8">
 <p class="admonition-title">Exercício</p>
 <form class="quiz-form"><p>Execute novamente a consulta e compare com os resultados anteriores:</p>
-<div class="language-sql highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">EXPLAIN</span><span class="w"> </span><span class="p">(</span><span class="k">ANALYZE</span><span class="p">,</span><span class="w"> </span><span class="n">BUFFERS</span><span class="p">)</span>
+<div class="language-sql copy highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">EXPLAIN</span><span class="w"> </span><span class="p">(</span><span class="k">ANALYZE</span><span class="p">,</span><span class="w"> </span><span class="n">BUFFERS</span><span class="p">)</span>
 <a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">t</span><span class="p">.</span><span class="n">station_id</span><span class="p">,</span>
 <a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">       </span><span class="k">AVG</span><span class="p">(</span><span class="n">t</span><span class="p">.</span><span class="n">bikes_available</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">qt_bikes_avaiable_avg</span>
 <a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="k">FROM</span><span class="w"> </span><span class="k">public</span><span class="p">.</span><span class="n">status</span><span class="w"> </span><span class="n">t</span>
@@ -4248,7 +4424,7 @@ body {
 <div class="admonition exercise exercise-self-progress" id="exercise_9">
 <p class="admonition-title">Exercício</p>
 <form class="quiz-form"><p>Para verificar o tamanho dos índices da tabela <code>status</code>, execute:</p>
-<div class="language-sql highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">SELECT</span>
+<div class="language-sql copy highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">SELECT</span>
 <a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="n">pg_size_pretty</span><span class="p">(</span><span class="n">pg_relation_size</span><span class="p">(</span><span class="s1">&#39;public.status&#39;</span><span class="p">))</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">table_data_size</span><span class="p">,</span>
 <a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="n">pg_size_pretty</span><span class="p">(</span><span class="n">pg_indexes_size</span><span class="p">(</span><span class="s1">&#39;public.status&#39;</span><span class="p">))</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">indexes_size</span><span class="p">,</span>
 <a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="n">pg_size_pretty</span><span class="p">(</span><span class="n">pg_total_relation_size</span><span class="p">(</span><span class="s1">&#39;public.status&#39;</span><span class="p">))</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">total_size</span><span class="p">;</span>
@@ -4262,13 +4438,95 @@ body {
 <div class="admonition exercise exercise-self-progress" id="exercise_10">
 <p class="admonition-title">Exercício</p>
 <form class="quiz-form"><p>Utilize o <code>pgbench</code> para realizar testes de performance com as tabelas contendo índices.</p>
-<p>Garanta que os índices existem e atualize as <em>queries</em> de teste.</p>
+<p>Garanta que os índices existem e atualize as <em>queries</em> de teste. O ideal é testar com seleção, inserção, atualização e deleção.</p>
 <div class="form-elements">
 <div class="quiz-self-progress">
 <input type="hidden" name="data" value="done" />
 <button class="quiz-submit-button" type="submit">Mark as done</button>
 </div>
 </div></form></div>
+<h2 id="exercicio">Exercício</h2>
+<div class="admonition exercise text long exercise-long" id="exercise_5">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Considere as <em>queries</em> a seguir:</p>
+<p><strong>Query 1</strong>:</p>
+<div class="language-sql copy highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">EXPLAIN</span><span class="w"> </span><span class="p">(</span><span class="k">ANALYZE</span><span class="p">,</span><span class="w"> </span><span class="n">BUFFERS</span><span class="p">)</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="k">FROM</span><span class="w"> </span><span class="k">public</span><span class="p">.</span><span class="n">status</span><span class="w"> </span><span class="n">s</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">category1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+</code></pre></div>
+<p><strong>Query 2</strong>:</p>
+<div class="language-sql copy highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">EXPLAIN</span><span class="w"> </span><span class="p">(</span><span class="k">ANALYZE</span><span class="p">,</span><span class="w"> </span><span class="n">BUFFERS</span><span class="p">)</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="k">FROM</span><span class="w"> </span><span class="k">public</span><span class="p">.</span><span class="n">status</span><span class="w"> </span><span class="n">s</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">category2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+</code></pre></div>
+<p>Qual a diferença entre elas? Execute-as e anote o resultado da sua execução.</p>
+<div class="form-elements">
+<div class="quiz-text-container">
+
+<textarea name="data" class="quiz-text-input" 
+          placeholder="Enter your detailed answer..." rows="4"></textarea>
+
+</div>
+<button class="quiz-submit-button" type="submit">Submit</button>
+</div></form><div class="admonition answer quiz-answer no-indent">
+<p class="admonition-title">Answer</p>
+<p>A primeira <em>query</em> filtra pela coluna <code>category1</code>, enquanto a segunda filtra pela coluna <code>category2</code>. Ambas as colunas são do tipo inteiro, da mesma tabela.</p>
+</div>
+</div>
+<div class="admonition exercise text long exercise-long" id="exercise_6">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Crie índices <strong>B-Tree</strong> para ambas as colunas e execute novamente as <em>queries</em>.</p>
+<p><strong>Criar índices</strong>:</p>
+<div class="language-sql copy highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">idx_status_btree_category1</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="k">ON</span><span class="w"> </span><span class="k">public</span><span class="p">.</span><span class="n">status</span><span class="w"> </span><span class="k">USING</span><span class="w"> </span><span class="n">btree</span><span class="w"> </span><span class="p">(</span><span class="n">category1</span><span class="p">);</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">idx_status_btree_category2</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="k">ON</span><span class="w"> </span><span class="k">public</span><span class="p">.</span><span class="n">status</span><span class="w"> </span><span class="k">USING</span><span class="w"> </span><span class="n">btree</span><span class="w"> </span><span class="p">(</span><span class="n">category2</span><span class="p">);</span>
+</code></pre></div>
+<p><strong>Query 1</strong>:</p>
+<div class="language-sql copy highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">EXPLAIN</span><span class="w"> </span><span class="p">(</span><span class="k">ANALYZE</span><span class="p">,</span><span class="w"> </span><span class="n">BUFFERS</span><span class="p">)</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="k">FROM</span><span class="w"> </span><span class="k">public</span><span class="p">.</span><span class="n">status</span><span class="w"> </span><span class="n">s</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">category1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+</code></pre></div>
+<p><strong>Query 2</strong>:</p>
+<div class="language-sql copy highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">EXPLAIN</span><span class="w"> </span><span class="p">(</span><span class="k">ANALYZE</span><span class="p">,</span><span class="w"> </span><span class="n">BUFFERS</span><span class="p">)</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="k">FROM</span><span class="w"> </span><span class="k">public</span><span class="p">.</span><span class="n">status</span><span class="w"> </span><span class="n">s</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">category2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+</code></pre></div>
+<p>Compare os resultados. Alguma diferença significativa? Por quê?</p>
+<div class="form-elements">
+<div class="quiz-text-container">
+
+<textarea name="data" class="quiz-text-input" 
+          placeholder="Enter your detailed answer..." rows="4"></textarea>
+
+</div>
+<button class="quiz-submit-button" type="submit">Submit</button>
+</div></form><div class="admonition answer quiz-answer no-indent">
+<p class="admonition-title">Answer</p>
+<p>A diferença na performance das duas <em>queries</em> após a criação dos índices ocorre devido à distribuição dos valores nas colunas <code>category1</code> e <code>category2</code>.</p>
+<p>O índice será mais eficaz se uma coluna tem uma distribuição mais uniforme dos valores, permitindo que o PostgreSQL localize rapidamente as linhas relevantes.</p>
+<p>Por outro lado, se uma coluna tem muitos valores repetidos (baixa cardinalidade), o índice pode não ser tão útil, pois muitas linhas podem corresponder ao mesmo valor, levando a um maior número de leituras de blocos.</p>
+<p><strong>Distribuição <code>category1</code></strong>:</p>
+<div class="language-sql copy highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">category1</span><span class="p">,</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">       </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">qtde_cat1</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="k">FROM</span><span class="w"> </span><span class="k">public</span><span class="p">.</span><span class="n">status</span><span class="w"> </span><span class="n">s</span><span class="w"> </span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">category1</span><span class="w"> </span>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">category1</span><span class="w"> </span><span class="k">ASC</span><span class="p">;</span>
+</code></pre></div>
+<p><strong>Distribuição <code>category2</code></strong>:</p>
+<div class="language-sql copy highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">category2</span><span class="p">,</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">       </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">qtde_cat2</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="k">FROM</span><span class="w"> </span><span class="k">public</span><span class="p">.</span><span class="n">status</span><span class="w"> </span><span class="n">s</span><span class="w"> </span>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">category2</span><span class="w"> </span>
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">category2</span><span class="w"> </span><span class="k">ASC</span><span class="p">;</span>
+</code></pre></div>
+</div>
+</div>
 <p>Por hoje é só! Bons estudos!</p>
 <script type="text/javascript">
 // Sistema de processamento de exercícios de múltipla escolha
@@ -5378,13 +5636,13 @@ document.addEventListener('click', function(e) {
         
         
           
-          <a href="../../08-interview-01/int01/" class="md-footer__link md-footer__link--next" aria-label="Next: Interview 01">
+          <a href="../indexes-views-subqueries/" class="md-footer__link md-footer__link--next" aria-label="Next: Mais Recursos">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Interview 01
+                Mais Recursos
               </div>
             </div>
             <div class="md-footer__button md-icon">
