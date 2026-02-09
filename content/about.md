@@ -18,7 +18,7 @@ Seja bem-vindo ao material do curso de **Engenharia de Dados** (2025/2). Aqui vo
 - **Quarta-feira**: 14:15 - 16:15
 - Plantão de dúvidas **quarta-feira** das 12:35 às 14:05 (Teams)
 
-Nossos encontros serão **presenciais**. A primeira aula será dia **11/08** e a última aula será dia **10/11**, mas poderão haver entregas após esta data.
+Nossos encontros serão **presenciais**. A primeira aula será dia **09/02** e a última aula será dia **25/05**, mas poderão haver entregas após esta data.
 
 ## Requirements.txt!
 

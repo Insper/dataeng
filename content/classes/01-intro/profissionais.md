@@ -100,7 +100,7 @@ Por não serem, em geral, especializados na construção de sistemas de dados pa
 !!! danger "Recruta-se Engenheiros(as) de dados!"
     Sem base sólida, o trabalho de ciência de dados tende a ser **ineficiente** e **limitado** pelo **tempo gasto em tarefas de preparação**.
 
-Assim, podemos considerar que engenharia de dados está localizada nas etapas primárias do fluxo de trabalho com dados: é responsável por **coletar**, **organizar**, **transformar** e **disponibilizar** dados de forma **confiável** e **escalável**, fornecendo insumos de alta qualidade para que cientistas de dados possam gerar análises, treinarr modelos de aprendizado de máquina e identificar *insights* estratégicos.
+Assim, podemos considerar que engenharia de dados está localizada nas etapas primárias do fluxo de trabalho com dados: é responsável por **coletar**, **organizar**, **transformar** e **disponibilizar** dados de forma **confiável** e **escalável**, fornecendo insumos de alta qualidade para que cientistas de dados possam gerar análises, treinar modelos de aprendizado de máquina e identificar *insights* estratégicos.
 
 ```mermaid
 flowchart LR
@@ -121,32 +121,35 @@ Para facilitar a compreensão da área de **Engenharia de Dados**, vamos explora
 !!! danger "Não seja tão rígido!"
     Esta lista serve como um guia geral para as principais atuações na área de dados.
     
-    Na prática, as responsabilidades de cada profissional podem se sobrepor e variar bastante de empresa para empresa.
+    Na prática, as responsabilidades de cada profissional podem se sobrepor e **variar bastante de empresa para empresa**.
+
+- **Arquiteto de Dados (Data Architect)**: O Arquiteto de Dados é o responsável por desenhar a estratégia e a arquitetura geral de dados da organização. Ele define como os dados serão armazenados, integrados e consumidos, garantindo que a infraestrutura seja escalável, segura e eficiente.
 
 - **Engenheiro de Dados (Data Engineer)**: Este profissional é responsável por projetar, construir e manter os sistemas e infraestruturas que coletam, armazenam e processam grandes volumes de dados. É ele quem garante que os dados estejam disponíveis e prontos para serem utilizados pelos analistas e cientistas.
 
-- **Arquiteto de Dados (Data Architect)**: O Arquiteto de Dados é o responsável por desenhar a estratégia e a arquitetura geral de dados da organização. Ele define como os dados serão armazenados, integrados e consumidos, garantindo que a infraestrutura seja escalável, segura e eficiente.
+!!! info "Importante!"
+    Enquanto o arquiteto de dados foca na **visão estratégica e no design da arquitetura de dados**, o engenheiro de dados está mais envolvido na **implementação técnica** dessa arquitetura, construindo pipelines, configurando ferramentas e garantindo a operação eficiente dos sistemas de dados.
 
 !!! tip "Atenção"
     Os dois próximos cargos são bastante focados em dar visão sobre o estado atual dos dados da empresa (geralmente sem envolver construção de modelos, predição).
 
-- **Analista de Dados (Data Analyst)**: Focado na análise exploratória de dados, o Analista de Dados coleta, limpa e interpreta conjuntos de dados para identificar tendências, padrões e insights. Ele utiliza ferramentas como **SQL** e Excel para criar relatórios e dashboards que ajudam na visualização dos resultados.
+- **Analista de Dados (Data Analyst)**: Focado na análise exploratória de dados, o Analista de Dados coleta, limpa e interpreta conjuntos de dados para identificar tendências, padrões e insights. Ele utiliza ferramentas como **SQL**, Excel, Python e Power BI para criar relatórios e dashboards que ajudam na visualização dos resultados.
 
 - **Analista de BI (Business Intelligence Analyst)**: Este profissional é especializado em transformar dados brutos em informações úteis para os negócios. Ele constrói *dashboards*, relatórios e visualizações que permitem que líderes e gestores monitorem o desempenho da empresa e tomem decisões mais assertivas.
 
 !!! tip "Atenção"
     Os dois próximos cargos são bastante focados em **Machine Learning**.
 
-- **Engenheiro de Machine Learning (Machine Learning Engineer)**: Responsável por desenvolver, treinar e otimizar modelos de machine learning. Este profissional tem um perfil mais técnico e focado na parte de criação do modelo, utilizando técnicas estatísticas e programação para resolver problemas complexos.
-
 - **Cientista de Dados (Data Scientist)**: O Cientista de Dados utiliza técnicas estatísticas, programação e aprendizado de máquina para extrair insights valiosos dos dados. Sua principal função é construir modelos preditivos (ML) e algoritmos que ajudam a resolver problemas complexos e a tomar decisões estratégicas.
 
+- **Engenheiro de Machine Learning (Machine Learning Engineer)**: Este profissional tem um perfil mais técnico e focado na parte de criação do modelo, utilizando técnicas estatísticas e programação para resolver problemas complexos. É responsável por desenvolver, treinar e otimizar modelos de *machine learning*, com foco em escalabilidade e eficiência.
+
 !!! tip "Atenção"
-    O próximo cargo é bastante focado em tornar a operação de machine learning mais eficiente. Os modelos produzidos pelos cientistas de dados viram produtos e são **monitorados e gerenciados** em produção pelo Engenheiro de MLOps.
+    O próximo cargo é bastante focado em tornar a operação de *machine learning* mais eficiente. Os modelos produzidos pelos cientistas de dados viram produtos e são **monitorados e gerenciados** em produção pelo Engenheiro de MLOps.
 
-- **Engenheiro de MLOps (MLOps Engineer)**: Este profissional atua como uma ponte entre o desenvolvimento de modelos de machine learning e o ambiente de produção. Ele automatiza, implanta e monitora os modelos, garantindo que funcionem de forma confiável, escalável e eficiente em um ambiente real. Ele aplica os princípios de **DevOps** para o mundo do machine learning.
+- **Engenheiro de MLOps (MLOps Engineer)**: Este profissional atua como uma ponte entre o desenvolvimento de modelos de *machine learning* e o ambiente de produção. Ele automatiza, implanta e monitora os modelos, garantindo que funcionem de forma confiável, escalável e eficiente em um ambiente real. Ele aplica os princípios de **DevOps** para o mundo do *machine learning*.
 
-- **Engenheiro de Software (Software Engineer)**: Embora não seja um profissional exclusivo da área de dados, o Engenheiro de Software desempenha um papel crucial. Ele é responsável por desenvolver aplicações e sistemas robustos e eficientes, muitas vezes colaborando com equipes de dados para integrar modelos de machine learning e pipelines de dados nas soluções de software da empresa.
+- **Engenheiro de Software (Software Engineer)**: Este profissional não é exclusivo da área de dados. Ele é responsável por desenvolver aplicações e sistemas robustos e eficientes, muitas vezes colaborando com equipes de dados para integrar modelos de *machine learning* e pipelines de dados nas soluções de software da empresa.
 
 - **Database Administrator (DBA)**: O **DBA** é responsável por gerenciar, manter e otimizar sistemas de gerenciamento de bancos de dados (SGBDs). Ele garante a segurança, a integridade e o desempenho dos bancos de dados, sendo fundamental para o armazenamento e acesso aos dados.
 
