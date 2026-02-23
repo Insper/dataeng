@@ -22,12 +22,12 @@ nav:
           - classes/02-docker-filas/rabbitmq.md
           - classes/02-docker-filas/programar-sensores.md
           - classes/02-docker-filas/programar-pipeline.md
-    #   - 03 - Data Warehousing:
-    #       - Parte I:
-    #           - classes/03-data-warehouse/intro.md
-    #           - classes/03-data-warehouse/linha-tempo.md
-    #           - classes/03-data-warehouse/data-warehousing.md
-    #           - classes/03-data-warehouse/pratica.md
+      - 03 - Data Warehousing:
+          - Parte I:
+              - classes/03-data-warehouse/intro.md
+              - classes/03-data-warehouse/linha-tempo.md
+              - classes/03-data-warehouse/data-warehousing.md
+              - classes/03-data-warehouse/pratica.md
     #       - Parte II:
     #           - classes/03-data-warehouse/olap.md
     #           - classes/03-data-warehouse/uv.md
