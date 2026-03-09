@@ -1,5 +1,3 @@
-<!-- Elements added to "home.html" will only be displayed on the home page -->
-
 <!-- Elements added to "main.html" will be displayed on all pages -->
 
 
@@ -15,23 +13,25 @@
       
       
       
+        <link rel="prev" href="../prefect/">
       
-        <link rel="next" href="classes/01-intro/intro/">
+      
+        <link rel="next" href="../../../about/">
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
     
     
       
-        <title>Home - Engenharia de Dados</title>
+        <title>Referências - Engenharia de Dados</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.7e37652d.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e37652d.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -50,9 +50,9 @@
       
     
     
-      <link rel="stylesheet" href="css/termynal.css">
+      <link rel="stylesheet" href="../../../css/termynal.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -80,6 +80,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#referencias" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -92,7 +97,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Engenharia de Dados" class="md-header__button md-logo" aria-label="Engenharia de Dados" data-md-component="logo">
+    <a href="../../.." title="Engenharia de Dados" class="md-header__button md-logo" aria-label="Engenharia de Dados" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -112,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Referências
             
           </span>
         </div>
@@ -222,11 +227,9 @@
   
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="." class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
         
   
   
@@ -243,6 +246,8 @@
   
   
   
+    
+  
   
     
     
@@ -250,11 +255,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="classes/01-intro/intro/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../01-intro/intro/" class="md-tabs__link">
           
   
   
@@ -277,7 +284,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="about/" class="md-tabs__link">
+      <a href="../../../about/" class="md-tabs__link">
         
   
   
@@ -296,7 +303,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="deadlines/" class="md-tabs__link">
+      <a href="../../../deadlines/" class="md-tabs__link">
         
   
   
@@ -315,7 +322,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="contributions/" class="md-tabs__link">
+      <a href="../../../contributions/" class="md-tabs__link">
         
   
   
@@ -338,326 +345,8 @@
     <div class="md-container" data-md-component="container">
       
       
-
         
       
-
-
-<!-- Stole this styling from the "up42-py" project (link: https://sdk.up42.com/) -->
-<!-- .tx-container Original Green Gradient: hsla(160deg,47%,55%,1) -->
-<style>
-
-    .md-main {
-        flex-grow: 0
-    }
-
-    .md-main__inner {
-        display: flex;
-        height: 100%;
-    }
-
-    .tx-container {
-        padding-top: .0rem;
-        background: linear-gradient(to bottom, var(--md-primary-fg-color), hsla(160deg,47%,55%,1) 99%,#fff 99%)
-    }
-
-    .tx-hero {
-        margin: 32px 2.8rem;
-        color: var(--md-primary-bg-color);
-        justify-content: center;
-    }
-
-    .tx-hero h1 {
-        margin-bottom: 1rem;
-        color: currentColor;
-        font-weight: 700
-    }
-
-    .tx-hero__content {
-        padding-bottom: 1rem;
-        margin: 0 auto;
-    }
-
-    .tx-hero__image{
-        width:17rem;
-        height:17rem;
-        order:1;
-        padding-right: 2.5rem;
-    }
-
-    .tx-hero .md-button {
-        margin-top: .5rem;
-        margin-right: .5rem;
-        color: var(--md-primary-bg-color)
-    }
-
-    .tx-hero .md-button--primary {
-        background-color: var(--md-primary-bg-color);
-        color: hsla(280deg, 37%, 48%, 1);
-        border-color: var(--md-primary-bg-color)
-    }
-
-    .tx-hero .md-button:focus,
-    .tx-hero .md-button:hover {
-        background-color: var(--md-accent-fg-color) !important;
-        color: var(--md-default-bg-color) !important;
-        border-color: var(--md-accent-fg-color) !important;
-        transition: all 0.2s ease !important;
-    }
-    
-    /* Força a cor de hover para todos os botões na hero section */
-    .tx-hero a.md-button:hover,
-    .tx-hero a.md-button:focus {
-        background-color: rgba(255, 255, 255, 0.2) !important;
-        color: var(--md-primary-bg-color) !important;
-        border-color: rgba(255, 255, 255, 0.3) !important;
-    }
-    
-    /* Selector mais específico para o terceiro botão */
-    .tx-hero a.md-button:nth-child(3):hover,
-    .tx-hero a.md-button:nth-child(3):focus {
-        background-color: rgba(255, 255, 255, 0.2) !important;
-        color: var(--md-primary-bg-color) !important;
-        border-color: rgba(255, 255, 255, 0.3) !important;
-    }
-
-    .feature-item h2 svg {
-        height: 30px;
-        float: left;
-        margin-right: 10px;
-        transform: translateY(10%);
-    }
-
-    .top-hr {
-        margin-top: 42px;
-    }
-
-    .feature-item {
-	border-radius: 20px;
-	margin-top: .5rem;
-        margin-right: .5rem;
-	background-color: var(--md-primary-bg-color);
-        font-family: 'Lato', sans-serif;
-        font-weight: 300;
-        box-sizing: border-box;
-        padding: 0 15px;
-        word-break: break-word;
-        transition: all 0.2s ease;
-    }
-
-    .feature-item:hover {
-        background-color: rgba(128, 128, 128, 0.1);
-        border-radius: 3px;
-        transform: translateY(-1px);
-        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    
-    /* Para tema escuro */
-    [data-md-color-scheme="slate"] .feature-item:hover {
-        background-color: rgba(255, 255, 255, 0.05);
-    }
-
-    .feature-item h2 {
-        color: #333;
-        font-weight: 300;
-        font-size: 25px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        line-height: normal;
-        margin-top: 20px;
-        margin-bottom: 10px;
-        font-family: inherit;
-    }
-
-    .feature-item p {
-        font-size: 16px;
-        line-height: 1.8em;
-        text-rendering: optimizeLegibility;
-        -webkit-font-smoothing: antialiased;
-        color: #111;
-        margin: 0 0 10px;
-        display: block;
-    }
-
-    @media screen and (max-width:30em) {
-        .tx-hero h1 {
-            font-size: 1.4rem
-        }
-    }
-
-    @media screen and (min-width:60em) {
-        .md-sidebar--secondary {
-            display: none
-        }
-
-        .tx-hero {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .tx-hero__content {
-            max-width: 22rem;
-            margin-top: 3.5rem;
-            margin-bottom: 3.5rem;
-            margin-left: 1.0rem;
-            margin-right: 4.0rem;
-            align-items: center;
-        }
-    }
-
-    @media screen and (min-width:76.25em) {
-        .md-sidebar--primary {
-            display: none
-        }
-
-        .top-hr {
-            width: 100%;
-            display: flex;
-            max-width: 61rem;
-            margin-right: auto;
-            margin-left: auto;
-            padding: 0 .2rem;
-        }
-
-        .bottom-hr {
-            margin-top: 10px;
-            width: 100%;
-            display: flex;
-            max-width: 61rem;
-            margin-right: auto;
-            margin-left: auto;
-            padding: 0 .2rem;
-        }
-
-        .feature-item {
-            flex: 1;
-            min-width: 0;
-        }
-    }
-
-    .hr {
-        border-bottom: 1px solid #eee;
-        width: 100%;
-        margin: 20px 0;
-    }
-
-    .text-center {
-        text-align: center;
-        padding-right: 15px;
-        padding-left: 15px;
-        margin-right: auto;
-        margin-left: auto;
-        margin-top: 15px;
-        font-family: 'Lato', sans-serif;
-        font-size: 23px;
-        font-weight: 300;
-        padding-bottom: 10px;
-    }
-
-    .logos {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-flow: row wrap;
-        margin: 0 auto;
-    }
-
-    .logos img {
-        flex: 1 1 auto;
-        padding: 25px;
-        max-height: 130px;
-        vertical-align: middle;
-    }
-
-    .hr-logos {
-        margin-top: 0;
-        margin-bottom: 30px;
-    }
-
-    .md-footer-meta__inner {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        margin-top: 1.0rem;
-    }
-
-    .md-footer-social {
-        padding-top: 20px;
-    }
-</style>
-
-
-<!-- Main site entry button descriptions -->
-<section class="tx-container">
-    <div class="md-grid md-typeset">
-      <div class="tx-hero">
-      
-        <!-- Custom Image -->
-        <div class="tx-hero__image">
-	  <img src="attachments/home-image.png" draggable="false">
-        </div>
-	
-	<!-- Main Tagline -->
-        <div class="tx-hero__content">
-          <h1>Engenharia de Dados</h1>
-          <p>Seja bem-vindo ao curso eletivo de Engenharia de Dados do Insper! Navegue pelos links do menu para acessar os conteúdos.
-</p>
-	  
-	  <!-- Added Buttons (up to 3) --><a href="classes/01-intro/intro/" title="Material | MkDocs" class="md-button  md-button--primary">
-            Aulas
-          </a><a href="about" title="Material | MkDocs" class="md-button">
-            Regras
-          </a><a href="deadlines" title="Material | MkDocs" class="md-button">
-            Deadlines
-          </a></div>
-      </div>
-    </div>
-</section>
-
-
-<!-- Main site box descriptions -->
-<div class="top-hr">
-
-    <!-- Start Outer Condition --><div class="feature-item">
-        <h2>
-	    <!-- People Icon --><!-- Gear Icon --><!-- Image Icon --><!-- Calendar Icon --><!-- Book Icon --><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M560-564v-68q33-14 67.5-21t72.5-7q26 0 51 4t49 10v64q-24-9-48.5-13.5T700-600q-38 0-73 9.5T560-564Zm0 220v-68q33-14 67.5-21t72.5-7q26 0 51 4t49 10v64q-24-9-48.5-13.5T700-380q-38 0-73 9t-67 27Zm0-110v-68q33-14 67.5-21t72.5-7q26 0 51 4t49 10v64q-24-9-48.5-13.5T700-490q-38 0-73 9.5T560-454ZM260-320q47 0 91.5 10.5T440-278v-394q-41-24-87-36t-93-12q-36 0-71.5 7T120-692v396q35-12 69.5-18t70.5-6Zm260 42q44-21 88.5-31.5T700-320q36 0 70.5 6t69.5 18v-396q-33-14-68.5-21t-71.5-7q-47 0-93 12t-87 36v394Zm-40 118q-48-38-104-59t-116-21q-42 0-82.5 11T100-198q-21 11-40.5-1T40-234v-482q0-11 5.5-21T62-752q46-24 96-36t102-12q58 0 113.5 15T480-740q51-30 106.5-45T700-800q52 0 102 12t96 36q11 5 16.5 15t5.5 21v482q0 23-19.5 35t-40.5 1q-37-20-77.5-31T700-240q-60 0-116 21t-104 59ZM280-494Z"/>
-        </svg><!-- Rule Icon --><!-- Button Description -->
-            Aulas
-        </h2>
-        <p>Material das aulas, que serão apresentadas no formato de handout.
-</p>
-    </div><!-- End Outer Condition -->
-    
-    <!-- Start Outer Condition --><div class="feature-item">
-        <h2>
-	    <!-- People Icon --><!-- Gear Icon --><!-- Image Icon --><!-- Calendar Icon --><!-- Book Icon --><!-- Book Icon --><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="m576-160-56-56 104-104-104-104 56-56 104 104 104-104 56 56-104 104 104 104-56 56-104-104-104 104Zm79-360L513-662l56-56 85 85 170-170 56 57-225 226ZM80-280v-80h360v80H80Zm0-320v-80h360v80H80Z"/>
-        </svg><!-- Rule Description -->
-	    Regras
-        </h2>
-        <p>Conheça detalhes sobre o curso, como as atividades, as regras e o que é esperado de você.
-</p>
-    </div><!-- End Outer Condition -->
-    
-    <!-- Start Outer Condition --><div class="feature-item">
-        <h2>
-	    <!-- People Icon --><!-- Gear Icon --><!-- Image Icon --><!-- Calendar Icon --><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M200-640h560v-80H200v80Zm0 0v-80 80Zm0 560q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v227q-19-9-39-15t-41-9v-43H200v400h252q7 22 16.5 42T491-80H200Zm520 40q-83 0-141.5-58.5T520-240q0-83 58.5-141.5T720-440q83 0 141.5 58.5T920-240q0 83-58.5 141.5T720-40Zm67-105 28-28-75-75v-112h-40v128l87 87Z"/>
-        </svg><!-- Book Icon --><!-- Rule Icon --><!-- Button Description -->
-            Deadlines
-        </h2>
-        <p>Confira os deadlines do curso, com as datas de entrega das atividades.
-</p>
-    </div><!-- End Outer Condition -->
-</div>
-
-<div class="top-hr">
-    <div class="hr">
-    </div>
-</div>
-
-
-<!-- Toggleable JavaScript execution -->
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
           
@@ -674,7 +363,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Engenharia de Dados" class="md-nav__button md-logo" aria-label="Engenharia de Dados" data-md-component="logo">
+    <a href="../../.." title="Engenharia de Dados" class="md-nav__button md-logo" aria-label="Engenharia de Dados" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -701,17 +390,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -722,7 +404,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -731,8 +412,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -752,17 +435,20 @@
     
     
       
+        
+        
+      
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   
@@ -775,7 +461,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Aulas
@@ -840,7 +526,7 @@
   
   
     <li class="md-nav__item">
-      <a href="classes/01-intro/intro/" class="md-nav__link">
+      <a href="../../01-intro/intro/" class="md-nav__link">
         
   
   
@@ -863,7 +549,7 @@
   
   
     <li class="md-nav__item">
-      <a href="classes/01-intro/profissionais/" class="md-nav__link">
+      <a href="../../01-intro/profissionais/" class="md-nav__link">
         
   
   
@@ -886,7 +572,7 @@
   
   
     <li class="md-nav__item">
-      <a href="classes/01-intro/warmup/" class="md-nav__link">
+      <a href="../../01-intro/warmup/" class="md-nav__link">
         
   
   
@@ -909,7 +595,7 @@
   
   
     <li class="md-nav__item">
-      <a href="classes/01-intro/processar/" class="md-nav__link">
+      <a href="../../01-intro/processar/" class="md-nav__link">
         
   
   
@@ -995,7 +681,7 @@
   
   
     <li class="md-nav__item">
-      <a href="classes/02-docker-filas/relembrar-ciclo/" class="md-nav__link">
+      <a href="../../02-docker-filas/relembrar-ciclo/" class="md-nav__link">
         
   
   
@@ -1018,7 +704,7 @@
   
   
     <li class="md-nav__item">
-      <a href="classes/02-docker-filas/filas/" class="md-nav__link">
+      <a href="../../02-docker-filas/filas/" class="md-nav__link">
         
   
   
@@ -1041,7 +727,7 @@
   
   
     <li class="md-nav__item">
-      <a href="classes/02-docker-filas/docker/" class="md-nav__link">
+      <a href="../../02-docker-filas/docker/" class="md-nav__link">
         
   
   
@@ -1064,7 +750,7 @@
   
   
     <li class="md-nav__item">
-      <a href="classes/02-docker-filas/rabbitmq/" class="md-nav__link">
+      <a href="../../02-docker-filas/rabbitmq/" class="md-nav__link">
         
   
   
@@ -1087,7 +773,7 @@
   
   
     <li class="md-nav__item">
-      <a href="classes/02-docker-filas/programar-sensores/" class="md-nav__link">
+      <a href="../../02-docker-filas/programar-sensores/" class="md-nav__link">
         
   
   
@@ -1110,7 +796,7 @@
   
   
     <li class="md-nav__item">
-      <a href="classes/02-docker-filas/programar-pipeline/" class="md-nav__link">
+      <a href="../../02-docker-filas/programar-pipeline/" class="md-nav__link">
         
   
   
@@ -1239,7 +925,7 @@
   
   
     <li class="md-nav__item">
-      <a href="classes/03-data-warehouse/intro/" class="md-nav__link">
+      <a href="../../03-data-warehouse/intro/" class="md-nav__link">
         
   
   
@@ -1262,7 +948,7 @@
   
   
     <li class="md-nav__item">
-      <a href="classes/03-data-warehouse/linha-tempo/" class="md-nav__link">
+      <a href="../../03-data-warehouse/linha-tempo/" class="md-nav__link">
         
   
   
@@ -1285,7 +971,7 @@
   
   
     <li class="md-nav__item">
-      <a href="classes/03-data-warehouse/data-warehousing/" class="md-nav__link">
+      <a href="../../03-data-warehouse/data-warehousing/" class="md-nav__link">
         
   
   
@@ -1308,7 +994,7 @@
   
   
     <li class="md-nav__item">
-      <a href="classes/03-data-warehouse/pratica/" class="md-nav__link">
+      <a href="../../03-data-warehouse/pratica/" class="md-nav__link">
         
   
   
@@ -1392,7 +1078,7 @@
   
   
     <li class="md-nav__item">
-      <a href="classes/03-data-warehouse/olap/" class="md-nav__link">
+      <a href="../../03-data-warehouse/olap/" class="md-nav__link">
         
   
   
@@ -1415,7 +1101,7 @@
   
   
     <li class="md-nav__item">
-      <a href="classes/03-data-warehouse/uv/" class="md-nav__link">
+      <a href="../../03-data-warehouse/uv/" class="md-nav__link">
         
   
   
@@ -1438,7 +1124,7 @@
   
   
     <li class="md-nav__item">
-      <a href="classes/03-data-warehouse/duckdb/" class="md-nav__link">
+      <a href="../../03-data-warehouse/duckdb/" class="md-nav__link">
         
   
   
@@ -1461,7 +1147,7 @@
   
   
     <li class="md-nav__item">
-      <a href="classes/03-data-warehouse/clickhouse/" class="md-nav__link">
+      <a href="../../03-data-warehouse/clickhouse/" class="md-nav__link">
         
   
   
@@ -1484,7 +1170,7 @@
   
   
     <li class="md-nav__item">
-      <a href="classes/03-data-warehouse/links/" class="md-nav__link">
+      <a href="../../03-data-warehouse/links/" class="md-nav__link">
         
   
   
@@ -1572,7 +1258,7 @@
   
   
     <li class="md-nav__item">
-      <a href="classes/04-cloud/intro/" class="md-nav__link">
+      <a href="../../04-cloud/intro/" class="md-nav__link">
         
   
   
@@ -1595,7 +1281,7 @@
   
   
     <li class="md-nav__item">
-      <a href="classes/04-cloud/config-aws-cli/" class="md-nav__link">
+      <a href="../../04-cloud/config-aws-cli/" class="md-nav__link">
         
   
   
@@ -1618,7 +1304,7 @@
   
   
     <li class="md-nav__item">
-      <a href="classes/04-cloud/pratica/" class="md-nav__link">
+      <a href="../../04-cloud/pratica/" class="md-nav__link">
         
   
   
@@ -1696,7 +1382,7 @@
   
   
     <li class="md-nav__item">
-      <a href="classes/05-iac/intro/" class="md-nav__link">
+      <a href="../../05-iac/intro/" class="md-nav__link">
         
   
   
@@ -1719,7 +1405,7 @@
   
   
     <li class="md-nav__item">
-      <a href="classes/05-iac/pratica/" class="md-nav__link">
+      <a href="../../05-iac/pratica/" class="md-nav__link">
         
   
   
@@ -1747,8 +1433,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -1767,11 +1455,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" checked>
         
           
           <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
@@ -1787,7 +1475,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_6">
             <span class="md-nav__icon md-icon"></span>
             06 - Intro Orquestração
@@ -1801,7 +1489,7 @@
   
   
     <li class="md-nav__item">
-      <a href="classes/06-intro-orchestration/intro-cron/" class="md-nav__link">
+      <a href="../intro-cron/" class="md-nav__link">
         
   
   
@@ -1824,7 +1512,7 @@
   
   
     <li class="md-nav__item">
-      <a href="classes/06-intro-orchestration/intro-orchestration/" class="md-nav__link">
+      <a href="../intro-orchestration/" class="md-nav__link">
         
   
   
@@ -1847,7 +1535,7 @@
   
   
     <li class="md-nav__item">
-      <a href="classes/06-intro-orchestration/prefect/" class="md-nav__link">
+      <a href="../prefect/" class="md-nav__link">
         
   
   
@@ -1867,10 +1555,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="classes/06-intro-orchestration/references/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1881,6 +1578,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -1908,7 +1606,7 @@
   
   
     <li class="md-nav__item">
-      <a href="about/" class="md-nav__link">
+      <a href="../../../about/" class="md-nav__link">
         
   
   
@@ -1930,7 +1628,7 @@
   
   
     <li class="md-nav__item">
-      <a href="deadlines/" class="md-nav__link">
+      <a href="../../../deadlines/" class="md-nav__link">
         
   
   
@@ -1952,7 +1650,7 @@
   
   
     <li class="md-nav__item">
-      <a href="contributions/" class="md-nav__link">
+      <a href="../../../contributions/" class="md-nav__link">
         
   
   
@@ -1984,6 +1682,8 @@
   
   
   
+    
+  
   
 </nav>
                   </div>
@@ -1995,6 +1695,30 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
+                  
+
+
+  
+  
+
+
+<h1 id="referencias">Referências</h1>
+<ul>
+<li>DDA. Serra, James. Deciphering Data Architectures. " O'Reilly Media, Inc.", 2024.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -2003,6 +1727,68 @@
         </div>
         
       </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../prefect/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Orquestração com Prefect">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Orquestração com Prefect
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../../about/" class="md-footer__link md-footer__link--next" aria-label="Next: Regras">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Regras
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2025 | @macielcalebe
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
       
     </div>
     <div class="md-dialog" data-md-component="dialog">
@@ -2014,16 +1800,16 @@
     
     
       
-      <script id="__config" type="application/json">{"base": ".", "features": ["navigation.indexes", "navigation.tabs", "navigation.tabs.sticky", "navigation.footer", "navigation.instant", "navigation.instant.progress", "search.highlight", "search.share", "search.suggest"], "search": "assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.indexes", "navigation.tabs", "navigation.tabs.sticky", "navigation.footer", "navigation.instant", "navigation.instant.progress", "search.highlight", "search.share", "search.suggest"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.50899def.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.50899def.min.js"></script>
       
-        <script src="js/tabs.js"></script>
+        <script src="../../../js/tabs.js"></script>
       
-        <script src="js/termynal.js"></script>
+        <script src="../../../js/termynal.js"></script>
       
-        <script src="js/custom.js"></script>
+        <script src="../../../js/custom.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
