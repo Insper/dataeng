@@ -52,8 +52,8 @@ nav:
           - classes/07-data-modeling/star-schema.md
           - classes/07-data-modeling/snowflake.md
           - classes/07-data-modeling/references.md
-    #   - 08 - Entrevista 01:
-    #       - classes/08-interview-01/faq.md
+      - 08 - Entrevista 01:
+          - classes/08-interview-01/faq.md
     #       - classes/08-interview-01/int01.md
     #   - 09 - Data Lakes:
     #       - classes/09-data-lakes/intro-data-lakes.md
@@ -108,20 +108,20 @@ nav:
     #       - classes/17-interview03/pre-interview2.md
     #       - classes/17-interview03/int03.md
     #       - classes/17-interview03/references.md
-#   - Entrevistas:
-#       - 08 - Entrevista 01:
-#           - classes/08-interview-01/faq.md
-#           - classes/08-interview-01/int01.md
-#       - 14 - Entrevista 02:
-#           - classes/14-interview02/int02.md
-#       - 17 - Entrevista 03:
-#           - classes/17-interview03/pre-interview1.md
-#           - classes/17-interview03/pre-interview2.md
-#           - classes/17-interview03/int03.md
-#           - classes/17-interview03/references.md
-#   - APS:
-#       - aps/aps01/aps01.md
-#   - Projeto: project/project.md
+  #   - Entrevistas:
+  #       - 08 - Entrevista 01:
+  #           - classes/08-interview-01/faq.md
+  #           - classes/08-interview-01/int01.md
+  #       - 14 - Entrevista 02:
+  #           - classes/14-interview02/int02.md
+  #       - 17 - Entrevista 03:
+  #           - classes/17-interview03/pre-interview1.md
+  #           - classes/17-interview03/pre-interview2.md
+  #           - classes/17-interview03/int03.md
+  #           - classes/17-interview03/references.md
+  #   - APS:
+  #       - aps/aps01/aps01.md
+  #   - Projeto: project/project.md
   - Regras: about.md
   - Deadlines: deadlines.md
   - Contribuições: contributions.md
