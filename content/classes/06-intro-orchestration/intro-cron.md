@@ -223,6 +223,14 @@ Para isto, considere os arquivos:
     !!! Warning "Atenção!"
         Deixe uma linha em branco no final do arquivo `crontab.txt`. O **cron** exige isto.
 
+    
+    !!! danger "Importante!"
+        Ainda, no **VS Code**, garanta que o arquivo `crontab.txt` esteja com a codificação de quebra de linha **LF** (Unix) e não **CRLF** (Windows).
+
+        Para isto, clique no canto inferior direito do VS Code, onde aparece a codificação do arquivo, e selecione **LF**.
+
+        Também é aconselhável utilizar UTF-8 como codificação de caracteres.
+
 ??? "`Dockerfile`"
     Atualizaremos para uso do `cron`:
     ```dockerfile { .copy }
