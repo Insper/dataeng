@@ -53,7 +53,7 @@ Vamos continuar de onde paramos na aula anterior, adicionando o Grafana ao nosso
           - "9100:9100"
 
       grafana:
-        image: -17718666199
+        image: grafana/grafana:12.3.0-17718666199
         container_name: grafana
         ports:
           - "3000:3000"
