@@ -13,10 +13,10 @@
       
       
       
-        <link rel="prev" href="../intro-data-modeling/">
+        <link rel="prev" href="../../09-data-lakes/aws-glue/">
       
       
-        <link rel="next" href="../star-schema/">
+        <link rel="next" href="../prometheus/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>One Big Table (OBT) - Engenharia de Dados</title>
+        <title>Introdução - Engenharia de Dados</title>
       
     
     
@@ -81,7 +81,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#one-big-table-obt" class="md-skip">
+        <a href="#introducao" class="md-skip">
           Skip to content
         </a>
       
@@ -117,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              One Big Table (OBT)
+              Introdução
             
           </span>
         </div>
@@ -1624,10 +1624,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -1648,11 +1646,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" >
         
           
           <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
@@ -1668,7 +1666,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_7">
             <span class="md-nav__icon md-icon"></span>
             07 - Modelagem de Dados
@@ -1682,7 +1680,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../intro-data-modeling/" class="md-nav__link">
+      <a href="../../07-data-modeling/intro-data-modeling/" class="md-nav__link">
         
   
   
@@ -1702,32 +1700,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    One Big Table (OBT)
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../07-data-modeling/obt/" class="md-nav__link">
         
   
   
@@ -1738,203 +1714,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#relembrando-a-aula-03" class="md-nav__link">
-    <span class="md-ellipsis">
-      Relembrando a aula 03
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#o-que-e-one-big-table-obt" class="md-nav__link">
-    <span class="md-ellipsis">
-      O que é One Big Table (OBT)?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#exemplo" class="md-nav__link">
-    <span class="md-ellipsis">
-      Exemplo
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Exemplo">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#tabelas-originais" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tabelas Originais
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Tabelas Originais">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#tabela-paciente" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tabela: paciente
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tabela-medico" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tabela: medico
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tabela-atendimento" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tabela: atendimento
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tabela-obt-resultante" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tabela OBT Resultante
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#contexto-historico" class="md-nav__link">
-    <span class="md-ellipsis">
-      Contexto Histórico
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#vantagens-da-abordagem-obt" class="md-nav__link">
-    <span class="md-ellipsis">
-      Vantagens da Abordagem OBT
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#desvantagens-da-abordagem-obt" class="md-nav__link">
-    <span class="md-ellipsis">
-      Desvantagens da Abordagem OBT
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#quando-usar-obt" class="md-nav__link">
-    <span class="md-ellipsis">
-      Quando Usar OBT?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#implementando-obt" class="md-nav__link">
-    <span class="md-ellipsis">
-      Implementando OBT
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Implementando OBT">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#projetando-a-obt" class="md-nav__link">
-    <span class="md-ellipsis">
-      Projetando a OBT
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#campos-da-obt-de-vendas" class="md-nav__link">
-    <span class="md-ellipsis">
-      Campos da OBT de Vendas
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#criando-a-obt-na-pratica" class="md-nav__link">
-    <span class="md-ellipsis">
-      Criando a OBT na Prática
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Criando a OBT na Prática">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#consultas-normalizado-vs-obt" class="md-nav__link">
-    <span class="md-ellipsis">
-      Consultas: Normalizado vs OBT
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1947,7 +1726,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../star-schema/" class="md-nav__link">
+      <a href="../../07-data-modeling/star-schema/" class="md-nav__link">
         
   
   
@@ -1970,7 +1749,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../snowflake/" class="md-nav__link">
+      <a href="../../07-data-modeling/snowflake/" class="md-nav__link">
         
   
   
@@ -1993,7 +1772,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../references/" class="md-nav__link">
+      <a href="../../07-data-modeling/references/" class="md-nav__link">
         
   
   
@@ -2223,8 +2002,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -2247,11 +2028,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10" checked>
         
           
           <label class="md-nav__link" for="__nav_2_10" id="__nav_2_10_label" tabindex="0">
@@ -2267,7 +2048,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_10">
             <span class="md-nav__icon md-icon"></span>
             10 - Observabilidade
@@ -2278,10 +2059,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../10-observability/intro-observability/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Introdução
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -2292,6 +2095,62 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#observabilidade-em-engenharia-de-dados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Observabilidade em Engenharia de Dados
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#o-que-e-observabilidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      O que é Observabilidade?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#os-pilares-da-observabilidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      Os Pilares da Observabilidade
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ciclo-de-vida-dos-dados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ciclo de Vida dos Dados
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2304,7 +2163,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../10-observability/prometheus/" class="md-nav__link">
+      <a href="../prometheus/" class="md-nav__link">
         
   
   
@@ -2327,7 +2186,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../10-observability/grafana/" class="md-nav__link">
+      <a href="../grafana/" class="md-nav__link">
         
   
   
@@ -2350,7 +2209,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../10-observability/logging/" class="md-nav__link">
+      <a href="../logging/" class="md-nav__link">
         
   
   
@@ -2373,7 +2232,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../10-observability/tracing/" class="md-nav__link">
+      <a href="../tracing/" class="md-nav__link">
         
   
   
@@ -2396,7 +2255,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../10-observability/references/" class="md-nav__link">
+      <a href="../references/" class="md-nav__link">
         
   
   
@@ -2673,179 +2532,38 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#relembrando-a-aula-03" class="md-nav__link">
+  <a href="#observabilidade-em-engenharia-de-dados" class="md-nav__link">
     <span class="md-ellipsis">
-      Relembrando a aula 03
+      Observabilidade em Engenharia de Dados
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#o-que-e-one-big-table-obt" class="md-nav__link">
+  <a href="#o-que-e-observabilidade" class="md-nav__link">
     <span class="md-ellipsis">
-      O que é One Big Table (OBT)?
+      O que é Observabilidade?
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#exemplo" class="md-nav__link">
+  <a href="#os-pilares-da-observabilidade" class="md-nav__link">
     <span class="md-ellipsis">
-      Exemplo
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Exemplo">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#tabelas-originais" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tabelas Originais
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Tabelas Originais">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#tabela-paciente" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tabela: paciente
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tabela-medico" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tabela: medico
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tabela-atendimento" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tabela: atendimento
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tabela-obt-resultante" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tabela OBT Resultante
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#contexto-historico" class="md-nav__link">
-    <span class="md-ellipsis">
-      Contexto Histórico
+      Os Pilares da Observabilidade
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#vantagens-da-abordagem-obt" class="md-nav__link">
+  <a href="#ciclo-de-vida-dos-dados" class="md-nav__link">
     <span class="md-ellipsis">
-      Vantagens da Abordagem OBT
+      Ciclo de Vida dos Dados
     </span>
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#desvantagens-da-abordagem-obt" class="md-nav__link">
-    <span class="md-ellipsis">
-      Desvantagens da Abordagem OBT
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#quando-usar-obt" class="md-nav__link">
-    <span class="md-ellipsis">
-      Quando Usar OBT?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#implementando-obt" class="md-nav__link">
-    <span class="md-ellipsis">
-      Implementando OBT
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Implementando OBT">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#projetando-a-obt" class="md-nav__link">
-    <span class="md-ellipsis">
-      Projetando a OBT
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#campos-da-obt-de-vendas" class="md-nav__link">
-    <span class="md-ellipsis">
-      Campos da OBT de Vendas
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#criando-a-obt-na-pratica" class="md-nav__link">
-    <span class="md-ellipsis">
-      Criando a OBT na Prática
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Criando a OBT na Prática">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#consultas-normalizado-vs-obt" class="md-nav__link">
-    <span class="md-ellipsis">
-      Consultas: Normalizado vs OBT
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -3282,302 +3000,62 @@ body {
   }
 }
 </style>
-<h1 id="one-big-table-obt">One Big Table (OBT)</h1>
-<h2 id="relembrando-a-aula-03">Relembrando a aula 03</h2>
-<p>Na <a href="../../03-data-warehouse/pratica/">aula 03</a>, quando fizemos a implementação do nosso <strong>Data Warehouse (DW)</strong>, foi preciso decidir como organizar os dados no <strong>DW</strong>.</p>
+<h1 id="introducao">Introdução</h1>
+<h2 id="observabilidade-em-engenharia-de-dados">Observabilidade em Engenharia de Dados</h2>
+<p>Ao longo das últimas aulas, construímos um repertório sobre o ciclo de vida dos dados, explorando desde a ingestão e orquestração com <code>DAGs</code> até o armazenamento em <code>Data Lakes</code> e <code>Lakehouses</code>.</p>
+<p>Vimos como sistemas de dados modernos são complexos, distribuídos e compostos por muitas partes. Agora, imagine que um pipeline de dados crucial para a empresa começa a entregar resultados incorretos silenciosamente, ou que a latência de uma consulta dispara sem um motivo aparente.</p>
 <div class="admonition exercise text long exercise-long" id="exercise_1">
 <p class="admonition-title">Exercise</p>
-<form class="quiz-form"><p>Como definimos o modelo de dados do <strong>DW</strong>?</p>
-<p>Como ele se diferenciava do modelo de dados operacional (<strong>PostgreSQL OLTP</strong>)?</p>
+<form class="quiz-form"><p>Pense em um pipeline de dados que você já tenha construído. Quais são os possíveis pontos de falha? O que poderia dar errado sem que você percebesse imediatamente?</p>
 <div class="form-elements">
 <div class="quiz-text-container">
 
 <textarea name="data" class="quiz-text-input" 
           placeholder="Enter your detailed answer..." rows="4"></textarea>
-
-</div>
-<button class="quiz-submit-button" type="submit">Submit</button>
-</div></form><div class="admonition answer quiz-answer no-indent">
-<p class="admonition-title">Answer</p>
-<p>Nós removemos as chaves estrangeiras e a obrigatoriedade de alguns atributos.</p>
-<p>Ademais, a estrutura foi mantida.</p>
-</div>
-</div>
-<div class="admonition exercise text long exercise-long" id="exercise_2">
-<p class="admonition-title">Exercise</p>
-<form class="quiz-form"><p>O que você acha de mantermos a estrutura do <strong>DW</strong> quase idêntia à do banco operacional?</p>
-<div class="form-elements">
-<div class="quiz-text-container">
-
-<textarea name="data" class="quiz-text-input" 
-          placeholder="Enter your detailed answer..." rows="4"></textarea>
-
-</div>
-<button class="quiz-submit-button" type="submit">Submit</button>
-</div></form><div class="admonition answer quiz-answer no-indent">
-<p class="admonition-title">Answer</p>
-<p>O padrão de acesso <strong>OLTP</strong> geralmente envolve transações rápidas e de curto prazo, envolvendo poucas linhas.</p>
-<p>Por outro lado, o <strong>DW</strong> é otimizado para <strong>OLAP</strong>, envolvendo consultas complexas, acesso colunar e com grande volume de dados.</p>
-<p>Portanto, manter a estrutura idêntica pode não ser a melhor abordagem para atender a essas diferentes necessidades.</p>
-</div>
-</div>
-<p>Conforme os dados forem disponibilizados para análise no <strong>DW</strong>, <em>queries</em> complexas podem demandar a junção de diversas tabelas, as quais podem conter grande volume de dados. Isto será computacionalmente custoso, especialmente quando o <strong>DW</strong> crescer em volume de dados e complexidade estrutural.</p>
-<p>Uma solução possível é o uso do padrão <strong>One Big Table (OBT)</strong>.</p>
-<h2 id="o-que-e-one-big-table-obt">O que é One Big Table (OBT)?</h2>
-<p>A abordagem <strong>One Big Table (OBT)</strong> representa uma estratégia de modelagem onde todos os dados relevantes para análise são consolidados em uma única tabela <strong>desnormalizada</strong>.</p>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>Desnormalização é o processo de, intencionalmente, adicionar <strong>redundância</strong> a um banco de dados previamente normalizado para <strong>melhorar o desempenho de leitura</strong>, através da combinação de tabelas ou <strong>duplicação</strong> de dados!</p>
-</div>
-<p>Esta técnica surgiu como uma resposta às limitações de performance em consultas analíticas que envolvem múltiplos <code>JOINs</code> entre tabelas normalizadas.</p>
-<div class="admonition abstract">
-<p class="admonition-title">Resumo!</p>
-<p>Em um modelo <strong>OBT</strong>, ao invés de manter dados distribuídos em várias tabelas relacionais, todas as informações necessárias são combinadas em uma única estrutura tabular.</p>
-<p>Isso elimina a necessidade de operações custosas de <code>JOIN</code> durante as consultas analíticas.</p>
-</div>
-<h2 id="exemplo">Exemplo</h2>
-<p>Vamos ilustrar o conceito de OBT com um exemplo de dados hospitalares.</p>
-<h3 id="tabelas-originais">Tabelas Originais</h3>
-<h4 id="tabela-paciente">Tabela: <code>paciente</code></h4>
-<table>
-<thead>
-<tr>
-<th>id_paciente</th>
-<th>nome</th>
-<th>uf</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>Carla Dias</td>
-<td>SP</td>
-</tr>
-<tr>
-<td>2</td>
-<td>Lucas Prado</td>
-<td>RJ</td>
-</tr>
-</tbody>
-</table>
-<h4 id="tabela-medico">Tabela: <code>medico</code></h4>
-<table>
-<thead>
-<tr>
-<th>id_medico</th>
-<th>nome_medico</th>
-<th>especialidade</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>10</td>
-<td>Dr. Silva</td>
-<td>Cardiologia</td>
-</tr>
-<tr>
-<td>20</td>
-<td>Dra. Souza</td>
-<td>Pediatria</td>
-</tr>
-</tbody>
-</table>
-<h4 id="tabela-atendimento">Tabela: <code>atendimento</code></h4>
-<table>
-<thead>
-<tr>
-<th>id_atendimento</th>
-<th>id_paciente</th>
-<th>id_medico</th>
-<th>data</th>
-<th>procedimento</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1001</td>
-<td>1</td>
-<td>10</td>
-<td>2025-08-01</td>
-<td>Consulta</td>
-</tr>
-<tr>
-<td>1002</td>
-<td>2</td>
-<td>20</td>
-<td>2025-08-02</td>
-<td>Exame</td>
-</tr>
-<tr>
-<td>1003</td>
-<td>1</td>
-<td>20</td>
-<td>2025-08-03</td>
-<td>Vacina</td>
-</tr>
-</tbody>
-</table>
-<h3 id="tabela-obt-resultante">Tabela OBT Resultante</h3>
-<table>
-<thead>
-<tr>
-<th>id_atendimento</th>
-<th>data</th>
-<th>nome_paciente</th>
-<th>uf</th>
-<th>nome_medico</th>
-<th>especialidade</th>
-<th>procedimento</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1001</td>
-<td>2025-08-01</td>
-<td>Carla Dias</td>
-<td>SP</td>
-<td>Dr. Silva</td>
-<td>Cardiologia</td>
-<td>Consulta</td>
-</tr>
-<tr>
-<td>1002</td>
-<td>2025-08-02</td>
-<td>Lucas Prado</td>
-<td>RJ</td>
-<td>Dra. Souza</td>
-<td>Pediatria</td>
-<td>Exame</td>
-</tr>
-<tr>
-<td>1003</td>
-<td>2025-08-03</td>
-<td>Carla Dias</td>
-<td>SP</td>
-<td>Dra. Souza</td>
-<td>Pediatria</td>
-<td>Vacina</td>
-</tr>
-</tbody>
-</table>
-<p>Assim, todas as informações relevantes para análise de atendimentos estão consolidadas em uma única tabela, eliminando a necessidade de JOINs.</p>
-<div class="admonition info">
-<p class="admonition-title">Conceito Fundamental</p>
-<p>O <strong>OBT</strong> prioriza <strong>performance de leitura</strong> sobre <strong>otimização de armazenamento</strong>, sendo especialmente útil em cenários de <strong>OLAP</strong> onde a velocidade das consultas é crítica.</p>
-</div>
-<h2 id="contexto-historico">Contexto Histórico</h2>
-<p>O conceito de <strong>OBT</strong> ganhou popularidade com o advento do <strong>Big Data</strong> e ferramentas de processamento distribuído como <strong>Hadoop</strong> e <strong>Spark</strong>. Com a queda do custo de armazenamento e a necessidade crescente de análises em tempo real, a redundância de dados tornou-se um <em>trade-off</em> aceitável em muitos cenários.</p>
-<p>A abordagem também se tornou viável com o desenvolvimento de <strong>sistemas de armazenamento colunar</strong> como <strong>Parquet</strong>, que consegue comprimir dados redundantes de forma eficiente, minimizando o impacto do aumento no volume de dados.</p>
-<h2 id="vantagens-da-abordagem-obt">Vantagens da Abordagem OBT</h2>
-<p>Dentre as vantagens do uso de <strong>OBT</strong>, podemos citar:</p>
-<ul>
-<li>
-<p><strong>Performance de Consultas</strong>: A principal vantagem do OBT é a <strong>eliminação de JOINs</strong> complexos. Em um <strong>DW</strong> tradicional, uma consulta simples pode requerer junções entre múltiplas tabelas, criando gargalos de performance.</p>
-</li>
-<li>
-<p><strong>Simplicidade de Consultas</strong>: Analistas e cientistas de dados podem escrever consultas mais diretas, sem precisar compreender relações complexas entre tabelas.</p>
-</li>
-<li>
-<p><strong>Otimização para Ferramentas de BI</strong>: Muitas ferramentas <strong>Business Intelligence</strong> trabalham melhor com estruturas desnormalizadas, aproveitando otimizações internas quando os dados estão em formato <em>flat</em>.</p>
-</li>
-<li>
-<p><strong>Paralelização</strong>: Em ambientes distribuídos, consultas em uma única tabela podem ser facilmente paralelizadas e distribuídas entre múltiplos nós de processamento.</p>
-</li>
-</ul>
-<div class="admonition exercise choice exercise-choice" data-answer-idx="1" id="exercise_1">
-<p class="admonition-title">Question</p>
-<form class="quiz-form"><p>Qual é a principal vantagem de performance do modelo <strong>OBT</strong> em relação a modelos normalizados?</p>
-<div class="form-elements">
-<div class="quiz-alternative-set">
-  
-<label class="quiz-alternative" data-alt-index="0">
-  <div class="content">
-    <input type="hidden" name="data" value="">
-    <span class="choice-text">Menor uso de memória</span>
-  </div>
-</label>
-
-<label class="quiz-alternative" data-alt-index="1">
-  <div class="content">
-    <input type="hidden" name="data" value="">
-    <span class="choice-text">Eliminação de operações JOIN</span>
-  </div>
-</label>
-
-<label class="quiz-alternative" data-alt-index="2">
-  <div class="content">
-    <input type="hidden" name="data" value="">
-    <span class="choice-text">Menor volume de dados</span>
-  </div>
-</label>
-
-<label class="quiz-alternative" data-alt-index="3">
-  <div class="content">
-    <input type="hidden" name="data" value="">
-    <span class="choice-text">Maior segurança dos dados</span>
-  </div>
-</label>
 
 </div>
 <button class="quiz-submit-button" type="submit">Submit</button>
 </div></form></div>
-<h2 id="desvantagens-da-abordagem-obt">Desvantagens da Abordagem OBT</h2>
-<p>Mas o uso de <strong>OBT</strong> também apresenta desvantagens que devem ser consideradas. Dentre elas:</p>
-<ul>
-<li>
-<p><strong>Redundância de Dados</strong>: A desnormalização resulta em <strong>duplicação massiva</strong> de informações. Dados que antes apareciam uma única vez em tabelas normalizadas agora são replicados em várias linhas da <strong>OBT</strong>.</p>
-</li>
-<li>
-<p><strong>Maior Consumo de Armazenamento</strong>: O volume de dados pode crescer significativamente, resultando em maiores custos de armazenamento e backup.</p>
-</li>
-<li>
-<p><strong>Maior Complexidade de Atualização</strong>: Quando um dado mestre é alterado (como o nome de um cliente), essa mudança precisa ser propagada para <strong>todas as linhas</strong> da <strong>OBT</strong> onde esse cliente aparece, tornando as atualizações mais complexas e custosas.</p>
-</li>
-</ul>
+<p>Quando os sistemas falham, não basta saber <em>que</em> algo deu errado. Precisamos ter a capacidade de investigar, entender a causa raiz e, idealmente, antecipar problemas antes que eles impactem os negócios.</p>
 <div class="admonition info">
-<p class="admonition-title">Info!</p>
-<p>Em muitos casos, a <strong>OBT</strong> é <em>append-only</em>.</p>
+<p class="admonition-title">Importante!</p>
+<p>É neste ponto que a <strong>observabilidade</strong> se torna importante na Engenharia de Dados, atuando para sustentar a confiabilidade e a qualidade de todo o ecossistema de dados.</p>
 </div>
-<ul>
+<h2 id="o-que-e-observabilidade">O que é Observabilidade?</h2>
+<p>A <strong>observabilidade</strong> é a capacidade de medir e entender o estado interno de um sistema a partir dos dados que ele gera externamente, como <strong>logs</strong>, <strong>métricas</strong> e <strong>traces</strong>.</p>
+<p>Em vez de apenas reagir a falhas, a <strong>observabilidade</strong> nos permite fazer perguntas abertas sobre o comportamento do sistema, como <em>"por que a ingestão de dados está mais lenta hoje do que na semana passada?"</em> ou <em>"qual alteração no código causou essa inconsistência nos dados?"</em>.</p>
+<div class="admonition important">
+<p class="admonition-title">Definição</p>
+<p><strong>Observabilidade</strong> é a prática que nos permite inferir e compreender o estado e o comportamento de um sistema de dados, fornecendo visibilidade sobre suas operações.</p>
+<div class="admonition warning">
+<p>Ela vai além do simples monitoramento, permitindo a depuração, a análise de causa raiz e a prevenção proativa de problemas em ambientes complexos e distribuídos.</p>
+</div>
+</div>
+<p>Muitas vezes, os termos <strong>monitoramento</strong> e <strong>observabilidade</strong> são usados de forma intercambiável, mas eles representam conceitos distintos, embora relacionados.</p>
+<details>
+<summary>Observabilidade <em>vs.</em> Monitoramento</summary>
+<p>O <strong>monitoramento</strong> tradicional é focado em observar e alertar sobre problemas conhecidos. Ele responde a perguntas predefinidas, como <em>"o uso de CPU está acima de 90%?"</em> ou <em>"o pipeline falhou?"</em>. Geralmente, isso é feito por meio de <em>dashboards</em>.</p>
+<p>A <strong>observabilidade</strong>, por outro lado, é focada em <strong>explorar e entender</strong> problemas desconhecidos. Ela fornece dados contextuais que permitem investigar o <strong>"porquê"</strong> por trás de um sintoma.</p>
+<div class="admonition warning">
+<p>Enquanto o monitoramento lhe diz <em>que</em> algo está errado, a observabilidade lhe dá as ferramentas para descobrir <em>por que</em> está errado.</p>
+</div>
+</details>
+<h2 id="os-pilares-da-observabilidade">Os Pilares da Observabilidade</h2>
+<p>Para alcançar um estado de observabilidade, precisamos coletar e analisar três tipos principais de dados:</p>
+<ol>
 <li>
-<p><strong>Potencial Inconsistência</strong>: A redundância aumenta o risco de <strong>inconsistências</strong>, especialmente se o processo de <strong>ETL</strong> não for bem projetado ou se houver falhas na sincronização dos dados.</p>
+<p><strong>Logs</strong>: São registros imutáveis e com carimbo de data/hora de eventos discretos que ocorreram ao longo do tempo. Um <strong>log</strong> pode registrar um <strong>erro</strong>, uma requisição de API ou a conclusão de uma tarefa. Eles fornecem um <strong>contexto detalhado</strong> e <strong>granular</strong>, essencial para a depuração, permitindo que você veja o que estava acontecendo em um ponto específico no tempo.</p>
 </li>
 <li>
-<p><strong>Gestão de Migrações</strong>: Alterações no modelo de dados podem exigir migrações complexas, uma vez que a estrutura desnormalizada pode não se adaptar facilmente a mudanças.</p>
-</li>
-</ul>
-<h2 id="quando-usar-obt">Quando Usar OBT?</h2>
-<p>A decisão de implementar uma <strong>OBT</strong> deve considerar diversos fatores:</p>
-<ul>
-<li>
-<p><strong>Cenários Adequados:</strong></p>
-<ul>
-<li><strong>Análises frequentes</strong> que sempre envolvem os mesmos conjuntos de dados</li>
-<li><strong>Relatórios padronizados</strong> com consultas previsíveis</li>
-<li>Ambientes onde a <strong>performance de leitura</strong> é mais crítica que eficiência de armazenamento</li>
-<li><strong>Data marts</strong> específicos para áreas de negócio</li>
-</ul>
+<p><strong>Métricas</strong>: São <strong>medições numéricas agregadas</strong> ao longo de um intervalo de tempo. Métricas como <strong>latência</strong>, <strong>taxa de transferência</strong> (<em>throughput</em>) e <strong>utilização de recursos</strong> (CPU, memória) são fundamentais para entender o desempenho e a saúde do sistema em larga escala. Elas são eficientes para armazenar e consultar, tornando-as ideais para <strong>dashboards</strong> e <strong>alertas</strong>.</p>
 </li>
 <li>
-<p><strong>Cenários Inadequados:</strong></p>
-<ul>
-<li>Dados com <strong>alta frequência de atualização</strong></li>
-<li>Ambientes com <strong>recursos limitados</strong> de armazenamento</li>
-<li>Casos onde a <strong>consistência transacional</strong> é crítica</li>
-<li>Sistemas principalmente <strong>OLTP</strong></li>
-</ul>
+<p><strong>Traces (Rastreamento Distribuído)</strong>: Em sistemas modernos, uma única requisição pode passar por múltiplos serviços. O <strong>tracing</strong> permite <strong>seguir o caminho completo</strong> dessa requisição, mostrando quanto tempo ela gastou em cada componente. Isso é indispensável para identificar gargalos de desempenho e entender as dependências entre serviços em uma arquitetura de microsserviços ou em um pipeline de dados complexo.</p>
 </li>
-</ul>
-<h2 id="implementando-obt">Implementando OBT</h2>
-<p>Vamos trabalhar com a transformação do nosso modelo de vendas normalizado em uma <strong>OBT</strong>. </p>
-<p>Antes, vamos relembrar a estrutura original:</p>
-<p><img alt="Estrutura Normalizada Original" src="../modelo-relacional-vendas.png" /></p>
-<h3 id="projetando-a-obt">Projetando a OBT</h3>
-<p>Para criar nossa <strong>OBT</strong>, precisamos identificar qual será o <strong>grão</strong> (<strong>granularidade</strong>) da tabela.</p>
-<p>No nosso caso, o grão natural seria <strong>cada item vendido</strong>, pois representa o nível mais detalhado de informação disponível.</p>
-<div class="admonition exercise text short exercise-short" id="exercise_3">
+</ol>
+<div class="admonition exercise text short exercise-short" id="exercise_2">
 <p class="admonition-title">Exercise</p>
-<form class="quiz-form"><p>Por que escolhemos <strong>"item vendido"</strong> como grão da <strong>OBT</strong> ao invés de <strong>"venda"</strong>?</p>
+<form class="quiz-form"><p>Considere um pipeline de dados que extrai dados de uma API, os transforma e os carrega em um Data Warehouse. Para cada um dos três pilares (Logs, Métricas, Traces), dê um exemplo de uma informação que seria útil coletar.</p>
 <div class="form-elements">
 <div class="quiz-text-container">
 
@@ -3588,213 +3066,32 @@ body {
 <button class="quiz-submit-button" type="submit">Submit</button>
 </div></form><div class="admonition answer quiz-answer no-indent">
 <p class="admonition-title">Answer</p>
-<p>Porque uma venda pode conter múltiplos produtos.</p>
-<p>Se usássemos <strong>"venda"</strong> como grão, perderiamos o <strong>detalhamento por produto</strong>!</p>
-</div>
-</div>
-<h3 id="campos-da-obt-de-vendas">Campos da OBT de Vendas</h3>
-<p>Nossa <strong>OBT</strong> incluirá todos os campos necessários para análises de vendas, eliminando a necessidade de JOINs:</p>
 <ul>
-<li>
-<p><strong>Informações da Venda:</strong> <code>id_venda</code>, <code>data_venda</code>, <code>entregue</code>, <code>valor_total_venda</code></p>
-</li>
-<li>
-<p><strong>Informações do Item:</strong> <code>id_item</code>, <code>quantidade</code>, <code>valor_unitario</code>, <code>valor_total_item</code></p>
-</li>
-<li>
-<p><strong>Informações do Produto:</strong> <code>id_produto</code>, <code>nome_produto</code>, <code>descricao_produto</code>, <code>preco_base</code></p>
-</li>
-<li>
-<p><strong>Informações do Cliente:</strong> <code>id_cliente</code>, <code>nome_cliente</code>, <code>data_nasc</code>, <code>data_cad</code>, <code>cpf</code></p>
-</li>
-<li>
-<p><strong>Informações Geográficas:</strong> <code>cidade</code>, <code>uf</code>, <code>pais</code></p>
-</li>
-</ul>
-<div class="admonition exercise choice exercise-choice" data-answer-idx="3" id="exercise_2">
-<p class="admonition-title">Question</p>
-<form class="quiz-form"><p>Quantas vezes os dados do cliente "João Silva" aparecerão na <strong>OBT</strong> se ele fez 5 compras com 3 itens cada?</p>
-<div class="form-elements">
-<div class="quiz-alternative-set">
-  
-<label class="quiz-alternative" data-alt-index="0">
-  <div class="content">
-    <input type="hidden" name="data" value="">
-    <span class="choice-text">1 vez</span>
-  </div>
-</label>
-
-<label class="quiz-alternative" data-alt-index="1">
-  <div class="content">
-    <input type="hidden" name="data" value="">
-    <span class="choice-text">5 vezes</span>
-  </div>
-</label>
-
-<label class="quiz-alternative" data-alt-index="2">
-  <div class="content">
-    <input type="hidden" name="data" value="">
-    <span class="choice-text">3 vezes</span>
-  </div>
-</label>
-
-<label class="quiz-alternative" data-alt-index="3">
-  <div class="content">
-    <input type="hidden" name="data" value="">
-    <span class="choice-text">15 vezes</span>
-  </div>
-</label>
-
-<label class="quiz-alternative" data-alt-index="4">
-  <div class="content">
-    <input type="hidden" name="data" value="">
-    <span class="choice-text">Depende dos produtos</span>
-  </div>
-</label>
-
-</div>
-<button class="quiz-submit-button" type="submit">Submit</button>
-</div></form></div>
-<h2 id="criando-a-obt-na-pratica">Criando a OBT na Prática</h2>
-<p>A transformação do modelo normalizado para <strong>OBT</strong>, usando <strong>SQL</strong>, pode ser representada pela seguinte <em>query</em>:</p>
-<div class="admonition warning">
-<p class="admonition-title">Atenção</p>
-<p>Esta é uma versão refatorada, o nome dos atributos (colunas) pode não bater com o utilizado na aula 03.</p>
-</div>
-<div class="language-sql copy highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w">    </span><span class="c1">-- Criação da OBT de Vendas</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">obt_vendas</span><span class="w"> </span><span class="k">AS</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="k">SELECT</span><span class="w"> </span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">        </span><span class="c1">-- Informações da venda</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">        </span><span class="n">v</span><span class="p">.</span><span class="n">id_venda</span><span class="p">,</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">        </span><span class="n">v</span><span class="p">.</span><span class="k">data</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">data_venda</span><span class="p">,</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">        </span><span class="n">v</span><span class="p">.</span><span class="n">entregue</span><span class="p">,</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">        </span><span class="n">v</span><span class="p">.</span><span class="n">valor_total</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">valor_total_venda</span><span class="p">,</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">        </span><span class="c1">-- Informações do item</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">        </span><span class="n">iv</span><span class="p">.</span><span class="n">id_item</span><span class="p">,</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">        </span><span class="n">iv</span><span class="p">.</span><span class="n">quantidade</span><span class="p">,</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">        </span><span class="n">iv</span><span class="p">.</span><span class="n">valor_unitario</span><span class="p">,</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">        </span><span class="n">iv</span><span class="p">.</span><span class="n">valor_total</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">valor_total_item</span><span class="p">,</span>
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">        </span><span class="c1">-- Informações do produto</span>
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">        </span><span class="n">p</span><span class="p">.</span><span class="n">id_produto</span><span class="p">,</span>
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">        </span><span class="n">p</span><span class="p">.</span><span class="n">nome</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">nome_produto</span><span class="p">,</span>
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">        </span><span class="n">p</span><span class="p">.</span><span class="n">descricao</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">descricao_produto</span><span class="p">,</span>
-<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">        </span><span class="n">p</span><span class="p">.</span><span class="n">preco_base</span><span class="p">,</span>
-<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">        </span><span class="n">p</span><span class="p">.</span><span class="n">ativo</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">produto_ativo</span><span class="p">,</span>
-<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>
-<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">        </span><span class="c1">-- Informações do cliente</span>
-<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">        </span><span class="k">c</span><span class="p">.</span><span class="n">id_cliente</span><span class="p">,</span>
-<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">        </span><span class="k">c</span><span class="p">.</span><span class="n">nome</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">nome_cliente</span><span class="p">,</span>
-<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">        </span><span class="k">c</span><span class="p">.</span><span class="n">data_nasc</span><span class="p">,</span>
-<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="w">        </span><span class="k">c</span><span class="p">.</span><span class="n">data_cad</span><span class="p">,</span>
-<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="w">        </span><span class="k">c</span><span class="p">.</span><span class="n">cpf</span><span class="p">,</span>
-<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>
-<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="w">        </span><span class="c1">-- Informações geográficas</span>
-<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="w">        </span><span class="n">cid</span><span class="p">.</span><span class="n">cidade_desc</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">cidade</span><span class="p">,</span>
-<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="w">        </span><span class="n">cid</span><span class="p">.</span><span class="n">cidade_uf</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">uf</span><span class="p">,</span>
-<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="w">        </span><span class="n">pa</span><span class="p">.</span><span class="n">pais</span>
-<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>
-<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">item_venda</span><span class="w"> </span><span class="n">iv</span>
-<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="w">    </span><span class="k">JOIN</span><span class="w"> </span><span class="n">venda</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">iv</span><span class="p">.</span><span class="n">id_venda</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">id_venda</span>
-<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a><span class="w">    </span><span class="k">JOIN</span><span class="w"> </span><span class="n">produto</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">iv</span><span class="p">.</span><span class="n">id_produto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">id_produto</span>
-<a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a><span class="w">    </span><span class="k">JOIN</span><span class="w"> </span><span class="n">cliente</span><span class="w"> </span><span class="k">c</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">id_cliente</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">id_cliente</span>
-<a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a><span class="w">    </span><span class="k">JOIN</span><span class="w"> </span><span class="n">cidade</span><span class="w"> </span><span class="n">cid</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">id_cidade</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cid</span><span class="p">.</span><span class="n">id_cidade</span>
-<a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a><span class="w">    </span><span class="k">JOIN</span><span class="w"> </span><span class="n">pais</span><span class="w"> </span><span class="n">pa</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">cid</span><span class="p">.</span><span class="n">id_pais</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pa</span><span class="p">.</span><span class="n">id_pais</span><span class="p">;</span>
-</code></pre></div>
-<h3 id="consultas-normalizado-vs-obt">Consultas: Normalizado <em>vs</em> OBT</h3>
-<p>Podemos comparar como seria a estrutura básica de consultas no modelo normalizado e na OBT.</p>
-<p>Por exemplo, para obter as vendas por país no último mês, teríamos:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Normalizado</label><label for="__tabbed_1_2">OBT</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="language-sql copy highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">-- Vendas por país no último mês</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">SELECT</span><span class="w"> </span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="n">pa</span><span class="p">.</span><span class="n">pais</span><span class="p">,</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">total_vendas</span><span class="p">,</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="k">SUM</span><span class="p">(</span><span class="n">v</span><span class="p">.</span><span class="n">valor_total</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">receita_total</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="k">FROM</span><span class="w"> </span><span class="n">venda</span><span class="w"> </span><span class="n">v</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="k">JOIN</span><span class="w"> </span><span class="n">cliente</span><span class="w"> </span><span class="k">c</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">id_cliente</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">id_cliente</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="k">JOIN</span><span class="w"> </span><span class="n">cidade</span><span class="w"> </span><span class="n">cid</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">id_cidade</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cid</span><span class="p">.</span><span class="n">id_cidade</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="k">JOIN</span><span class="w"> </span><span class="n">pais</span><span class="w"> </span><span class="n">pa</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">cid</span><span class="p">.</span><span class="n">id_pais</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pa</span><span class="p">.</span><span class="n">id_pais</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="k">data</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">DATE_SUB</span><span class="p">(</span><span class="k">CURRENT_DATE</span><span class="p">,</span><span class="w"> </span><span class="nb">INTERVAL</span><span class="w"> </span><span class="mi">30</span><span class="w"> </span><span class="k">DAY</span><span class="p">)</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">pa</span><span class="p">.</span><span class="n">pais</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">receita_total</span><span class="w"> </span><span class="k">DESC</span><span class="p">;</span>
-</code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="language-sql copy highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1">-- Vendas por país no último mês</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">SELECT</span><span class="w"> </span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="n">pais</span><span class="p">,</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="k">COUNT</span><span class="p">(</span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">id_venda</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">total_vendas</span><span class="p">,</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="k">SUM</span><span class="p">(</span><span class="n">valor_total_venda</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">receita_total</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="k">FROM</span><span class="w"> </span><span class="n">obt_vendas</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">data_venda</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">DATE_SUB</span><span class="p">(</span><span class="k">CURRENT_DATE</span><span class="p">,</span><span class="w"> </span><span class="nb">INTERVAL</span><span class="w"> </span><span class="mi">30</span><span class="w"> </span><span class="k">DAY</span><span class="p">)</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">pais</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">receita_total</span><span class="w"> </span><span class="k">DESC</span><span class="p">;</span>
-</code></pre></div>
-</div>
-</div>
-</div>
-<div class="admonition exercise text long exercise-long" id="exercise_4">
-<p class="admonition-title">Exercise</p>
-<form class="quiz-form"><p>Compare as duas consultas acima. Quais diferenças você observa em termos de complexidade e potencial performance?</p>
-<div class="form-elements">
-<div class="quiz-text-container">
-
-<textarea name="data" class="quiz-text-input" 
-          placeholder="Enter your detailed answer..." rows="4"></textarea>
-
-</div>
-<button class="quiz-submit-button" type="submit">Submit</button>
-</div></form><div class="admonition answer quiz-answer no-indent">
-<p class="admonition-title">Answer</p>
-<p>A consulta <strong>OBT</strong> é mais simples (sem <strong>JOINs</strong>), potencialmente mais rápida, mas requer atenção especial ao usar <code>COUNT(DISTINCT id_venda)</code> para evitar contar a mesma venda múltiplas vezes devido aos múltiplos itens.</p>
-</div>
-</div>
-<div class="admonition tip">
-<p class="admonition-title">Otimizações!</p>
-<p>Como a OBT será consultada frequentemente, é fundamental criar índices nas colunas mais utilizadas em filtros e agrupamentos:</p>
-</div>
-<div class="admonition danger">
-<p class="admonition-title">Explosão de Cardinalidade!</p>
-<p>Em relacionamentos <strong>muitos-para-muitos</strong>, a OBT pode crescer exponencialmente.</p>
-<p>É importante monitorar o tamanho da tabela resultante.</p>
-</div>
-<div class="admonition tip">
-<p class="admonition-title">Cuidado!</p>
-<p>Ao fazer agregações na OBT, tenha cuidado para não <strong>contar duplicatas</strong>:</p>
-<div class="language-sql highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1">-- INCORRETO: conta o mesmo cliente múltiplas vezes</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">total_clientes</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">obt_vendas</span><span class="p">;</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1">-- CORRETO: conta clientes únicos</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">id_cliente</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">total_clientes</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">obt_vendas</span><span class="p">;</span>
-</code></pre></div>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Manutenção de Consistência</p>
-<p>A redundância exige processos robustos de <strong>ETL</strong> para garantir que todas as cópias dos dados permaneçam consistentes.</p>
-</div>
-<div class="admonition exercise text long exercise-long" id="exercise_5">
-<p class="admonition-title">Exercise</p>
-<form class="quiz-form"><p>Que estratégias você implementaria para detectar e corrigir inconsistências em uma <strong>OBT</strong>?</p>
-<div class="form-elements">
-<div class="quiz-text-container">
-
-<textarea name="data" class="quiz-text-input" 
-          placeholder="Enter your detailed answer..." rows="4"></textarea>
-
-</div>
-<button class="quiz-submit-button" type="submit">Submit</button>
-</div></form><div class="admonition answer quiz-answer no-indent">
-<p class="admonition-title">Answer</p>
-<ul>
-<li>Monitoramento contínuo de dados para identificar anomalias.</li>
-<li>Implementação de testes automatizados para validar a integridade dos dados.</li>
-<li>Processos de reconciliação periódicos entre a <strong>OBT</strong> e as fontes de dados originais.</li>
+<li><strong>Logs</strong>: Registro de cada execução do pipeline, incluindo erros específicos encontrados durante a transformação dos dados.</li>
+<li><strong>Métricas</strong>: Tempo total de execução do pipeline, número de registros processados por minuto e taxa de sucesso/falha das execuções.</li>
+<li><strong>Traces</strong>: Tempo gasto em cada etapa do pipeline (extração, transformação, carregamento) e a latência da API durante a extração dos dados.</li>
 </ul>
 </div>
 </div>
+<h2 id="ciclo-de-vida-dos-dados">Ciclo de Vida dos Dados</h2>
+<p>A observabilidade não é uma fase isolada, mas uma prática contínua que se aplica a todas as etapas do ciclo de vida da engenharia de dados, desde a origem até o consumo.</p>
+<ul>
+<li>
+<p><strong>Sistemas Fonte e Ingestão</strong>: Aqui, a observabilidade ajuda a monitorar a disponibilidade das fontes, a conformidade dos esquemas e a qualidade dos dados brutos. Durante a ingestão, medimos a taxa de transferência, a latência e a ocorrência de erros para garantir que os dados cheguem de forma confiável ao nosso repositório.</p>
+</li>
+<li>
+<p><strong>Armazenamento e Transformação</strong>: Em um Data Lake ou Data Warehouse, a observabilidade foca na saúde dos dados armazenados. Isso inclui validar esquemas, verificar estatísticas (como contagens de nulos, valores mínimos/máximos) e garantir a correção das transformações. Testes de qualidade de dados nos datasets de entrada e saída são essenciais para evitar a propagação de dados lixo (<code>garbage in, garbage out</code>).</p>
+</li>
+<li>
+<p><strong>Serviço e Consumo</strong>: Na camada final, onde os dados são consumidos por dashboards, modelos de machine learning ou outras aplicações, a observabilidade garante que os Acordos de Nível de Serviço (<strong>SLOs</strong>) sejam cumpridos. Monitoramos a latência das consultas, a atualização dos dados (<code>freshness</code>) e a disponibilidade dos sistemas de serviço.</p>
+</li>
+</ul>
+<div class="admonition quote">
+<p class="admonition-title">Quote</p>
+<p>A aplicação da observabilidade em todo o ciclo de vida dos dados deu origem a uma nova abordagem, o <strong>Desenvolvimento Orientado à Observabilidade de Dados (DODD)</strong>.</p>
+<p>Semelhante ao Desenvolvimento Orientado a Testes (TDD), o DODD torna a observabilidade uma consideração de primeira classe desde o início do desenvolvimento, garantindo que a visibilidade seja construída em cada etapa do pipeline, e não adicionada como um pensamento tardio.</p>
+</div>
+<p>Ao integrar a observabilidade em nossa cultura e processos, buscamos nos tornar capazes de entregar valor de forma consistente e segura.</p>
 <script type="text/javascript">
 // Sistema de processamento de exercícios de múltipla escolha
 function processChoiceExercises() {
@@ -4886,7 +4183,7 @@ document.addEventListener('click', function(e) {
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../intro-data-modeling/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Modelagem de Dados">
+          <a href="../../09-data-lakes/aws-glue/" class="md-footer__link md-footer__link--prev" aria-label="Previous: AWS Glue">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -4896,20 +4193,20 @@ document.addEventListener('click', function(e) {
                 Previous
               </span>
               <div class="md-ellipsis">
-                Modelagem de Dados
+                AWS Glue
               </div>
             </div>
           </a>
         
         
           
-          <a href="../star-schema/" class="md-footer__link md-footer__link--next" aria-label="Next: Star Schema">
+          <a href="../prometheus/" class="md-footer__link md-footer__link--next" aria-label="Next: Prometheus">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Star Schema
+                Prometheus
               </div>
             </div>
             <div class="md-footer__button md-icon">

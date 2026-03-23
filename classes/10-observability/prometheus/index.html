@@ -13,10 +13,10 @@
       
       
       
-        <link rel="prev" href="../intro-data-modeling/">
+        <link rel="prev" href="../intro-observability/">
       
       
-        <link rel="next" href="../star-schema/">
+        <link rel="next" href="../grafana/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>One Big Table (OBT) - Engenharia de Dados</title>
+        <title>Prometheus - Engenharia de Dados</title>
       
     
     
@@ -81,7 +81,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#one-big-table-obt" class="md-skip">
+        <a href="#prometheus" class="md-skip">
           Skip to content
         </a>
       
@@ -117,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              One Big Table (OBT)
+              Prometheus
             
           </span>
         </div>
@@ -1624,10 +1624,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -1648,11 +1646,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" >
         
           
           <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
@@ -1668,7 +1666,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_7">
             <span class="md-nav__icon md-icon"></span>
             07 - Modelagem de Dados
@@ -1682,7 +1680,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../intro-data-modeling/" class="md-nav__link">
+      <a href="../../07-data-modeling/intro-data-modeling/" class="md-nav__link">
         
   
   
@@ -1702,32 +1700,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    One Big Table (OBT)
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../07-data-modeling/obt/" class="md-nav__link">
         
   
   
@@ -1738,203 +1714,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#relembrando-a-aula-03" class="md-nav__link">
-    <span class="md-ellipsis">
-      Relembrando a aula 03
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#o-que-e-one-big-table-obt" class="md-nav__link">
-    <span class="md-ellipsis">
-      O que é One Big Table (OBT)?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#exemplo" class="md-nav__link">
-    <span class="md-ellipsis">
-      Exemplo
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Exemplo">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#tabelas-originais" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tabelas Originais
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Tabelas Originais">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#tabela-paciente" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tabela: paciente
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tabela-medico" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tabela: medico
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tabela-atendimento" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tabela: atendimento
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tabela-obt-resultante" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tabela OBT Resultante
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#contexto-historico" class="md-nav__link">
-    <span class="md-ellipsis">
-      Contexto Histórico
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#vantagens-da-abordagem-obt" class="md-nav__link">
-    <span class="md-ellipsis">
-      Vantagens da Abordagem OBT
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#desvantagens-da-abordagem-obt" class="md-nav__link">
-    <span class="md-ellipsis">
-      Desvantagens da Abordagem OBT
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#quando-usar-obt" class="md-nav__link">
-    <span class="md-ellipsis">
-      Quando Usar OBT?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#implementando-obt" class="md-nav__link">
-    <span class="md-ellipsis">
-      Implementando OBT
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Implementando OBT">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#projetando-a-obt" class="md-nav__link">
-    <span class="md-ellipsis">
-      Projetando a OBT
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#campos-da-obt-de-vendas" class="md-nav__link">
-    <span class="md-ellipsis">
-      Campos da OBT de Vendas
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#criando-a-obt-na-pratica" class="md-nav__link">
-    <span class="md-ellipsis">
-      Criando a OBT na Prática
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Criando a OBT na Prática">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#consultas-normalizado-vs-obt" class="md-nav__link">
-    <span class="md-ellipsis">
-      Consultas: Normalizado vs OBT
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1947,7 +1726,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../star-schema/" class="md-nav__link">
+      <a href="../../07-data-modeling/star-schema/" class="md-nav__link">
         
   
   
@@ -1970,7 +1749,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../snowflake/" class="md-nav__link">
+      <a href="../../07-data-modeling/snowflake/" class="md-nav__link">
         
   
   
@@ -1993,7 +1772,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../references/" class="md-nav__link">
+      <a href="../../07-data-modeling/references/" class="md-nav__link">
         
   
   
@@ -2223,8 +2002,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -2247,11 +2028,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10" checked>
         
           
           <label class="md-nav__link" for="__nav_2_10" id="__nav_2_10_label" tabindex="0">
@@ -2267,7 +2048,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_10">
             <span class="md-nav__icon md-icon"></span>
             10 - Observabilidade
@@ -2281,7 +2062,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../10-observability/intro-observability/" class="md-nav__link">
+      <a href="../intro-observability/" class="md-nav__link">
         
   
   
@@ -2301,10 +2082,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../10-observability/prometheus/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Prometheus
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -2315,6 +2118,125 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introducao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introdução
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arquitetura-e-conceitos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arquitetura e Conceitos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configurando-o-ambiente" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configurando o Ambiente
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracao-do-prometheus" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuração do Prometheus
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker-compose" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker Compose
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#executando-o-prometheus" class="md-nav__link">
+    <span class="md-ellipsis">
+      Executando o Prometheus
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#monitorando-uma-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Monitorando uma API
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#explorando-o-valor-das-metricas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Explorando o valor das Métricas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#monitorando-outro-servico-com-um-exporter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Monitorando Outro Serviço com um Exporter
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consultando-metricas-com-promql" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consultando Métricas com PromQL
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limpeza-do-ambiente" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limpeza do Ambiente
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2327,7 +2249,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../10-observability/grafana/" class="md-nav__link">
+      <a href="../grafana/" class="md-nav__link">
         
   
   
@@ -2350,7 +2272,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../10-observability/logging/" class="md-nav__link">
+      <a href="../logging/" class="md-nav__link">
         
   
   
@@ -2373,7 +2295,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../10-observability/tracing/" class="md-nav__link">
+      <a href="../tracing/" class="md-nav__link">
         
   
   
@@ -2396,7 +2318,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../10-observability/references/" class="md-nav__link">
+      <a href="../references/" class="md-nav__link">
         
   
   
@@ -2673,179 +2595,101 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#relembrando-a-aula-03" class="md-nav__link">
+  <a href="#introducao" class="md-nav__link">
     <span class="md-ellipsis">
-      Relembrando a aula 03
+      Introdução
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#o-que-e-one-big-table-obt" class="md-nav__link">
+  <a href="#arquitetura-e-conceitos" class="md-nav__link">
     <span class="md-ellipsis">
-      O que é One Big Table (OBT)?
+      Arquitetura e Conceitos
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#exemplo" class="md-nav__link">
+  <a href="#configurando-o-ambiente" class="md-nav__link">
     <span class="md-ellipsis">
-      Exemplo
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Exemplo">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#tabelas-originais" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tabelas Originais
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Tabelas Originais">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#tabela-paciente" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tabela: paciente
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tabela-medico" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tabela: medico
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tabela-atendimento" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tabela: atendimento
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tabela-obt-resultante" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tabela OBT Resultante
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#contexto-historico" class="md-nav__link">
-    <span class="md-ellipsis">
-      Contexto Histórico
+      Configurando o Ambiente
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#vantagens-da-abordagem-obt" class="md-nav__link">
+  <a href="#configuracao-do-prometheus" class="md-nav__link">
     <span class="md-ellipsis">
-      Vantagens da Abordagem OBT
+      Configuração do Prometheus
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#desvantagens-da-abordagem-obt" class="md-nav__link">
+  <a href="#docker-compose" class="md-nav__link">
     <span class="md-ellipsis">
-      Desvantagens da Abordagem OBT
+      Docker Compose
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#quando-usar-obt" class="md-nav__link">
+  <a href="#executando-o-prometheus" class="md-nav__link">
     <span class="md-ellipsis">
-      Quando Usar OBT?
+      Executando o Prometheus
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#implementando-obt" class="md-nav__link">
+  <a href="#monitorando-uma-api" class="md-nav__link">
     <span class="md-ellipsis">
-      Implementando OBT
+      Monitorando uma API
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Implementando OBT">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#projetando-a-obt" class="md-nav__link">
-    <span class="md-ellipsis">
-      Projetando a OBT
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#campos-da-obt-de-vendas" class="md-nav__link">
-    <span class="md-ellipsis">
-      Campos da OBT de Vendas
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#criando-a-obt-na-pratica" class="md-nav__link">
+  <a href="#explorando-o-valor-das-metricas" class="md-nav__link">
     <span class="md-ellipsis">
-      Criando a OBT na Prática
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Criando a OBT na Prática">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#consultas-normalizado-vs-obt" class="md-nav__link">
-    <span class="md-ellipsis">
-      Consultas: Normalizado vs OBT
+      Explorando o valor das Métricas
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#monitorando-outro-servico-com-um-exporter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Monitorando Outro Serviço com um Exporter
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consultando-metricas-com-promql" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consultando Métricas com PromQL
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limpeza-do-ambiente" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limpeza do Ambiente
+    </span>
+  </a>
   
 </li>
       
@@ -3282,302 +3126,63 @@ body {
   }
 }
 </style>
-<h1 id="one-big-table-obt">One Big Table (OBT)</h1>
-<h2 id="relembrando-a-aula-03">Relembrando a aula 03</h2>
-<p>Na <a href="../../03-data-warehouse/pratica/">aula 03</a>, quando fizemos a implementação do nosso <strong>Data Warehouse (DW)</strong>, foi preciso decidir como organizar os dados no <strong>DW</strong>.</p>
-<div class="admonition exercise text long exercise-long" id="exercise_1">
-<p class="admonition-title">Exercise</p>
-<form class="quiz-form"><p>Como definimos o modelo de dados do <strong>DW</strong>?</p>
-<p>Como ele se diferenciava do modelo de dados operacional (<strong>PostgreSQL OLTP</strong>)?</p>
-<div class="form-elements">
-<div class="quiz-text-container">
-
-<textarea name="data" class="quiz-text-input" 
-          placeholder="Enter your detailed answer..." rows="4"></textarea>
-
-</div>
-<button class="quiz-submit-button" type="submit">Submit</button>
-</div></form><div class="admonition answer quiz-answer no-indent">
-<p class="admonition-title">Answer</p>
-<p>Nós removemos as chaves estrangeiras e a obrigatoriedade de alguns atributos.</p>
-<p>Ademais, a estrutura foi mantida.</p>
-</div>
-</div>
-<div class="admonition exercise text long exercise-long" id="exercise_2">
-<p class="admonition-title">Exercise</p>
-<form class="quiz-form"><p>O que você acha de mantermos a estrutura do <strong>DW</strong> quase idêntia à do banco operacional?</p>
-<div class="form-elements">
-<div class="quiz-text-container">
-
-<textarea name="data" class="quiz-text-input" 
-          placeholder="Enter your detailed answer..." rows="4"></textarea>
-
-</div>
-<button class="quiz-submit-button" type="submit">Submit</button>
-</div></form><div class="admonition answer quiz-answer no-indent">
-<p class="admonition-title">Answer</p>
-<p>O padrão de acesso <strong>OLTP</strong> geralmente envolve transações rápidas e de curto prazo, envolvendo poucas linhas.</p>
-<p>Por outro lado, o <strong>DW</strong> é otimizado para <strong>OLAP</strong>, envolvendo consultas complexas, acesso colunar e com grande volume de dados.</p>
-<p>Portanto, manter a estrutura idêntica pode não ser a melhor abordagem para atender a essas diferentes necessidades.</p>
-</div>
-</div>
-<p>Conforme os dados forem disponibilizados para análise no <strong>DW</strong>, <em>queries</em> complexas podem demandar a junção de diversas tabelas, as quais podem conter grande volume de dados. Isto será computacionalmente custoso, especialmente quando o <strong>DW</strong> crescer em volume de dados e complexidade estrutural.</p>
-<p>Uma solução possível é o uso do padrão <strong>One Big Table (OBT)</strong>.</p>
-<h2 id="o-que-e-one-big-table-obt">O que é One Big Table (OBT)?</h2>
-<p>A abordagem <strong>One Big Table (OBT)</strong> representa uma estratégia de modelagem onde todos os dados relevantes para análise são consolidados em uma única tabela <strong>desnormalizada</strong>.</p>
+<h1 id="prometheus">Prometheus</h1>
+<h2 id="introducao">Introdução</h2>
+<p>Na seção anterior, introduzimos o conceito de <strong>observabilidade</strong> e seus pilares. Vimos que as <strong>métricas</strong> são essenciais para entender a saúde e o desempenho de nossos sistemas em larga escala.</p>
+<p>Agora, vamos explorar o <strong>Prometheus</strong>, uma das ferramentas mais populares para coleta e armazenamento de métricas.</p>
+<p>O <strong>Prometheus</strong> é um projeto de código aberto, originalmente desenvolvido pela <strong>SoundCloud</strong>, que se tornou o padrão para monitoramento em ecossistemas de contêineres e microsserviços. Ele funciona como um banco de dados de séries temporais, coletando métricas de serviços configurados em intervalos específicos, avaliando regras de alerta e exibindo os resultados.</p>
 <div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>Desnormalização é o processo de, intencionalmente, adicionar <strong>redundância</strong> a um banco de dados previamente normalizado para <strong>melhorar o desempenho de leitura</strong>, através da combinação de tabelas ou <strong>duplicação</strong> de dados!</p>
+<p class="admonition-title">Prometheus e os Pilares da Observabilidade</p>
+<p>O Prometheus é a personificação do pilar de <strong>Métricas</strong>.</p>
+<p>Ele foi projetado para coletar, armazenar e consultar dados numéricos de séries temporais de forma altamente eficiente.</p>
 </div>
-<p>Esta técnica surgiu como uma resposta às limitações de performance em consultas analíticas que envolvem múltiplos <code>JOINs</code> entre tabelas normalizadas.</p>
-<div class="admonition abstract">
-<p class="admonition-title">Resumo!</p>
-<p>Em um modelo <strong>OBT</strong>, ao invés de manter dados distribuídos em várias tabelas relacionais, todas as informações necessárias são combinadas em uma única estrutura tabular.</p>
-<p>Isso elimina a necessidade de operações custosas de <code>JOIN</code> durante as consultas analíticas.</p>
-</div>
-<h2 id="exemplo">Exemplo</h2>
-<p>Vamos ilustrar o conceito de OBT com um exemplo de dados hospitalares.</p>
-<h3 id="tabelas-originais">Tabelas Originais</h3>
-<h4 id="tabela-paciente">Tabela: <code>paciente</code></h4>
-<table>
-<thead>
-<tr>
-<th>id_paciente</th>
-<th>nome</th>
-<th>uf</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>Carla Dias</td>
-<td>SP</td>
-</tr>
-<tr>
-<td>2</td>
-<td>Lucas Prado</td>
-<td>RJ</td>
-</tr>
-</tbody>
-</table>
-<h4 id="tabela-medico">Tabela: <code>medico</code></h4>
-<table>
-<thead>
-<tr>
-<th>id_medico</th>
-<th>nome_medico</th>
-<th>especialidade</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>10</td>
-<td>Dr. Silva</td>
-<td>Cardiologia</td>
-</tr>
-<tr>
-<td>20</td>
-<td>Dra. Souza</td>
-<td>Pediatria</td>
-</tr>
-</tbody>
-</table>
-<h4 id="tabela-atendimento">Tabela: <code>atendimento</code></h4>
-<table>
-<thead>
-<tr>
-<th>id_atendimento</th>
-<th>id_paciente</th>
-<th>id_medico</th>
-<th>data</th>
-<th>procedimento</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1001</td>
-<td>1</td>
-<td>10</td>
-<td>2025-08-01</td>
-<td>Consulta</td>
-</tr>
-<tr>
-<td>1002</td>
-<td>2</td>
-<td>20</td>
-<td>2025-08-02</td>
-<td>Exame</td>
-</tr>
-<tr>
-<td>1003</td>
-<td>1</td>
-<td>20</td>
-<td>2025-08-03</td>
-<td>Vacina</td>
-</tr>
-</tbody>
-</table>
-<h3 id="tabela-obt-resultante">Tabela OBT Resultante</h3>
-<table>
-<thead>
-<tr>
-<th>id_atendimento</th>
-<th>data</th>
-<th>nome_paciente</th>
-<th>uf</th>
-<th>nome_medico</th>
-<th>especialidade</th>
-<th>procedimento</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1001</td>
-<td>2025-08-01</td>
-<td>Carla Dias</td>
-<td>SP</td>
-<td>Dr. Silva</td>
-<td>Cardiologia</td>
-<td>Consulta</td>
-</tr>
-<tr>
-<td>1002</td>
-<td>2025-08-02</td>
-<td>Lucas Prado</td>
-<td>RJ</td>
-<td>Dra. Souza</td>
-<td>Pediatria</td>
-<td>Exame</td>
-</tr>
-<tr>
-<td>1003</td>
-<td>2025-08-03</td>
-<td>Carla Dias</td>
-<td>SP</td>
-<td>Dra. Souza</td>
-<td>Pediatria</td>
-<td>Vacina</td>
-</tr>
-</tbody>
-</table>
-<p>Assim, todas as informações relevantes para análise de atendimentos estão consolidadas em uma única tabela, eliminando a necessidade de JOINs.</p>
-<div class="admonition info">
-<p class="admonition-title">Conceito Fundamental</p>
-<p>O <strong>OBT</strong> prioriza <strong>performance de leitura</strong> sobre <strong>otimização de armazenamento</strong>, sendo especialmente útil em cenários de <strong>OLAP</strong> onde a velocidade das consultas é crítica.</p>
-</div>
-<h2 id="contexto-historico">Contexto Histórico</h2>
-<p>O conceito de <strong>OBT</strong> ganhou popularidade com o advento do <strong>Big Data</strong> e ferramentas de processamento distribuído como <strong>Hadoop</strong> e <strong>Spark</strong>. Com a queda do custo de armazenamento e a necessidade crescente de análises em tempo real, a redundância de dados tornou-se um <em>trade-off</em> aceitável em muitos cenários.</p>
-<p>A abordagem também se tornou viável com o desenvolvimento de <strong>sistemas de armazenamento colunar</strong> como <strong>Parquet</strong>, que consegue comprimir dados redundantes de forma eficiente, minimizando o impacto do aumento no volume de dados.</p>
-<h2 id="vantagens-da-abordagem-obt">Vantagens da Abordagem OBT</h2>
-<p>Dentre as vantagens do uso de <strong>OBT</strong>, podemos citar:</p>
+<h2 id="arquitetura-e-conceitos">Arquitetura e Conceitos</h2>
+<p>A arquitetura do <strong>Prometheus</strong> é baseada em um modelo <strong>pull</strong>, onde o servidor <strong>Prometheus</strong> é responsável por <em>puxar</em> (coletar) as métricas de <em>endpoints</em> <strong>HTTP</strong> expostos pelos serviços monitorados, conhecidos como <strong>exporters</strong>.</p>
+<p>Os principais componentes são:</p>
 <ul>
-<li>
-<p><strong>Performance de Consultas</strong>: A principal vantagem do OBT é a <strong>eliminação de JOINs</strong> complexos. Em um <strong>DW</strong> tradicional, uma consulta simples pode requerer junções entre múltiplas tabelas, criando gargalos de performance.</p>
-</li>
-<li>
-<p><strong>Simplicidade de Consultas</strong>: Analistas e cientistas de dados podem escrever consultas mais diretas, sem precisar compreender relações complexas entre tabelas.</p>
-</li>
-<li>
-<p><strong>Otimização para Ferramentas de BI</strong>: Muitas ferramentas <strong>Business Intelligence</strong> trabalham melhor com estruturas desnormalizadas, aproveitando otimizações internas quando os dados estão em formato <em>flat</em>.</p>
-</li>
-<li>
-<p><strong>Paralelização</strong>: Em ambientes distribuídos, consultas em uma única tabela podem ser facilmente paralelizadas e distribuídas entre múltiplos nós de processamento.</p>
-</li>
+<li><strong>Prometheus Server</strong>: O coração do sistema, responsável por coletar e armazenar as métricas.</li>
+<li><strong>Exporters</strong>: Pequenos serviços que rodam junto com as aplicações e expõem as métricas no formato que o Prometheus entende. Existem <em>exporters</em> para uma infinidade de tecnologias: bancos de dados, sistemas operacionais, hardware, etc.</li>
+<li><strong>PromQL</strong>: A linguagem de consulta (<em>Query Language</em>) do Prometheus, projetada para trabalhar com dados de séries temporais.</li>
+<li><strong>Alertmanager</strong>: Gerencia os alertas enviados pelo Prometheus, agrupando, deduplicando e enviando notificações para canais como Slack, E-mail, etc.</li>
 </ul>
-<div class="admonition exercise choice exercise-choice" data-answer-idx="1" id="exercise_1">
-<p class="admonition-title">Question</p>
-<form class="quiz-form"><p>Qual é a principal vantagem de performance do modelo <strong>OBT</strong> em relação a modelos normalizados?</p>
-<div class="form-elements">
-<div class="quiz-alternative-set">
-  
-<label class="quiz-alternative" data-alt-index="0">
-  <div class="content">
-    <input type="hidden" name="data" value="">
-    <span class="choice-text">Menor uso de memória</span>
-  </div>
-</label>
-
-<label class="quiz-alternative" data-alt-index="1">
-  <div class="content">
-    <input type="hidden" name="data" value="">
-    <span class="choice-text">Eliminação de operações JOIN</span>
-  </div>
-</label>
-
-<label class="quiz-alternative" data-alt-index="2">
-  <div class="content">
-    <input type="hidden" name="data" value="">
-    <span class="choice-text">Menor volume de dados</span>
-  </div>
-</label>
-
-<label class="quiz-alternative" data-alt-index="3">
-  <div class="content">
-    <input type="hidden" name="data" value="">
-    <span class="choice-text">Maior segurança dos dados</span>
-  </div>
-</label>
-
+<h2 id="configurando-o-ambiente">Configurando o Ambiente</h2>
+<p>Vamos começar configurando um ambiente local com Prometheus.</p>
+<div class="admonition exercise exercise-self-progress" id="exercise_1">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Crie uma nova pasta para esta parte da aula e navegue até ela:</p>
+<div class="termy">
+<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>$ mkdir -p 11-observability/01-prometheus
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>$ cd 11-observability/01-prometheus
+</code></pre></div>
 </div>
-<button class="quiz-submit-button" type="submit">Submit</button>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
 </div></form></div>
-<h2 id="desvantagens-da-abordagem-obt">Desvantagens da Abordagem OBT</h2>
-<p>Mas o uso de <strong>OBT</strong> também apresenta desvantagens que devem ser consideradas. Dentre elas:</p>
-<ul>
-<li>
-<p><strong>Redundância de Dados</strong>: A desnormalização resulta em <strong>duplicação massiva</strong> de informações. Dados que antes apareciam uma única vez em tabelas normalizadas agora são replicados em várias linhas da <strong>OBT</strong>.</p>
-</li>
-<li>
-<p><strong>Maior Consumo de Armazenamento</strong>: O volume de dados pode crescer significativamente, resultando em maiores custos de armazenamento e backup.</p>
-</li>
-<li>
-<p><strong>Maior Complexidade de Atualização</strong>: Quando um dado mestre é alterado (como o nome de um cliente), essa mudança precisa ser propagada para <strong>todas as linhas</strong> da <strong>OBT</strong> onde esse cliente aparece, tornando as atualizações mais complexas e custosas.</p>
-</li>
-</ul>
-<div class="admonition info">
-<p class="admonition-title">Info!</p>
-<p>Em muitos casos, a <strong>OBT</strong> é <em>append-only</em>.</p>
+<h2 id="configuracao-do-prometheus">Configuração do Prometheus</h2>
+<p>O Prometheus precisa de um arquivo de configuração para saber quais alvos (<em>targets</em>) ele deve monitorar.</p>
+<div class="admonition exercise exercise-self-progress" id="exercise_2">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Crie um arquivo chamado <code>prometheus.yml</code> com o seguinte conteúdo:</p>
+<div class="language-yaml copy highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">global</span><span class="p">:</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">scrape_interval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">15s</span><span class="w"> </span><span class="c1"># Com que frequência coletar métricas</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nt">scrape_configs</span><span class="p">:</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">job_name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;api&quot;</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="nt">static_configs</span><span class="p">:</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">targets</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
+</code></pre></div>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
 </div>
-<ul>
-<li>
-<p><strong>Potencial Inconsistência</strong>: A redundância aumenta o risco de <strong>inconsistências</strong>, especialmente se o processo de <strong>ETL</strong> não for bem projetado ou se houver falhas na sincronização dos dados.</p>
-</li>
-<li>
-<p><strong>Gestão de Migrações</strong>: Alterações no modelo de dados podem exigir migrações complexas, uma vez que a estrutura desnormalizada pode não se adaptar facilmente a mudanças.</p>
-</li>
-</ul>
-<h2 id="quando-usar-obt">Quando Usar OBT?</h2>
-<p>A decisão de implementar uma <strong>OBT</strong> deve considerar diversos fatores:</p>
-<ul>
-<li>
-<p><strong>Cenários Adequados:</strong></p>
-<ul>
-<li><strong>Análises frequentes</strong> que sempre envolvem os mesmos conjuntos de dados</li>
-<li><strong>Relatórios padronizados</strong> com consultas previsíveis</li>
-<li>Ambientes onde a <strong>performance de leitura</strong> é mais crítica que eficiência de armazenamento</li>
-<li><strong>Data marts</strong> específicos para áreas de negócio</li>
-</ul>
-</li>
-<li>
-<p><strong>Cenários Inadequados:</strong></p>
-<ul>
-<li>Dados com <strong>alta frequência de atualização</strong></li>
-<li>Ambientes com <strong>recursos limitados</strong> de armazenamento</li>
-<li>Casos onde a <strong>consistência transacional</strong> é crítica</li>
-<li>Sistemas principalmente <strong>OLTP</strong></li>
-</ul>
-</li>
-</ul>
-<h2 id="implementando-obt">Implementando OBT</h2>
-<p>Vamos trabalhar com a transformação do nosso modelo de vendas normalizado em uma <strong>OBT</strong>. </p>
-<p>Antes, vamos relembrar a estrutura original:</p>
-<p><img alt="Estrutura Normalizada Original" src="../modelo-relacional-vendas.png" /></p>
-<h3 id="projetando-a-obt">Projetando a OBT</h3>
-<p>Para criar nossa <strong>OBT</strong>, precisamos identificar qual será o <strong>grão</strong> (<strong>granularidade</strong>) da tabela.</p>
-<p>No nosso caso, o grão natural seria <strong>cada item vendido</strong>, pois representa o nível mais detalhado de informação disponível.</p>
-<div class="admonition exercise text short exercise-short" id="exercise_3">
-<p class="admonition-title">Exercise</p>
-<form class="quiz-form"><p>Por que escolhemos <strong>"item vendido"</strong> como grão da <strong>OBT</strong> ao invés de <strong>"venda"</strong>?</p>
+</div></form></div>
+<div class="admonition exercise text short exercise-short" id="exercise_1">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>O que o arquivo de configuração acima está dizendo para o Prometheus fazer?</p>
 <div class="form-elements">
 <div class="quiz-text-container">
 
@@ -3588,196 +3193,451 @@ body {
 <button class="quiz-submit-button" type="submit">Submit</button>
 </div></form><div class="admonition answer quiz-answer no-indent">
 <p class="admonition-title">Answer</p>
-<p>Porque uma venda pode conter múltiplos produtos.</p>
-<p>Se usássemos <strong>"venda"</strong> como grão, perderiamos o <strong>detalhamento por produto</strong>!</p>
+<p>O arquivo de configuração instrui o Prometheus a coletar métricas a cada 15 segundos, mas não foi especificado de quais serviços ele deve coletar essas métricas.</p>
 </div>
 </div>
-<h3 id="campos-da-obt-de-vendas">Campos da OBT de Vendas</h3>
-<p>Nossa <strong>OBT</strong> incluirá todos os campos necessários para análises de vendas, eliminando a necessidade de JOINs:</p>
-<ul>
-<li>
-<p><strong>Informações da Venda:</strong> <code>id_venda</code>, <code>data_venda</code>, <code>entregue</code>, <code>valor_total_venda</code></p>
-</li>
-<li>
-<p><strong>Informações do Item:</strong> <code>id_item</code>, <code>quantidade</code>, <code>valor_unitario</code>, <code>valor_total_item</code></p>
-</li>
-<li>
-<p><strong>Informações do Produto:</strong> <code>id_produto</code>, <code>nome_produto</code>, <code>descricao_produto</code>, <code>preco_base</code></p>
-</li>
-<li>
-<p><strong>Informações do Cliente:</strong> <code>id_cliente</code>, <code>nome_cliente</code>, <code>data_nasc</code>, <code>data_cad</code>, <code>cpf</code></p>
-</li>
-<li>
-<p><strong>Informações Geográficas:</strong> <code>cidade</code>, <code>uf</code>, <code>pais</code></p>
-</li>
-</ul>
-<div class="admonition exercise choice exercise-choice" data-answer-idx="3" id="exercise_2">
-<p class="admonition-title">Question</p>
-<form class="quiz-form"><p>Quantas vezes os dados do cliente "João Silva" aparecerão na <strong>OBT</strong> se ele fez 5 compras com 3 itens cada?</p>
+<h2 id="docker-compose">Docker Compose</h2>
+<p>Agora, vamos criar um <code>docker-compose.yml</code> para iniciar o servidor Prometheus.</p>
+<div class="admonition exercise exercise-self-progress" id="exercise_3">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Crie um arquivo <code>11-observability/01-prometheus/docker-compose.yml</code> com o seguinte conteúdo:</p>
+<div class="language-yaml copy highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">services</span><span class="p">:</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="nt">prometheus</span><span class="p">:</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">prom/prometheus:v3.6.0-rc.1</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">prometheus</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;9090:9090&quot;</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./prometheus.yml:/etc/prometheus/prometheus.yml</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">    </span><span class="nt">command</span><span class="p">:</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;--config.file=/etc/prometheus/prometheus.yml&#39;</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="nt">networks</span><span class="p">:</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">  </span><span class="nt">default</span><span class="p">:</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">    </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bridge</span>
+</code></pre></div>
 <div class="form-elements">
-<div class="quiz-alternative-set">
-  
-<label class="quiz-alternative" data-alt-index="0">
-  <div class="content">
-    <input type="hidden" name="data" value="">
-    <span class="choice-text">1 vez</span>
-  </div>
-</label>
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
+</div></form></div>
+<div class="admonition exercise text long exercise-long" id="exercise_2">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Analise o arquivo <code>docker-compose.yml</code>. Qual a função do <code>volume</code> no serviço do Prometheus?</p>
+<div class="form-elements">
+<div class="quiz-text-container">
 
-<label class="quiz-alternative" data-alt-index="1">
-  <div class="content">
-    <input type="hidden" name="data" value="">
-    <span class="choice-text">5 vezes</span>
-  </div>
-</label>
+<textarea name="data" class="quiz-text-input" 
+          placeholder="Enter your detailed answer..." rows="4"></textarea>
 
-<label class="quiz-alternative" data-alt-index="2">
-  <div class="content">
-    <input type="hidden" name="data" value="">
-    <span class="choice-text">3 vezes</span>
-  </div>
-</label>
+</div>
+<button class="quiz-submit-button" type="submit">Submit</button>
+</div></form><div class="admonition answer quiz-answer no-indent">
+<p class="admonition-title">Answer</p>
+<p>O <code>volume</code> mapeia o arquivo de configuração <code>prometheus.yml</code> do diretório atual (onde o Docker Compose está sendo executado) para o caminho <code>/etc/prometheus/prometheus.yml</code> dentro do contêiner do Prometheus.</p>
+<p>Isso permite que o Prometheus utilize a configuração personalizada definida no arquivo local.</p>
+</div>
+</div>
+<h2 id="executando-o-prometheus">Executando o Prometheus</h2>
+<p>Com os arquivos de configuração prontos, vamos iniciar o serviço.</p>
+<div class="admonition exercise exercise-self-progress" id="exercise_4">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Inicie o servidor Prometheus:</p>
+<div class="termy">
+<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>$ docker compose up
+</code></pre></div>
+</div>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
+</div></form></div>
+<div class="admonition exercise exercise-self-progress" id="exercise_5">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Acesse a interface web do Prometheus em seu navegador: <a href="http://localhost:9090">http://localhost:9090</a>.</p>
+<p>Você verá a interface principal, onde pode executar consultas e visualizar o estado do monitoramento.</p>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
+</div></form><div class="admonition answer quiz-answer no-indent">
+<p class="admonition-title">Answer</p>
+<p><img alt="" src="../prometheus-home.png" /></p>
+</div>
+</div>
+<p>Para o <strong>Prometheus</strong> saber quais serviços monitorar, precisamos definir <code>targets</code> no arquivo <code>prometheus.yml</code>. </p>
+<p>Assim, o <strong>Prometheus</strong> irá coletar métricas desses serviços ao acessar a rota <code>/metrics</code> de cada <strong>target</strong>.</p>
+<div class="admonition exercise exercise-self-progress" id="exercise_6">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>No navegador, acesse a rota de <code>/metrics</code> do próprio <strong>Prometheus</strong>: <a href="http://localhost:9090/metrics">http://localhost:9090/metrics</a>.</p>
+<p>Ou seja, se quiséssemos, poderíamos configurar o Prometheus para monitorar a si mesmo! Mas para não ficar tão confuso, vamos monitorar outro serviço.</p>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
+</div></form></div>
+<h2 id="monitorando-uma-api">Monitorando uma API</h2>
+<p>Vamos atualizar o <strong>Prometheus</strong> para monitorar uma <strong>API</strong>.</p>
+<div class="admonition exercise exercise-self-progress" id="exercise_7">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Crie uma pasta <code>api</code> em <code>11-observability/01-prometheus/api</code> e navegue até ela:</p>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
+</div></form></div>
+<p>Na pasta <code>api</code>, iremos criar uma série de arquivos:</p>
+<details>
+<summary><code>api/main.py</code></summary>
+<div class="language-python copy highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">fastapi</span><span class="w"> </span><span class="kn">import</span> <span class="n">FastAPI</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">prometheus_fastapi_instrumentator</span><span class="w"> </span><span class="kn">import</span> <span class="n">Instrumentator</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">()</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="n">Instrumentator</span><span class="p">()</span><span class="o">.</span><span class="n">instrument</span><span class="p">(</span><span class="n">app</span><span class="p">)</span><span class="o">.</span><span class="n">expose</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="c1"># Database dummy</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="n">dummy_data</span> <span class="o">=</span> <span class="p">{}</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="nb">id</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="k">def</span><span class="w"> </span><span class="nf">read_root</span><span class="p">():</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;Hello&quot;</span><span class="p">:</span> <span class="s2">&quot;World&quot;</span><span class="p">}</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/items/</span><span class="si">{item_id}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="k">def</span><span class="w"> </span><span class="nf">read_item</span><span class="p">(</span><span class="n">item_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Simula a leitura de um item de um banco de dados.&quot;&quot;&quot;</span>
+<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>    <span class="c1"># time.sleep(abs(random.gauss(5, 1))) # Simula um tempo de resposta</span>
+<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;item_id&quot;</span><span class="p">:</span> <span class="n">item_id</span><span class="p">,</span> <span class="s2">&quot;item&quot;</span><span class="p">:</span> <span class="n">dummy_data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">item_id</span><span class="p">,</span> <span class="s2">&quot;Not Found&quot;</span><span class="p">)}</span>
+<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>
+<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a><span class="nd">@app</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s2">&quot;/items/&quot;</span><span class="p">)</span>
+<a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a><span class="k">def</span><span class="w"> </span><span class="nf">create_item</span><span class="p">(</span><span class="n">item</span><span class="p">:</span> <span class="nb">dict</span><span class="p">):</span>
+<a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Simula a criação de um item em um banco de dados.&quot;&quot;&quot;</span>
+<a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a>    <span class="k">global</span> <span class="nb">id</span>
+<a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a>    <span class="nb">id</span> <span class="o">+=</span> <span class="mi">1</span>
+<a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a>    <span class="n">dummy_data</span><span class="p">[</span><span class="nb">id</span><span class="p">]</span> <span class="o">=</span> <span class="n">item</span>
+<a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a>    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="nb">id</span><span class="p">}</span>
+</code></pre></div>
+</details>
+<details>
+<summary><code>api/requirements.txt</code></summary>
+<div class="language-text copy highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>fastapi==0.116.2
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>uvicorn==0.35.0
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>prometheus-fastapi-instrumentator==7.1.0
+</code></pre></div>
+</details>
+<details>
+<summary><code>api/Dockerfile</code></summary>
+<div class="language-dockerfile copy highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">FROM</span><span class="w"> </span><span class="s">python:3.12-slim</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="k">WORKDIR</span><span class="w"> </span><span class="s">/app</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="k">COPY</span><span class="w"> </span>requirements.txt<span class="w"> </span>.
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="k">RUN</span><span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--no-cache-dir<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="k">COPY</span><span class="w"> </span>.<span class="w"> </span>.
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="k">EXPOSE</span><span class="w"> </span><span class="s">8000</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;uvicorn&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;main:app&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;--host&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;0.0.0.0&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;--port&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;8000&quot;</span><span class="p">]</span>
+</code></pre></div>
+</details>
+<div class="admonition exercise exercise-self-progress" id="exercise_8">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Crie os arquivos acima na pasta <code>api</code>.</p>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
+</div></form></div>
+<p>Após criar os arquivos, volte para a pasta <code>11-observability/01-prometheus</code> e atualize o arquivo <code>docker-compose.yml</code> para incluir o serviço da API:</p>
+<div class="language-yaml copy highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nt">services</span><span class="p">:</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span><span class="nt">prometheus</span><span class="p">:</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">prom/prometheus:v3.6.0-rc.1</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">prometheus</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;9090:9090&quot;</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./prometheus.yml:/etc/prometheus/prometheus.yml</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">    </span><span class="nt">command</span><span class="p">:</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;--config.file=/etc/prometheus/prometheus.yml&#39;</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="w">  </span><span class="nt">api</span><span class="p">:</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="w">    </span><span class="nt">build</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./api</span>
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">api</span>
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;8000:8000&quot;</span>
+<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./api:/app</span>
+<a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a>
+<a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a><span class="nt">networks</span><span class="p">:</span>
+<a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a><span class="w">  </span><span class="nt">default</span><span class="p">:</span>
+<a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a><span class="w">    </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bridge</span>
+</code></pre></div>
+<p>Atualize também o arquivo <code>prometheus.yml</code> para adicionar a API como um novo <code>target</code>:</p>
+<div class="language-yaml copy highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nt">global</span><span class="p">:</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">  </span><span class="nt">scrape_interval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">15s</span><span class="w"> </span><span class="c1"># Com que frequência coletar métricas</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="nt">scrape_configs</span><span class="p">:</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">job_name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;api&quot;</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">    </span><span class="nt">static_configs</span><span class="p">:</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">targets</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">localhost</span><span class="p p-Indicator">:</span><span class="nv">8000</span><span class="p p-Indicator">]</span><span class="w"> </span><span class="c1"># Para monitorar a API</span>
+</code></pre></div>
+<div class="admonition exercise exercise-self-progress" id="exercise_9">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Atualize os arquivos <code>docker-compose.yml</code> e <code>prometheus.yml</code> conforme acima.</p>
+<p>Reinicie os serviços para aplicar as novas configurações:</p>
+<div class="termy">
+<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>$ docker compose down
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>$ docker compose build
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>$ docker compose up
+</code></pre></div>
+</div>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
+</div></form></div>
+<div class="admonition exercise exercise-self-progress" id="exercise_10">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Acesse a API em <a href="http://localhost:8000/docs">http://localhost:8000/docs</a> e teste os endpoints.</p>
+<p>Primeiro, insira alguns itens usando o endpoint <code>POST /items/</code>, depois recupere-os com o endpoint <code>GET /items/{item_id}</code>.</p>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
+</div></form></div>
+<div class="admonition exercise text short exercise-short" id="exercise_3">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Acesse a rota de métricas da API em <a href="http://localhost:8000/metrics">http://localhost:8000/metrics</a>.</p>
+<p>Qual o significado da métrica <code>http_request_duration_highr_seconds_count</code>?</p>
+<div class="admonition tip">
+<p class="admonition-title">Dica</p>
+<p>Aperte uns <strong>F5</strong> para atualizar a página algumas vezes e ver como os valores mudam.</p>
+<p>E leia o help!</p>
+</div>
+<div class="form-elements">
+<div class="quiz-text-container">
 
-<label class="quiz-alternative" data-alt-index="3">
-  <div class="content">
-    <input type="hidden" name="data" value="">
-    <span class="choice-text">15 vezes</span>
-  </div>
-</label>
-
-<label class="quiz-alternative" data-alt-index="4">
-  <div class="content">
-    <input type="hidden" name="data" value="">
-    <span class="choice-text">Depende dos produtos</span>
-  </div>
-</label>
+<input type="text" value="" name="data" class="quiz-text-input" 
+       placeholder="Enter your answer..." autocomplete="off"/>
 
 </div>
 <button class="quiz-submit-button" type="submit">Submit</button>
 </div></form></div>
-<h2 id="criando-a-obt-na-pratica">Criando a OBT na Prática</h2>
-<p>A transformação do modelo normalizado para <strong>OBT</strong>, usando <strong>SQL</strong>, pode ser representada pela seguinte <em>query</em>:</p>
-<div class="admonition warning">
-<p class="admonition-title">Atenção</p>
-<p>Esta é uma versão refatorada, o nome dos atributos (colunas) pode não bater com o utilizado na aula 03.</p>
-</div>
-<div class="language-sql copy highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w">    </span><span class="c1">-- Criação da OBT de Vendas</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">obt_vendas</span><span class="w"> </span><span class="k">AS</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="k">SELECT</span><span class="w"> </span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">        </span><span class="c1">-- Informações da venda</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">        </span><span class="n">v</span><span class="p">.</span><span class="n">id_venda</span><span class="p">,</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">        </span><span class="n">v</span><span class="p">.</span><span class="k">data</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">data_venda</span><span class="p">,</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">        </span><span class="n">v</span><span class="p">.</span><span class="n">entregue</span><span class="p">,</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">        </span><span class="n">v</span><span class="p">.</span><span class="n">valor_total</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">valor_total_venda</span><span class="p">,</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">        </span><span class="c1">-- Informações do item</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">        </span><span class="n">iv</span><span class="p">.</span><span class="n">id_item</span><span class="p">,</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">        </span><span class="n">iv</span><span class="p">.</span><span class="n">quantidade</span><span class="p">,</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">        </span><span class="n">iv</span><span class="p">.</span><span class="n">valor_unitario</span><span class="p">,</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">        </span><span class="n">iv</span><span class="p">.</span><span class="n">valor_total</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">valor_total_item</span><span class="p">,</span>
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">        </span><span class="c1">-- Informações do produto</span>
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">        </span><span class="n">p</span><span class="p">.</span><span class="n">id_produto</span><span class="p">,</span>
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">        </span><span class="n">p</span><span class="p">.</span><span class="n">nome</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">nome_produto</span><span class="p">,</span>
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">        </span><span class="n">p</span><span class="p">.</span><span class="n">descricao</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">descricao_produto</span><span class="p">,</span>
-<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">        </span><span class="n">p</span><span class="p">.</span><span class="n">preco_base</span><span class="p">,</span>
-<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">        </span><span class="n">p</span><span class="p">.</span><span class="n">ativo</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">produto_ativo</span><span class="p">,</span>
-<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>
-<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">        </span><span class="c1">-- Informações do cliente</span>
-<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">        </span><span class="k">c</span><span class="p">.</span><span class="n">id_cliente</span><span class="p">,</span>
-<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">        </span><span class="k">c</span><span class="p">.</span><span class="n">nome</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">nome_cliente</span><span class="p">,</span>
-<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">        </span><span class="k">c</span><span class="p">.</span><span class="n">data_nasc</span><span class="p">,</span>
-<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="w">        </span><span class="k">c</span><span class="p">.</span><span class="n">data_cad</span><span class="p">,</span>
-<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="w">        </span><span class="k">c</span><span class="p">.</span><span class="n">cpf</span><span class="p">,</span>
-<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>
-<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="w">        </span><span class="c1">-- Informações geográficas</span>
-<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="w">        </span><span class="n">cid</span><span class="p">.</span><span class="n">cidade_desc</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">cidade</span><span class="p">,</span>
-<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="w">        </span><span class="n">cid</span><span class="p">.</span><span class="n">cidade_uf</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">uf</span><span class="p">,</span>
-<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="w">        </span><span class="n">pa</span><span class="p">.</span><span class="n">pais</span>
-<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>
-<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">item_venda</span><span class="w"> </span><span class="n">iv</span>
-<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="w">    </span><span class="k">JOIN</span><span class="w"> </span><span class="n">venda</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">iv</span><span class="p">.</span><span class="n">id_venda</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">id_venda</span>
-<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a><span class="w">    </span><span class="k">JOIN</span><span class="w"> </span><span class="n">produto</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">iv</span><span class="p">.</span><span class="n">id_produto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">id_produto</span>
-<a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a><span class="w">    </span><span class="k">JOIN</span><span class="w"> </span><span class="n">cliente</span><span class="w"> </span><span class="k">c</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">id_cliente</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">id_cliente</span>
-<a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a><span class="w">    </span><span class="k">JOIN</span><span class="w"> </span><span class="n">cidade</span><span class="w"> </span><span class="n">cid</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">id_cidade</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cid</span><span class="p">.</span><span class="n">id_cidade</span>
-<a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a><span class="w">    </span><span class="k">JOIN</span><span class="w"> </span><span class="n">pais</span><span class="w"> </span><span class="n">pa</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">cid</span><span class="p">.</span><span class="n">id_pais</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pa</span><span class="p">.</span><span class="n">id_pais</span><span class="p">;</span>
-</code></pre></div>
-<h3 id="consultas-normalizado-vs-obt">Consultas: Normalizado <em>vs</em> OBT</h3>
-<p>Podemos comparar como seria a estrutura básica de consultas no modelo normalizado e na OBT.</p>
-<p>Por exemplo, para obter as vendas por país no último mês, teríamos:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Normalizado</label><label for="__tabbed_1_2">OBT</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="language-sql copy highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">-- Vendas por país no último mês</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">SELECT</span><span class="w"> </span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="n">pa</span><span class="p">.</span><span class="n">pais</span><span class="p">,</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">total_vendas</span><span class="p">,</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="k">SUM</span><span class="p">(</span><span class="n">v</span><span class="p">.</span><span class="n">valor_total</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">receita_total</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="k">FROM</span><span class="w"> </span><span class="n">venda</span><span class="w"> </span><span class="n">v</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="k">JOIN</span><span class="w"> </span><span class="n">cliente</span><span class="w"> </span><span class="k">c</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">id_cliente</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">id_cliente</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="k">JOIN</span><span class="w"> </span><span class="n">cidade</span><span class="w"> </span><span class="n">cid</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">id_cidade</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cid</span><span class="p">.</span><span class="n">id_cidade</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="k">JOIN</span><span class="w"> </span><span class="n">pais</span><span class="w"> </span><span class="n">pa</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">cid</span><span class="p">.</span><span class="n">id_pais</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pa</span><span class="p">.</span><span class="n">id_pais</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="k">data</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">DATE_SUB</span><span class="p">(</span><span class="k">CURRENT_DATE</span><span class="p">,</span><span class="w"> </span><span class="nb">INTERVAL</span><span class="w"> </span><span class="mi">30</span><span class="w"> </span><span class="k">DAY</span><span class="p">)</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">pa</span><span class="p">.</span><span class="n">pais</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">receita_total</span><span class="w"> </span><span class="k">DESC</span><span class="p">;</span>
-</code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="language-sql copy highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1">-- Vendas por país no último mês</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">SELECT</span><span class="w"> </span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="n">pais</span><span class="p">,</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="k">COUNT</span><span class="p">(</span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">id_venda</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">total_vendas</span><span class="p">,</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="k">SUM</span><span class="p">(</span><span class="n">valor_total_venda</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">receita_total</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="k">FROM</span><span class="w"> </span><span class="n">obt_vendas</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">data_venda</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">DATE_SUB</span><span class="p">(</span><span class="k">CURRENT_DATE</span><span class="p">,</span><span class="w"> </span><span class="nb">INTERVAL</span><span class="w"> </span><span class="mi">30</span><span class="w"> </span><span class="k">DAY</span><span class="p">)</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">pais</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">receita_total</span><span class="w"> </span><span class="k">DESC</span><span class="p">;</span>
-</code></pre></div>
-</div>
-</div>
-</div>
-<div class="admonition exercise text long exercise-long" id="exercise_4">
-<p class="admonition-title">Exercise</p>
-<form class="quiz-form"><p>Compare as duas consultas acima. Quais diferenças você observa em termos de complexidade e potencial performance?</p>
+<div class="admonition exercise text short exercise-short" id="exercise_4">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Na interface do Prometheus, navegue até o menu <strong>Status &gt; Targets</strong>. O que você observa? O alvo <code>prometheus</code> está com o estado <strong>"UP"</strong>?</p>
+<p>Por que o erro aconteceu?</p>
 <div class="form-elements">
 <div class="quiz-text-container">
 
-<textarea name="data" class="quiz-text-input" 
-          placeholder="Enter your detailed answer..." rows="4"></textarea>
+<input type="text" value="" name="data" class="quiz-text-input" 
+       placeholder="Enter your answer..." autocomplete="off"/>
 
 </div>
 <button class="quiz-submit-button" type="submit">Submit</button>
 </div></form><div class="admonition answer quiz-answer no-indent">
 <p class="admonition-title">Answer</p>
-<p>A consulta <strong>OBT</strong> é mais simples (sem <strong>JOINs</strong>), potencialmente mais rápida, mas requer atenção especial ao usar <code>COUNT(DISTINCT id_venda)</code> para evitar contar a mesma venda múltiplas vezes devido aos múltiplos itens.</p>
+<p>Error scraping target: Get "<a href="http://localhost:8000/metrics">http://localhost:8000/metrics</a>": dial tcp [::1]:8000: connect: connection refused</p>
+<p>Isto acontece porque o <code>target</code> para a API está incorreto. No arquivo <code>prometheus.yml</code>, o <code>target</code> está definido como <code>localhost:8000</code>, mas <code>localhost</code> é o próprio host onde o Prometheus está rodando, e não o contêiner da API!</p>
+<p>Para corrigir, basta alterar o <code>target</code> para <code>api:8000</code>, onde <code>api</code> é o nome do serviço definido no <code>docker-compose.yml</code>.</p>
 </div>
 </div>
+<div class="admonition exercise exercise-self-progress" id="exercise_11">
+<p class="admonition-title">Exercise</p>
+<form class="quiz-form"><p>Altere o <code>target</code> para <code>api:8000</code> e reinicie os serviços.</p>
+<p>Aguarte alguns instantes e verifique novamente o menu <strong>Status &gt; Targets</strong>. Agora, o alvo deve estar com o estado <strong>"UP"</strong>.</p>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
+</div></form></div>
+<div class="admonition exercise exercise-self-progress" id="exercise_12">
+<p class="admonition-title">Exercise</p>
+<form class="quiz-form"><p>Faça novamente algumas requisições na API para gerar mais métricas.</p>
+<div class="admonition note">
+<p class="admonition-title">Opcional!</p>
+<p>Você pode descomentar a linha <code>time.sleep(abs(random.gauss(5, 1)))</code> no arquivo <code>api/main.py</code> para simular tempos de resposta variados.</p>
+<p>Altere os parâmetros da função <code>gauss</code> para ajustar a média e o desvio padrão do tempo de resposta simulado.</p>
+</div>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
+</div></form></div>
+<h2 id="explorando-o-valor-das-metricas">Explorando o valor das Métricas</h2>
+<p>No menu <strong>Query</strong> da interface do <strong>Prometheus</strong>, você pode usar a linguagem <strong>PromQL</strong> para explorar as métricas coletadas.</p>
+<p>Por exemplo, para ver a contagem total de requisições HTTP feitas à API, você pode executar a seguinte consulta:</p>
+<div class="language-promql highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nv">http_request_duration_highr_seconds_count</span>
+</code></pre></div>
+<p>Acesse o menu <strong>Graph</strong> e execute a consulta acima. Você verá o número total de requisições feitas à API desde que o Prometheus começou a coletar métricas.</p>
+<div class="admonition exercise exercise-self-progress" id="exercise_13">
+<p class="admonition-title">Exercise</p>
+<form class="quiz-form"><p>Agora acesse os três pontinhos ao lado do botão <strong>Execute</strong> e selecione a opção <strong>Explore Metrics</strong>. Você verá uma lista métricas disponíveis, bem como seus respectivos <em>labels</em>.</p>
+<p><img alt="" src="../prometheus-explore-metrics.png" /></p>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
+</div></form></div>
+<div class="admonition exercise exercise-self-progress" id="exercise_14">
+<p class="admonition-title">Exercise</p>
+<form class="quiz-form"><p>Volte para a aba <strong>Graph</strong> e utilize a métrica <code>http_requests_total</code>. Clique na opção <strong>Stacked</strong>.</p>
+<p>Garanta que você consegue ver um gráfico de quantidade de requisições feitas à API ao longo do tempo, por rota e método HTTP.</p>
 <div class="admonition tip">
-<p class="admonition-title">Otimizações!</p>
-<p>Como a OBT será consultada frequentemente, é fundamental criar índices nas colunas mais utilizadas em filtros e agrupamentos:</p>
+<p class="admonition-title">Tip</p>
+<p>Tente chamar os endpoints da API algumas vezes para ver o gráfico mudando!</p>
+<p>Será necessário esperar o intervalo de <em>scrape</em> (15 segundos) para o gráfico atualizar.</p>
+<p>Se necessário, ajuste o intervalo de tempo do gráfico para um período menor (já que estamos em um ambiente de desenvolvimento/ensino!).</p>
 </div>
-<div class="admonition danger">
-<p class="admonition-title">Explosão de Cardinalidade!</p>
-<p>Em relacionamentos <strong>muitos-para-muitos</strong>, a OBT pode crescer exponencialmente.</p>
-<p>É importante monitorar o tamanho da tabela resultante.</p>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
 </div>
-<div class="admonition tip">
-<p class="admonition-title">Cuidado!</p>
-<p>Ao fazer agregações na OBT, tenha cuidado para não <strong>contar duplicatas</strong>:</p>
-<div class="language-sql highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1">-- INCORRETO: conta o mesmo cliente múltiplas vezes</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">total_clientes</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">obt_vendas</span><span class="p">;</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1">-- CORRETO: conta clientes únicos</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">id_cliente</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">total_clientes</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">obt_vendas</span><span class="p">;</span>
+</div></form><div class="admonition answer quiz-answer no-indent">
+<p class="admonition-title">Answer</p>
+<p>Passe o mouse sobre o gráfico para ver os detalhes de cada rota!
+<img alt="" src="../prometheus-requests-by-route.png" /></p>
+</div>
+</div>
+<h2 id="monitorando-outro-servico-com-um-exporter">Monitorando Outro Serviço com um Exporter</h2>
+<p>Vamos adicionar um <code>node-exporter</code>, que expõe métricas do sistema operacional do host (CPU, memória, disco, rede, etc.).</p>
+<div class="admonition exercise exercise-self-progress" id="exercise_15">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Atualize seu <code>docker-compose.yml</code> para incluir o <code>node-exporter</code>:</p>
+<div class="language-yaml copy highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nt">services</span><span class="p">:</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">  </span><span class="nt">prometheus</span><span class="p">:</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">prom/prometheus:v3.6.0-rc.1</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">prometheus</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;9090:9090&quot;</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./prometheus.yml:/etc/prometheus/prometheus.yml</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="w">    </span><span class="nt">command</span><span class="p">:</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;--config.file=/etc/prometheus/prometheus.yml&#39;</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="w">  </span><span class="nt">api</span><span class="p">:</span>
+<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a><span class="w">    </span><span class="nt">build</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./api</span>
+<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">api</span>
+<a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a><span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;8000:8000&quot;</span>
+<a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./api:/app</span>
+<a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a>
+<a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a><span class="w">  </span><span class="nt">node-exporter</span><span class="p">:</span>
+<a id="__codelineno-11-21" name="__codelineno-11-21" href="#__codelineno-11-21"></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">prom/node-exporter:v1.9.1</span>
+<a id="__codelineno-11-22" name="__codelineno-11-22" href="#__codelineno-11-22"></a><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">node-exporter</span>
+<a id="__codelineno-11-23" name="__codelineno-11-23" href="#__codelineno-11-23"></a><span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<a id="__codelineno-11-24" name="__codelineno-11-24" href="#__codelineno-11-24"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;9100:9100&quot;</span>
+<a id="__codelineno-11-25" name="__codelineno-11-25" href="#__codelineno-11-25"></a>
+<a id="__codelineno-11-26" name="__codelineno-11-26" href="#__codelineno-11-26"></a><span class="nt">networks</span><span class="p">:</span>
+<a id="__codelineno-11-27" name="__codelineno-11-27" href="#__codelineno-11-27"></a><span class="w">  </span><span class="nt">default</span><span class="p">:</span>
+<a id="__codelineno-11-28" name="__codelineno-11-28" href="#__codelineno-11-28"></a><span class="w">    </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bridge</span>
+</code></pre></div>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
+</div></form></div>
+<p>Agora, precisamos dizer ao Prometheus para coletar as métricas do <code>node-exporter</code>.</p>
+<div class="admonition exercise exercise-self-progress" id="exercise_16">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Atualize o arquivo <code>prometheus.yml</code> para adicionar um novo <code>job</code>:</p>
+<div class="language-yaml copy highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nt">global</span><span class="p">:</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">  </span><span class="nt">scrape_interval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">15s</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="nt">scrape_configs</span><span class="p">:</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">job_name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;api&quot;</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="w">    </span><span class="nt">static_configs</span><span class="p">:</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">targets</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">api</span><span class="p p-Indicator">:</span><span class="nv">8000</span><span class="p p-Indicator">]</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">job_name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;node-exporter&quot;</span>
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="w">    </span><span class="nt">static_configs</span><span class="p">:</span>
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">targets</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">node-exporter</span><span class="p p-Indicator">:</span><span class="nv">9100</span><span class="p p-Indicator">]</span>
+</code></pre></div>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
+</div></form></div>
+<div class="admonition exercise exercise-self-progress" id="exercise_17">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Reinicie os serviços para aplicar as novas configurações:</p>
+<div class="termy">
+<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>$ docker compose down
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>$ docker compose up -d
 </code></pre></div>
 </div>
-<div class="admonition warning">
-<p class="admonition-title">Manutenção de Consistência</p>
-<p>A redundância exige processos robustos de <strong>ETL</strong> para garantir que todas as cópias dos dados permaneçam consistentes.</p>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
 </div>
+</div></form></div>
+<div class="admonition exercise exercise-self-progress" id="exercise_18">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Acesse novamente a página de <strong>Targets</strong> (<a href="http://localhost:9090/targets">http://localhost:9090/targets</a>). Você deve ver o <code>node-exporter</code> na lista, também com o estado "UP".</p>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
+</div></form></div>
+<h2 id="consultando-metricas-com-promql">Consultando Métricas com PromQL</h2>
+<p>Vamos explorar as métricas do <code>node-exporter</code>.</p>
+<div class="admonition exercise exercise-self-progress" id="exercise_19">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Volte para a aba <strong>Graph</strong> na interface do <strong>Prometheus</strong>.</p>
+<p>No campo de expressão, você pode começar a digitar <code>node_</code> para ver um autocompletar com todas as métricas disponíveis do <code>node-exporter</code>.</p>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
+</div></form></div>
+<p>Vamos tentar algumas consultas básicas.</p>
+<div class="admonition exercise exercise-self-progress" id="exercise_20">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Execute as seguintes consultas PromQL na aba <strong>Graph</strong> e analise o resultado. Tente alternar entre a visualização de "Table" e "Graph".</p>
+<ol>
+<li>
+<p>Uso de memória (em bytes):
+    <div class="language-promql highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="nv">node_memory_Active_bytes</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>Uso de CPU (em segundos, acumulado). A função <code>rate()</code> calcula a taxa de crescimento por segundo em um intervalo de tempo.
+    <div class="language-promql highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="kr">rate</span><span class="o">(</span><span class="nv">node_cpu_seconds_total</span><span class="p">{</span><span class="nl">mode</span><span class="o">=</span><span class="p">&quot;</span><span class="s">system</span><span class="p">&quot;}[</span><span class="s">1m</span><span class="p">]</span><span class="o">)</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>Espaço livre em disco (em bytes) para cada dispositivo e ponto de montagem.
+    <div class="language-promql highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="nv">node_filesystem_free_bytes</span>
+</code></pre></div></p>
+</li>
+</ol>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
+</div></form></div>
 <div class="admonition exercise text long exercise-long" id="exercise_5">
-<p class="admonition-title">Exercise</p>
-<form class="quiz-form"><p>Que estratégias você implementaria para detectar e corrigir inconsistências em uma <strong>OBT</strong>?</p>
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Crie uma consulta <strong>PromQL</strong> para calcular o espaço livre em disco (em GB).</p>
 <div class="form-elements">
 <div class="quiz-text-container">
 
@@ -3788,13 +3648,54 @@ body {
 <button class="quiz-submit-button" type="submit">Submit</button>
 </div></form><div class="admonition answer quiz-answer no-indent">
 <p class="admonition-title">Answer</p>
-<ul>
-<li>Monitoramento contínuo de dados para identificar anomalias.</li>
-<li>Implementação de testes automatizados para validar a integridade dos dados.</li>
-<li>Processos de reconciliação periódicos entre a <strong>OBT</strong> e as fontes de dados originais.</li>
-</ul>
+<p>Em GB:
+<div class="language-promql highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="nv">node_filesystem_free_bytes</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="o">(</span><span class="mi">1000</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="mi">3</span><span class="o">)</span>
+</code></pre></div></p>
+<p>Em GiB:
+<div class="language-promql highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="nv">node_filesystem_free_bytes</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="o">(</span><span class="mi">1024</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="mi">3</span><span class="o">)</span>
+</code></pre></div></p>
+<p>Esta consulta calcula a taxa de crescimento da métrica <code>node_cpu_seconds_total</code> no modo <code>idle</code> (inativo) e subtrai esse valor de 100 para obter a porcentagem de CPU utilizada.</p>
 </div>
 </div>
+<div class="admonition exercise text long exercise-long" id="exercise_6">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Crie uma consulta <strong>PromQL</strong> para calcular a porcentagem de memória livre no seu sistema.</p>
+<div class="form-elements">
+<div class="quiz-text-container">
+
+<textarea name="data" class="quiz-text-input" 
+          placeholder="Enter your detailed answer..." rows="4"></textarea>
+
+</div>
+<button class="quiz-submit-button" type="submit">Submit</button>
+</div></form><div class="admonition answer quiz-answer no-indent">
+<p class="admonition-title">Answer</p>
+<p>A consulta para calcular a porcentagem de memória livre é:</p>
+<div class="language-promql highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="o">(</span><span class="nv">node_memory_MemAvailable_bytes</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nv">node_memory_MemTotal_bytes</span><span class="o">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">100</span>
+</code></pre></div>
+<p>Esta consulta divide a memória disponível (<code>node_memory_MemAvailable_bytes</code>) pela memória total (<code>node_memory_MemTotal_bytes</code>) e multiplica por 100 para obter a porcentagem.</p>
+</div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Não é objetivo do curso aprofundar em <strong>PromQL</strong>. O foco é entender o conceito de métricas e como o <strong>Prometheus</strong> pode ser utilizado para coletá-las.</p>
+<p>Sinta-se à vontade para utilizar IAg, sempre solicitando uma explicação do que está sendo feito.</p>
+</div>
+<h2 id="limpeza-do-ambiente">Limpeza do Ambiente</h2>
+<div class="admonition exercise exercise-self-progress" id="exercise_21">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Quando terminar, não se esqueça de parar e remover os contêineres:</p>
+<div class="termy">
+<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>$ docker compose down
+</code></pre></div>
+</div>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
+</div></form></div>
+<p>Na próxima seção, exploraremos como visualizar essas métricas de forma mais amigável usando o Grafana.</p>
 <script type="text/javascript">
 // Sistema de processamento de exercícios de múltipla escolha
 function processChoiceExercises() {
@@ -4886,7 +4787,7 @@ document.addEventListener('click', function(e) {
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../intro-data-modeling/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Modelagem de Dados">
+          <a href="../intro-observability/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Introdução">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -4896,20 +4797,20 @@ document.addEventListener('click', function(e) {
                 Previous
               </span>
               <div class="md-ellipsis">
-                Modelagem de Dados
+                Introdução
               </div>
             </div>
           </a>
         
         
           
-          <a href="../star-schema/" class="md-footer__link md-footer__link--next" aria-label="Next: Star Schema">
+          <a href="../grafana/" class="md-footer__link md-footer__link--next" aria-label="Next: Grafana">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Star Schema
+                Grafana
               </div>
             </div>
             <div class="md-footer__button md-icon">

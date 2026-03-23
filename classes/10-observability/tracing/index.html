@@ -13,10 +13,10 @@
       
       
       
-        <link rel="prev" href="../intro-data-modeling/">
+        <link rel="prev" href="../logging/">
       
       
-        <link rel="next" href="../star-schema/">
+        <link rel="next" href="../references/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>One Big Table (OBT) - Engenharia de Dados</title>
+        <title>Tracing com Jaeger - Engenharia de Dados</title>
       
     
     
@@ -81,7 +81,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#one-big-table-obt" class="md-skip">
+        <a href="#tracing-com-jaeger" class="md-skip">
           Skip to content
         </a>
       
@@ -117,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              One Big Table (OBT)
+              Tracing com Jaeger
             
           </span>
         </div>
@@ -1624,10 +1624,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -1648,11 +1646,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" >
         
           
           <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
@@ -1668,7 +1666,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_7">
             <span class="md-nav__icon md-icon"></span>
             07 - Modelagem de Dados
@@ -1682,7 +1680,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../intro-data-modeling/" class="md-nav__link">
+      <a href="../../07-data-modeling/intro-data-modeling/" class="md-nav__link">
         
   
   
@@ -1702,32 +1700,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    One Big Table (OBT)
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../07-data-modeling/obt/" class="md-nav__link">
         
   
   
@@ -1738,203 +1714,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#relembrando-a-aula-03" class="md-nav__link">
-    <span class="md-ellipsis">
-      Relembrando a aula 03
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#o-que-e-one-big-table-obt" class="md-nav__link">
-    <span class="md-ellipsis">
-      O que é One Big Table (OBT)?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#exemplo" class="md-nav__link">
-    <span class="md-ellipsis">
-      Exemplo
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Exemplo">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#tabelas-originais" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tabelas Originais
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Tabelas Originais">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#tabela-paciente" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tabela: paciente
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tabela-medico" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tabela: medico
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tabela-atendimento" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tabela: atendimento
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tabela-obt-resultante" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tabela OBT Resultante
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#contexto-historico" class="md-nav__link">
-    <span class="md-ellipsis">
-      Contexto Histórico
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#vantagens-da-abordagem-obt" class="md-nav__link">
-    <span class="md-ellipsis">
-      Vantagens da Abordagem OBT
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#desvantagens-da-abordagem-obt" class="md-nav__link">
-    <span class="md-ellipsis">
-      Desvantagens da Abordagem OBT
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#quando-usar-obt" class="md-nav__link">
-    <span class="md-ellipsis">
-      Quando Usar OBT?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#implementando-obt" class="md-nav__link">
-    <span class="md-ellipsis">
-      Implementando OBT
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Implementando OBT">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#projetando-a-obt" class="md-nav__link">
-    <span class="md-ellipsis">
-      Projetando a OBT
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#campos-da-obt-de-vendas" class="md-nav__link">
-    <span class="md-ellipsis">
-      Campos da OBT de Vendas
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#criando-a-obt-na-pratica" class="md-nav__link">
-    <span class="md-ellipsis">
-      Criando a OBT na Prática
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Criando a OBT na Prática">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#consultas-normalizado-vs-obt" class="md-nav__link">
-    <span class="md-ellipsis">
-      Consultas: Normalizado vs OBT
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1947,7 +1726,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../star-schema/" class="md-nav__link">
+      <a href="../../07-data-modeling/star-schema/" class="md-nav__link">
         
   
   
@@ -1970,7 +1749,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../snowflake/" class="md-nav__link">
+      <a href="../../07-data-modeling/snowflake/" class="md-nav__link">
         
   
   
@@ -1993,7 +1772,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../references/" class="md-nav__link">
+      <a href="../../07-data-modeling/references/" class="md-nav__link">
         
   
   
@@ -2223,8 +2002,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -2247,11 +2028,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10" checked>
         
           
           <label class="md-nav__link" for="__nav_2_10" id="__nav_2_10_label" tabindex="0">
@@ -2267,7 +2048,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_10">
             <span class="md-nav__icon md-icon"></span>
             10 - Observabilidade
@@ -2281,7 +2062,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../10-observability/intro-observability/" class="md-nav__link">
+      <a href="../intro-observability/" class="md-nav__link">
         
   
   
@@ -2304,7 +2085,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../10-observability/prometheus/" class="md-nav__link">
+      <a href="../prometheus/" class="md-nav__link">
         
   
   
@@ -2327,7 +2108,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../10-observability/grafana/" class="md-nav__link">
+      <a href="../grafana/" class="md-nav__link">
         
   
   
@@ -2350,7 +2131,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../10-observability/logging/" class="md-nav__link">
+      <a href="../logging/" class="md-nav__link">
         
   
   
@@ -2370,10 +2151,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../10-observability/tracing/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Tracing com Jaeger
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -2384,6 +2187,137 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#distributed-tracing-com-jaeger" class="md-nav__link">
+    <span class="md-ellipsis">
+      Distributed Tracing com Jaeger
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configurando-o-ambiente" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configurando o Ambiente
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configurando o Ambiente">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#instrumentando-a-aplicacao-com-opentelemetry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instrumentando a Aplicação com OpenTelemetry
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-compose-com-jaeger" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker Compose com Jaeger
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gerando-e-visualizando-traces" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gerando e Visualizando Traces
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limpeza" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limpeza
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pratica-orquestracao-e-tracing-com-prefect-e-jaeger" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prática: Orquestração e Tracing com Prefect e Jaeger
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Prática: Orquestração e Tracing com Prefect e Jaeger">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configurando-o-ambiente_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configurando o Ambiente
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componentes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#executando-e-observando" class="md-nav__link">
+    <span class="md-ellipsis">
+      Executando e Observando
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limpeza_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limpeza
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2396,7 +2330,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../10-observability/references/" class="md-nav__link">
+      <a href="../references/" class="md-nav__link">
         
   
   
@@ -2673,79 +2607,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#relembrando-a-aula-03" class="md-nav__link">
+  <a href="#distributed-tracing-com-jaeger" class="md-nav__link">
     <span class="md-ellipsis">
-      Relembrando a aula 03
+      Distributed Tracing com Jaeger
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#o-que-e-one-big-table-obt" class="md-nav__link">
+  <a href="#configurando-o-ambiente" class="md-nav__link">
     <span class="md-ellipsis">
-      O que é One Big Table (OBT)?
+      Configurando o Ambiente
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#exemplo" class="md-nav__link">
-    <span class="md-ellipsis">
-      Exemplo
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Exemplo">
+    <nav class="md-nav" aria-label="Configurando o Ambiente">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#tabelas-originais" class="md-nav__link">
+  <a href="#instrumentando-a-aplicacao-com-opentelemetry" class="md-nav__link">
     <span class="md-ellipsis">
-      Tabelas Originais
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Tabelas Originais">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#tabela-paciente" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tabela: paciente
+      Instrumentando a Aplicação com OpenTelemetry
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#tabela-medico" class="md-nav__link">
+  <a href="#docker-compose-com-jaeger" class="md-nav__link">
     <span class="md-ellipsis">
-      Tabela: medico
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tabela-atendimento" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tabela: atendimento
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tabela-obt-resultante" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tabela OBT Resultante
+      Docker Compose com Jaeger
     </span>
   </a>
   
@@ -2757,88 +2649,64 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#contexto-historico" class="md-nav__link">
+  <a href="#gerando-e-visualizando-traces" class="md-nav__link">
     <span class="md-ellipsis">
-      Contexto Histórico
+      Gerando e Visualizando Traces
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#vantagens-da-abordagem-obt" class="md-nav__link">
+  <a href="#limpeza" class="md-nav__link">
     <span class="md-ellipsis">
-      Vantagens da Abordagem OBT
+      Limpeza
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#desvantagens-da-abordagem-obt" class="md-nav__link">
+  <a href="#pratica-orquestracao-e-tracing-com-prefect-e-jaeger" class="md-nav__link">
     <span class="md-ellipsis">
-      Desvantagens da Abordagem OBT
+      Prática: Orquestração e Tracing com Prefect e Jaeger
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#quando-usar-obt" class="md-nav__link">
-    <span class="md-ellipsis">
-      Quando Usar OBT?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#implementando-obt" class="md-nav__link">
-    <span class="md-ellipsis">
-      Implementando OBT
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Implementando OBT">
+    <nav class="md-nav" aria-label="Prática: Orquestração e Tracing com Prefect e Jaeger">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#projetando-a-obt" class="md-nav__link">
+  <a href="#configurando-o-ambiente_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Projetando a OBT
+      Configurando o Ambiente
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#campos-da-obt-de-vendas" class="md-nav__link">
+  <a href="#componentes" class="md-nav__link">
     <span class="md-ellipsis">
-      Campos da OBT de Vendas
+      Componentes
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#criando-a-obt-na-pratica" class="md-nav__link">
-    <span class="md-ellipsis">
-      Criando a OBT na Prática
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Criando a OBT na Prática">
-      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#consultas-normalizado-vs-obt" class="md-nav__link">
+  <a href="#executando-e-observando" class="md-nav__link">
     <span class="md-ellipsis">
-      Consultas: Normalizado vs OBT
+      Executando e Observando
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limpeza_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limpeza
     </span>
   </a>
   
@@ -3282,519 +3150,592 @@ body {
   }
 }
 </style>
-<h1 id="one-big-table-obt">One Big Table (OBT)</h1>
-<h2 id="relembrando-a-aula-03">Relembrando a aula 03</h2>
-<p>Na <a href="../../03-data-warehouse/pratica/">aula 03</a>, quando fizemos a implementação do nosso <strong>Data Warehouse (DW)</strong>, foi preciso decidir como organizar os dados no <strong>DW</strong>.</p>
-<div class="admonition exercise text long exercise-long" id="exercise_1">
-<p class="admonition-title">Exercise</p>
-<form class="quiz-form"><p>Como definimos o modelo de dados do <strong>DW</strong>?</p>
-<p>Como ele se diferenciava do modelo de dados operacional (<strong>PostgreSQL OLTP</strong>)?</p>
-<div class="form-elements">
-<div class="quiz-text-container">
-
-<textarea name="data" class="quiz-text-input" 
-          placeholder="Enter your detailed answer..." rows="4"></textarea>
-
+<h1 id="tracing-com-jaeger">Tracing com Jaeger</h1>
+<h2 id="distributed-tracing-com-jaeger">Distributed Tracing com Jaeger</h2>
+<p>Nesta seção, vamos abordar o terceiro pilar de observabilidade: <strong>Rastreamento Distribuído (Distributed Tracing)</strong>.</p>
+<p>Em sistemas modernos, uma única requisição ou um fluxo de dados pode atravessar dezenas de serviços antes de ser concluído. Um pipeline de dados pode envolver uma API de ingestão, uma fila de mensagens, um processador de <em>streaming</em> e, finalmente, um <em>data warehouse</em>.</p>
+<div class="admonition note">
+<p class="admonition-title">Como?</p>
+<p>Se a latência aumentar, como saber qual componente é o gargalo?</p>
+<p>Se ocorrer um erro em uma etapa intermediária, como rastrear a causa raiz a partir da requisição original?</p>
 </div>
-<button class="quiz-submit-button" type="submit">Submit</button>
-</div></form><div class="admonition answer quiz-answer no-indent">
-<p class="admonition-title">Answer</p>
-<p>Nós removemos as chaves estrangeiras e a obrigatoriedade de alguns atributos.</p>
-<p>Ademais, a estrutura foi mantida.</p>
-</div>
-</div>
-<div class="admonition exercise text long exercise-long" id="exercise_2">
-<p class="admonition-title">Exercise</p>
-<form class="quiz-form"><p>O que você acha de mantermos a estrutura do <strong>DW</strong> quase idêntia à do banco operacional?</p>
-<div class="form-elements">
-<div class="quiz-text-container">
-
-<textarea name="data" class="quiz-text-input" 
-          placeholder="Enter your detailed answer..." rows="4"></textarea>
-
-</div>
-<button class="quiz-submit-button" type="submit">Submit</button>
-</div></form><div class="admonition answer quiz-answer no-indent">
-<p class="admonition-title">Answer</p>
-<p>O padrão de acesso <strong>OLTP</strong> geralmente envolve transações rápidas e de curto prazo, envolvendo poucas linhas.</p>
-<p>Por outro lado, o <strong>DW</strong> é otimizado para <strong>OLAP</strong>, envolvendo consultas complexas, acesso colunar e com grande volume de dados.</p>
-<p>Portanto, manter a estrutura idêntica pode não ser a melhor abordagem para atender a essas diferentes necessidades.</p>
-</div>
-</div>
-<p>Conforme os dados forem disponibilizados para análise no <strong>DW</strong>, <em>queries</em> complexas podem demandar a junção de diversas tabelas, as quais podem conter grande volume de dados. Isto será computacionalmente custoso, especialmente quando o <strong>DW</strong> crescer em volume de dados e complexidade estrutural.</p>
-<p>Uma solução possível é o uso do padrão <strong>One Big Table (OBT)</strong>.</p>
-<h2 id="o-que-e-one-big-table-obt">O que é One Big Table (OBT)?</h2>
-<p>A abordagem <strong>One Big Table (OBT)</strong> representa uma estratégia de modelagem onde todos os dados relevantes para análise são consolidados em uma única tabela <strong>desnormalizada</strong>.</p>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>Desnormalização é o processo de, intencionalmente, adicionar <strong>redundância</strong> a um banco de dados previamente normalizado para <strong>melhorar o desempenho de leitura</strong>, através da combinação de tabelas ou <strong>duplicação</strong> de dados!</p>
-</div>
-<p>Esta técnica surgiu como uma resposta às limitações de performance em consultas analíticas que envolvem múltiplos <code>JOINs</code> entre tabelas normalizadas.</p>
-<div class="admonition abstract">
-<p class="admonition-title">Resumo!</p>
-<p>Em um modelo <strong>OBT</strong>, ao invés de manter dados distribuídos em várias tabelas relacionais, todas as informações necessárias são combinadas em uma única estrutura tabular.</p>
-<p>Isso elimina a necessidade de operações custosas de <code>JOIN</code> durante as consultas analíticas.</p>
-</div>
-<h2 id="exemplo">Exemplo</h2>
-<p>Vamos ilustrar o conceito de OBT com um exemplo de dados hospitalares.</p>
-<h3 id="tabelas-originais">Tabelas Originais</h3>
-<h4 id="tabela-paciente">Tabela: <code>paciente</code></h4>
-<table>
-<thead>
-<tr>
-<th>id_paciente</th>
-<th>nome</th>
-<th>uf</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>Carla Dias</td>
-<td>SP</td>
-</tr>
-<tr>
-<td>2</td>
-<td>Lucas Prado</td>
-<td>RJ</td>
-</tr>
-</tbody>
-</table>
-<h4 id="tabela-medico">Tabela: <code>medico</code></h4>
-<table>
-<thead>
-<tr>
-<th>id_medico</th>
-<th>nome_medico</th>
-<th>especialidade</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>10</td>
-<td>Dr. Silva</td>
-<td>Cardiologia</td>
-</tr>
-<tr>
-<td>20</td>
-<td>Dra. Souza</td>
-<td>Pediatria</td>
-</tr>
-</tbody>
-</table>
-<h4 id="tabela-atendimento">Tabela: <code>atendimento</code></h4>
-<table>
-<thead>
-<tr>
-<th>id_atendimento</th>
-<th>id_paciente</th>
-<th>id_medico</th>
-<th>data</th>
-<th>procedimento</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1001</td>
-<td>1</td>
-<td>10</td>
-<td>2025-08-01</td>
-<td>Consulta</td>
-</tr>
-<tr>
-<td>1002</td>
-<td>2</td>
-<td>20</td>
-<td>2025-08-02</td>
-<td>Exame</td>
-</tr>
-<tr>
-<td>1003</td>
-<td>1</td>
-<td>20</td>
-<td>2025-08-03</td>
-<td>Vacina</td>
-</tr>
-</tbody>
-</table>
-<h3 id="tabela-obt-resultante">Tabela OBT Resultante</h3>
-<table>
-<thead>
-<tr>
-<th>id_atendimento</th>
-<th>data</th>
-<th>nome_paciente</th>
-<th>uf</th>
-<th>nome_medico</th>
-<th>especialidade</th>
-<th>procedimento</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1001</td>
-<td>2025-08-01</td>
-<td>Carla Dias</td>
-<td>SP</td>
-<td>Dr. Silva</td>
-<td>Cardiologia</td>
-<td>Consulta</td>
-</tr>
-<tr>
-<td>1002</td>
-<td>2025-08-02</td>
-<td>Lucas Prado</td>
-<td>RJ</td>
-<td>Dra. Souza</td>
-<td>Pediatria</td>
-<td>Exame</td>
-</tr>
-<tr>
-<td>1003</td>
-<td>2025-08-03</td>
-<td>Carla Dias</td>
-<td>SP</td>
-<td>Dra. Souza</td>
-<td>Pediatria</td>
-<td>Vacina</td>
-</tr>
-</tbody>
-</table>
-<p>Assim, todas as informações relevantes para análise de atendimentos estão consolidadas em uma única tabela, eliminando a necessidade de JOINs.</p>
-<div class="admonition info">
-<p class="admonition-title">Conceito Fundamental</p>
-<p>O <strong>OBT</strong> prioriza <strong>performance de leitura</strong> sobre <strong>otimização de armazenamento</strong>, sendo especialmente útil em cenários de <strong>OLAP</strong> onde a velocidade das consultas é crítica.</p>
-</div>
-<h2 id="contexto-historico">Contexto Histórico</h2>
-<p>O conceito de <strong>OBT</strong> ganhou popularidade com o advento do <strong>Big Data</strong> e ferramentas de processamento distribuído como <strong>Hadoop</strong> e <strong>Spark</strong>. Com a queda do custo de armazenamento e a necessidade crescente de análises em tempo real, a redundância de dados tornou-se um <em>trade-off</em> aceitável em muitos cenários.</p>
-<p>A abordagem também se tornou viável com o desenvolvimento de <strong>sistemas de armazenamento colunar</strong> como <strong>Parquet</strong>, que consegue comprimir dados redundantes de forma eficiente, minimizando o impacto do aumento no volume de dados.</p>
-<h2 id="vantagens-da-abordagem-obt">Vantagens da Abordagem OBT</h2>
-<p>Dentre as vantagens do uso de <strong>OBT</strong>, podemos citar:</p>
+<p>É aqui que o <strong>Distributed Tracing</strong> se torna indispensável. Ele nos permite seguir o caminho completo de uma requisição (um <em>trace</em>) à medida que ela passa por múltiplos serviços. Cada unidade de trabalho dentro de um <em>trace</em> é chamada de <em>span</em>.</p>
+<div class="admonition important">
+<p class="admonition-title">Conceitos Chave</p>
 <ul>
-<li>
-<p><strong>Performance de Consultas</strong>: A principal vantagem do OBT é a <strong>eliminação de JOINs</strong> complexos. Em um <strong>DW</strong> tradicional, uma consulta simples pode requerer junções entre múltiplas tabelas, criando gargalos de performance.</p>
-</li>
-<li>
-<p><strong>Simplicidade de Consultas</strong>: Analistas e cientistas de dados podem escrever consultas mais diretas, sem precisar compreender relações complexas entre tabelas.</p>
-</li>
-<li>
-<p><strong>Otimização para Ferramentas de BI</strong>: Muitas ferramentas <strong>Business Intelligence</strong> trabalham melhor com estruturas desnormalizadas, aproveitando otimizações internas quando os dados estão em formato <em>flat</em>.</p>
-</li>
-<li>
-<p><strong>Paralelização</strong>: Em ambientes distribuídos, consultas em uma única tabela podem ser facilmente paralelizadas e distribuídas entre múltiplos nós de processamento.</p>
-</li>
+<li><strong>Trace</strong>: Representa a jornada completa de uma requisição através de um sistema distribuído. É composto por um ou mais <em>spans</em>.</li>
+<li><strong>Span</strong>: Representa uma única unidade de trabalho ou operação dentro de um <em>trace</em> (ex: uma chamada de banco de dados, uma requisição HTTP). Cada <em>span</em> tem um nome, um horário de início e uma duração.</li>
+<li><strong>Context Propagation</strong>: O mecanismo que permite que o ID do <em>trace</em> e do <em>span</em> pai seja passado de um serviço para outro, conectando os <em>spans</em> em um único <em>trace</em>.</li>
 </ul>
-<div class="admonition exercise choice exercise-choice" data-answer-idx="1" id="exercise_1">
-<p class="admonition-title">Question</p>
-<form class="quiz-form"><p>Qual é a principal vantagem de performance do modelo <strong>OBT</strong> em relação a modelos normalizados?</p>
-<div class="form-elements">
-<div class="quiz-alternative-set">
-  
-<label class="quiz-alternative" data-alt-index="0">
-  <div class="content">
-    <input type="hidden" name="data" value="">
-    <span class="choice-text">Menor uso de memória</span>
-  </div>
-</label>
-
-<label class="quiz-alternative" data-alt-index="1">
-  <div class="content">
-    <input type="hidden" name="data" value="">
-    <span class="choice-text">Eliminação de operações JOIN</span>
-  </div>
-</label>
-
-<label class="quiz-alternative" data-alt-index="2">
-  <div class="content">
-    <input type="hidden" name="data" value="">
-    <span class="choice-text">Menor volume de dados</span>
-  </div>
-</label>
-
-<label class="quiz-alternative" data-alt-index="3">
-  <div class="content">
-    <input type="hidden" name="data" value="">
-    <span class="choice-text">Maior segurança dos dados</span>
-  </div>
-</label>
-
 </div>
-<button class="quiz-submit-button" type="submit">Submit</button>
+<p>Para a parte prática, usaremos o <strong>Jaeger</strong> (<em>Jaeger: open source, distributed tracing platform</em>), um sistema de <em>tracing</em> de código aberto criado pela <strong>Uber</strong> e agora um projeto da <em>Cloud Native Computing Foundation</em> (<strong>CNCF</strong>).</p>
+<h2 id="configurando-o-ambiente">Configurando o Ambiente</h2>
+<p>Para demonstrar o <em>tracing</em>, precisamos de uma aplicação com múltiplos serviços. Criaremos uma aplicação simples com dois serviços: um <code>frontend</code> que recebe requisições e um <code>backend</code> que realiza uma operação.</p>
+<div class="admonition exercise exercise-self-progress" id="exercise_1">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Crie uma nova pasta para esta aula e navegue até ela:</p>
+<div class="termy">
+<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>$ mkdir -p 11-observability/02-tracing
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>$ cd 11-observability/02-tracing
+</code></pre></div>
+</div>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
 </div></form></div>
-<h2 id="desvantagens-da-abordagem-obt">Desvantagens da Abordagem OBT</h2>
-<p>Mas o uso de <strong>OBT</strong> também apresenta desvantagens que devem ser consideradas. Dentre elas:</p>
-<ul>
-<li>
-<p><strong>Redundância de Dados</strong>: A desnormalização resulta em <strong>duplicação massiva</strong> de informações. Dados que antes apareciam uma única vez em tabelas normalizadas agora são replicados em várias linhas da <strong>OBT</strong>.</p>
-</li>
-<li>
-<p><strong>Maior Consumo de Armazenamento</strong>: O volume de dados pode crescer significativamente, resultando em maiores custos de armazenamento e backup.</p>
-</li>
-<li>
-<p><strong>Maior Complexidade de Atualização</strong>: Quando um dado mestre é alterado (como o nome de um cliente), essa mudança precisa ser propagada para <strong>todas as linhas</strong> da <strong>OBT</strong> onde esse cliente aparece, tornando as atualizações mais complexas e custosas.</p>
-</li>
-</ul>
-<div class="admonition info">
-<p class="admonition-title">Info!</p>
-<p>Em muitos casos, a <strong>OBT</strong> é <em>append-only</em>.</p>
-</div>
-<ul>
-<li>
-<p><strong>Potencial Inconsistência</strong>: A redundância aumenta o risco de <strong>inconsistências</strong>, especialmente se o processo de <strong>ETL</strong> não for bem projetado ou se houver falhas na sincronização dos dados.</p>
-</li>
-<li>
-<p><strong>Gestão de Migrações</strong>: Alterações no modelo de dados podem exigir migrações complexas, uma vez que a estrutura desnormalizada pode não se adaptar facilmente a mudanças.</p>
-</li>
-</ul>
-<h2 id="quando-usar-obt">Quando Usar OBT?</h2>
-<p>A decisão de implementar uma <strong>OBT</strong> deve considerar diversos fatores:</p>
-<ul>
-<li>
-<p><strong>Cenários Adequados:</strong></p>
-<ul>
-<li><strong>Análises frequentes</strong> que sempre envolvem os mesmos conjuntos de dados</li>
-<li><strong>Relatórios padronizados</strong> com consultas previsíveis</li>
-<li>Ambientes onde a <strong>performance de leitura</strong> é mais crítica que eficiência de armazenamento</li>
-<li><strong>Data marts</strong> específicos para áreas de negócio</li>
-</ul>
-</li>
-<li>
-<p><strong>Cenários Inadequados:</strong></p>
-<ul>
-<li>Dados com <strong>alta frequência de atualização</strong></li>
-<li>Ambientes com <strong>recursos limitados</strong> de armazenamento</li>
-<li>Casos onde a <strong>consistência transacional</strong> é crítica</li>
-<li>Sistemas principalmente <strong>OLTP</strong></li>
-</ul>
-</li>
-</ul>
-<h2 id="implementando-obt">Implementando OBT</h2>
-<p>Vamos trabalhar com a transformação do nosso modelo de vendas normalizado em uma <strong>OBT</strong>. </p>
-<p>Antes, vamos relembrar a estrutura original:</p>
-<p><img alt="Estrutura Normalizada Original" src="../modelo-relacional-vendas.png" /></p>
-<h3 id="projetando-a-obt">Projetando a OBT</h3>
-<p>Para criar nossa <strong>OBT</strong>, precisamos identificar qual será o <strong>grão</strong> (<strong>granularidade</strong>) da tabela.</p>
-<p>No nosso caso, o grão natural seria <strong>cada item vendido</strong>, pois representa o nível mais detalhado de informação disponível.</p>
-<div class="admonition exercise text short exercise-short" id="exercise_3">
-<p class="admonition-title">Exercise</p>
-<form class="quiz-form"><p>Por que escolhemos <strong>"item vendido"</strong> como grão da <strong>OBT</strong> ao invés de <strong>"venda"</strong>?</p>
+<h3 id="instrumentando-a-aplicacao-com-opentelemetry">Instrumentando a Aplicação com OpenTelemetry</h3>
+<p>Para que uma aplicação gere <em>traces</em>, ela precisa ser instrumentada. Usaremos o <strong>OpenTelemetry</strong>, um padrão aberto para instrumentação de telemetria (métricas, logs e <em>traces</em>).</p>
+<div class="admonition exercise exercise-self-progress" id="exercise_2">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Crie uma pasta <code>app</code> (<code>11-observability/02-tracing/app</code>) e, dentro dela, crie dois arquivos: <code>frontend.py</code> e <code>backend.py</code>.</p>
 <div class="form-elements">
-<div class="quiz-text-container">
-
-<input type="text" value="" name="data" class="quiz-text-input" 
-       placeholder="Enter your answer..." autocomplete="off"/>
-
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
 </div>
-<button class="quiz-submit-button" type="submit">Submit</button>
-</div></form><div class="admonition answer quiz-answer no-indent">
-<p class="admonition-title">Answer</p>
-<p>Porque uma venda pode conter múltiplos produtos.</p>
-<p>Se usássemos <strong>"venda"</strong> como grão, perderiamos o <strong>detalhamento por produto</strong>!</p>
-</div>
-</div>
-<h3 id="campos-da-obt-de-vendas">Campos da OBT de Vendas</h3>
-<p>Nossa <strong>OBT</strong> incluirá todos os campos necessários para análises de vendas, eliminando a necessidade de JOINs:</p>
-<ul>
-<li>
-<p><strong>Informações da Venda:</strong> <code>id_venda</code>, <code>data_venda</code>, <code>entregue</code>, <code>valor_total_venda</code></p>
-</li>
-<li>
-<p><strong>Informações do Item:</strong> <code>id_item</code>, <code>quantidade</code>, <code>valor_unitario</code>, <code>valor_total_item</code></p>
-</li>
-<li>
-<p><strong>Informações do Produto:</strong> <code>id_produto</code>, <code>nome_produto</code>, <code>descricao_produto</code>, <code>preco_base</code></p>
-</li>
-<li>
-<p><strong>Informações do Cliente:</strong> <code>id_cliente</code>, <code>nome_cliente</code>, <code>data_nasc</code>, <code>data_cad</code>, <code>cpf</code></p>
-</li>
-<li>
-<p><strong>Informações Geográficas:</strong> <code>cidade</code>, <code>uf</code>, <code>pais</code></p>
-</li>
-</ul>
-<div class="admonition exercise choice exercise-choice" data-answer-idx="3" id="exercise_2">
-<p class="admonition-title">Question</p>
-<form class="quiz-form"><p>Quantas vezes os dados do cliente "João Silva" aparecerão na <strong>OBT</strong> se ele fez 5 compras com 3 itens cada?</p>
-<div class="form-elements">
-<div class="quiz-alternative-set">
-  
-<label class="quiz-alternative" data-alt-index="0">
-  <div class="content">
-    <input type="hidden" name="data" value="">
-    <span class="choice-text">1 vez</span>
-  </div>
-</label>
-
-<label class="quiz-alternative" data-alt-index="1">
-  <div class="content">
-    <input type="hidden" name="data" value="">
-    <span class="choice-text">5 vezes</span>
-  </div>
-</label>
-
-<label class="quiz-alternative" data-alt-index="2">
-  <div class="content">
-    <input type="hidden" name="data" value="">
-    <span class="choice-text">3 vezes</span>
-  </div>
-</label>
-
-<label class="quiz-alternative" data-alt-index="3">
-  <div class="content">
-    <input type="hidden" name="data" value="">
-    <span class="choice-text">15 vezes</span>
-  </div>
-</label>
-
-<label class="quiz-alternative" data-alt-index="4">
-  <div class="content">
-    <input type="hidden" name="data" value="">
-    <span class="choice-text">Depende dos produtos</span>
-  </div>
-</label>
-
-</div>
-<button class="quiz-submit-button" type="submit">Submit</button>
 </div></form></div>
-<h2 id="criando-a-obt-na-pratica">Criando a OBT na Prática</h2>
-<p>A transformação do modelo normalizado para <strong>OBT</strong>, usando <strong>SQL</strong>, pode ser representada pela seguinte <em>query</em>:</p>
+<details>
+<summary>Código para <code>app/frontend.py</code></summary>
+<div class="language-python copy highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">fastapi</span><span class="w"> </span><span class="kn">import</span> <span class="n">FastAPI</span><span class="p">,</span> <span class="n">Query</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">httpx</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">opentelemetry</span><span class="w"> </span><span class="kn">import</span> <span class="n">trace</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="kn">from</span><span class="w"> </span><span class="nn">opentelemetry.instrumentation.fastapi</span><span class="w"> </span><span class="kn">import</span> <span class="n">FastAPIInstrumentor</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="kn">from</span><span class="w"> </span><span class="nn">opentelemetry.instrumentation.httpx</span><span class="w"> </span><span class="kn">import</span> <span class="n">HTTPXClientInstrumentor</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="kn">from</span><span class="w"> </span><span class="nn">opentelemetry.sdk.trace</span><span class="w"> </span><span class="kn">import</span> <span class="n">TracerProvider</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="kn">from</span><span class="w"> </span><span class="nn">opentelemetry.sdk.trace.export</span><span class="w"> </span><span class="kn">import</span> <span class="n">BatchSpanProcessor</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="kn">from</span><span class="w"> </span><span class="nn">opentelemetry.exporter.otlp.proto.grpc.trace_exporter</span><span class="w"> </span><span class="kn">import</span> <span class="n">OTLPSpanExporter</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="kn">from</span><span class="w"> </span><span class="nn">opentelemetry.sdk.resources</span><span class="w"> </span><span class="kn">import</span> <span class="n">Resource</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="c1"># Configuração do OTLP para Jaeger</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="n">otlp_exporter</span> <span class="o">=</span> <span class="n">OTLPSpanExporter</span><span class="p">(</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>    <span class="n">endpoint</span><span class="o">=</span><span class="s2">&quot;http://jaeger:4317&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>    <span class="n">insecure</span><span class="o">=</span><span class="kc">True</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="p">)</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="c1"># Configuração do OpenTelemetry</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="n">resource</span> <span class="o">=</span> <span class="n">Resource</span><span class="o">.</span><span class="n">create</span><span class="p">({</span><span class="s2">&quot;service.name&quot;</span><span class="p">:</span> <span class="s2">&quot;frontend-service&quot;</span><span class="p">})</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="n">provider</span> <span class="o">=</span> <span class="n">TracerProvider</span><span class="p">(</span><span class="n">resource</span><span class="o">=</span><span class="n">resource</span><span class="p">)</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="n">processor</span> <span class="o">=</span> <span class="n">BatchSpanProcessor</span><span class="p">(</span><span class="n">otlp_exporter</span><span class="p">)</span>
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="n">provider</span><span class="o">.</span><span class="n">add_span_processor</span><span class="p">(</span><span class="n">processor</span><span class="p">)</span>
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="n">trace</span><span class="o">.</span><span class="n">set_tracer_provider</span><span class="p">(</span><span class="n">provider</span><span class="p">)</span>
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>
+<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="n">tracer</span> <span class="o">=</span> <span class="n">trace</span><span class="o">.</span><span class="n">get_tracer</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>
+<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Frontend Service&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="n">FastAPIInstrumentor</span><span class="o">.</span><span class="n">instrument_app</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
+<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="n">HTTPXClientInstrumentor</span><span class="p">()</span><span class="o">.</span><span class="n">instrument</span><span class="p">()</span>
+<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>
+<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a><span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">hello</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Query</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="s2">&quot;Mundo&quot;</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Nome para cumprimentar&quot;</span><span class="p">)):</span>
+<a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a>    <span class="k">with</span> <span class="n">tracer</span><span class="o">.</span><span class="n">start_as_current_span</span><span class="p">(</span><span class="s2">&quot;frontend-request&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">span</span><span class="p">:</span>
+<a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a>        <span class="n">span</span><span class="o">.</span><span class="n">set_attribute</span><span class="p">(</span><span class="s2">&quot;user.name&quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+<a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a>
+<a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a>        <span class="c1"># Chama o serviço de backend</span>
+<a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a>        <span class="k">async</span> <span class="k">with</span> <span class="n">httpx</span><span class="o">.</span><span class="n">AsyncClient</span><span class="p">()</span> <span class="k">as</span> <span class="n">client</span><span class="p">:</span>
+<a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a>            <span class="n">response</span> <span class="o">=</span> <span class="k">await</span> <span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;http://backend:5001/api?name=</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a>            <span class="n">backend_response</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">text</span>
+<a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a>
+<a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a>        <span class="n">span</span><span class="o">.</span><span class="n">set_attribute</span><span class="p">(</span><span class="s2">&quot;backend.response&quot;</span><span class="p">,</span> <span class="n">backend_response</span><span class="p">)</span>
+<a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a>        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Olá, </span><span class="si">{</span><span class="n">backend_response</span><span class="si">}</span><span class="s2">!&quot;</span>
+</code></pre></div>
+</details>
+<details>
+<summary>Código para <code>app/backend.py</code></summary>
+<div class="language-python copy highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">fastapi</span><span class="w"> </span><span class="kn">import</span> <span class="n">FastAPI</span><span class="p">,</span> <span class="n">Query</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="kn">from</span><span class="w"> </span><span class="nn">opentelemetry</span><span class="w"> </span><span class="kn">import</span> <span class="n">trace</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="kn">from</span><span class="w"> </span><span class="nn">opentelemetry.instrumentation.fastapi</span><span class="w"> </span><span class="kn">import</span> <span class="n">FastAPIInstrumentor</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="kn">from</span><span class="w"> </span><span class="nn">opentelemetry.sdk.trace</span><span class="w"> </span><span class="kn">import</span> <span class="n">TracerProvider</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="kn">from</span><span class="w"> </span><span class="nn">opentelemetry.sdk.trace.export</span><span class="w"> </span><span class="kn">import</span> <span class="n">BatchSpanProcessor</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="kn">from</span><span class="w"> </span><span class="nn">opentelemetry.exporter.otlp.proto.grpc.trace_exporter</span><span class="w"> </span><span class="kn">import</span> <span class="n">OTLPSpanExporter</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="kn">from</span><span class="w"> </span><span class="nn">opentelemetry.sdk.resources</span><span class="w"> </span><span class="kn">import</span> <span class="n">Resource</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="c1"># Configuração do OTLP para Jaeger</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="n">otlp_exporter</span> <span class="o">=</span> <span class="n">OTLPSpanExporter</span><span class="p">(</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>    <span class="n">endpoint</span><span class="o">=</span><span class="s2">&quot;http://jaeger:4317&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>    <span class="n">insecure</span><span class="o">=</span><span class="kc">True</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="p">)</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="c1"># Configuração do OpenTelemetry</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="n">resource</span> <span class="o">=</span> <span class="n">Resource</span><span class="o">.</span><span class="n">create</span><span class="p">({</span><span class="s2">&quot;service.name&quot;</span><span class="p">:</span> <span class="s2">&quot;backend-service&quot;</span><span class="p">})</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="n">provider</span> <span class="o">=</span> <span class="n">TracerProvider</span><span class="p">(</span><span class="n">resource</span><span class="o">=</span><span class="n">resource</span><span class="p">)</span>
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="n">processor</span> <span class="o">=</span> <span class="n">BatchSpanProcessor</span><span class="p">(</span><span class="n">otlp_exporter</span><span class="p">)</span>
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="n">provider</span><span class="o">.</span><span class="n">add_span_processor</span><span class="p">(</span><span class="n">processor</span><span class="p">)</span>
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="n">trace</span><span class="o">.</span><span class="n">set_tracer_provider</span><span class="p">(</span><span class="n">provider</span><span class="p">)</span>
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>
+<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a><span class="n">tracer</span> <span class="o">=</span> <span class="n">trace</span><span class="o">.</span><span class="n">get_tracer</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>
+<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a><span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Backend Service&quot;</span><span class="p">)</span>
+<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a><span class="n">FastAPIInstrumentor</span><span class="o">.</span><span class="n">instrument_app</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
+<a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a>
+<a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a><span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/api&quot;</span><span class="p">)</span>
+<a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">api</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Query</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Nome para processar&quot;</span><span class="p">)):</span>
+<a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a>    <span class="k">with</span> <span class="n">tracer</span><span class="o">.</span><span class="n">start_as_current_span</span><span class="p">(</span><span class="s2">&quot;backend-processing&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">span</span><span class="p">:</span>
+<a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a>        <span class="n">span</span><span class="o">.</span><span class="n">set_attribute</span><span class="p">(</span><span class="s2">&quot;request.name&quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+<a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a>
+<a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a>        <span class="c1"># Simula algum trabalho</span>
+<a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a>        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">))</span>
+<a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a>
+<a id="__codelineno-2-37" name="__codelineno-2-37" href="#__codelineno-2-37"></a>        <span class="k">return</span> <span class="n">name</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span>
+</code></pre></div>
+</details>
+<div class="admonition exercise exercise-self-progress" id="exercise_3">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Crie um arquivo <code>app/requirements.txt</code> com as dependências Python:</p>
+<div class="language-text copy highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>fastapi==0.116.2
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>uvicorn==0.35.0
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>httpx==0.28.1
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>opentelemetry-api==1.37.0
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>opentelemetry-sdk==1.37.0
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>opentelemetry-instrumentation-fastapi==0.58b0
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>opentelemetry-instrumentation-httpx==0.58b0
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>opentelemetry-exporter-otlp==1.37.0
+</code></pre></div>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
+</div></form></div>
+<div class="admonition exercise exercise-self-progress" id="exercise_4">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Crie um <code>Dockerfile</code> na raiz do projeto (<code>11-observability/02-tracing/Dockerfile</code>):</p>
+<div class="language-dockerfile copy highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">FROM</span><span class="w"> </span><span class="s">python:3.12-slim</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="k">WORKDIR</span><span class="w"> </span><span class="s">/app</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="k">COPY</span><span class="w"> </span>app/requirements.txt<span class="w"> </span>.
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="k">RUN</span><span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--no-cache-dir<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="k">COPY</span><span class="w"> </span>app/<span class="w"> </span>.
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="c"># A variável de ambiente CMD_TO_RUN será passada pelo docker-compose</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;python&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;-u&quot;</span><span class="p">]</span>
+</code></pre></div>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
+</div></form></div>
+<h3 id="docker-compose-com-jaeger">Docker Compose com Jaeger</h3>
+<p>Agora, vamos criar o <code>docker-compose.yml</code> para orquestrar o Jaeger e nossos dois serviços.</p>
+<div class="admonition exercise exercise-self-progress" id="exercise_5">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Crie o arquivo <code>docker-compose.yml</code>:</p>
+<div class="language-yaml copy highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nt">services</span><span class="p">:</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="nt">jaeger</span><span class="p">:</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">jaegertracing/all-in-one:1.73.0</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">jaeger</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;6831:6831/udp&quot;</span><span class="w"> </span><span class="c1"># Agent</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;16686:16686&quot;</span><span class="w">   </span><span class="c1"># UI</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">  </span><span class="nt">frontend</span><span class="p">:</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">    </span><span class="nt">build</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">frontend</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;5000:5000&quot;</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="w">    </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;uvicorn&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;frontend:app&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;--host&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;0.0.0.0&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;--port&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;5000&quot;</span><span class="p p-Indicator">]</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="w">    </span><span class="nt">depends_on</span><span class="p">:</span>
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">jaeger</span>
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">backend</span>
+<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>
+<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a><span class="w">  </span><span class="nt">backend</span><span class="p">:</span>
+<a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a><span class="w">    </span><span class="nt">build</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.</span>
+<a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">backend</span>
+<a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a><span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;5001:5001&quot;</span>
+<a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a><span class="w">    </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;uvicorn&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;backend:app&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;--host&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;0.0.0.0&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;--port&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;5001&quot;</span><span class="p p-Indicator">]</span>
+<a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a><span class="w">    </span><span class="nt">depends_on</span><span class="p">:</span>
+<a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">jaeger</span>
+</code></pre></div>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
+</div></form></div>
+<h2 id="gerando-e-visualizando-traces">Gerando e Visualizando Traces</h2>
+<div class="admonition exercise exercise-self-progress" id="exercise_6">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Inicie todos os serviços:</p>
+<div class="termy">
+<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>$ docker compose build
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>$ docker compose up
+</code></pre></div>
+</div>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
+</div></form></div>
+<div class="admonition exercise exercise-self-progress" id="exercise_7">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Em um novo terminal, envie algumas requisições para o serviço de <code>frontend</code>:</p>
 <div class="admonition warning">
 <p class="admonition-title">Atenção</p>
-<p>Esta é uma versão refatorada, o nome dos atributos (colunas) pode não bater com o utilizado na aula 03.</p>
+<p>Se não tiver o <code>curl</code> instalado, utilize seu navegador para acessar <code>http://localhost:5000/?name=ana</code> e <code>http://localhost:5000/?name=maria</code>.</p>
 </div>
-<div class="language-sql copy highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w">    </span><span class="c1">-- Criação da OBT de Vendas</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">obt_vendas</span><span class="w"> </span><span class="k">AS</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="k">SELECT</span><span class="w"> </span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">        </span><span class="c1">-- Informações da venda</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">        </span><span class="n">v</span><span class="p">.</span><span class="n">id_venda</span><span class="p">,</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">        </span><span class="n">v</span><span class="p">.</span><span class="k">data</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">data_venda</span><span class="p">,</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">        </span><span class="n">v</span><span class="p">.</span><span class="n">entregue</span><span class="p">,</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">        </span><span class="n">v</span><span class="p">.</span><span class="n">valor_total</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">valor_total_venda</span><span class="p">,</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">        </span><span class="c1">-- Informações do item</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">        </span><span class="n">iv</span><span class="p">.</span><span class="n">id_item</span><span class="p">,</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">        </span><span class="n">iv</span><span class="p">.</span><span class="n">quantidade</span><span class="p">,</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">        </span><span class="n">iv</span><span class="p">.</span><span class="n">valor_unitario</span><span class="p">,</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">        </span><span class="n">iv</span><span class="p">.</span><span class="n">valor_total</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">valor_total_item</span><span class="p">,</span>
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">        </span><span class="c1">-- Informações do produto</span>
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">        </span><span class="n">p</span><span class="p">.</span><span class="n">id_produto</span><span class="p">,</span>
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">        </span><span class="n">p</span><span class="p">.</span><span class="n">nome</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">nome_produto</span><span class="p">,</span>
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">        </span><span class="n">p</span><span class="p">.</span><span class="n">descricao</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">descricao_produto</span><span class="p">,</span>
-<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">        </span><span class="n">p</span><span class="p">.</span><span class="n">preco_base</span><span class="p">,</span>
-<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">        </span><span class="n">p</span><span class="p">.</span><span class="n">ativo</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">produto_ativo</span><span class="p">,</span>
-<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>
-<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">        </span><span class="c1">-- Informações do cliente</span>
-<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">        </span><span class="k">c</span><span class="p">.</span><span class="n">id_cliente</span><span class="p">,</span>
-<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">        </span><span class="k">c</span><span class="p">.</span><span class="n">nome</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">nome_cliente</span><span class="p">,</span>
-<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">        </span><span class="k">c</span><span class="p">.</span><span class="n">data_nasc</span><span class="p">,</span>
-<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="w">        </span><span class="k">c</span><span class="p">.</span><span class="n">data_cad</span><span class="p">,</span>
-<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="w">        </span><span class="k">c</span><span class="p">.</span><span class="n">cpf</span><span class="p">,</span>
-<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>
-<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="w">        </span><span class="c1">-- Informações geográficas</span>
-<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="w">        </span><span class="n">cid</span><span class="p">.</span><span class="n">cidade_desc</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">cidade</span><span class="p">,</span>
-<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="w">        </span><span class="n">cid</span><span class="p">.</span><span class="n">cidade_uf</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">uf</span><span class="p">,</span>
-<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="w">        </span><span class="n">pa</span><span class="p">.</span><span class="n">pais</span>
-<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>
-<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">item_venda</span><span class="w"> </span><span class="n">iv</span>
-<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="w">    </span><span class="k">JOIN</span><span class="w"> </span><span class="n">venda</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">iv</span><span class="p">.</span><span class="n">id_venda</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">id_venda</span>
-<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a><span class="w">    </span><span class="k">JOIN</span><span class="w"> </span><span class="n">produto</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">iv</span><span class="p">.</span><span class="n">id_produto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">id_produto</span>
-<a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a><span class="w">    </span><span class="k">JOIN</span><span class="w"> </span><span class="n">cliente</span><span class="w"> </span><span class="k">c</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">id_cliente</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">id_cliente</span>
-<a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a><span class="w">    </span><span class="k">JOIN</span><span class="w"> </span><span class="n">cidade</span><span class="w"> </span><span class="n">cid</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">id_cidade</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cid</span><span class="p">.</span><span class="n">id_cidade</span>
-<a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a><span class="w">    </span><span class="k">JOIN</span><span class="w"> </span><span class="n">pais</span><span class="w"> </span><span class="n">pa</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">cid</span><span class="p">.</span><span class="n">id_pais</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pa</span><span class="p">.</span><span class="n">id_pais</span><span class="p">;</span>
-</code></pre></div>
-<h3 id="consultas-normalizado-vs-obt">Consultas: Normalizado <em>vs</em> OBT</h3>
-<p>Podemos comparar como seria a estrutura básica de consultas no modelo normalizado e na OBT.</p>
-<p>Por exemplo, para obter as vendas por país no último mês, teríamos:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Normalizado</label><label for="__tabbed_1_2">OBT</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="language-sql copy highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">-- Vendas por país no último mês</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">SELECT</span><span class="w"> </span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="n">pa</span><span class="p">.</span><span class="n">pais</span><span class="p">,</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">total_vendas</span><span class="p">,</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="k">SUM</span><span class="p">(</span><span class="n">v</span><span class="p">.</span><span class="n">valor_total</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">receita_total</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="k">FROM</span><span class="w"> </span><span class="n">venda</span><span class="w"> </span><span class="n">v</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="k">JOIN</span><span class="w"> </span><span class="n">cliente</span><span class="w"> </span><span class="k">c</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">id_cliente</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">id_cliente</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="k">JOIN</span><span class="w"> </span><span class="n">cidade</span><span class="w"> </span><span class="n">cid</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">id_cidade</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cid</span><span class="p">.</span><span class="n">id_cidade</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="k">JOIN</span><span class="w"> </span><span class="n">pais</span><span class="w"> </span><span class="n">pa</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">cid</span><span class="p">.</span><span class="n">id_pais</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pa</span><span class="p">.</span><span class="n">id_pais</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="k">data</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">DATE_SUB</span><span class="p">(</span><span class="k">CURRENT_DATE</span><span class="p">,</span><span class="w"> </span><span class="nb">INTERVAL</span><span class="w"> </span><span class="mi">30</span><span class="w"> </span><span class="k">DAY</span><span class="p">)</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">pa</span><span class="p">.</span><span class="n">pais</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">receita_total</span><span class="w"> </span><span class="k">DESC</span><span class="p">;</span>
+<div class="termy">
+<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>$ curl &quot;http://localhost:5000/?name=ana&quot;
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>Olá, Ana!
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>$ curl &quot;http://localhost:5000/?name=maria&quot;
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>Olá, Maria!
 </code></pre></div>
 </div>
-<div class="tabbed-block">
-<div class="language-sql copy highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1">-- Vendas por país no último mês</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">SELECT</span><span class="w"> </span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="n">pais</span><span class="p">,</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="k">COUNT</span><span class="p">(</span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">id_venda</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">total_vendas</span><span class="p">,</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="k">SUM</span><span class="p">(</span><span class="n">valor_total_venda</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">receita_total</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="k">FROM</span><span class="w"> </span><span class="n">obt_vendas</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">data_venda</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">DATE_SUB</span><span class="p">(</span><span class="k">CURRENT_DATE</span><span class="p">,</span><span class="w"> </span><span class="nb">INTERVAL</span><span class="w"> </span><span class="mi">30</span><span class="w"> </span><span class="k">DAY</span><span class="p">)</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">pais</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">receita_total</span><span class="w"> </span><span class="k">DESC</span><span class="p">;</span>
-</code></pre></div>
-</div>
-</div>
-</div>
-<div class="admonition exercise text long exercise-long" id="exercise_4">
-<p class="admonition-title">Exercise</p>
-<form class="quiz-form"><p>Compare as duas consultas acima. Quais diferenças você observa em termos de complexidade e potencial performance?</p>
 <div class="form-elements">
-<div class="quiz-text-container">
-
-<textarea name="data" class="quiz-text-input" 
-          placeholder="Enter your detailed answer..." rows="4"></textarea>
-
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
 </div>
-<button class="quiz-submit-button" type="submit">Submit</button>
-</div></form><div class="admonition answer quiz-answer no-indent">
-<p class="admonition-title">Answer</p>
-<p>A consulta <strong>OBT</strong> é mais simples (sem <strong>JOINs</strong>), potencialmente mais rápida, mas requer atenção especial ao usar <code>COUNT(DISTINCT id_venda)</code> para evitar contar a mesma venda múltiplas vezes devido aos múltiplos itens.</p>
-</div>
-</div>
-<div class="admonition tip">
-<p class="admonition-title">Otimizações!</p>
-<p>Como a OBT será consultada frequentemente, é fundamental criar índices nas colunas mais utilizadas em filtros e agrupamentos:</p>
-</div>
-<div class="admonition danger">
-<p class="admonition-title">Explosão de Cardinalidade!</p>
-<p>Em relacionamentos <strong>muitos-para-muitos</strong>, a OBT pode crescer exponencialmente.</p>
-<p>É importante monitorar o tamanho da tabela resultante.</p>
-</div>
-<div class="admonition tip">
-<p class="admonition-title">Cuidado!</p>
-<p>Ao fazer agregações na OBT, tenha cuidado para não <strong>contar duplicatas</strong>:</p>
-<div class="language-sql highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1">-- INCORRETO: conta o mesmo cliente múltiplas vezes</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">total_clientes</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">obt_vendas</span><span class="p">;</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1">-- CORRETO: conta clientes únicos</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">id_cliente</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">total_clientes</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">obt_vendas</span><span class="p">;</span>
-</code></pre></div>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Manutenção de Consistência</p>
-<p>A redundância exige processos robustos de <strong>ETL</strong> para garantir que todas as cópias dos dados permaneçam consistentes.</p>
-</div>
-<div class="admonition exercise text long exercise-long" id="exercise_5">
-<p class="admonition-title">Exercise</p>
-<form class="quiz-form"><p>Que estratégias você implementaria para detectar e corrigir inconsistências em uma <strong>OBT</strong>?</p>
+</div></form></div>
+<div class="admonition exercise exercise-self-progress" id="exercise_8">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Agora, acesse a interface do Jaeger em <a href="http://localhost:16686">http://localhost:16686</a>.</p>
+<ol>
+<li>No menu <strong>Search</strong>, selecione o serviço <code>frontend</code> no dropdown <strong>Service</strong>.</li>
+<li>Clique em <strong>Find Traces</strong>. Você deve ver os <em>traces</em> correspondentes às suas requisições <code>curl</code>.</li>
+<li>Clique em um dos <em>traces</em> para ver os detalhes.</li>
+</ol>
 <div class="form-elements">
-<div class="quiz-text-container">
-
-<textarea name="data" class="quiz-text-input" 
-          placeholder="Enter your detailed answer..." rows="4"></textarea>
-
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
 </div>
-<button class="quiz-submit-button" type="submit">Submit</button>
-</div></form><div class="admonition answer quiz-answer no-indent">
-<p class="admonition-title">Answer</p>
+</div></form></div>
+<div class="admonition exercise text long exercise-long" id="exercise_1">
+<p class="admonition-title">Analisando o Trace</p>
+<form class="quiz-form"><p>Na visualização do <em>trace</em>, você verá um gráfico de Gantt. Observe a hierarquia:</p>
 <ul>
-<li>Monitoramento contínuo de dados para identificar anomalias.</li>
-<li>Implementação de testes automatizados para validar a integridade dos dados.</li>
-<li>Processos de reconciliação periódicos entre a <strong>OBT</strong> e as fontes de dados originais.</li>
+<li>O <em>span</em> raiz é do serviço <code>frontend</code>.</li>
+<li>Dentro dele, há um <em>span</em> filho para a requisição HTTP feita ao <code>backend</code>.</li>
+<li>O serviço <code>backend</code> cria seu próprio <em>span</em> para o processamento.</li>
 </ul>
+<p>Clique em cada <em>span</em> e explore as abas <strong>Tags</strong> e <strong>Process</strong>. Que informações úteis você consegue encontrar? Consegue ver os atributos que definimos no código, como <code>user.name</code>?</p>
+<div class="form-elements">
+<div class="quiz-text-container">
+
+<textarea name="data" class="quiz-text-input" 
+          placeholder="Enter your detailed answer..." rows="4"></textarea>
+
 </div>
+<button class="quiz-submit-button" type="submit">Submit</button>
+</div></form></div>
+<h2 id="limpeza">Limpeza</h2>
+<div class="admonition exercise exercise-self-progress" id="exercise_9">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Quando terminar, pare os contêineres:</p>
+<div class="termy">
+<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>$ docker compose down
+</code></pre></div>
 </div>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
+</div></form></div>
+<p>Com a adição do <em>tracing</em>, você agora tem uma visão completa dos três pilares da observabilidade, permitindo não apenas monitorar a saúde do sistema, mas também depurar problemas em ambientes distribuídos.</p>
+<h2 id="pratica-orquestracao-e-tracing-com-prefect-e-jaeger">Prática: Orquestração e Tracing com Prefect e Jaeger</h2>
+<p>Nesta seção, orquestraremos um pipeline de <strong>ETL</strong> usando <strong>Prefect</strong> e, ao mesmo tempo, geraremos <em>traces</em> para cada etapa usando <strong>OpenTelemetry</strong> e <strong>Jaeger</strong>.</p>
+<p>Isso nos dará uma visão onde utilizamos:</p>
+<ul>
+<li><strong>Prefect</strong>: Para gerenciar o fluxo, dependências, <em>retries</em> e agendamento.</li>
+<li><strong>Jaeger</strong>: Para visualizar a latência de cada tarefa e entender os gargalos de desempenho.</li>
+</ul>
+<h3 id="configurando-o-ambiente_1">Configurando o Ambiente</h3>
+<div class="admonition exercise exercise-self-progress" id="exercise_10">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Crie uma nova pasta para esta prática e navegue até ela:</p>
+<div class="termy">
+<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>$ mkdir -p 11-observability/03-prefect-tracing
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>$ cd 11-observability/03-prefect-tracing
+</code></pre></div>
+</div>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
+</div></form></div>
+<h3 id="componentes">Componentes</h3>
+<p>Nossa prática terá os seguintes componentes:</p>
+<ol>
+<li><strong>Jaeger</strong>: Nosso backend de <em>tracing</em>.</li>
+<li><strong>Prefect Server</strong>: O servidor que gerencia os <em>flows</em>.</li>
+<li><strong>ETL Runner</strong>: Um contêiner que executa nosso <em>flow</em> de <strong>ETL</strong> escrito em Python com <strong>Prefect</strong> e instrumentado com <strong>OpenTelemetry</strong>.</li>
+</ol>
+<p><strong>Código para <code>docker-compose.yml</code></strong>:
+<div class="language-yaml copy highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nt">services</span><span class="p">:</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">  </span><span class="nt">jaeger</span><span class="p">:</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">jaegertracing/all-in-one:1.73.0</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">jaeger</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;6831:6831/udp&quot;</span><span class="w"> </span><span class="c1"># Agent</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;16686:16686&quot;</span><span class="w">   </span><span class="c1"># UI</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="w">  </span><span class="nt">prefect-server</span><span class="p">:</span>
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">prefecthq/prefect:3.4-python3.12</span>
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">prefect_server</span>
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="w">    </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;prefect&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;server&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;start&quot;</span><span class="p p-Indicator">]</span>
+<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PREFECT_SERVER_API_HOST=0.0.0.0</span>
+<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PREFECT_API_URL=http://0.0.0.0:4200/api</span>
+<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PREFECT_API_DATABASE_CONNECTION_URL=sqlite+aiosqlite:///prefect.db</span>
+<a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;4200:4200&quot;</span>
+<a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">prefect_data:/root/.prefect</span>
+<a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a><span class="w">    </span><span class="nt">user</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;0:0&quot;</span>
+<a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a><span class="w">    </span><span class="nt">healthcheck</span><span class="p">:</span>
+<a id="__codelineno-10-23" name="__codelineno-10-23" href="#__codelineno-10-23"></a><span class="w">      </span><span class="nt">test</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;CMD&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;sleep&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;3&quot;</span><span class="p p-Indicator">]</span>
+<a id="__codelineno-10-24" name="__codelineno-10-24" href="#__codelineno-10-24"></a><span class="w">      </span><span class="nt">interval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
+<a id="__codelineno-10-25" name="__codelineno-10-25" href="#__codelineno-10-25"></a><span class="w">      </span><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5s</span>
+<a id="__codelineno-10-26" name="__codelineno-10-26" href="#__codelineno-10-26"></a><span class="w">      </span><span class="nt">retries</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<a id="__codelineno-10-27" name="__codelineno-10-27" href="#__codelineno-10-27"></a><span class="w">      </span><span class="nt">start_period</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5s</span>
+<a id="__codelineno-10-28" name="__codelineno-10-28" href="#__codelineno-10-28"></a>
+<a id="__codelineno-10-29" name="__codelineno-10-29" href="#__codelineno-10-29"></a><span class="w">  </span><span class="nt">etl-runner</span><span class="p">:</span>
+<a id="__codelineno-10-30" name="__codelineno-10-30" href="#__codelineno-10-30"></a><span class="w">    </span><span class="nt">build</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.</span>
+<a id="__codelineno-10-31" name="__codelineno-10-31" href="#__codelineno-10-31"></a><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">etl-runner</span>
+<a id="__codelineno-10-32" name="__codelineno-10-32" href="#__codelineno-10-32"></a><span class="w">    </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python etl_flow.py</span>
+<a id="__codelineno-10-33" name="__codelineno-10-33" href="#__codelineno-10-33"></a><span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<a id="__codelineno-10-34" name="__codelineno-10-34" href="#__codelineno-10-34"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PREFECT_API_URL=http://prefect-server:4200/api</span>
+<a id="__codelineno-10-35" name="__codelineno-10-35" href="#__codelineno-10-35"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OTEL_EXPORTER_OTLP_ENDPOINT=http://jaeger:4317</span>
+<a id="__codelineno-10-36" name="__codelineno-10-36" href="#__codelineno-10-36"></a><span class="w">    </span><span class="nt">depends_on</span><span class="p">:</span>
+<a id="__codelineno-10-37" name="__codelineno-10-37" href="#__codelineno-10-37"></a><span class="w">      </span><span class="nt">prefect-server</span><span class="p">:</span>
+<a id="__codelineno-10-38" name="__codelineno-10-38" href="#__codelineno-10-38"></a><span class="w">        </span><span class="nt">condition</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">service_healthy</span>
+<a id="__codelineno-10-39" name="__codelineno-10-39" href="#__codelineno-10-39"></a><span class="w">      </span><span class="nt">jaeger</span><span class="p">:</span>
+<a id="__codelineno-10-40" name="__codelineno-10-40" href="#__codelineno-10-40"></a><span class="w">        </span><span class="nt">condition</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">service_started</span>
+<a id="__codelineno-10-41" name="__codelineno-10-41" href="#__codelineno-10-41"></a><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unless-stopped</span>
+<a id="__codelineno-10-42" name="__codelineno-10-42" href="#__codelineno-10-42"></a>
+<a id="__codelineno-10-43" name="__codelineno-10-43" href="#__codelineno-10-43"></a><span class="nt">volumes</span><span class="p">:</span>
+<a id="__codelineno-10-44" name="__codelineno-10-44" href="#__codelineno-10-44"></a><span class="w">  </span><span class="nt">prefect_data</span><span class="p">:</span>
+</code></pre></div></p>
+<div class="admonition exercise exercise-self-progress" id="exercise_11">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Crie o arquivo <code>docker-compose.yml</code></p>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
+</div></form></div>
+<div class="admonition exercise exercise-self-progress" id="exercise_12">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Crie o arquivo <code>etl_flow.py</code> que contém nosso <em>pipeline</em> de <strong>ETL</strong>:</p>
+<details>
+<summary>Código para <code>etl_flow.py</code></summary>
+<div class="language-python copy highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">prefect</span><span class="w"> </span><span class="kn">import</span> <span class="n">flow</span><span class="p">,</span> <span class="n">task</span><span class="p">,</span> <span class="n">get_run_logger</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">opentelemetry</span><span class="w"> </span><span class="kn">import</span> <span class="n">trace</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="kn">from</span><span class="w"> </span><span class="nn">opentelemetry.sdk.trace</span><span class="w"> </span><span class="kn">import</span> <span class="n">TracerProvider</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="kn">from</span><span class="w"> </span><span class="nn">opentelemetry.sdk.trace.export</span><span class="w"> </span><span class="kn">import</span> <span class="n">BatchSpanProcessor</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="kn">from</span><span class="w"> </span><span class="nn">opentelemetry.exporter.otlp.proto.grpc.trace_exporter</span><span class="w"> </span><span class="kn">import</span> <span class="n">OTLPSpanExporter</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="kn">from</span><span class="w"> </span><span class="nn">opentelemetry.sdk.resources</span><span class="w"> </span><span class="kn">import</span> <span class="n">Resource</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="c1"># Configuração do OpenTelemetry</span>
+<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a><span class="n">resource</span> <span class="o">=</span> <span class="n">Resource</span><span class="o">.</span><span class="n">create</span><span class="p">({</span><span class="s2">&quot;service.name&quot;</span><span class="p">:</span> <span class="s2">&quot;prefect-etl-service&quot;</span><span class="p">})</span>
+<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a><span class="n">provider</span> <span class="o">=</span> <span class="n">TracerProvider</span><span class="p">(</span><span class="n">resource</span><span class="o">=</span><span class="n">resource</span><span class="p">)</span>
+<a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a>
+<a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a><span class="c1"># A URL do endpoint do Jaeger é passada via variável de ambiente</span>
+<a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a><span class="n">otlp_exporter</span> <span class="o">=</span> <span class="n">OTLPSpanExporter</span><span class="p">(</span>
+<a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a>    <span class="n">endpoint</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;OTEL_EXPORTER_OTLP_ENDPOINT&quot;</span><span class="p">,</span> <span class="s2">&quot;http://localhost:4317&quot;</span><span class="p">),</span>
+<a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a>    <span class="n">insecure</span><span class="o">=</span><span class="kc">True</span>
+<a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a><span class="p">)</span>
+<a id="__codelineno-11-21" name="__codelineno-11-21" href="#__codelineno-11-21"></a>
+<a id="__codelineno-11-22" name="__codelineno-11-22" href="#__codelineno-11-22"></a><span class="n">provider</span><span class="o">.</span><span class="n">add_span_processor</span><span class="p">(</span><span class="n">BatchSpanProcessor</span><span class="p">(</span><span class="n">otlp_exporter</span><span class="p">))</span>
+<a id="__codelineno-11-23" name="__codelineno-11-23" href="#__codelineno-11-23"></a><span class="n">trace</span><span class="o">.</span><span class="n">set_tracer_provider</span><span class="p">(</span><span class="n">provider</span><span class="p">)</span>
+<a id="__codelineno-11-24" name="__codelineno-11-24" href="#__codelineno-11-24"></a>
+<a id="__codelineno-11-25" name="__codelineno-11-25" href="#__codelineno-11-25"></a><span class="n">tracer</span> <span class="o">=</span> <span class="n">trace</span><span class="o">.</span><span class="n">get_tracer</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<a id="__codelineno-11-26" name="__codelineno-11-26" href="#__codelineno-11-26"></a>
+<a id="__codelineno-11-27" name="__codelineno-11-27" href="#__codelineno-11-27"></a><span class="nd">@task</span>
+<a id="__codelineno-11-28" name="__codelineno-11-28" href="#__codelineno-11-28"></a><span class="k">def</span><span class="w"> </span><span class="nf">extract_data</span><span class="p">():</span>
+<a id="__codelineno-11-29" name="__codelineno-11-29" href="#__codelineno-11-29"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Simula a extração de dados de uma fonte.&quot;&quot;&quot;</span>
+<a id="__codelineno-11-30" name="__codelineno-11-30" href="#__codelineno-11-30"></a>    <span class="n">logger</span> <span class="o">=</span> <span class="n">get_run_logger</span><span class="p">()</span>
+<a id="__codelineno-11-31" name="__codelineno-11-31" href="#__codelineno-11-31"></a>    <span class="k">with</span> <span class="n">tracer</span><span class="o">.</span><span class="n">start_as_current_span</span><span class="p">(</span><span class="s2">&quot;extract-data-span&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">span</span><span class="p">:</span>
+<a id="__codelineno-11-32" name="__codelineno-11-32" href="#__codelineno-11-32"></a>        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Iniciando extração de dados...&quot;</span><span class="p">)</span>
+<a id="__codelineno-11-33" name="__codelineno-11-33" href="#__codelineno-11-33"></a>        <span class="n">wait_time</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<a id="__codelineno-11-34" name="__codelineno-11-34" href="#__codelineno-11-34"></a>        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">wait_time</span><span class="p">)</span>
+<a id="__codelineno-11-35" name="__codelineno-11-35" href="#__codelineno-11-35"></a>        <span class="n">data</span> <span class="o">=</span> <span class="p">[{</span><span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="n">i</span><span class="p">,</span> <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">100</span><span class="p">}</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>
+<a id="__codelineno-11-36" name="__codelineno-11-36" href="#__codelineno-11-36"></a>        <span class="n">span</span><span class="o">.</span><span class="n">set_attribute</span><span class="p">(</span><span class="s2">&quot;extracted.records&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+<a id="__codelineno-11-37" name="__codelineno-11-37" href="#__codelineno-11-37"></a>        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Extração concluída. </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="si">}</span><span class="s2"> registros encontrados.&quot;</span><span class="p">)</span>
+<a id="__codelineno-11-38" name="__codelineno-11-38" href="#__codelineno-11-38"></a>        <span class="k">return</span> <span class="n">data</span>
+<a id="__codelineno-11-39" name="__codelineno-11-39" href="#__codelineno-11-39"></a>
+<a id="__codelineno-11-40" name="__codelineno-11-40" href="#__codelineno-11-40"></a><span class="nd">@task</span>
+<a id="__codelineno-11-41" name="__codelineno-11-41" href="#__codelineno-11-41"></a><span class="k">def</span><span class="w"> </span><span class="nf">transform_data</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+<a id="__codelineno-11-42" name="__codelineno-11-42" href="#__codelineno-11-42"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Simula a transformação dos dados.&quot;&quot;&quot;</span>
+<a id="__codelineno-11-43" name="__codelineno-11-43" href="#__codelineno-11-43"></a>    <span class="n">logger</span> <span class="o">=</span> <span class="n">get_run_logger</span><span class="p">()</span>
+<a id="__codelineno-11-44" name="__codelineno-11-44" href="#__codelineno-11-44"></a>    <span class="k">with</span> <span class="n">tracer</span><span class="o">.</span><span class="n">start_as_current_span</span><span class="p">(</span><span class="s2">&quot;transform-data-span&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">span</span><span class="p">:</span>
+<a id="__codelineno-11-45" name="__codelineno-11-45" href="#__codelineno-11-45"></a>        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Iniciando transformação de dados...&quot;</span><span class="p">)</span>
+<a id="__codelineno-11-46" name="__codelineno-11-46" href="#__codelineno-11-46"></a>        <span class="n">wait_time</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<a id="__codelineno-11-47" name="__codelineno-11-47" href="#__codelineno-11-47"></a>        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">wait_time</span><span class="p">)</span>
+<a id="__codelineno-11-48" name="__codelineno-11-48" href="#__codelineno-11-48"></a>        <span class="n">transformed_data</span> <span class="o">=</span> <span class="p">[]</span>
+<a id="__codelineno-11-49" name="__codelineno-11-49" href="#__codelineno-11-49"></a>        <span class="k">for</span> <span class="n">record</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+<a id="__codelineno-11-50" name="__codelineno-11-50" href="#__codelineno-11-50"></a>            <span class="n">record</span><span class="p">[</span><span class="s1">&#39;value&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">record</span><span class="p">[</span><span class="s1">&#39;value&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">2</span>
+<a id="__codelineno-11-51" name="__codelineno-11-51" href="#__codelineno-11-51"></a>            <span class="n">transformed_data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">record</span><span class="p">)</span>
+<a id="__codelineno-11-52" name="__codelineno-11-52" href="#__codelineno-11-52"></a>        <span class="n">span</span><span class="o">.</span><span class="n">set_attribute</span><span class="p">(</span><span class="s2">&quot;transformed.records&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">transformed_data</span><span class="p">))</span>
+<a id="__codelineno-11-53" name="__codelineno-11-53" href="#__codelineno-11-53"></a>        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Transformação concluída.&quot;</span><span class="p">)</span>
+<a id="__codelineno-11-54" name="__codelineno-11-54" href="#__codelineno-11-54"></a>        <span class="k">return</span> <span class="n">transformed_data</span>
+<a id="__codelineno-11-55" name="__codelineno-11-55" href="#__codelineno-11-55"></a>
+<a id="__codelineno-11-56" name="__codelineno-11-56" href="#__codelineno-11-56"></a><span class="nd">@task</span>
+<a id="__codelineno-11-57" name="__codelineno-11-57" href="#__codelineno-11-57"></a><span class="k">def</span><span class="w"> </span><span class="nf">load_data</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+<a id="__codelineno-11-58" name="__codelineno-11-58" href="#__codelineno-11-58"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Simula o carregamento dos dados em um destino.&quot;&quot;&quot;</span>
+<a id="__codelineno-11-59" name="__codelineno-11-59" href="#__codelineno-11-59"></a>    <span class="n">logger</span> <span class="o">=</span> <span class="n">get_run_logger</span><span class="p">()</span>
+<a id="__codelineno-11-60" name="__codelineno-11-60" href="#__codelineno-11-60"></a>    <span class="k">with</span> <span class="n">tracer</span><span class="o">.</span><span class="n">start_as_current_span</span><span class="p">(</span><span class="s2">&quot;load-data-span&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">span</span><span class="p">:</span>
+<a id="__codelineno-11-61" name="__codelineno-11-61" href="#__codelineno-11-61"></a>        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Iniciando carregamento de dados...&quot;</span><span class="p">)</span>
+<a id="__codelineno-11-62" name="__codelineno-11-62" href="#__codelineno-11-62"></a>        <span class="n">wait_time</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<a id="__codelineno-11-63" name="__codelineno-11-63" href="#__codelineno-11-63"></a>        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">wait_time</span><span class="p">)</span>
+<a id="__codelineno-11-64" name="__codelineno-11-64" href="#__codelineno-11-64"></a>        <span class="n">span</span><span class="o">.</span><span class="n">set_attribute</span><span class="p">(</span><span class="s2">&quot;loaded.records&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+<a id="__codelineno-11-65" name="__codelineno-11-65" href="#__codelineno-11-65"></a>        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Carregamento concluído. </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="si">}</span><span class="s2"> registros carregados.&quot;</span><span class="p">)</span>
+<a id="__codelineno-11-66" name="__codelineno-11-66" href="#__codelineno-11-66"></a>        <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;success&quot;</span><span class="p">,</span> <span class="s2">&quot;records_loaded&quot;</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)}</span>
+<a id="__codelineno-11-67" name="__codelineno-11-67" href="#__codelineno-11-67"></a>
+<a id="__codelineno-11-68" name="__codelineno-11-68" href="#__codelineno-11-68"></a><span class="nd">@flow</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;ETL com Tracing&quot;</span><span class="p">)</span>
+<a id="__codelineno-11-69" name="__codelineno-11-69" href="#__codelineno-11-69"></a><span class="k">def</span><span class="w"> </span><span class="nf">etl_flow</span><span class="p">():</span>
+<a id="__codelineno-11-70" name="__codelineno-11-70" href="#__codelineno-11-70"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Um flow de ETL simples com tracing integrado.&quot;&quot;&quot;</span>
+<a id="__codelineno-11-71" name="__codelineno-11-71" href="#__codelineno-11-71"></a>    <span class="n">logger</span> <span class="o">=</span> <span class="n">get_run_logger</span><span class="p">()</span>
+<a id="__codelineno-11-72" name="__codelineno-11-72" href="#__codelineno-11-72"></a>    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Iniciando o pipeline de ETL...&quot;</span><span class="p">)</span>
+<a id="__codelineno-11-73" name="__codelineno-11-73" href="#__codelineno-11-73"></a>
+<a id="__codelineno-11-74" name="__codelineno-11-74" href="#__codelineno-11-74"></a>    <span class="n">extracted</span> <span class="o">=</span> <span class="n">extract_data</span><span class="p">()</span>
+<a id="__codelineno-11-75" name="__codelineno-11-75" href="#__codelineno-11-75"></a>    <span class="n">transformed</span> <span class="o">=</span> <span class="n">transform_data</span><span class="p">(</span><span class="n">extracted</span><span class="p">)</span>
+<a id="__codelineno-11-76" name="__codelineno-11-76" href="#__codelineno-11-76"></a>    <span class="n">load_result</span> <span class="o">=</span> <span class="n">load_data</span><span class="p">(</span><span class="n">transformed</span><span class="p">)</span>
+<a id="__codelineno-11-77" name="__codelineno-11-77" href="#__codelineno-11-77"></a>
+<a id="__codelineno-11-78" name="__codelineno-11-78" href="#__codelineno-11-78"></a>    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Pipeline de ETL concluído com sucesso: </span><span class="si">{</span><span class="n">load_result</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-11-79" name="__codelineno-11-79" href="#__codelineno-11-79"></a>    <span class="k">return</span> <span class="n">load_result</span>
+<a id="__codelineno-11-80" name="__codelineno-11-80" href="#__codelineno-11-80"></a>
+<a id="__codelineno-11-81" name="__codelineno-11-81" href="#__codelineno-11-81"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<a id="__codelineno-11-82" name="__codelineno-11-82" href="#__codelineno-11-82"></a>    <span class="n">etl_flow</span><span class="p">()</span>
+</code></pre></div>
+</details>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
+</div></form></div>
+<div class="admonition exercise exercise-self-progress" id="exercise_13">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Crie o <code>requirements.txt</code> para as dependências:</p>
+<div class="language-text copy highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>prefect==3.4.18
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>opentelemetry-api==1.37.0
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>opentelemetry-sdk==1.37.0
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>opentelemetry-exporter-otlp==1.37.0
+</code></pre></div>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
+</div></form></div>
+<div class="admonition exercise exercise-self-progress" id="exercise_14">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Finalmente, crie o <code>Dockerfile</code> para construir a imagem do nosso <code>etl-runner</code>:</p>
+<div class="language-dockerfile copy highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">FROM</span><span class="w"> </span><span class="s">python:3.12-slim</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="k">WORKDIR</span><span class="w"> </span><span class="s">/app</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="k">COPY</span><span class="w"> </span>requirements.txt<span class="w"> </span>.
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="k">RUN</span><span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--no-cache-dir<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="k">COPY</span><span class="w"> </span>etl_flow.py<span class="w"> </span>.
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;python&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;-u&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;etl_flow.py&quot;</span><span class="p">]</span>
+</code></pre></div>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
+</div></form></div>
+<h3 id="executando-e-observando">Executando e Observando</h3>
+<div class="admonition exercise exercise-self-progress" id="exercise_15">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Inicie todos os serviços:</p>
+<div class="termy">
+<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>$ docker compose build
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>$ docker compose up
+</code></pre></div>
+</div>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
+</div></form></div>
+<div class="admonition exercise exercise-self-progress" id="exercise_16">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Aguarde alguns segundos e verifique os logs do <code>etl-runner</code> para ver a execução do flow:</p>
+<div class="termy">
+<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>$ docker logs etl-runner -f
+</code></pre></div>
+</div>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
+</div></form></div>
+<div class="admonition exercise exercise-self-progress" id="exercise_17">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Agora, vamos observar os resultados nas interfaces web:</p>
+<ol>
+<li>
+<p><strong>Prefect UI</strong>: Acesse <a href="http://localhost:4200">http://localhost:4200</a>.</p>
+<ul>
+<li>Vá para a aba <strong>Flow Runs</strong>. Você deve ver a execução do <code>ETL com Tracing</code>.</li>
+<li>Clique na execução para ver o <strong>DAG</strong>, os logs de cada tarefa e os tempos de execução.</li>
+</ul>
+</li>
+<li>
+<p><strong>Jaeger UI</strong>: Acesse <a href="http://localhost:16686">http://localhost:16686</a>.</p>
+<ul>
+<li>No menu <strong>Search</strong>, selecione o serviço <code>prefect-etl-service</code>.</li>
+<li>Clique em <strong>Find Traces</strong>. Você verá o <em>trace</em> da sua execução de ETL.</li>
+<li>Clique no <em>trace</em> para ver o detalhamento.</li>
+</ul>
+</li>
+</ol>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
+</div></form></div>
+<div class="admonition exercise exercise-self-progress" id="exercise_18">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Com as duas UIs abertas lado a lado, analise a execução:</p>
+<ul>
+<li>No <strong>Prefect</strong>, você vê a estrutura lógica do <em>flow</em> e o status (sucesso, falha).</li>
+<li>No <strong>Jaeger</strong>, você vê a performance real, com um gráfico de Gantt mostrando exatamente onde o tempo foi gasto.</li>
+</ul>
+<p>Como a combinação dessas duas ferramentas fornece uma visão mais completa do que cada uma individualmente? Em que cenário o Jaeger seria mais útil? E o Prefect?</p>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
+</div></form></div>
+<h3 id="limpeza_1">Limpeza</h3>
+<div class="admonition exercise exercise-self-progress" id="exercise_19">
+<p class="admonition-title">Exercício</p>
+<form class="quiz-form"><p>Quando terminar, pare e remova os contêineres:</p>
+<div class="termy">
+<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>$ docker compose down -v
+</code></pre></div>
+</div>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
+</div></form></div>
 <script type="text/javascript">
 // Sistema de processamento de exercícios de múltipla escolha
 function processChoiceExercises() {
@@ -4886,7 +4827,7 @@ document.addEventListener('click', function(e) {
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../intro-data-modeling/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Modelagem de Dados">
+          <a href="../logging/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Logs com Loki">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -4896,20 +4837,20 @@ document.addEventListener('click', function(e) {
                 Previous
               </span>
               <div class="md-ellipsis">
-                Modelagem de Dados
+                Logs com Loki
               </div>
             </div>
           </a>
         
         
           
-          <a href="../star-schema/" class="md-footer__link md-footer__link--next" aria-label="Next: Star Schema">
+          <a href="../references/" class="md-footer__link md-footer__link--next" aria-label="Next: Referências">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Star Schema
+                Referências
               </div>
             </div>
             <div class="md-footer__button md-icon">
