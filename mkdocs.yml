@@ -58,19 +58,19 @@ nav:
     - 09 - Data Lakes:
       - classes/09-data-lakes/intro-data-lakes.md
       - classes/09-data-lakes/aws-glue.md
-    #   - 10 - Data Lakehouse:
-    #       - classes/10-data-lakehouse/intro-data-lakehouse.md
-    #       - classes/10-data-lakehouse/minio.md
-    #       - classes/10-data-lakehouse/iceberg.md
-    #       - classes/10-data-lakehouse/trino.md
-    #       - classes/10-data-lakehouse/references.md
-    #   - 11 - Observabilidade:
-    #       - classes/11-observability/intro-observability.md
-    #       - classes/11-observability/prometheus.md
-    #       - classes/11-observability/grafana.md
-    #       - classes/11-observability/logging.md
-    #       - classes/11-observability/tracing.md
-    #       - classes/11-observability/references.md
+    - 10 - Observabilidade:
+      - classes/10-observability/intro-observability.md
+      - classes/10-observability/prometheus.md
+      - classes/10-observability/grafana.md
+      - classes/10-observability/logging.md
+      - classes/10-observability/tracing.md
+      - classes/10-observability/references.md
+    # - 11 - Data Lakehouse:
+    #   - classes/11-data-lakehouse/intro-data-lakehouse.md
+    #   - classes/11-data-lakehouse/minio.md
+    #   - classes/11-data-lakehouse/iceberg.md
+    #   - classes/11-data-lakehouse/trino.md
+    #   - classes/11-data-lakehouse/references.md
     #   - 12 - Orquestração:
     #       - Parte I:
     #           - classes/12-orchestration-airflow/intro-airflow.md
