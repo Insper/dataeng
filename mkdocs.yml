@@ -65,18 +65,18 @@ nav:
       - classes/10-observability/logging.md
       - classes/10-observability/tracing.md
       - classes/10-observability/references.md
-    # - 11 - Data Lakehouse:
-    #   - classes/11-data-lakehouse/intro-data-lakehouse.md
-    #   - classes/11-data-lakehouse/minio.md
-    #   - classes/11-data-lakehouse/iceberg.md
-    #   - classes/11-data-lakehouse/trino.md
-    #   - classes/11-data-lakehouse/references.md
-    #   - 12 - Orquestração:
-    #       - Parte I:
-    #           - classes/12-orchestration-airflow/intro-airflow.md
-    #           - classes/12-orchestration-airflow/pratica-airflow.md
-    #       - Parte II:
-    #           - classes/12-orchestration-airflow/airflow-emr.md
+    - 11 - Orquestração:
+      - Parte I:
+        - classes/11-orchestration-airflow/intro-airflow.md
+        - classes/11-orchestration-airflow/pratica-airflow.md
+      # - Parte II:
+      #   - classes/11-orchestration-airflow/airflow-emr.md
+    # - 12 - Data Lakehouse:
+    #   - classes/12-data-lakehouse/intro-data-lakehouse.md
+    #   - classes/12-data-lakehouse/minio.md
+    #   - classes/12-data-lakehouse/iceberg.md
+    #   - classes/12-data-lakehouse/trino.md
+    #   - classes/12-data-lakehouse/references.md
     #   - 13 - Databricks:
     #       - Parte I:
     #           - classes/13-databricks/intro-paas.md
