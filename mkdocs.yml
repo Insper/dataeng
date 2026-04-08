@@ -69,11 +69,11 @@ nav:
       - Parte I:
         - classes/11-orchestration-airflow/intro-airflow.md
         - classes/11-orchestration-airflow/pratica-airflow.md
-      # - Parte II:
-      #   - classes/11-orchestration-airflow/airflow-emr.md
+      - Parte II:
+        - classes/11-orchestration-airflow/airflow-emr.md
     # - 12 - Data Lakehouse:
     #   - classes/12-data-lakehouse/intro-data-lakehouse.md
-    #   - classes/12-data-lakehouse/minio.md
+    #   - classes/12-data-lakehouse/seaweedfs.md
     #   - classes/12-data-lakehouse/iceberg.md
     #   - classes/12-data-lakehouse/trino.md
     #   - classes/12-data-lakehouse/references.md
