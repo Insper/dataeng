@@ -71,12 +71,12 @@ nav:
         - classes/11-orchestration-airflow/pratica-airflow.md
       - Parte II:
         - classes/11-orchestration-airflow/airflow-emr.md
-    # - 12 - Data Lakehouse:
-    #   - classes/12-data-lakehouse/intro-data-lakehouse.md
-    #   - classes/12-data-lakehouse/seaweedfs.md
-    #   - classes/12-data-lakehouse/iceberg.md
-    #   - classes/12-data-lakehouse/trino.md
-    #   - classes/12-data-lakehouse/references.md
+    - 12 - Data Lakehouse:
+      - classes/12-data-lakehouse/intro-data-lakehouse.md
+      - classes/12-data-lakehouse/seaweedfs.md
+      - classes/12-data-lakehouse/iceberg.md
+      - classes/12-data-lakehouse/trino.md
+      - classes/12-data-lakehouse/references.md
     #   - 13 - Databricks:
     #       - Parte I:
     #           - classes/13-databricks/intro-paas.md
