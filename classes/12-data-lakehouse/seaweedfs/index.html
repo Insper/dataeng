@@ -13,10 +13,10 @@
       
       
       
-        <link rel="prev" href="../../01-intro/processar/">
+        <link rel="prev" href="../intro-data-lakehouse/">
       
       
-        <link rel="next" href="../filas/">
+        <link rel="next" href="../iceberg/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Relembrar - Engenharia de Dados</title>
+        <title>SeaweedFS - Engenharia de Dados</title>
       
     
     
@@ -81,7 +81,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#relembrar" class="md-skip">
+        <a href="#seaweedfs" class="md-skip">
           Skip to content
         </a>
       
@@ -117,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Relembrar
+              SeaweedFS
             
           </span>
         </div>
@@ -667,10 +667,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -693,11 +691,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
         
           
           <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
@@ -713,7 +711,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
             02 - Filas e Containers
@@ -724,32 +722,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Relembrar
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../02-docker-filas/relembrar-ciclo/" class="md-nav__link">
         
   
   
@@ -760,44 +736,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#ingestao-push-based" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ingestão Push-based
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ingestao-pull-based" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ingestão Pull-based
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -810,7 +748,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../filas/" class="md-nav__link">
+      <a href="../../02-docker-filas/filas/" class="md-nav__link">
         
   
   
@@ -833,7 +771,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker/" class="md-nav__link">
+      <a href="../../02-docker-filas/docker/" class="md-nav__link">
         
   
   
@@ -856,7 +794,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../rabbitmq/" class="md-nav__link">
+      <a href="../../02-docker-filas/rabbitmq/" class="md-nav__link">
         
   
   
@@ -879,7 +817,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../programar-sensores/" class="md-nav__link">
+      <a href="../../02-docker-filas/programar-sensores/" class="md-nav__link">
         
   
   
@@ -902,7 +840,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../programar-pipeline/" class="md-nav__link">
+      <a href="../../02-docker-filas/programar-pipeline/" class="md-nav__link">
         
   
   
@@ -2501,8 +2439,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -2523,11 +2463,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_12" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_12" checked>
         
           
           <label class="md-nav__link" for="__nav_2_12" id="__nav_2_12_label" tabindex="0">
@@ -2543,7 +2483,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_12_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_12_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_12">
             <span class="md-nav__icon md-icon"></span>
             12 - Data Lakehouse
@@ -2557,7 +2497,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../12-data-lakehouse/intro-data-lakehouse/" class="md-nav__link">
+      <a href="../intro-data-lakehouse/" class="md-nav__link">
         
   
   
@@ -2577,10 +2517,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../12-data-lakehouse/seaweedfs/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    SeaweedFS
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -2591,6 +2553,62 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#preparar-ambiente" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preparar ambiente
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracao-de-credenciais" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuração de credenciais
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker-compose" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker compose
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#remover-containers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Remover containers
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2603,7 +2621,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../12-data-lakehouse/iceberg/" class="md-nav__link">
+      <a href="../iceberg/" class="md-nav__link">
         
   
   
@@ -2626,7 +2644,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../12-data-lakehouse/trino/" class="md-nav__link">
+      <a href="../trino/" class="md-nav__link">
         
   
   
@@ -2649,7 +2667,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../12-data-lakehouse/references/" class="md-nav__link">
+      <a href="../references/" class="md-nav__link">
         
   
   
@@ -2926,18 +2944,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#ingestao-push-based" class="md-nav__link">
+  <a href="#preparar-ambiente" class="md-nav__link">
     <span class="md-ellipsis">
-      Ingestão Push-based
+      Preparar ambiente
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ingestao-pull-based" class="md-nav__link">
+  <a href="#configuracao-de-credenciais" class="md-nav__link">
     <span class="md-ellipsis">
-      Ingestão Pull-based
+      Configuração de credenciais
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker-compose" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker compose
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#remover-containers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Remover containers
     </span>
   </a>
   
@@ -3376,156 +3412,176 @@ body {
   }
 }
 </style>
-<h1 id="relembrar">Relembrar</h1>
-<p>Em nossa primeira aula, exploramos a definição de engenharia de dados e os principais profissionais técnicos da área</p>
-<p>Um dos principais conceitos discutidos foi o ciclo de vida de engenharia de dados, você se lembra dele?!</p>
-<div class="admonition exercise text long exercise-long" id="exercise_1">
+<h1 id="seaweedfs">SeaweedFS</h1>
+<p>Iremos utilizar o <strong>SeaweedFS</strong> como nosso sistema de armazenamento de objetos (<em>object storage</em>) para o <strong>Data Lakehouse</strong>.</p>
+<p>O <strong>SeaweedFS</strong> é um sistema de armazenamento compatível com a API do AWS S3, que pode ser executado localmente.</p>
+<h2 id="preparar-ambiente">Preparar ambiente</h2>
+<div class="admonition exercise exercise-self-progress" id="exercise_1">
 <p class="admonition-title">Exercise</p>
-<form class="quiz-form"><p>Quais eram os principais componentes do ciclo de vida de engenharia de dados?</p>
+<form class="quiz-form"><p>Crie uma pasta <code>12-data-lakehouse/01-seaweedfs</code> em seu diretório de trabalho e navegue até ela:</p>
+<div class="termy">
+<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>$ mkdir -p 12-data-lakehouse/01-seaweedfs
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>$ cd 12-data-lakehouse/01-seaweedfs
+</code></pre></div>
+</div>
 <div class="form-elements">
-<div class="quiz-text-container">
-
-<textarea name="data" class="quiz-text-input" 
-          placeholder="Enter your detailed answer..." rows="4"></textarea>
-
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
 </div>
-<button class="quiz-submit-button" type="submit">Submit</button>
-</div></form><div class="admonition answer quiz-answer no-indent">
-<p class="admonition-title">Answer</p>
-<p><strong>Ingestão</strong>, <strong>Transformação</strong> e <strong>Disponibilização</strong>.</p>
-<pre class="mermaid"><code>flowchart LR
-
-%% Plataforma principal
-subgraph PD[Plataforma de Dados]
-    direction LR
-
-    G[Geração]
-
-    %% Linha horizontal de entrada + pipeline
-    subgraph LINE[Armazenamento]
-    direction LR
-    I[Ingestão]
-    T[Transformação]
-    S[Disponibilização]
-    I --&gt; T --&gt; S
-    end
-
-    %% Saídas diretas (à direita)
-    ML[Aprendizado de Máquina]
-    AN[Análises]
-    REP[Dashboards]
-
-    G --&gt; I
-    S --&gt; ML
-    S --&gt; AN
-    S --&gt; REP
-end
-
-%% Estilos adaptados para light e dark mode
-classDef gen fill:#64748b,stroke:#475569,color:#ffffff,stroke-width:2px;
-classDef stage fill:#0891b2,stroke:#0e7490,color:#ffffff,stroke-width:2px;
-classDef trans fill:#8b5cf6,stroke:#7c3aed,color:#ffffff,stroke-width:2px;
-classDef serve fill:#10b981,stroke:#059669,color:#ffffff,stroke-width:2px;
-classDef out fill:#f59e0b,stroke:#d97706,color:#ffffff,stroke-width:2px;
-
-class G gen;
-class I stage;
-class T trans;
-class S serve;
-class ML,AN,REP out;</code></pre>
-</div>
-</div>
-<p>No final da aula, fizemos um <em>warm up</em>, onde fizemos a leitura de dados do serviço <strong>S3</strong> (<em>Amazon Simple Storage Service</em>) da <strong>AWS</strong> (<strong>Amazon Web Services</strong>). Os dados passaram por uma definição de <em>schema</em> e posterior escrita no próprio <strong>S3</strong>.</p>
-<div class="admonition exercise text long exercise-long" id="exercise_2">
+</div></form></div>
+<h2 id="configuracao-de-credenciais">Configuração de credenciais</h2>
+<p>O <strong>SeaweedFS</strong> utiliza um arquivo de configuração JSON para definir os usuários e suas credenciais de acesso à API S3.</p>
+<p>Crie o arquivo <code>seaweedfs-s3.json</code> com o seguinte conteúdo:</p>
+<div class="language-json copy highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">&quot;identities&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;admin&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">      </span><span class="nt">&quot;credentials&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">        </span><span class="p">{</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">          </span><span class="nt">&quot;accessKey&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;admin&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">          </span><span class="nt">&quot;secretKey&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;password&quot;</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">      </span><span class="p">],</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">      </span><span class="nt">&quot;actions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Admin&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Read&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;List&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Tagging&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Write&quot;</span><span class="p">]</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">  </span><span class="p">]</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="p">}</span>
+</code></pre></div>
+<h2 id="docker-compose">Docker compose</h2>
+<p>Vamos utilizar o Docker Compose para facilitar a execução do <strong>SeaweedFS</strong>.</p>
+<p>O arquivo <code>docker-compose.yml</code> deve conter:</p>
+<div class="language-yaml copy highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">services</span><span class="p">:</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="nt">master</span><span class="p">:</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">chrislusf/seaweedfs:4.19</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">seaweedfs-master-intro</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="nt">networks</span><span class="p">:</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">      </span><span class="nt">iceberg_net</span><span class="p">:</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">9333:9333</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">    </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;master</span><span class="nv"> </span><span class="s">-ip=master&quot;</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">  </span><span class="nt">volume</span><span class="p">:</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">chrislusf/seaweedfs:4.19</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">seaweedfs-volume-intro</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">    </span><span class="nt">networks</span><span class="p">:</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">      </span><span class="nt">iceberg_net</span><span class="p">:</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8090:8080</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="w">    </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;volume</span><span class="nv"> </span><span class="s">-mserver=master:9333</span><span class="nv"> </span><span class="s">-port=8080&quot;</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="w">    </span><span class="nt">depends_on</span><span class="p">:</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">master</span>
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="w">  </span><span class="nt">filer</span><span class="p">:</span>
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">chrislusf/seaweedfs:4.19</span>
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">seaweedfs-filer-intro</span>
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="w">    </span><span class="nt">networks</span><span class="p">:</span>
+<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a><span class="w">      </span><span class="nt">iceberg_net</span><span class="p">:</span>
+<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a><span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8889:8888</span>
+<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8333:8333</span>
+<a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./seaweedfs-s3.json:/etc/seaweedfs/s3.json:ro</span>
+<a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a><span class="w">    </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;filer</span><span class="nv"> </span><span class="s">-master=master:9333</span><span class="nv"> </span><span class="s">-s3</span><span class="nv"> </span><span class="s">-s3.config=/etc/seaweedfs/s3.json&quot;</span>
+<a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a><span class="w">    </span><span class="nt">depends_on</span><span class="p">:</span>
+<a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">master</span>
+<a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">volume</span>
+<a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a>
+<a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a><span class="nt">networks</span><span class="p">:</span>
+<a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a><span class="w">  </span><span class="nt">iceberg_net</span><span class="p">:</span>
+</code></pre></div>
+<div class="admonition exercise exercise-self-progress" id="exercise_2">
 <p class="admonition-title">Exercise</p>
-<form class="quiz-form"><p>Como o <em>script</em> final do seu <em>warm up</em> se relaciona com o ciclo de vida de engenharia de dados? Existiam seções de código que realizaram tarefas relativas a cada etapa do ciclo?</p>
+<form class="quiz-form"><p>Crie os arquivos <code>seaweedfs-s3.json</code> e <code>docker-compose.yml</code> e inicialize com:</p>
+<div class="termy">
+<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>$ docker compose up
+</code></pre></div>
+</div>
 <div class="form-elements">
-<div class="quiz-text-container">
-
-<textarea name="data" class="quiz-text-input" 
-          placeholder="Enter your detailed answer..." rows="4"></textarea>
-
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
 </div>
-<button class="quiz-submit-button" type="submit">Submit</button>
-</div></form><div class="admonition answer quiz-answer no-indent">
-<p class="admonition-title">Answer</p>
-<p>O script percorre as três etapas:</p>
-<ol>
-<li>
-<p><strong>Ingestão</strong>: realizada ao <strong>ler dados</strong> do <em>bucket</em> <strong>S3</strong>.  </p>
-</li>
-<li>
-<p><strong>Transformação</strong>: ao definir um <strong>schema</strong> (tipos de dados, nomes de colunas). Mesmo que não haja cálculos complexos, normalizações ou junções, a simples conversão e padronização de tipos é parte da transformação.</p>
-</li>
-<li>
-<p><strong>Disponibilização (Serving)</strong>: ao <strong>escrever no **S3</strong> em formato Parquet**, disponibilizamos os dados em um formato otimizado para consulta e processamento posterior (exemplo: ferramentas analíticas).</p>
-</li>
-</ol>
-</div>
-</div>
-<p>Nosso <a href="../../01-intro/warmup/"><em>warm up</em></a> da aula passada Serviu como um exemplo prático de como os dados podem ser ingeridos, transformados e disponibilizados em um fluxo de trabalho simples de engenharia de dados.</p>
-<p>Entretanto, é importante notar que começamos com uma representação bem simplista.</p>
-<p>Por exemplo, a etapa de <strong>ingestão</strong> foi representada apenas pela leitura de dados do <strong>S3</strong>, mas na prática, ela pode envolver uma variedade de fontes e métodos de coleta de dados, como APIs, bancos de dados, arquivos CSV, entre outros. Raramente teremos apenas poucos arquivos e raramente eles serão estáticos.</p>
-<p>Em cenários de <em>Big Data</em> <span class="twemoji" title="Big data é um conjunto de práticas, tecnologias e conceitos voltados para o tratamento de volumes massivos de dados, gerados em alta velocidade e em formatos variados, que ultrapassam a capacidade das ferramentas tradicionais de processamento. Seu objetivo é extrair valor a partir dessas informações, garantindo qualidade, confiabilidade e utilidade para apoiar a tomada de decisões estratégicas. O conceito é frequentemente caracterizado pelos cinco Vs: Volume, Velocidade, Variedade, Veracidade e Valor."><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 9h2V7h-2m1 13c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-1 15h2v-6h-2z"/></svg></span>, os dados tendem a ser gerados continuamente, em grandes volumes e a partir de múltiplas origens, como sensores IoT, registros de transações, redes sociais, sistemas corporativos e fluxos de <em>streaming</em>. Além disso, a natureza dinâmica e heterogênea dessas fontes exige que a ingestão seja capaz de lidar com dados estruturados, semiestruturados e não estruturados, frequentemente em tempo real.</p>
-<div class="admonition note">
-<p class="admonition-title">Os cinco <strong>Vs</strong> do <em>Big Data</em>:</p>
-<ol>
-<li><strong>Volume</strong> – Quantidade massiva de dados gerados.</li>
-<li><strong>Velocidade</strong> – Rapidez com que os dados são gerados, processados e analisados.</li>
-<li><strong>Variedade</strong> – Diversidade de formatos e fontes dos dados.</li>
-<li><strong>Veracidade</strong> – Confiabilidade e qualidade das informações.</li>
-<li><strong>Valor</strong> – Utilidade e relevância dos dados para gerar insights.</li>
-</ol>
-</div>
-<p>Ao final do curso, nosso objetivo é capacitar você a lidar com esses desafios e a construir soluções de engenharia de dados que sejam escaláveis, eficientes e capazes de extrair valor real dos dados. Começaremos com cenários mais simples e controlados, mas gradualmente avançaremos para situações mais complexas e realistas.</p>
-<div class="admonition exercise choice exercise-choice" data-answer-idx="1" id="exercise_1">
-<p class="admonition-title">Question</p>
-<form class="quiz-form"><p>Então a <strong>ingestão</strong> de dados envolverá, necessariamente, que algum <em>script</em> seja ativado e faça a leitura de dados de alguma fonte (como o <strong>S3</strong>)?</p>
+</div></form></div>
+<div class="admonition exercise exercise-self-progress" id="exercise_3">
+<p class="admonition-title">Exercise</p>
+<form class="quiz-form"><p>Com o serviço inicializado, acesse a URL <a href="http://localhost:9333">http://localhost:9333</a> em seu navegador para ver o painel de administração do <strong>SeaweedFS</strong>.</p>
 <div class="form-elements">
-<div class="quiz-alternative-set">
-  
-<label class="quiz-alternative" data-alt-index="0">
-  <div class="content">
-    <input type="hidden" name="data" value="">
-    <span class="choice-text">Sim</span>
-  </div>
-</label>
-
-<label class="quiz-alternative" data-alt-index="1">
-  <div class="content">
-    <input type="hidden" name="data" value="">
-    <span class="choice-text">Não</span>
-  </div>
-</label>
-
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
 </div>
-<button class="quiz-submit-button" type="submit">Submit</button>
-</div></form><div class="admonition answer quiz-answer no-indent">
-<p class="admonition-title">Answer</p>
-<p>Não, veremos na sequência!</p>
+</div></form></div>
+<div class="admonition exercise exercise-self-progress" id="exercise_4">
+<p class="admonition-title">Exercise</p>
+<form class="quiz-form"><p>Agora acessa a URL <a href="http://localhost:8889">http://localhost:8889</a> para acessar o painel do <strong>Filer</strong> do <strong>SeaweedFS</strong>.</p>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
 </div>
+</div></form></div>
+<div class="admonition exercise exercise-self-progress" id="exercise_5">
+<p class="admonition-title">Exercise</p>
+<form class="quiz-form"><p>Vamos criar buckets para representar a arquitetura medallion, vista na aula passada.</p>
+<p>Utilize a <strong>AWS CLI</strong> para criar os buckets. Primeiro, configure as variáveis de ambiente:</p>
+<div class="termy">
+<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>$ export AWS_ACCESS_KEY_ID=admin
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>$ export AWS_SECRET_ACCESS_KEY=password
+</code></pre></div>
 </div>
-<p>Em <strong>engenharia de dados</strong>, a ingestão pode funcionar seguindo um padrão:</p>
-<ul>
-<li><strong>Push</strong> (a ingestão é chamada): a fonte <strong>envia</strong> dados para você.</li>
-<li><strong>Pull</strong> (a ingestão chama a fonte): ocorre a <strong>busca</strong> de dados na fonte.</li>
-<li><strong>Híbrido</strong>: mistura os dois.</li>
-</ul>
-<h2 id="ingestao-push-based">Ingestão <strong>Push-based</strong></h2>
-<p>Neste formato de ingestão, a fonte <strong>empurra</strong> eventos/dados para um <em>endpoint</em> seu. Este modelo é particularmente bom para cenários de <strong>tempo real</strong>.</p>
-<p><strong>Analogia</strong>: notificações no celular (você <strong>não pede</strong>, elas chegam).</p>
-<div class="admonition example">
-<p class="admonition-title">Exemplo</p>
-<p>Lembra do <strong>Webhook</strong> configurado para as correções das atividades de <em>SisHard</em>?</p>
-<p>As criações de <em>tag</em> batem no <em>endpoint</em> do servidor de correção como um <em>JSON</em>.</p>
+<p>Em seguida, crie os buckets:</p>
+<div class="termy">
+<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>$ aws --endpoint-url http://localhost:8333 s3 mb s3://bronze --region us-east-1
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>$ aws --endpoint-url http://localhost:8333 s3 mb s3://silver --region us-east-1
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>$ aws --endpoint-url http://localhost:8333 s3 mb s3://gold --region us-east-1
+</code></pre></div>
 </div>
-<h2 id="ingestao-pull-based">Ingestão <strong>Pull-based</strong></h2>
-<p>Segundo este formato, o pipeline ou script <strong>consulta</strong>/<strong>baixa</strong> dados periodicamente. Este é um formato adequado para processamento em lotes (iremos abordar isso mais adiante) e integrações com sistemas legados.</p>
-<p><strong>Analogia</strong>: checar e-mail manualmente, uma vez que você <strong>vai lá e busca</strong>.</p>
-<div class="admonition example">
-<p class="admonition-title">Exemplo</p>
-<p>Um <em>script</em> diário que lê um banco de dados e grava no <strong>S3</strong></p>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
 </div>
+</div></form></div>
+<div class="admonition exercise exercise-self-progress" id="exercise_6">
+<p class="admonition-title">Exercise</p>
+<form class="quiz-form"><p>Faça uploads de um ou mais arquivos <strong>CSV</strong> para testes:</p>
+<div class="termy">
+<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>$ aws --endpoint-url http://localhost:8333 s3 cp meu_arquivo.csv s3://bronze/
+</code></pre></div>
+</div>
+<p>Verifique o upload listando o conteúdo do bucket:</p>
+<div class="termy">
+<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>$ aws --endpoint-url http://localhost:8333 s3 ls s3://bronze/
+</code></pre></div>
+</div>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
+</div></form></div>
+<div class="admonition exercise exercise-self-progress" id="exercise_7">
+<p class="admonition-title">Exercise</p>
+<form class="quiz-form"><p>Volte para a URL <a href="http://localhost:8889">http://localhost:8889</a> e confira se o arquivo adicionado está visível.</p>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
+</div></form></div>
+<h2 id="remover-containers">Remover containers</h2>
+<div class="admonition exercise exercise-self-progress" id="exercise_8">
+<p class="admonition-title">Exercise</p>
+<form class="quiz-form"><p>Para parar e remover os containers, utilize:</p>
+<div class="termy">
+<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>$ docker compose down
+</code></pre></div>
+</div>
+<div class="form-elements">
+<div class="quiz-self-progress">
+<input type="hidden" name="data" value="done" />
+<button class="quiz-submit-button" type="submit">Mark as done</button>
+</div>
+</div></form></div>
 <script type="text/javascript">
 // Sistema de processamento de exercícios de múltipla escolha
 function processChoiceExercises() {
@@ -4617,7 +4673,7 @@ document.addEventListener('click', function(e) {
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../01-intro/processar/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Explorar Alternativas">
+          <a href="../intro-data-lakehouse/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Data Lakehouse">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -4627,20 +4683,20 @@ document.addEventListener('click', function(e) {
                 Previous
               </span>
               <div class="md-ellipsis">
-                Explorar Alternativas
+                Data Lakehouse
               </div>
             </div>
           </a>
         
         
           
-          <a href="../filas/" class="md-footer__link md-footer__link--next" aria-label="Next: Exemplo: Sensores">
+          <a href="../iceberg/" class="md-footer__link md-footer__link--next" aria-label="Next: Apache Iceberg">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Exemplo: Sensores
+                Apache Iceberg
               </div>
             </div>
             <div class="md-footer__button md-icon">
