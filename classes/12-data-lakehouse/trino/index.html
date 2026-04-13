@@ -3411,7 +3411,7 @@ body {
 <h2 id="configuracao">Configuração</h2>
 <p>Vamos atualizar o <code>docker-compose.yml</code> que utilizamos para o Iceberg, adicionando o serviço do Trino:</p>
 <div class="language-yaml copy highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w">  </span><span class="nt">trino</span><span class="p">:</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">trinodb/trino:latest</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">trinodb/trino:480</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">trino</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nt">depends_on</span><span class="p">:</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rest</span>
@@ -3479,7 +3479,7 @@ body {
 </div></form></div>
 <div class="admonition exercise exercise-self-progress" id="exercise_4">
 <p class="admonition-title">Exercise</p>
-<form class="quiz-form"><p>Crie uma nota aba de <strong>SQL script</strong> e execute algumas <em>queries</em> nas tabelas que você criou no Iceberg!</p>
+<form class="quiz-form"><p>Crie uma nova aba de <strong>SQL script</strong> e execute algumas <em>queries</em> nas tabelas que você criou no Iceberg!</p>
 <div class="language-sql copy highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">iceberg</span><span class="p">.</span><span class="n">nyc</span><span class="p">.</span><span class="n">taxis</span>
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="k">LIMIT</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
