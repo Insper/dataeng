@@ -60,7 +60,6 @@ services:
   spark-iceberg:
     image: tabulario/spark-iceberg
     container_name: spark-iceberg
-    build: spark/
     networks:
       iceberg_net:
     depends_on:
@@ -183,7 +182,7 @@ volumes:
         4. **seaweedfs-init**: Este serviço utiliza a **AWS CLI** para criar e configurar o bucket `warehouse` no **SeaweedFS**.
 
 !!! exercise
-    A partir da pasta raiz da aula, crie um arquivo `spark/conf/spark-defaults.conf` com o seguinte conteúdo:
+    A partir da pasta `12-data-lakehouse/02-iceberg`, crie um arquivo `spark/conf/spark-defaults.conf` com o seguinte conteúdo:
 
     !!! warning "Atenção!"
         Crie as pastas necessárias!
@@ -205,7 +204,7 @@ volumes:
     ```
 
 !!! exercise
-    A partir da pasta raiz da aula, crie um arquivo `seaweedfs-s3.json` com as credenciais de acesso:
+    A partir da pasta `12-data-lakehouse/02-iceberg`, crie um arquivo `seaweedfs-s3.json` com as credenciais de acesso:
 
     ```json { .copy }
     {
@@ -297,7 +296,7 @@ Vamos utilizar o **PyIceberg** para criar e manipular tabelas no Iceberg.
     Execute os códigos do notebook. Se tiver dúvidas, chame o professor.
 
 !!! exercise
-    Acesse a URL do **SeaweedFS** [http://localhost:8333](http://localhost:8333) para verificar os arquivos disponíveis no bucket `warehouse`.
+    Acesse a URL do **SeaweedFS** [http://localhost:8889](http://localhost:8889) para verificar os arquivos disponíveis no bucket `warehouse`.
 
 Acesse o servidor **Jupyter Notebook** no endereço [http://localhost:8888](http://localhost:8888). Você irá encontrar vários notebooks de exemplo para explorar o **Iceberg**!
 

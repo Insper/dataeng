@@ -22,7 +22,7 @@ Vamos atualizar o `docker-compose.yml` que utilizamos para o Iceberg, adicionand
 
 ```yaml { .copy }
   trino:
-    image: trinodb/trino:latest
+    image: trinodb/trino:480
     container_name: trino
     depends_on:
       - rest
@@ -81,7 +81,7 @@ Acesse o **DBeaver** e crie uma nova conexão com o banco de dados **Trino**.
     Teste a conexão e salve.
 
 !!! exercise
-    Crie uma nota aba de **SQL script** e execute algumas *queries* nas tabelas que você criou no Iceberg!
+    Crie uma nova aba de **SQL script** e execute algumas *queries* nas tabelas que você criou no Iceberg!
 
     ```sql { .copy }
     SELECT *

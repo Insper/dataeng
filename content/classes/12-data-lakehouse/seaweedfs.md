@@ -103,7 +103,7 @@ networks:
     Com o serviço inicializado, acesse a URL [http://localhost:9333](http://localhost:9333) em seu navegador para ver o painel de administração do **SeaweedFS**.
 
 !!! exercise
-    Agora acessa a URL [http://localhost:8889](http://localhost:8889) para acessar o painel do **Filer** do **SeaweedFS**.
+    Agora acesse a URL [http://localhost:8889](http://localhost:8889) para acessar o painel do **Filer** do **SeaweedFS**.
 
 !!! exercise
     Vamos criar buckets para representar a arquitetura medallion, vista na aula passada.
