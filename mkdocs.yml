@@ -77,11 +77,11 @@ nav:
       - classes/12-data-lakehouse/iceberg.md
       - classes/12-data-lakehouse/trino.md
       - classes/12-data-lakehouse/references.md
-    #   - 13 - Databricks:
-    #       - Parte I:
-    #           - classes/13-databricks/intro-paas.md
-    #           - classes/13-databricks/intro-databricks.md
-    #           - classes/13-databricks/databricks-pratica.md
+    - 13 - Databricks:
+      - Parte I:
+        - classes/13-databricks/intro-paas.md
+        - classes/13-databricks/intro-databricks.md
+        - classes/13-databricks/databricks-pratica.md
     #       - Parte II:
     #           - classes/13-databricks/databricks-aws-setup.md
     #           - classes/13-databricks/databricks-etl.md
