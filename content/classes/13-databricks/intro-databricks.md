@@ -30,7 +30,7 @@ A proposta do **Databricks** é fornecer uma solução única e integrada que at
 
 ## A Arquitetura Lakehouse
 
-O conceito central por trás do **Databricks** é o [**Lakehouse**](../10-data-lakehouse/intro-data-lakehouse.md).
+O conceito central por trás do **Databricks** é o [**Lakehouse**](../12-data-lakehouse/intro-data-lakehouse.md).
 
 Como vimos em aulas anteriores, os **Data Warehouses** são excelentes para **BI** e análises estruturadas, mas são caros e inflexíveis para dados não estruturados.
 

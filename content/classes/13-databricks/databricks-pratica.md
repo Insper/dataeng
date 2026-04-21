@@ -45,9 +45,11 @@ Vamos explorar o catálogo de dados disponível no ambiente.
 
         ![](databricks-catalog-sfbikeshare-sample-data.png)
 
-        Clique em **Select compute** e selecione o *cluster* já iniciado.
+        Clique em **Select compute** e selecione o modo **Serverless**.
 
-        ![](databricks-catalog-sfbikeshare-attach-cluster.png)
+        <!-- Clique em **Select compute** e selecione o *cluster* já iniciado. -->
+
+        <!-- ![](databricks-catalog-sfbikeshare-attach-cluster.png) -->
 
 !!! exercise "Exercicio"
     Explore as tabelas disponíveis no catálogo.
