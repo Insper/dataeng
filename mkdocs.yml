@@ -85,8 +85,8 @@ nav:
       - Parte II:
         - classes/13-databricks/databricks-aws-setup.md
         - classes/13-databricks/databricks-etl.md
-    #   - 14 - Entrevista 02:
-    #       - classes/14-interview02/int02.md
+    - 14 - Entrevista 02:
+      - classes/14-interview02/int02.md
     #   - 15 - SGBDR - Performance:
     #       - Parte I:
     #           - classes/15-query-opt/intro.md
@@ -112,8 +112,8 @@ nav:
     - 08 - Entrevista 01:
       - classes/08-interview-01/faq.md
       - classes/08-interview-01/int01.md
-  #       - 14 - Entrevista 02:
-  #           - classes/14-interview02/int02.md
+    - 14 - Entrevista 02:
+      - classes/14-interview02/int02.md
   #       - 17 - Entrevista 03:
   #           - classes/17-interview03/pre-interview1.md
   #           - classes/17-interview03/pre-interview2.md
