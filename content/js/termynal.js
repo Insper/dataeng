@@ -33,9 +33,9 @@
          this.originalStartDelay = this.startDelay = options.startDelay
              || parseFloat(this.container.getAttribute(`${this.pfx}-startDelay`)) || 100;
          this.originalTypeDelay = this.typeDelay = options.typeDelay
-             || parseFloat(this.container.getAttribute(`${this.pfx}-typeDelay`)) || 10;
+             || parseFloat(this.container.getAttribute(`${this.pfx}-typeDelay`)) || 5;
          this.originalLineDelay = this.lineDelay = options.lineDelay
-             || parseFloat(this.container.getAttribute(`${this.pfx}-lineDelay`)) || 10;
+             || parseFloat(this.container.getAttribute(`${this.pfx}-lineDelay`)) || 50;
          this.progressLength = options.progressLength
              || parseFloat(this.container.getAttribute(`${this.pfx}-progressLength`)) || 40;
          this.progressChar = options.progressChar
